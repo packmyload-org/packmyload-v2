@@ -1,23 +1,33 @@
-import React from 'react';
+import Nav from '@/components/Nav'
+import './globals.css'
+import type { Metadata } from 'next'
 
-const Layout: React.FC = ({ children }) => {
+
+
+export const metadata: Metadata = {
+  title: 'Packmyload',
+  description: 'Moving as easy as ABC',
+  
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="bg-gray-800 py-4">
-        <div className="container mx-auto px-4">
-          {/* Your header content goes here */}
-        </div>
-      </header>
-      <main className="flex-1">
-        <div className="container mx-auto px-4">{children}</div>
-      </main>
-      <footer className="bg-gray-800 py-4">
-        <div className="container mx-auto px-4">
-          {/* Your footer content goes here */}
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Layout;
+    <html lang="en">
+      <head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className='font-satoshi'>
+        <div className='w-full'>
+            <main className=''>
+              <Nav/>
+              {children}
+            </main>
+          </div>
+        </body>
+    </html>
+  )
+}
