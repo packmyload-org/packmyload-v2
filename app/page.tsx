@@ -1,8 +1,10 @@
 import React from 'react'
-
+import HeroSection from '@/components/landing/HeroSection'
 function Home() {
   return (
-    <div>Home</div>
+    <div className='sm:mt-[6%] mt-[15%] w-full text-black'>
+      <HeroSection/>
+    </div>
   )
 }
 

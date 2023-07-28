@@ -46,7 +46,7 @@ const items: MenuProps['items'] = [
 function Nav() {
   const {sm} = useBreakpoint()
   return (
-    <nav className="flex-between w-full mb-16 px-10 py-4 bg-blue-300">
+    <nav className="flex-between w-full px-10 py-4 bg-blue-300 fixed top-0 z-10">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     {sm ? 
     <Image 

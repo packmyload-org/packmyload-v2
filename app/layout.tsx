@@ -5,7 +5,6 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'Packmyload',
   description: 'Moving as easy as ABC',
   
 }
@@ -17,9 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
+      <link rel="icon" href="/favicon.ico"  />
+      <title>Packmyload</title>
       <body className='font-satoshi'>
         <div className='w-full'>
             <main className=''>
