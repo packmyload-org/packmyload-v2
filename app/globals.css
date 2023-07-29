@@ -77,8 +77,73 @@
   @apply relative z-10 flex justify-center items-center flex-col mx-auto sm:px-4 px-0 w-full;
 }
 .container {
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-title h2 {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+  color: #566985;
+  line-height: 24px;
+
+}
+.section-title p {
+  color: #7d93b2;
+  font-size: 13px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 24px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+.section-subtitle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  color: #4DB7FE;
+  top: -30px;
+  font-size: 80px;
+  line-height: 70px;
+  opacity: .13;
+  z-index: -1;
+  font-weight: 700;
+}
+.section-separator {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+}
+span{
+  border: none;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.section-separator:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 4px;
+  margin-left: -25px;
+  width: 50px;
+  border-radius: 3px;
+  background: #4DB7FE;
 }
 .main-search-input{
   margin-top: 50px;
