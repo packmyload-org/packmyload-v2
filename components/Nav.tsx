@@ -7,7 +7,7 @@ import LogoMinify from '@/public/images/iconpackmyload.png'
 import { SmileOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space , Grid} from 'antd';
-import {Phone, CaretDown, FirstAid } from '@phosphor-icons/react'
+import {Phone, CaretDown, FirstAid, List } from '@phosphor-icons/react'
 const { useBreakpoint } = Grid;
 const items: MenuProps['items'] = [
   {
@@ -46,7 +46,7 @@ const items: MenuProps['items'] = [
 function Nav() {
   const {sm} = useBreakpoint()
   return (
-    <nav className="flex-between w-full px-10 py-4 bg-blue-300 fixed top-0 z-10">
+    <nav className="flex-between w-full px-10 py-2 bg-blue-300 fixed top-0 z-10">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     {sm ? 
     <Image 
@@ -67,7 +67,7 @@ function Nav() {
     </Link>
     
     {/* Desktop Navigation  */}
-    <div className="sm:flex hidden no-wrap items-center text-sm  w-1/2">
+    <div className="sm:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-1/2">
       <div className='text-gray-300 w-full gap-10 flex justify-evenly items-center'>
       <Dropdown menu={{ items }} className=' w-16'>
     <a onClick={(e) => e.preventDefault()} className='text-gray-300 cursor-pointer'>
@@ -101,8 +101,18 @@ function Nav() {
       </div>
     </div>
         {/* Mobile Nav  */}
-    <div className="sm:hidden flex relative">
-      hello mobile
+    <div className="sm:hidden flex justify-center items-center relative">
+    <Dropdown menu={{ items }} className=' w-16'>
+    <a onClick={(e) => e.preventDefault()} className='text-gray-300 cursor-pointer'>
+      <Space className='bg-blue-100 p-1 rounded-sm hover:bg-blue-700'>
+        <List size={32} color="#fff" weight="fill" />
+      </Space>
+    </a>
+        </Dropdown>
+      <a href="tel:+2347007225776" className='text-gray-100 flex-between w-16 cursor-pointer'>
+        <Phone size={16} color="#ffffff" weight="fill" />
+          call us
+        </a>
     </div>
    </nav>
   )
