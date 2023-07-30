@@ -35,7 +35,7 @@ export default function Section3() {
           <p className='w-[70%] text-center text-sm '>Every Pack comes with strong professional packmen who are vetted for a 5-star experience. They will do the impossible to load, haul and deliver your items safely.</p>
        </Col>
        </Row>
-       <Row className=' w-full mt-16 lg:gap-0 px-[3%]' justify={'center'}  gutter={[0,80]}>
+       <Row className=' w-full mt-16 lg:gap-0 p-0 lg:px-[3%]' justify={'center'}  gutter={[0,80]}>
        <Col span={20} className='process-itemkey'>
 									<Image alt="moving company lagos nigeria truck sizes" src="/images/moving-company-lagos-nigeria-truck_large1.png" 
          width={700}
@@ -49,28 +49,29 @@ export default function Section3() {
        </Col>
        <Col span={24}>
         <Row className='w-full mb-11' gutter={[10,30]} justify={'space-between'}>
-        <Col span={24} lg={6} className='min-h-[350px] flex text-center flex-col justify-center section-title gap-4'>
+        <Col span={24} lg={6} className='min-h-[350px] min-w-[350px] flex text-center flex-col justify-center items-center section-title gap-4'>
          <div className='flex flex-col justify-center gap-3 items-center'>
           <Image src="/images/secure.svg" alt="moving company lagos nigeria secure feature " width={100} height={80} loading='lazy'/>
           <h3 className="banner-text">Protection</h3>
          </div>
           <span className="section-separator"></span>
-          <p>Each Move is backed by a Goods-in-transit insurance policy from the moment your items are in our hands.</p>
+          <p className='w-80%'>Each Move is backed by a Goods-in-transit insurance policy from the moment your items are in our hands.</p>
         </Col>
-        <Col span={24} lg={6} className='min-h-[300px] min-w-[350px]  flex text-center flex-col justify-center section-title gap-4'>
+        <Col span={24} lg={6} className='min-h-[300px] min-w-[350px]  flex text-center flex-col justify-center items-center section-title gap-4'>
           <div className='flex flex-col justify-center gap-3 items-center'>
             <Image src="/images/ratetip.svg"alt="moving company lagos nigeria secure feature " width={100} height={80} loading='lazy'/>
             <h3 className="banner-text">Pay, rate & tip</h3>
          </div>
           <span className="section-separator"></span>
-          <p>When your Packing is complete you’ll be asked to rate your Packer with the option to tip them in the app for a job well done.</p>
-        </Col><Col span={24} lg={6} className=' min-h-[300px] min-w-[350px] flex  text-center flex-col justify-center section-title gap-4'>
+          <p className='w-80%'>When your Packing is complete you’ll be asked to rate your Packer with the option to tip them in the app for a job well done.</p>
+        </Col>
+        <Col span={24} lg={6} className=' min-h-[300px] min-w-[350px] flex text-center flex-col justify-center items-center section-title gap-4'>
         <div className='flex flex-col justify-center gap-3 w-full items-center'>
           <Image src="/images/calender.svg" alt="moving company lagos nigeria secure feature " width={100} height={80} loading='lazy'/>
           <h3 className="banner-text">30 mins or 30 days</h3>
          </div>
           <span className="section-separator"></span>
-          <p>Schedule your Pack ahead of time up to 30 days in advance or request on-demand and we’ll arrive in as little as 30 minutes.</p>
+          <p className='w-80%'>Schedule your Pack ahead of time up to 30 days in advance or request on-demand and we’ll arrive in as little as 30 minutes.</p>
         </Col>
         </Row>
        </Col>

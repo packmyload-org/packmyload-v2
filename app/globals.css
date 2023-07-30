@@ -265,6 +265,9 @@ span{
   font-size: 60px;
   
 }
+.container {
+  width: 95%;
+}
 }
 .hero{
   background-image: url('/images/moving-company-lagos-nigeria-packmyload_website_banner_image.png');
