@@ -67,7 +67,7 @@ function Nav() {
     </Link>
     
     {/* Desktop Navigation  */}
-    <div className="sm:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-1/2">
+    <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-1/2">
       <div className='text-gray-300 w-full gap-10 flex justify-evenly items-center'>
       <Dropdown menu={{ items }} className=' w-16'>
     <a onClick={(e) => e.preventDefault()} className='text-gray-300 cursor-pointer'>
@@ -99,6 +99,26 @@ function Nav() {
         </span>
       </button>
       </div>
+    </div>
+        {/* Tablet  */}
+    <div className="lg:hidden flex justify-center space-x-4 items-center relative">
+    <Dropdown menu={{ items }} className=' w-16'>
+    <a onClick={(e) => e.preventDefault()} className='text-gray-300 cursor-pointer'>
+      <Space className='bg-blue-100 p-1 rounded-sm hover:bg-blue-700'>
+        <List size={32} color="#fff" weight="thin" />
+      </Space>
+    </a>
+        </Dropdown>
+      <a href="tel:+2347007225776" className='text-gray-100 flex-between w-16 cursor-pointer'>
+        <Phone size={16} color="#ffffff" weight="fill" />
+          call us
+        </a>
+        <button type='button' className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[10px] border-[#587FB1] border-[10px] bg-blue-100 hover:bg-blue-600  text-gray-100 font-bold rounded-full text-xs'>
+        BOOK NOW 
+        <span>
+          <FirstAid size={16} color="#fefbfb" weight="fill" />    
+        </span>
+        </button>
     </div>
         {/* Mobile Nav  */}
     <div className="sm:hidden flex justify-center items-center relative">

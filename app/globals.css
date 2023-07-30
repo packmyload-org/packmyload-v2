@@ -7,7 +7,14 @@
 /* 
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
-
+.box-widget-item .list-single-tags a:hover, .gradient-bg, .list-single-header-cat a, .listing-geodir-category, .nav-holder nav li a::before {
+  background: -webkit-linear-gradient(top, rgb(62, 170, 253), rgb(73, 206, 255));
+}
+.join-wrap p {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 13px;
+}
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -27,7 +34,70 @@
   height: 100%;
   top: 0;
 }
-
+.cirle-bg {
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  bottom: -70%;
+  z-index: 1;
+  opacity: 0.1;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+  .bg {
+      background-size: cover;
+      background-attachment: scroll !important;
+      background-position: center center;
+  }
+}
+.bg {
+  z-index: 0;
+  background-origin: content-box;
+  background-position: center center;
+  background-image: url('/images/bg/circle.png');
+}
+.bg, .shapes-bg-big::before, .shapes-bg-small::before {
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-repeat: repeat;
+}
+.join-wrap {
+  padding: 10px 0px 10px 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.21);
+  width: 100%;
+}
+@media only screen and (max-width: 1064px){
+  .join-wrap-btn {
+      display: block;
+      float: left;
+  }
+}
+.join-wrap-btn {
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 7px;
+    background: rgb(7, 154, 217);
+    border-radius: 30px;
+}
+.join-wrap-btn, .join-wrap-text {
+    display: inline-table;
+    font-size: 11px;
+    font-weight: 700;
+    position: relative;
+    top: 15px;
+    padding: 20px 55px;
+}
+.color-bg-link, .footer-menu li a, .header-sec-link a, .images-collage-title, .join-wrap-btn, .list-single-header-contacts li a, .main-register h3 span, .section-subtitle, .showshare span {
+    text-transform: uppercase;
+}
+a {
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.cirle-bg, .step-item, .timeline-end {
+  position: absolute;
+}
 .main:after {
   content: "";
   background-image: url("/assets/images/grid.svg");

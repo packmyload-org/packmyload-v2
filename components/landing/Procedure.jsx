@@ -39,7 +39,7 @@ export default function Procedure() {
 				
 					<Row  className='w-full' justify={'center'} gutter={[0,10]}>
 						<Col span={24} md={12}>
-							<Image alt="responsivePix" src="/images/packmyload-rate-and-review.png" width={339} height={192} className='w-full object-cover'unoptimized/>
+							<Image alt="responsivePix" src="/images/packmyload-rate-and-review.png" width={339} height={192} className='w-full object-cover' unoptimized/>
 						</Col>
 						<Col span={24} md={12}>
 							<h3 id="about-font2" className='text-[#42556B]'>Rate and review</h3>
