@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function Faq() {
   return (
-   <section className="gradient-bg">
-   <div className="cirle-bg">
-    <div className="bg" />   
+   <section className="gradient-bg relative">
+   <div className="cirle-bg ">
+    <div className="bg z-10" ></div>   
    </div>
    <div className="container py-12">
     <div className="join-wrap fl-wrap text-white">
@@ -14,7 +14,7 @@ export default function Faq() {
        <h3 className='text-3xl font-bold'>Do You Have Questions ?</h3>
        <p>Check out our frequently asked questions.</p>
       </Col>
-      <Col span={24} md={10} className='flex flex-col items-end justify-center min-h-[150px] '>
+      <Col span={24} md={10} className='flex flex-col items-start md:items-end justify-center min-h-[150px] '>
        <a href="/Faqs" className="join-wrap-btn hover:bg-blue-600">FAQs</a>
       </Col>
      </Row>

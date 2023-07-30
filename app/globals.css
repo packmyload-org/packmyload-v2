@@ -41,6 +41,7 @@
   bottom: -70%;
   z-index: 1;
   opacity: 0.1;
+  background-image: url('/images/bg/circle.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2){
   .bg {
@@ -50,7 +51,6 @@
   }
 }
 .bg {
-  z-index: 0;
   background-origin: content-box;
   background-position: center center;
   background-image: url('/images/bg/circle.png');
@@ -95,7 +95,7 @@ a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-.cirle-bg, .step-item, .timeline-end {
+.cirle-bg,.step-item, .timeline-end {
   position: absolute;
 }
 .main:after {

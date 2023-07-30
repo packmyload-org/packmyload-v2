@@ -101,7 +101,7 @@ function Nav() {
       </div>
     </div>
         {/* Tablet  */}
-    <div className="lg:hidden flex justify-center space-x-4 items-center relative">
+    <div className="hidden md:flex lg:hidden justify-center space-x-4 items-center relative">
     <Dropdown menu={{ items }} className=' w-16'>
     <a onClick={(e) => e.preventDefault()} className='text-gray-300 cursor-pointer'>
       <Space className='bg-blue-100 p-1 rounded-sm hover:bg-blue-700'>
