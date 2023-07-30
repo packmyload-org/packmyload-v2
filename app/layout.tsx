@@ -1,6 +1,7 @@
 'use client'
 import Nav from '@/components/Nav'
 import './globals.css'
+import Footer from '@/components/Footer'
 
 
 export default function RootLayout({
@@ -22,9 +23,10 @@ export default function RootLayout({
 
       <body className='font-satoshi'>
         <div className='w-full'>
-            <main className=''>
+            <main className='w-full overflow-y-hidden'>
               <Nav/>
               {children}
+              <Footer/>
             </main>
           </div>
         </body>
