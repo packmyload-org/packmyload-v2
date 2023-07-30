@@ -35,13 +35,13 @@
   top: 0;
 }
 .cirle-bg {
-  right: 10%;
+  right: 15%;
   width: 500px;
-  height: 500px;
-  bottom: -70%;
+  height: 370px;
+  top: 0;
   z-index: 1;
   opacity: 0.1;
-  background-image: url('/images/bg/circle.png');
+  /* background-image: url('/images/bg/circle.png'); */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2){
   .bg {
