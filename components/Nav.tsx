@@ -46,7 +46,7 @@ const items: MenuProps['items'] = [
 function Nav() {
   const {sm} = useBreakpoint()
   return (
-    <nav className="flex-between w-full px-10 py-2 bg-blue-300 fixed top-0 z-30">
+    <nav className="flex-between w-full px-10 py-3 bg-blue-300 fixed top-0 z-30">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     {sm ? 
     <Image 
@@ -92,7 +92,7 @@ function Nav() {
         <Phone size={16} color="#ffffff" weight="fill" />
           call us
         </a>
-      <button type='button' className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[10px] border-[#587FB1] border-[10px] bg-blue-100 hover:bg-blue-600  text-gray-100 font-bold rounded-full  text-sm'>
+      <button type='button' className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[10px] border-[#587FB1] border-[10px] bg-blue-100 hover:bg-blue-600  text-gray-100 font-bold rounded-full text-xs'>
         BOOK NOW 
         <span>
           <FirstAid size={16} color="#fefbfb" weight="fill" />    

@@ -32,16 +32,18 @@ const Servicelist: List[] = [
 
 export default function ServiceSection() {
   return (
-    <div className='pt-[7%] pb-10 w-full bg-white'>
+    <div className='pt-[10%] pb-10 w-full bg-white'>
       <div className="container">
         <div className="section-title relative ">
+        <div className='gap-6 flex flex-col'>
           <h2 className="w-full font-bold text-4xl text-center">Services</h2>
-          <div className="section-subtitle">Catalog of Services</div>
+          <div className="section-subtitle uppercase">Catalog of Services</div>
           <span className="section-separator"></span>
-          <p className='w-full text-center mt-[10%] '>Browse through our services to find the one relevant to you.</p>
+          <p className='w-full text-center '>Browse through our services to find the one relevant to you.</p>
+         </div>
         </div>
         {/* portfolio */}
-        <Row className=' w-full mt-12 items-center px-[3%]' gutter={[16, 16]} justify={'space-between'}>
+        <Row className=' w-full mt-14 items-center px-[3%]' gutter={[16, 16]} justify={'space-between'}>
           {Servicelist.map((item, index) => (
             <div key={index} className='w-[350px] bg-[#566985] opacity-80 cursor-pointer relative rounded-lg'>
               <Link href={item.href}>
@@ -53,13 +55,13 @@ export default function ServiceSection() {
                   className='object-cover'
                 />
               </Link>
-              <h2 className='absolute bottom-4 font-bold text-2xl left-3 w-[300px] text-start'>{item.serviceName}</h2>
+              <h2 className='absolute bottom-4 font-bold text-2xl left-3 w-[300px] text-[#566985] text-start'>{item.serviceName}</h2>
             </div>
           ))}
         </Row>
        {/* Portfolio end  */}
-       <Link href='#' className='border-[#777373] border-2 rounded-lg sm:rounded-full '>
-       <button type="button" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3  w-[300px] my-10 mb-14 sm:w-[150px] mx-auto rounded-lg sm:rounded-full border-8 sm:border-none uppercase font-bold text-white flex items-center justify-evenly'>
+       <Link href='#' className='border-[#777373] border-2 rounded-lg sm:rounded-full p-2  w-[318px] my-10 mb-14 sm:w-[168px] mx-auto hover:animate-pulse'>
+       <button type="button" className='bg-blue-100 hover:bg-blue-600  p-3  w-[300px] sm:w-[150px] rounded-lg sm:rounded-full border-8 sm:border-none uppercase font-bold text-white flex items-center text-xs justify-evenly'>
             view all
             <span>
              <Eye color='#fff' size={24}/>

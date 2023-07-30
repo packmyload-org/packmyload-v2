@@ -82,15 +82,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.section-title h2 {
+.section-title h2  {
   float: left;
   width: 100%;
   position: relative;
-  padding-bottom: 50px;
   color: #566985;
   line-height: 24px;
+  font-size: 34px;
+}
+#about-font2,h3,p{
+  font-size: 13px;
+  font-weight: 400;
+}
 
+
+.banner-text{
+  color: #566985;
+  line-height: 24px;
+  font-size: 34px;
+  font-weight: 700;
 }
 .section-title p {
   color: #7d93b2;
@@ -100,7 +112,6 @@
 p {
   font-size: 12px;
   line-height: 24px;
-  padding-bottom: 10px;
   font-weight: 500;
 }
 .section-subtitle {
@@ -109,18 +120,54 @@ p {
   text-align: center;
   left: 0;
   color: #4DB7FE;
-  top: -30px;
-  font-size: 80px;
-  line-height: 70px;
-  opacity: .13;
-  z-index: -1;
+  top: -20px;
+  line-height: 60px;
+  opacity: .15;
+  font-size: 65px;
   font-weight: 700;
+}
+.video-box {
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, .2);
+}
+
+.fl-wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+
+.process-itemkey, .process-itempackmen {
+    border-radius: 6px;
+}
+
+.process-item, .process-itemkey, .process-itempackmen {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    float: left;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+.section-separator:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 4px;
+  margin-left: -25px;
+  width: 50px;
+  border-radius: 3px;
+  background: #4DB7FE;
 }
 .section-separator {
   float: left;
   width: 100%;
   position: relative;
-  margin: 20px 0;
+  margin: 8px 0;
 }
 span{
   border: none;
@@ -134,26 +181,20 @@ span{
   margin: 0;
   padding: 0;
 }
-.section-separator:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  height: 4px;
-  margin-left: -25px;
-  width: 50px;
-  border-radius: 3px;
-  background: #4DB7FE;
-}
 .main-search-input{
   margin-top: 50px;
-  @media only screen and (max-width: 768px){
-  .main-search-input {
-      background: rgba(255, 255, 255, .2);
-      padding: 14px 20px 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-  }}
+}
+@media only screen and (max-width: 768px){
+.main-search-input {
+    background: rgba(255, 255, 255, .2);
+    padding: 14px 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+}
+.section-subtitle{
+  font-size: 60px;
+  
+}
 }
 .hero{
   background-image: url('/images/moving-company-lagos-nigeria-packmyload_website_banner_image.png');
