@@ -60,8 +60,8 @@ export default function ServiceSection() {
           ))}
         </Row>
        {/* Portfolio end  */}
-       <Link href='#' className='border-[#777373] border-2 rounded-lg sm:rounded-full p-2  w-[318px] my-10 mb-14 sm:w-[168px] mx-auto hover:animate-pulse'>
-       <button type="button" className='bg-blue-100 hover:bg-blue-600  p-3  w-[300px] sm:w-[150px] rounded-lg sm:rounded-full border-8 sm:border-none uppercase font-bold text-white flex items-center text-xs justify-evenly'>
+       <Link href='#' className='border-2 rounded-lg sm:rounded-full p-2 w-[318px] my-10 mb-14 sm:w-[168px] mx-auto hover:animate-pulse'>
+       <button type="button" className='bg-blue-100 hover:bg-blue-600 border-[#777373] p-3  w-[300px] sm:w-[150px] rounded-lg sm:rounded-full border-8 sm:border-none uppercase font-bold text-white flex items-center text-xs justify-evenly'>
             view all
             <span>
              <Eye color='#fff' size={24}/>

@@ -16,7 +16,7 @@ export default function Procedure() {
 						<p id="about-font2" className='text-[#7d93b2]'>Tell us what you are moving, your pickup address and destination, 
 						to get a free quote. Pick a moving day and time convenient for you</p>
 					</Row>
-					<Row className='w-[40%]' justify={sm ? 'end':'center'}>
+					<Row className='w-[50%]' justify={sm ? 'end':'center'}>
 						<Image src="/images/packmyload-truck-on-road.png" alt='res pix' width={200} height={100}className='w-full object-contain'/>
 					</Row>
 				
@@ -33,7 +33,7 @@ export default function Procedure() {
 					</Row>
 				
 				
-					<Row className='w-[40%]' justify={sm ? 'end':'center'}>
+					<Row className='w-[50%]' justify={sm ? 'end':'center'}>
 						<Image src="/images/packmyload-truck-on-road2.png" alt='responsivePix' width={339} height={192} className='w-full object-contain'/>
 					</Row>
 				

@@ -11,20 +11,20 @@ export default function HeroSection() {
 									a new house or business address, we are here to help you with
 									managing the stress.</p>
       <div className="sm:w-full sm:mt-10 ">
-         <form action="" className='border-[#9d9d9d] bg-[#9d9d9d] border-[15px] sm:border-[10px] rounded-lg sm:rounded-full w-full mx-auto lg:w-[70%]  flex space-y-4 sm:space-y-0 flex-col md:flex-row'>
-          <div className='flex bg-gray-100 flex-nowrap py-2 px-3 sm:rounded-l-full w-full sm:w-5/12 justify-between border-r-2'>
+         <form action="" className='border-[#9d9d9d] bg-[#9d9d9d] border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[70%]  flex space-y-4 sm:space-y-0 flex-col md:flex-row'>
+          <div className='flex bg-gray-100 flex-nowrap py-2 px-3 lg:rounded-l-full w-full lg:w-5/12 justify-between border-r-2'>
            <input type="text" name="" placeholder='Pickup Address' autoComplete='off' required className='p-2 h-10 focus:outline-0 text-black ' />
            <Image src="/images/ic_pickup.svg" 
            className='hover:animate-ping'
            alt="moving company lagos nigeria-student moving pickup indicator" width={20} height={20}/>
           </div>
-          <div className='flex bg-gray-100 flex-nowrap py-2 px-3 w-full sm:w-5/12 justify-between'>
+          <div className='flex bg-gray-100 flex-nowrap py-2 px-3 w-full lg:w-5/12 justify-between'>
            <input type="text" name="" placeholder='Destination Address' autoComplete='off' required className='p-2 h-10 focus:outline-0 text-black ' />
            <Image src="/images/ic_dropdown.svg"
            className='hover:animate-ping'
            alt="moving company lagos nigeria-student moving pickup indicator" width={20} height={20}/>
           </div>
-          <button type="button" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3 sm:relative absolute bottom-[8%] w-[250px] sm:w-[150px] mx-auto rounded-lg sm:rounded-r-full border-[#9d9d9d] border-8 sm:border-none uppercase text-xs font-bold'>
+          <button type="button" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3 sm:relative absolute bottom-[8%]  w-[260px] lg:w-[150px] mx-auto rounded-lg lg:rounded-r-full border-[#9d9d9d] border-8 lg:border-none uppercase text-xs font-bold'>
             Get Started
           </button>
          </form>
