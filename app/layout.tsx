@@ -2,6 +2,7 @@
 import Nav from '@/components/Nav'
 import './globals.css'
 import Footer from '@/components/Footer'
+import PartnerFirst from './partner/PartnerFirst'
 
 
 export default function RootLayout({
@@ -25,6 +26,7 @@ export default function RootLayout({
             <main className='w-full overflow-y-hidden'>
               <Nav/>
               {children}
+             
               <Footer/>
             </main>
         </body>
