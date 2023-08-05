@@ -7,7 +7,17 @@
 /* 
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
-
+.gradient-bg{
+  position: relative;
+}
+.box-widget-item .list-single-tags a:hover, .gradient-bg, .list-single-header-cat a, .listing-geodir-category, .nav-holder nav li a::before {
+  background: -webkit-linear-gradient(top, rgb(62, 170, 253), rgb(73, 206, 255));
+}
+.join-wrap p {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 13px;
+}
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -17,7 +27,47 @@
   padding: 10px 8px;
   pointer-events: none;
 }
+footer.main-footer {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 90px 0 0;
+}
 
+.dark-footer {
+  background: #2C3B5A;
+}
+@media only screen and (max-width: 1064px) {
+  .footer-widget,
+  .user-profile-menu-wrap,
+  .video-box {
+    margin-bottom: 20px;
+  }
+}
+
+.fl-wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.footer-contacts {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 255, 255, .21);
+}
+
+
+ol,
+ul {
+  list-style: none;
+}
+.footer-widget .widget-posts li {
+  padding: 13px 0;
+  margin-bottom: 8px;
+}
+.footer-menu {
+  margin-top: 20px;
+}
 .main:before {
   background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
   position: absolute;
@@ -27,7 +77,70 @@
   height: 100%;
   top: 0;
 }
-
+.cirle-bg {
+  right: 15%;
+  width: 500px;
+  height: 370px;
+  top: 0;
+  z-index: 1;
+  opacity: 0.1;
+  /* background-image: url('/images/bg/circle.png'); */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+  .bg {
+      background-size: contain;
+      background-attachment: scroll !important;
+      background-position: center center;
+  }
+}
+.bg {
+  background-origin: content-box;
+  background-position: center center;
+  background-image: url('/images/bg/circle.png');
+}
+.bg, .shapes-bg-big::before, .shapes-bg-small::before {
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-repeat: repeat;
+}
+.join-wrap {
+  padding: 10px 0px 10px 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.21);
+  width: 100%;
+}
+@media only screen and (max-width: 1064px){
+  .join-wrap-btn {
+      display: block;
+      float: left;
+  }
+}
+.join-wrap-btn {
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 7px;
+    background: rgb(7, 154, 217);
+    border-radius: 30px;
+}
+.join-wrap-btn, .join-wrap-text {
+    display: inline-table;
+    font-size: 11px;
+    font-weight: 700;
+    position: relative;
+    top: 15px;
+    padding: 20px 55px;
+}
+.color-bg-link, .footer-menu li a, .header-sec-link a, .images-collage-title, .join-wrap-btn, .list-single-header-contacts li a, .main-register h3 span, .section-subtitle, .showshare span {
+    text-transform: uppercase;
+}
+a {
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.cirle-bg,.step-item, .timeline-end {
+  position: absolute;
+}
 .main:after {
   content: "";
   background-image: url("/assets/images/grid.svg");
@@ -51,11 +164,11 @@
       transparent 0%
     ),
     radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsl(246, 94%, 53%, 1) 0px, transparent 50%),
     radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
     radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
     radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+    radial-gradient(at 79% 53%, hsl(215, 98%, 61%,1) 0px, transparent 50%);
   position: absolute;
   content: "";
   width: 100%;
@@ -77,11 +190,131 @@
   @apply relative z-10 flex justify-center items-center flex-col mx-auto sm:px-4 px-0 w-full;
 }
 .container {
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-title h2  {
+  float: left;
+  width: 100%;
+  position: relative;
+  color: #566985;
+  line-height: 44px;
+  font-size: 34px;
+}
+#about-font2,h3,p{
+  font-size: 13px;
+  font-weight: 400;
+}
+
+
+.banner-text{
+  color: #566985;
+  line-height: 24px;
+  font-size: 34px;
+  font-weight: 700;
+}
+.section-title p {
+  color: #7d93b2;
+  font-size: 13px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.section-subtitle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  color: #4DB7FE;
+  top: -20px;
+  line-height: 60px;
+  opacity: .15;
+  font-size: 65px;
+  font-weight: 700;
+}
+.video-box {
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, .2);
+}
+
+.fl-wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+
+.process-itemkey, .process-itempackmen {
+    border-radius: 6px;
+}
+
+.process-item, .process-itemkey, .process-itempackmen {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    float: left;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+.section-separator:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 4px;
+  margin-left: -25px;
+  width: 50px;
+  border-radius: 3px;
+  background: #4DB7FE;
+}
+.section-separator {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: 8px 0;
+}
+span{
+  border: none;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.main-search-input{
+  margin-top: 50px;
+}
+@media only screen and (max-width: 768px){
+.main-search-input {
+    background: rgba(255, 255, 255, .2);
+    padding: 14px 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+}
+.section-subtitle{
+  font-size: 60px;
+  
+}
+.container {
+  width: 100%;
+  padding: 0 5px 0 5px;
+}
 }
 .hero{
-  background-image: url('/images/moving-company-lagos-nigeria-packmyload_website_banner_image.png');
+  /* background-image: url('/images/moving-company-lagos-nigeria-packmyload_website_banner_image.png'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

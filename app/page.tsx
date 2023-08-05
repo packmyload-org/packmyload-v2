@@ -1,10 +1,17 @@
 import React from 'react'
 import HeroSection from '@/components/landing/HeroSection'
-import Service from './services/Service'
+import ServiceSection from '@/components/landing/ServiceSection'
+import Section3 from '@/components/landing/Section3'
+import Procedure from '@/components/landing/Procedure'
+import Faq from '@/components/landing/Faq'
 function Home() {
   return (
-    <div className='sm:mt-[6%] mt-[15%] w-full text-black'>
+    <div className='sm:mt-[5%] mt-[13%] w-full text-black'>
       <HeroSection/>
+      <ServiceSection/>
+      <Section3/>
+      <Procedure/>
+      <Faq/>
     </div>
   )
 }
