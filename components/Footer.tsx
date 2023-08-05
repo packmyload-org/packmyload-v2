@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
+import { Col, Row } from 'antd'
 export default function Footer() {
   return (
     <footer className='w-full bg-blue-800 dark-footer main-footer'>
 			<div className="container">
-				<div className="row">
-					<div className="col-md-3">
+				<Row className='w-full' justify={'space-between'} align={'middle'}>
+					<Col span={20} md={6}>
 						<div className="footer-widget fl-wrap">
 							<h3>About Us</h3>
 							<div className="footer-contacts-widget fl-wrap">
@@ -19,8 +20,8 @@ export default function Footer() {
 								</ul>
 							</div>
 						</div>
-					</div>
-					<div className="col-md-5">
+					</Col>
+					<Col span={20} md={8}>
 						<div className="footer-widget fl-wrap">
 							<h3>Our Services</h3>
 
@@ -97,8 +98,8 @@ export default function Footer() {
 							</div>
 
 						</div>
-					</div>
-					<div className="col-md-4">
+					</Col>
+					<Col span={20} md={6}>
 					<div className="footer-widget fl-wrap">
                                 <h3>Subscribe</h3>
                                 <div className="subscribe-widget fl-wrap">
@@ -129,12 +130,12 @@ export default function Footer() {
 								</ul>
 							</div>
 						</div>
-					</div>
-				</div>
+				</Col>
+					</Row>
 			</div>
 			<div className="sub-footer fl-wrap">
 				<div className="container">
-					<div className="row">
+					<Row className='w-full' justify={'space-between'} align={'middle'}>
 						<div className="col-md-4">
 							<div className="about-widget">
                 <Image src="/images/iconpackmyload1.png" style={{ width:"30px" }} alt="image" width={30} height={30}/>
@@ -156,7 +157,7 @@ export default function Footer() {
 								</ul>
 							</div>
 						</div>
-					</div>
+					</Row>
 				</div>
 			</div>
 		</footer>

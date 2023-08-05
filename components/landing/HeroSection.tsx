@@ -24,7 +24,7 @@ export default function HeroSection() {
            className='hover:animate-ping'
            alt="moving company lagos nigeria-student moving pickup indicator" width={20} height={20}/>
           </div>
-          <button type="button" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3 sm:relative absolute bottom-[8%]  w-[260px] lg:w-[150px] mx-auto rounded-lg lg:rounded-r-full border-[#9d9d9d] text-gray-100 border-8 lg:border-none uppercase text-xs font-bold'>
+          <button type="button" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3   w-full lg:w-[150px] mx-auto rounded-lg lg:rounded-r-full border-[#9d9d9d] text-gray-500 hover:text-gray-100 border-8 lg:border-none uppercase text-xs font-bold'>
             Get Started
           </button>
          </form>
