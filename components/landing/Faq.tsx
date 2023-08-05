@@ -3,18 +3,18 @@ import React from 'react'
 
 export default function Faq() {
   return (
-   <section className="gradient-bg relative py-[50px]">
+   <section className="gradient-bg grid items-center py-[50px] min-h-[380px]">
    <div className="cirle-bg ">
     <div className="bg object-contain" ></div>   
    </div>
    <div className="container py-12">
     <div className="join-wrap fl-wrap text-white">
-     <Row className='w-full' justify={'space-between'} align={'middle'}>
-      <Col span={24} md={10} className='flex flex-col gap-10'>
-       <h3 className='text-3xl font-bold'>Do You Have Questions ?</h3>
+     <Row className='w-full flex' justify={'space-between'} align={'middle'}>
+      <Col span={24} md={10} className='flex flex-col space-y-6'>
+       <h3 className='text-4xl font-bold'>Do You Have Questions ?</h3>
        <p>Check out our frequently asked questions.</p>
       </Col>
-      <Col span={24} md={10} className='flex flex-col items-start md:items-end justify-center min-h-[160px] '>
+      <Col span={24} md={10} className='flex items-center text-start md:text-end justify-center min-h-[160px] '>
        <a href="/Faqs" className="join-wrap-btn hover:bg-blue-600">FAQs</a>
       </Col>
      </Row>
