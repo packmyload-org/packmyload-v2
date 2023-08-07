@@ -6,7 +6,7 @@ import Section3 from '@/components/landing/Section3'
 import Procedure from '@/components/landing/Procedure'
 import Faq from '@/components/landing/Faq'
 import { useLoading } from '@/context/LoadingContext'
-import Loading from '@/app/Loading'
+import Loading from '@/app/loading'
 function Home() {
   const { isLoading, setIsLoading } = useLoading()
   useEffect(() => {
