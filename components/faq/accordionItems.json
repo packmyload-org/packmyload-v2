@@ -1,0 +1,96 @@
+{
+    "firstItems": [
+        {
+            "id": 1,
+            "title": "What is Packmyload.com?",
+            "content": "Packmyload.com is an online marketplace that makes the moving process easier, and more transparent. We are a fully integrated moving company specializing now in home/office relocations, store delivery, student moves and storage of goods both in small and large quantity. Our unique mobile and web application platform allows intending packers get guaranteed pricing, make smart decisions and ultimately have a delightful moving experience. Just enter in your move details, choose a verified mover, and book online. Our core values are transparency, innovation and performance."
+        },
+        {
+            "id": 2,
+            "title": "Why should i use packmyload.com?",
+            "content": "Forget about searching on the internet, filling out multiple request forms, and talking to multiple movers to get moving quotes. Booking your move on packmyload.com is easy and saves you time and money! Just enter in your move details once to get guaranteed prices. You can book your move at any time, even in your PJs. The prices you see on packmyload.com are guaranteed, based on the details on your Move Plan. If you book your move on packmyload.com, your mover must adhere to the packmyload.com Service Standards, so rest assured that your move will be handled with care and respect. Your friends, The packmyload.com Team, will always be here for you to guide you along the way before, during, and after your move."
+        },
+        {
+            "id": 3,
+            "title": "What is the packmyload.com guarantee?",
+            "content": "Packmyload.com guarantees that our movers treat you and your items professionally, with courtesy and honesty. Your price doesn't change unless your move changes, and we can help smooth over any tensions you have with your mover regarding miscommunication and help you find a resolution as quickly as possible. We're not just a website, we're a team of people here to help you every step of the way."
+        },
+        {
+            "id": 4,
+            "title": "Who do i contact with any questions?",
+            "content": "Got questions? We've got answers. Ordering a mover online doesn't mean you're on your own. The packmyload.com Team are real humans behind the scene who make the wheels turn. Connect with The packmyload.com Team via Live Chat, phone, or email. We'll be here for you, before, during, and after your move."
+        },
+        {
+            "id": 5,
+            "title": "How does packmyload.com work?",
+            "content": "Exact prices, No surprises! Packmyload.com uses a simple formula to get exact prices. We take how much stuff you have, multiplied by how far you're moving, and add in any additional services. We've helped each mover determine their exact cost per unit of stuff, which allows us to provide guaranteed prices. With this simple formula, booking a mover is as simple as booking a hotel online!"
+        },
+        {
+            "id": 6,
+            "title": "Who can see my personal information?",
+            "content": "We have a strict privacy policy. Our movers will never see your contact info unless you book with them on packmyload.com. This means no annoying phone calls or junk mail, yay!"
+        },
+        {
+            "id": 7,
+            "title": "Do i have to register?",
+            "content": "Yes, consider your Move Plan your own personalized profile. Don't erase all your hard work. Register to create an account so that you can always log back in to continue from where you left off. Don't worry, we have a very strict privacy policy."
+        },
+        {
+            "id": 8,
+            "title": "Is it safe to use my Facebook or Goggle+ account to register?",
+            "content": "Registering with your Facebook or Google+ account is completely safe. Facebook and Google+ do not give us access or permission to post on your wall."
+        }
+    ],
+    "secondItems": [
+        {
+            "id": 20,
+            "title": "What is a Move Plan?",
+            "content": "Your Move Plan contains the important details of your move: your date and addresses, inventory, and any additional services you select (ie. professional assembly/disassembly and packing/unpacking). It’s always available when you log in and can be edited and managed 24/7."
+        },
+        {
+            "id": 21,
+            "title": "How far in advance should i book my book",
+            "content": "To get the best rates and availability, we recommend booking at least one month ahead in the busy season (Summer) and two weeks ahead during the Winter, Spring, and Fall."
+        },
+        {
+            "id": 22,
+            "title": "Can i book my move sooner than 2 business days in advance?",
+            "content": "We'll try our best to get your last-minute move on the road. Simply create a Move Plan by selecting the soonest possible date and let us know when you'd prefer to move and which movers you'd like to work with. We'll coordinate with available movers to get you going and gone. (Hint: It helps to be flexible with start time!)"
+        },
+        {
+            "id": 23,
+            "title": "Can i book my move using the mobile app?",
+            "content": "You sure can! Check us out on the App Store and Google Play. You can find, compare, and book movers, and even update your inventory on-the-go, all through the app!"
+        },
+        {
+            "id": 24,
+            "title": "What if i can't find an item in the inventory planner tool?",
+            "content": "If you have a couch that is shaped like a spaceship, or you just can’t seem to find the stuff you’re looking for, you can create a custom item. This option is available for every room. Provide a description, height, width, and depth in inches – voila! Please note that for some items, handling fees may be added on later."
+        },
+        {
+            "id": 25,
+            "title": "Can i change my inventory at any time?",
+            "content": "Yes! Log in to your Move Plan 24/7 to make changes to your inventory. You can update your inventory after booking, even through the day of the move. We recommend finalizing it 2-business days beforehand for accurate billing, but we understand that sometimes there's a box or two hidden away! You can even download one of our nifty mobile apps to update your inventory during your move when your computer is packed away."
+        },
+        {
+            "id": 26,
+            "title": "Can i get boxes through packmyload.com?",
+            "content": "Yes, most of our movers sell and deliver boxes to your home. It’s easy - choose box delivery when creating your Move Plan (from the Boxes section of the Inventory page, directly from the Compare page or later on from your Move Plan summary), select how many boxes you’d like, and set your preferred delivery date."
+        },
+        {
+            "id": 27,
+            "title": "What if i don't know the exact address I'm moving to yet?",
+            "content": "Don’t worry – it’s hard to find that perfect place! Simply enter a nearby zip code or city/state as a placeholder. You can update your addresses even after you book."
+        },
+        {
+            "id": 28,
+            "title": "Am i able to change my move date or time?",
+            "content": "If you need to change your move date and/or time, log in to your Move Plan to request a date and/or time change. If you can’t log in, email enquiries@packmyload.com or give us a call at 855-286-7258 and we will help coordinate it with your mover. Keep in mind that price may change when rescheduling."
+        },
+        {
+            "id": 29,
+            "title": "Can i add extra pick-up or drop-off location?",
+            "content": "Sure, if you’re moving from two homes to one (or vice versa), or want to pick-up or drop-off stuff from storage, most movers support multiple stops. To add additional pick-up or drop-off addresses simply select 'extra pick-up' or 'extra drop-off' from the address details page. Just make sure any additional furniture or boxes you are picking-up are included in your inventory."
+        }
+    ]
+}
