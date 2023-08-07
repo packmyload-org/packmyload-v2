@@ -8,10 +8,11 @@ function Home() {
   return (
     <div className='sm:mt-[5%] mt-[13%] w-full text-black'>
       <HeroSection/>
+      {/*
       <ServiceSection/>
       <Section3/>
       <Procedure/>
-      <Faq/>
+      <Faq/> */}
     </div>
   )
 }

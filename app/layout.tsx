@@ -1,8 +1,6 @@
-'use client'
 import Nav from '@/components/Nav'
 import './globals.css'
 import Footer from '@/components/Footer'
-
 
 export default function RootLayout({
   children,
@@ -22,11 +20,13 @@ export default function RootLayout({
       <title>Packmyload</title>
 
       <body className='font-satoshi'>
+        <div className='w-full'>
             <main className='w-full overflow-y-hidden'>
               <Nav/>
               {children}
               <Footer/>
             </main>
+          </div>
         </body>
     </html>
   )
