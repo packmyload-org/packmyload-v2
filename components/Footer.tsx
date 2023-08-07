@@ -1,165 +1,149 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import { Col, Row } from 'antd'
+import { EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, Phone, PinterestLogo, TwitterLogo, YoutubeLogo } from '@phosphor-icons/react'
 export default function Footer() {
   return (
     <footer className='w-full bg-blue-800 dark-footer main-footer'>
 			<div className="container">
-				<Row className='w-full' justify={'space-between'} align={'middle'}>
-					<Col span={20} md={6}>
-						<div className="footer-widget fl-wrap">
-							<h3>About Us</h3>
-							<div className="footer-contacts-widget fl-wrap">
-								<p>We are a professional moving company, powered by
-									technology and created to move more than just your belongings.
-									We'll move you with our hardwork and genuine smiles.</p>
-								<ul className="footer-contacts fl-wrap">
-									<li><span><i className="fa fa-envelope-o"></i> Mail :</span><a href="#" target="_blank">book@packmyload.com</a></li>
-								
-									<li><span><i className="fa fa-phone"></i> Phone :</span><a href="#">0700- PACK-PRO (0700-722-5776)</a></li>
-								</ul>
-							</div>
-						</div>
-					</Col>
-					<Col span={20} md={8}>
-						<div className="footer-widget fl-wrap">
-							<h3>Our Services</h3>
-
-							<div className="col-md-6">
-								<div className="widget-posts fl-wrap">
-									<ul>
-										<li className="clearfix">
-											<div className="widget-posts-descr">
-												<a href="/home-moves" title="">Home Moves</a>
-
-											</div>
-										</li>
-										<li className="clearfix">
-
-											<div className="widget-posts-descr">
-												<a href="/office-moves" title="office Relocations">
-													Office Relocation</a>
-
-											</div>
-										</li>
-										<li className="clearfix">
-
-											<div className="widget-posts-descr">
-												<a href="/student-moves" title="Student Moves">Student
-													Moves</a>
-
-											</div>
-										</li>
-										<li className="clearfix">
-
-											<div className="widget-posts-descr">
-												<a href="/cleaning" title="Cleaning">Cleaning Services</a>
-
-											</div>
-										</li>
-										<li className="clearfix">
-
-											<div className="widget-posts-descr">
-												<a href="/wedding-handling" title="">Wedding Gift
-													Handling</a>
-
-											</div>
-										</li>
+				<Row className='w-full h-max' justify={'space-between'} align={'middle'} gutter={[10,50]}>
+						<Col span={20} lg={6} className='md:h-[350px] mb-0 lg:mb-6'>
+							<div className="space-y-8 text-gray-400">
+								<h3 className='text-xl font-[600]'>About Us</h3>
+								<div className="space-y-6 pt-8 border-t-2 border-t-gray-950">
+									<p className='text-white'>We are a professional moving company, powered by
+										technology and created to move more than just your belongings.
+										We'll move you with our hardwork and genuine smiles.</p>
+									<ul className="footer-contacts fl-wrap text-gray-500 space-y-2">
+											<li className='w-full flex no-wrap items-center'><span className='flex items-center gap-1 mr-2'><EnvelopeSimple color="#4bcbfe"/> Mail:</span><a className='text-gray-400 hover:text-gray-950' href="#" target="_blank">book@packmyload.com</a></li>
+									
+										<li className='w-full flex no-wrap items-center'><span className='flex items-center gap-1 mr-2'><Phone size={16} color='#4bcbfe' weight="fill" /> Phone:</span><a className='text-gray-400 hover:text-gray-950' href="#">0700- PACK-PRO (0700-722-5776)</a></li>
 									</ul>
 								</div>
 							</div>
-
-							<div className="col-md-6">
-								<div className="widget-posts fl-wrap">
-									<ul>
-										<li className="clearfix">
-											<div className="widget-posts-descr">
-												<a href="/home-moves" title="">Small Moves</a>
-
-											</div>
-										</li>
-										<li className="clearfix">
-
-											<div className="widget-posts-descr">
-												<a href="/Junk-moves" title=""> Junk Removal</a>
-
-											</div>
-										</li>
-										<li className="clearfix">
-
-											<div className="widget-posts-descr">
-												<a href="/storage" title="">Storage</a>
-
-											</div>
-										</li>
-
-									</ul>
-								</div>
+						</Col>
+						<Col span={20} lg={8} className='lg:h-[350px] min-h-max md:min-h-0 mb-6'>
+							<div className="flex text-gray-400 space-y-8 flex-col h-full w-full">
+								<h3 className='text-xl font-[600]'>Our Services</h3>
+									<Row className='w-full pt-8 mb-2 border-t-2 h-full border-t-gray-950'justify={'space-evenly'}  gutter={[10,10]}>
+										<Col span={24} lg={10}>
+												<ul className='space-y-4 h-full'>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/home-moves" title="">Home Moves</a>
+													</li>
+													<li className="clearfix">
+														<a className='text-gray-400' href="/home-moves" title="">Office Relocation</a>
+													</li>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/student-moves" title="Student Moves">Student
+																Moves</a>
+													</li>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/cleaning" title="Cleaning">Cleaning Services</a>
+													</li>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/wedding-handling" title="">Wedding Gift
+																Handling</a>
+													</li>
+												</ul>
+										</Col>
+										<Col span={24} lg={10}>
+												<ul className='space-y-4 h-full md:mt-0 mt-2'>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/home-moves" title="">Small Moves</a>
+													</li>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/Junk-moves" title=""> Junk Removal</a>
+													</li>
+													<li className="clearfix">
+															<a className='text-gray-400' href="/storage" title="">Storage</a>
+													</li>
+												</ul>
+										</Col>
+								</Row>
 							</div>
-
-						</div>
-					</Col>
-					<Col span={20} md={6}>
-					<div className="footer-widget fl-wrap">
-                                <h3>Subscribe</h3>
-                                <div className="subscribe-widget fl-wrap">
-                                    <p>Want to be notified when we have Moving tip or offers. Just sign up and we'll send you a notification by email.</p>
-                                    <div className="subcribe-form">
-                                        <form id="subscribe">
-                                            <input className="enteremail" name="EMAIL" id="subscribe-email" placeholder="Email" type="email" required/>
-                                            <button type="submit"  id="subscribe-button" className="subscribe-button"><i className="fa fa-rss"></i> Subscribe</button>
-										</form>
-										{/* <button disabled="disabled" id="subscribe-button" className="subscribebutton2" style="display: none;"><span><i className="fa fa-spinner load-animate"></i></span></button>
-										
-                                         <div id="progressnotif" style="margin-top: 30px; display: none;" className="notification success fl-wrap">
-                                                <p id="signupalert"></p>
-                                            </div> */}
-                                    </div>
-                                </div>
-                                
-                            </div>
-						<div className="footer-menu fl-wrap">
-
-							
-							<div className="footer-menu fl-wrap">
-								<ul>
-									<li><a href="/Faqs">FAQs </a></li>
-									<li><a href="https://www.blog.packmyload.com">Blog</a></li>
-									<li><a href="/partner">Partner</a></li>
-									<li><a href="/become_a_packer">Become a Packer</a></li>
-								</ul>
+						</Col>
+						<Col span={20} lg={8} className='md:h-[350px] mb-6'>
+								<div className="space-y-8 text-gray-400" text-gray-500>
+										<h3 className='text-xl font-[600]'>Subscribe</h3>
+									<div className='space-y-8 pt-8 border-t-2 border-t-gray-950'>
+											<p>Want to be notified when we have Moving tip or offers. Just sign up and we'll send you a notification by email.</p>
+											<form className='flex flex-col gap-6'>
+													<input className="w-full p-2 h-10 rounded-lg outline-none"
+														name="EMAIL"
+														placeholder="Enter your Email"
+														type="email"
+														required
+													/>
+													<button type="submit" className="w-full p-2 h-10 bg-blue-100 text-white hover:bg-blue-600 rounded-lg">
+														Subscribe
+													</button>
+											</form>
+											<ul className='text-white uppercase inline-flex gap-5 hover:text-gray-950'>
+													<li><a href="/Faqs">FAQs </a></li>
+													<li><a href="">Blog</a></li>
+													<li><a href="/partner">Partner</a></li>
+													<li><a href="/become_a_packer">Become a Packer</a></li>
+											</ul>
+									</div>
 							</div>
-						</div>
-				</Col>
+						</Col>
 					</Row>
 			</div>
-			<div className="sub-footer fl-wrap">
-				<div className="container">
-					<Row className='w-full' justify={'space-between'} align={'middle'}>
-						<div className="col-md-4">
-							<div className="about-widget">
-                <Image src="/images/iconpackmyload1.png" style={{ width:"30px" }} alt="image" width={30} height={30}/>
+				<div className="bg-slate-800 py-6 ">
+					<Row className='w-full mt-6 container' justify={'space-between'} align={'middle'}>
+						<div className="mb-2 md:mb-0 w-[60%] ">
+							<div className="flex md:flex-row flex-col justify-between gap-4 items-center">
+								<Image
+									src="/images/iconpackmyload1.png"
+									style={{ width: "30px" }}
+									alt="image"
+									width={30}
+									height={30}
+								/>
+								<div className="copyright text-gray-400">
+									© Total Moves &amp; Company LTD
+									{' '}{new Date().getFullYear()}. All rights reserved.
+								</div>
 							</div>
 						</div>
-						<div className="col-md-4">
-							<div className="copyright">© Total Moves &amp; Company LTD
-								{' '}{new Date().getFullYear()}. All rights reserved.</div>
-						</div>
-						<div className="col-md-4">
-							<div className="footer-social">
-								<ul>
-									<li><a href="https://facebook.com/packmyload" target="_blank"></a></li>
-									<li><a href="https://twitter.com/packmyload" target="_blank"></a></li>
-									<li><a href="https://instagram.com/packmyload" target="_blank"></a></li>
-									<li><a href="https://www.linkedin.com/company/packmyload-com/about/" target="_blank"></a></li>
-									<li><a href="https://www.pinterest.com/Packmyload/" target="_blank"></a></li>
-									<li><a href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ" target="_blank"></a></li>
+						<Col span={20} md={8}>
+								<ul className='flex gap-4 w-full justify-start md:justify-end'>
+									<li>
+										<a href="https://facebook.com/packmyload" target="_blank">
+												<FacebookLogo weight='fill' color='#4bcbfe' size={20} />
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/packmyload" target="_blank">
+												<TwitterLogo weight='fill' color='#4bcbfe' size={20}/>
+										</a>
+									</li>
+									<li>
+										<a href="https://instagram.com/packmyload" target="_blank">
+											<InstagramLogo weight='fill' color='#4bcbfe' size={20}/>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/company/packmyload-com/about/" target="_blank">
+											<LinkedinLogo weight='fill' color='#4bcbfe' size={20}/>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.pinterest.com/Packmyload/" target="_blank">
+											<PinterestLogo weight='fill' color='#4bcbfe' size={20}/>
+										</a>
+								</li>
+									<li>
+										<a href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ" target="_blank">
+												<YoutubeLogo weight='fill' color='#4bcbfe' size={20}/>
+										</a>
+								</li>
 								</ul>
-							</div>
-						</div>
+						</Col>
 					</Row>
 				</div>
-			</div>
 		</footer>
   )
 }

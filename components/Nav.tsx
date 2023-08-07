@@ -6,7 +6,6 @@ import {Phone} from '@phosphor-icons/react'
 import MobileNav from './navBar/mobileNav';
 import TabletsNav from './navBar/tabletsNav';
 import Services from './navBar/Service';
-import Partners from './navBar/Partner'
 
 function Nav() {
   return (
@@ -23,12 +22,14 @@ function Nav() {
     
     {/* Desktop Navigation  */}
     <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-1/2">
-      <div className='text-gray-500 w-full gap-10 flex justify-evenly items-center'>
-        <Services/>
+        <div className='text-gray-500 w-full gap-10 flex justify-evenly items-center'>
+        <Link href='/services' className=' w-16 text-gray-500 cursor-pointer'>
+          Services
+        </Link>
         <Link href='/gallery' className=' w-16 text-gray-500 cursor-pointer'>
           Gallery
         </Link>
-        <Partners/>
+        <Services/>
         <a href="tel:+2347007225776" className='text-gray-500 flex-between w-16 cursor-pointer'>
         <Phone size={16} color='#667280' weight="fill" />
           call us
