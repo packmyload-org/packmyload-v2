@@ -29,8 +29,8 @@ export default function Section3() {
          </a>
        </div>
        </Col>
-        <Col span={24} lg={8} className='min-h-[200px] flex flex-col justify-center items-center section-title'>
-        <div className='h-max mt-[20%]'>
+        <Col span={24} lg={8} className='min-h-[200px]  justify-center items-center section-title '>
+        <div className='h-max mt-[20%] gap-4 flex flex-col'>
           <h2 className="w-[70%] font-bold text-4xl text-center font-satoshi">Strong PackMen</h2>
           <span className="section-separator"></span>
           <p className='w-[70%] text-center text-sm mx-auto '>Every Pack comes with strong professional packmen who are vetted for a 5-star experience. They will do the impossible to load, haul and deliver your items safely.</p>
