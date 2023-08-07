@@ -34,6 +34,11 @@ footer.main-footer {
   padding: 90px 0 0;
 }
 
+.clearfix{
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ffffff36;
+}
+
 .dark-footer {
   background: #2C3B5A;
 }
