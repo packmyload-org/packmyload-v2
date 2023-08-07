@@ -11,7 +11,7 @@ export default function HeroSection() {
 									a new house or business address, we are here to help you with
 									managing the stress.</p>
           <div className="sm:w-full sm:mt-10 ">
-            <form action="" className='border-[#9d9d9d] bg-[#9d9d9d] border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[70%] flex space-y-4 sm:space-y-0 flex-col md:flex-row'>
+            <form action="" className='border-[#9d9d9d] bg-[#9d9d9d] border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[70%] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-5/12 justify-between border-r-2'>
               <input type="text" name="" placeholder='Pickup Address' autoComplete='off' required className='p-2 h-10 focus:outline-0 text-gray-500 ' />
               <Image src="/images/ic_pickup.svg" 
