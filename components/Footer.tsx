@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <footer className='w-full bg-blue-800 dark-footer main-footer'>
 			<div className="container">
-				<Row className='w-full h-max' justify={'space-between'} align={'middle'}>
-						<Col span={20} lg={6} className='md:h-[350px] mb-6'>
+				<Row className='w-full h-max' justify={'space-between'} align={'middle'} gutter={[10,50]}>
+						<Col span={20} lg={6} className='md:h-[350px] mb-0 lg:mb-6'>
 							<div className="space-y-8 text-gray-400">
 								<h3 className='text-xl font-[600]'>About Us</h3>
 								<div className="space-y-6 pt-8 border-t-2 border-t-gray-950">
@@ -23,10 +23,10 @@ export default function Footer() {
 								</div>
 							</div>
 						</Col>
-						<Col span={20} lg={8} className='md:h-[350px] mb-6'>
+						<Col span={20} lg={8} className='lg:h-[350px] min-h-max md:min-h-0 mb-6'>
 							<div className="flex text-gray-400 space-y-8 flex-col h-full w-full">
 								<h3 className='text-xl font-[600]'>Our Services</h3>
-									<Row className='w-full pt-8 border-t-2 h-full border-t-gray-950'justify={'space-evenly'}>
+									<Row className='w-full pt-8 mb-2 border-t-2 h-full border-t-gray-950'justify={'space-evenly'}  gutter={[10,10]}>
 										<Col span={24} lg={10}>
 												<ul className='space-y-4 h-full'>
 													<li className="clearfix">

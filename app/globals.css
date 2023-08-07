@@ -161,8 +161,6 @@ a {
 .gradient {
   height: fit-content;
   z-index: 3;
-  width: 100%;
-  min-width: 640px;
   background-image: radial-gradient(
       at 27% 37%,
       hsla(215, 98%, 61%, 1) 0px,
