@@ -16,22 +16,37 @@ const sitems: Item[] = accordionOb.secondItems;
 export default function Faqs(){
     const [activeId,setActiveId] = useState(1);
 
+    const toggleAccordion = (itemId: number) => {
+        if(activeId === itemId) return true
+
+        return false
+    }
+
     const handleItemClick = (itemId: number) => {
-        setActiveId(itemId);
+        if(activeId === itemId) setActiveId(0)
+
+        else setActiveId(itemId);
+
+        toggleAccordion(itemId)
+
     };
 
     const firstItems = fitems.map((acc) => (
         <div key={acc.id} onClick={() => handleItemClick(acc.id)} className= "w-full"
         >
-            <Accordion title = {acc.title} content={acc.content} buttonClassName = {`${
-            activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} showContent = {`${activeId !== acc.id ? 'hidden' : null}`} />
+            <Accordion 
+                title = {acc.title} content={acc.content} buttonClassName = {`${
+                activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} isActive = {toggleAccordion(acc.id)}
+            />
         </div>
     ))
     const secondItems = sitems.map((acc) => (
         <div key={acc.id} onClick={() => handleItemClick(acc.id)} className= "w-full"
         >
-            <Accordion title = {acc.title} content={acc.content} buttonClassName = {`${
-            activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} showContent = {`${activeId !== acc.id ? 'hidden' : null}`}/>
+            <Accordion 
+                title = {acc.title} content={acc.content} buttonClassName = {`${
+                activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} isActive = {toggleAccordion(acc.id)} 
+            />
         </div>
     ))
     return(
