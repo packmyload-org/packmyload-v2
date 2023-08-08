@@ -1,5 +1,5 @@
 // components/Accordion.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { CaretUp, CaretDown } from "@phosphor-icons/react";
 
 interface AccordionProps {
