@@ -7,24 +7,19 @@ interface AccordionProps {
   content: string | React.ReactNode;
   buttonClassName?: string;
   showContent?: string;
+  isActive?: boolean;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ title, content, buttonClassName, showContent }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
+const Accordion: React.FC<AccordionProps> = ({ title, content, buttonClassName, showContent, isActive }) => {
 
   let arrowButton = <CaretDown size={20}/>
 
-  if(!!isOpen) arrowButton = <CaretUp size={20}/>
+  if(!!isActive) arrowButton = <CaretUp size={20}/>
 
   return (
     <div className="border rounded-md w-full mt-5">
         <button
             className={`w-full text-left p-4 focus:outline-none flex justify-between ${buttonClassName}`}
-            onClick={toggleAccordion}
         >
             {title}
             <span className='bg-slate-1000'>
