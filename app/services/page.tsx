@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import servicesArr from '../../components/services/services.json'
-
+import Faq from '@/components/landing/Faq';
 export default function Service() {
 
   const servicesItems = servicesArr.map((item,index) => (
@@ -48,6 +48,7 @@ export default function Service() {
           </div>
         </div>
       </div>
+      <Faq />
     </section>
   );
 }
