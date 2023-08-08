@@ -21,15 +21,15 @@ export default function RootLayout({
       <title>Packmyload</title>
 
       <body className='font-satoshi'>
-      <LoadingProvider>     
         <div className='w-full'>
-            <main className='w-full overflow-y-hidden'>
+          <main className='w-full overflow-y-hidden'>
+            <LoadingProvider>     
               <Nav/>
               {children}
               <Footer/>
-            </main>
+            </LoadingProvider>
+          </main>
         </div>
-      </LoadingProvider>
         </body>
     </html>
   )

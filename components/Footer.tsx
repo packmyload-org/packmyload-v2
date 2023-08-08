@@ -8,14 +8,14 @@ export default function Footer() {
     <footer className='w-full bg-blue-800 dark-footer main-footer'>
 			<div className="container">
 				<Row className='w-full h-max' justify={'space-between'} align={'middle'} gutter={[10,50]}>
-						<Col span={20} lg={6} className='md:h-[350px] mb-0 lg:mb-6'>
+						<Col span={24} lg={6} className='md:h-[350px] mb-0 lg:mb-6'>
 							<div className="space-y-8 text-gray-400">
 								<h3 className='text-xl font-[600]'>About Us</h3>
 								<div className="space-y-6 pt-8 border-t-2 border-t-gray-950">
 									<p className='text-white'>We are a professional moving company, powered by
 										technology and created to move more than just your belongings.
 										We'll move you with our hardwork and genuine smiles.</p>
-									<ul className="footer-contacts fl-wrap text-gray-500 space-y-2">
+									<ul className="footer-contacts fl-wrap space-y-2">
 											<li className='w-full flex no-wrap items-center'><span className='flex items-center gap-1 mr-2'><EnvelopeSimple color="#4bcbfe"/> Mail:</span><a className='text-gray-400 hover:text-gray-950' href="#" target="_blank">book@packmyload.com</a></li>
 									
 										<li className='w-full flex no-wrap items-center'><span className='flex items-center gap-1 mr-2'><Phone size={16} color='#4bcbfe' weight="fill" /> Phone:</span><a className='text-gray-400 hover:text-gray-950' href="#">0700- PACK-PRO (0700-722-5776)</a></li>
@@ -23,7 +23,7 @@ export default function Footer() {
 								</div>
 							</div>
 						</Col>
-						<Col span={20} lg={8} className='lg:h-[350px] min-h-max md:min-h-0 mb-6'>
+						<Col span={24} lg={8} className='lg:h-[350px] min-h-max md:min-h-0 mb-6'>
 							<div className="flex text-gray-400 space-y-8 flex-col h-full w-full">
 								<h3 className='text-xl font-[600]'>Our Services</h3>
 									<Row className='w-full pt-8 mb-2 border-t-2 h-full border-t-gray-950'justify={'space-evenly'}  gutter={[10,10]}>
@@ -64,7 +64,7 @@ export default function Footer() {
 								</Row>
 							</div>
 						</Col>
-						<Col span={20} lg={8} className='md:h-[350px] mb-6'>
+						<Col span={24} lg={8} className='md:h-[350px] mb-6'>
 								<div className="space-y-8 text-gray-400" text-gray-500>
 										<h3 className='text-xl font-[600]'>Subscribe</h3>
 									<div className='space-y-8 pt-8 border-t-2 border-t-gray-950'>
@@ -94,7 +94,7 @@ export default function Footer() {
 				<div className="bg-slate-800 py-6 ">
 					<Row className='w-full mt-6 container' justify={'space-between'} align={'middle'}>
 						<div className="mb-2 md:mb-0 w-[60%] ">
-							<div className="flex md:flex-row flex-col justify-between gap-4 items-center">
+							<div className="flex md:flex-row flex-col justify-between gap-4 items-start md:items-center">
 								<Image
 									src="/images/iconpackmyload1.png"
 									style={{ width: "30px" }}
@@ -108,7 +108,7 @@ export default function Footer() {
 								</div>
 							</div>
 						</div>
-						<Col span={20} md={8}>
+						<Col span={24} md={8}>
 								<ul className='flex gap-4 w-full justify-start md:justify-end'>
 									<li>
 										<a href="https://facebook.com/packmyload" target="_blank">
