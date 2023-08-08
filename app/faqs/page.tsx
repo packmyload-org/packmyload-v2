@@ -36,7 +36,7 @@ export default function Faqs(){
         >
             <Accordion 
                 title = {acc.title} content={acc.content} buttonClassName = {`${
-                activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} showContent = {`${activeId !== acc.id ? 'hidden' : null}`} isActive = {toggleAccordion(acc.id)}
+                activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} isActive = {toggleAccordion(acc.id)}
             />
         </div>
     ))
@@ -45,7 +45,7 @@ export default function Faqs(){
         >
             <Accordion 
                 title = {acc.title} content={acc.content} buttonClassName = {`${
-                activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} showContent = {`${activeId !== acc.id ? 'hidden' : null}`} isActive = {toggleAccordion(acc.id)} 
+                activeId === acc.id ? 'bg-sky-400 text-white' : 'bg-white'}`} isActive = {toggleAccordion(acc.id)} 
             />
         </div>
     ))
