@@ -2,7 +2,7 @@ import Image from 'next/image';
 export default function HeroSection() {
   return (
     <section className='w-full h-max pb-4 md:pb-0 md:h-[85dvh] relative flex flex-col justify-center'>
-     <div className='gradient h-full w-full z-0 absolute'/>
+     <div className='gradient h-full w-full z-0 absolute' />
 
       <div className='my-auto section-title h-1/2 w-full z-10 '>
         <main className='container flex flex-col items-center text-center space-y-8'>
