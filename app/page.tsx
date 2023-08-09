@@ -8,7 +8,7 @@ import Faq from '@/components/landing/Faq'
 function Home() {
   
   return(
-    <div className='sm:mt-[5%] mt-[13%] w-full text-black'>
+    <div className='sm:mt-[5%] mt-[13%] w-full text-black' style={{marginTop: '130px'}}>
       <HeroSection/>
       <ServiceSection/>
       <Section3/>

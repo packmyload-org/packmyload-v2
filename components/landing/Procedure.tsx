@@ -20,7 +20,7 @@ export default function Procedure() {
 						<Image src="/images/packmyload-truck-on-road.png" alt='res pix' width={200} height={100}className='w-full object-contain'/>
 					</Row>
 				
-					<Row  className='w-full' justify={'center'} gutter={[0,10]}>
+					<Row  className='w-full text-center' justify={'center'} gutter={[0,10]}>
 						<Col span={24} md={12}>
 							<h3 id="about-font2" className='text-[#42556B]'>Sit back and relax</h3>
 							<p id="about-font2" className='text-[#7d93b2]'>We've got you covered. Our packers will arrive, handle, 
@@ -37,7 +37,7 @@ export default function Procedure() {
 						<Image src="/images/packmyload-truck-on-road2.png" alt='responsivePix' width={339} height={192} className='w-full object-contain'/>
 					</Row>
 				
-					<Row  className='w-full' justify={'center'} gutter={[0,10]}>
+					<Row  className='w-full text-center' justify={'center'} gutter={[0,10]}>
 						<Col span={24} md={12}>
 							<Image alt="responsivePix" src="/images/packmyload-rate-and-review.png" width={339} height={192} className='w-full object-cover' unoptimized/>
 						</Col>
