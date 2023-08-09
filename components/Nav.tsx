@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '@/public/images/logo.png'
@@ -6,9 +7,17 @@ import {Phone} from '@phosphor-icons/react'
 import MobileNav from './navBar/mobileNav';
 import TabletsNav from './navBar/tabletsNav';
 import Services from './navBar/Service';
-
+import { useLoading } from '@/context/LoadingContext'
+import Loading from '@/app/loading'
 function Nav() {
+  const { isLoading, setIsLoading } = useLoading()
+  useEffect(() => {
+    setIsLoading(false)
+  },[])
   return (
+    <>
+    {!isLoading ? (
+
     <nav className="flex-between w-full px-10 py-3 bg-white border-b-2 border-[#9d9d9d] fixed top-0 z-30">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     <Image 
@@ -46,7 +55,13 @@ function Nav() {
       <TabletsNav/>
         {/* Mobile Nav  */}
       <MobileNav/>
-   </nav>
+    </nav>
+        ) : (
+        // Render a loading spinner or skeleton components
+        <Loading/>
+  )
+}
+        </>
   )
 }
 

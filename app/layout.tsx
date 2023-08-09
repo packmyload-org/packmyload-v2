@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className='font-satoshi'>
         <div className='w-full'>
           <main className='w-full overflow-y-hidden'>
-            <LoadingProvider>     
+              <LoadingProvider>     
               <Nav/>
               {children}
               <Footer/>
