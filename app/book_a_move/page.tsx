@@ -1,6 +1,7 @@
 'use client'
 import { Col, Dropdown, MenuProps, Space } from 'antd';
 import { ArrowLeft,  ListNumbers } from "@phosphor-icons/react";
+import { useRouter } from 'next/navigation';
 const items: MenuProps['items'] = [
   {
     key: '1',
@@ -20,7 +21,7 @@ const items: MenuProps['items'] = [
   }
 ];
 export default function Booking() {
-  
+  const router = useRouter()
  return (
   <Col span={24} className="h-screen bg-blue-900 pt-[81px] md:pt-[90px] pb-2 px-[5%]">
     <div className="flex flex-row flex-wrap-reverse h-full w-full rounded-xl border bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-0 lg:p-6 input_shadow lg:gap-10 justify-evenly overflow-y-scroll lg:overflow-y-hidden">
@@ -44,7 +45,7 @@ export default function Booking() {
         </div>
 
          {/* Form  */}
-        <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center ">
+         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/steps?step=0') }}>
           <div className="w-[90%] mx-auto flex flex-col items-start">
             <Dropdown menu={{items}} className='border border-gray-500 p-3 w-full rounded-md'>
               <a onClick={(e) => e.preventDefault()} className='text-white cursor-pointer'>
@@ -60,17 +61,17 @@ export default function Booking() {
               type="text"
               id='MovingFrom'
               placeholder="Destination From"
-              className="w-full h-10 p-4 text-white rounded-md outline-none"
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
             />
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-white font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
+            <label className="text-md text-gray-500 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
             <input
               type="text"
               id='MovingTo'
               placeholder="Destination To"
-              className="w-full h-10 p-4 text-white rounded-md outline-none"
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
             />
           </div>
