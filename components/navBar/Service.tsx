@@ -24,13 +24,13 @@ const items: MenuProps['items'] = [
 function Services() {
   return (
     <div>
-         <Dropdown menu={{ items }} className='flex w-16'>
-    <a onClick={(e) => e.preventDefault()} className='text-gray-500 cursor-pointer'>
-      <Space className='flex items-center'>
-        Partners
-        <CaretDown size={16} color="#667280" weight="fill" />
-      </Space>
-    </a>
+        <Dropdown menu={{ items }} className='flex w-16'>
+          <a onClick={(e) => e.preventDefault()} className='text-gray-500 cursor-pointer'>
+            <Space className='flex items-center'>
+              Partners
+              <CaretDown size={16} color="#667280" weight="fill" />
+            </Space>
+          </a>
         </Dropdown>
     </div>
   )

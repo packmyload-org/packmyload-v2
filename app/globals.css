@@ -180,7 +180,26 @@ a {
   top: 80px;
   opacity: 0.15;
 }
+body {
+  scrollbar-width: thin; /* thin, auto, or none */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2E5F9E;
+  border-radius: 5px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2a272700;
+}
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;
