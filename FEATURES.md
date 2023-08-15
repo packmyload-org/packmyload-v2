@@ -10,7 +10,7 @@ E.T.C
 
       - BUSINESS: type of business, required man power, boxes, appliances, set-up video call meet, vehicle type
       
-    - SMALL MOVES & FURNITURE DELIVERY
+    - SMALL MOVES & FURNITURE DELIVERY 
 
 ### HELP ME PACK
 
@@ -23,7 +23,7 @@ E.T.C
     - HOME: number of rooms , assembling and disassembling, set-up video call meet, vehicle type
     - BUSINESS: size of organization, assembling and disassembling, 
 
-# ROLL OUT THESE FEATURES ON V2
+<!-- # ROLL OUT THESE FEATURES ON V2
 
 ### REARRANGE MY SPACE
 
@@ -32,4 +32,4 @@ E.T.C
 ### I NEED SUPPLIES
 
 ### ADMIN INTERFACE
-
+ -->

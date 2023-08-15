@@ -4,6 +4,7 @@ import './globals.css'
 import Footer from '@/components/Footer'
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import { LoadingProvider } from '@/context/LoadingContext';
+import { App } from 'antd';
 export default function RootLayout({
   children,
 }: {
@@ -26,9 +27,11 @@ export default function RootLayout({
           <main className='w-full overflow-y-hidden'>
             <LoadingProvider>
               <StyledComponentsRegistry>
-                <Nav/>
-                {children}
-                <Footer/>
+                <App>
+                  <Nav/>
+                    {children}
+                  <Footer/>
+                </App>
               </StyledComponentsRegistry>
             </LoadingProvider>
           </main>
