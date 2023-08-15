@@ -45,7 +45,7 @@ export default function Booking() {
         </div>
 
          {/* Form  */}
-         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/steps?step=0') }}>
+         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/steps') }}>
           <div className="w-[90%] mx-auto flex flex-col items-start">
             <Dropdown menu={{items}} className='border border-gray-500 p-3 w-full rounded-md'>
               <a onClick={(e) => e.preventDefault()} className='text-white cursor-pointer'>

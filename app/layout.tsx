@@ -2,6 +2,7 @@
 import Nav from '@/components/Nav'
 import './globals.css'
 import Footer from '@/components/Footer'
+import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import { LoadingProvider } from '@/context/LoadingContext';
 export default function RootLayout({
   children,
@@ -23,10 +24,12 @@ export default function RootLayout({
       <body className='font-satoshi'>
         <div className='w-full'>
           <main className='w-full overflow-y-hidden'>
-              <LoadingProvider>     
-              <Nav/>
-              {children}
-              <Footer/>
+            <LoadingProvider>
+              <StyledComponentsRegistry>
+                <Nav/>
+                {children}
+                <Footer/>
+              </StyledComponentsRegistry>
             </LoadingProvider>
           </main>
         </div>
