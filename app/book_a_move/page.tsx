@@ -1,106 +1,21 @@
 'use client'
+import Map from '@/components/Map';
+import BookingIndexForm from '@/components/book_a_move_comp/BookingIndexForm';
 import { Col } from 'antd';
-import { ArrowCircleLeft,  ListNumbers } from "@phosphor-icons/react";
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { serviceList, serviceFor, serviceType } from "@/utils/bookingService";
-export default function Booking() {
-  const router = useRouter()
-  const [displayType, setDisplayType] = useState(false)
- return (
-  <Col span={24} className="min-h-screen bg-blue-900 pt-[81px] md:pt-[94px] pb-3 px-[5%]">
-    <div className="flex flex-row flex-wrap-reverse h-full w-full rounded-xl border bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-0 lg:p-6 input_shadow lg:gap-10 justify-evenly overflow-y-scroll lg:overflow-y-hidden">
-         {/* Map Section */}
-      <div className="flex flex-col h-[300px] lg:h-full bg-cover bg-no-repeat rounded-b-lg lg:rounded-xl w-full lg:w-[45%] bg-[url('https://storage.prompt-hunt.workers.dev/cc21c6f2-9f26-4b1e-8ede-04597b9bba15')]"></div>
-         {/* Form  Section*/}
-      <div className="w-full rounded-t-lg lg:rounded-xl lg:w-[45%] h-max  section_title p-6 space-y-6">
-         {/* Form Header  */}
-        <div className="w-full md:w-[80%] mx-auto space-y-3">
-            <div className="flex flex-nowrap w-full justify-between ">
-                  <ArrowCircleLeft size={24} className='text-white' />
-                <div className="flex w-[70%] justify-between">
-                <h2 className="text-lg text-white font-satoshi font-semibold"> Price ${0.32}</h2>
-                <div className="hidden relative w-10 h-[30px] flex-col items-center justify-end ">
-                    <p className="absolute top-0 right-0 text-sm text-white font-bold">0</p>
-                    <ListNumbers size={24} className='text-white'/>
-                </div>
-                </div>
-            </div>
-            <h2 className="w-full text-2xl text-white font-bold font-mono text-center">Let's Get Started </h2>
-        </div>
 
-         {/* Form  */}
-         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/steps') }}>
-          <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='MovingFrom'
-              placeholder="Destination From"
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-            />
-          </div>
-          <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-white font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='MovingTo'
-              placeholder="Destination To"
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-            />
-          </div>
-          <div className="w-[90%] mx-auto flex flex-col items-start">
-             <select className='border bg-inherit text-white border-white p-3 w-full px-0 rounded-md outline-none' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-            e.target.value === serviceList[0].label ? setDisplayType(true) : setDisplayType(false)
-            }}>
-          
-                <option hidden>
-                  Select Service 
-               </option>
-               {serviceList.map(item => <option
-                 value={item.label}
-                 key={item.key}
-               >
-                 {item.label}
-               </option>)
-               }
-            </select>
-          </div>
-           {displayType && (
-            <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-              <select name="category" id="" className='w-full p-3 px-0 border border-white text-white rounded-md bg-inherit outline-none'>
-                 <option value="" hidden>Service Type</option>
-                 {serviceType.map(item => <option
-                   value={item.label}
-                   key={item.key}
-                 >
-                   {item.label}
-                 </option>)}
-              </select>
+export default function Booking() {
+
+ return (
+  <>
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-10">
+            {/* Your items go here */}
+            <div className="p-5">
+              <Map/>
             </div>
-          )}
-          <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <select name="category" id="" className='w-full p-3 px-0 border border-white text-white rounded-md bg-inherit outline-none'>
-               <option value="" hidden>Service For</option>
-               {serviceFor.map(item => <option
-                   value={item.label}
-                   key={item.key}
-                 >
-                   {item.label}
-                 </option>)}
-            </select>
-          </div>
-            <button
-             type='submit'
-             className='bg-blue-600 w-[40%] font-bold text-md text-gray-600 hover:text-gray-100 hover:bg-blue-300 p-2 rounded-lg'
-            >
-              Proceed
-          </button>
-        </form>
-    </div>
-    </div>
-  </Col>
+            <div className="p-5">
+              <BookingIndexForm/>
+            </div>
+        </div>
+  </>
  )
 }
