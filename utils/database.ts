@@ -1,22 +1,23 @@
-import mongoose from "mongoose";
+import mongoose, { ConnectOptions } from 'mongoose';
 
 let isConnected = false;
-
 export async function connectToDB() {
-  mongoose.set("strictQuery", true);
+  mongoose.set('strictQuery', true);
   if (isConnected) {
-    console.log("DB is already connected");
+    console.log('DB is already connected');
     return;
   }
-  let URI = process.env.MONGO_URI || ''
+  let URI = process.env.MONGO_URI || '';
   try {
-    await mongoose.connect(URI, {
-      dbName: "packmyload",
-    });
+    const options: ConnectOptions = {
+      dbName:"packmyload"
+    };
+
+    await mongoose.connect(URI, options);
 
     isConnected = true;
-    console.log("DB connected");
+    console.log('DB connected');
   } catch (error) {
-    console.log(error);
+    console.error('Error connecting to the database:', error);
   }
 }

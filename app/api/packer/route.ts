@@ -2,23 +2,21 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import Packer from '@/models/packer';
 import { connectToDB } from '@/utils/database';
 
-export default async function POST(request: NextApiRequest, response: NextApiResponse) {
-  try {
-    const { fullName, mobileNumber, location, dateOfBirth } = request.body;
-
-    await connectToDB();
-
+export async function POST(request: Request) {
+ await connectToDB();
+ try {
+  const body = await request.json();
+  const {fullName,mobileNumber,location,dob} = body
     const packer = new Packer({
       fullName,
       mobileNumber,
       location,
-      dateOfBirth,
+      dob,
     });
-
     await packer.save();
 
-    return response.status(201).json(packer);
+    return new Response(JSON.stringify(packer),{status:201})
   } catch (error) {
-    return response.status(500).send('Failed to create a packer');
+    return new Response("failed",{status:500})
   }
 }
