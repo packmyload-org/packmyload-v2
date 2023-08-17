@@ -4,12 +4,15 @@ import './globals.css'
 import Footer from '@/components/Footer'
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import { LoadingProvider } from '@/context/LoadingContext';
+import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
+import { usePathname } from 'next/navigation';
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname()
   return (
     <html lang="en">
       <meta name="description" content="packmyload.com offers is one of the best packing and moving companies in Lagos, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move.
@@ -29,6 +32,9 @@ export default function RootLayout({
               <StyledComponentsRegistry>
                 <App>
                   <Nav/>
+                  {
+                    pathname.includes("book_a_move") ? <BookingProgress /> : null
+                  }
                     {children}
                   <Footer/>
                 </App>

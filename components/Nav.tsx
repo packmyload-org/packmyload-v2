@@ -8,9 +8,13 @@ import MobileNav from './navBar/mobileNav';
 import TabletsNav from './navBar/tabletsNav';
 import Services from './navBar/Service';
 import { useLoading } from '@/context/LoadingContext'
+import { usePathname } from 'next/navigation'
 import Loading from '@/app/loading'
 function Nav() {
   const { isLoading, setIsLoading } = useLoading()
+  
+  const pathname = usePathname()
+ 
   useEffect(() => {
     setIsLoading(false)
   },[])
@@ -42,13 +46,16 @@ function Nav() {
         <a href="tel:+2347007225776" className='text-gray-500 flex-between w-16 cursor-pointer'>
         <Phone size={16} color='#667280' weight="fill" />
           call us
-        </a>
-      <Link href='https://pack-my-load-booking.vercel.app/'  className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[8px] border-[#9d9d9d] border-[10px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold rounded-full text-xs'>
-        BOOK NOW 
-        <span className='font-extrabold text-lg max-h-5 text-center flex justify-center items-center'>
-        + 
-        </span>
-      </Link>
+        </a> 
+        {
+          !pathname.includes("book_a_move") ?
+          <Link href='https://pack-my-load-booking.vercel.app/'  className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[8px] border-[#9d9d9d] border-[10px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold rounded-full text-xs'>
+            BOOK NOW 
+            <span className='font-extrabold text-lg max-h-5 text-center flex justify-center items-center'>
+            + 
+            </span>
+          </Link> : null
+        }
       </div>
     </div>
         {/* Tablet  */}
