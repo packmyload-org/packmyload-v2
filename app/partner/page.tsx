@@ -1,4 +1,5 @@
 'use client'
+import Map, { AutoCompleteInput } from '@/components/Map';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 interface PartnerData {
     emailAddress: string,
@@ -17,7 +18,7 @@ function PartnerPage() {
     storeAddress: '',
     reason: '',
   });
-
+  const [loading,setLoading]= useState(false)
    
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -33,13 +34,15 @@ function PartnerPage() {
   }
     // Handle form submission and data storage
       console.log('Form data to be submitted:', data);
+      setLoading(!loading)
       const res = await fetch('api/partner', {
                 method: 'POST',
                 body: JSON.stringify(data)
       })
        if (res.ok) {
            alert('application successful')
-        }
+      }
+      setLoading(!loading)
   };
     return (
         <div className="flex justify-left min-h-screen bg-gray-100 mt-20">
@@ -100,7 +103,7 @@ function PartnerPage() {
                     </div>
                     <div className="mb-8">
                         <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="location">Store Address *</label>
-                        <input
+                        {/* <input
                             id="location"
                             name="storeAddress"
                             type="text"
@@ -108,7 +111,8 @@ function PartnerPage() {
                             placeholder="Destination, Area, Street"
                             required
                             onChange={handleInputChange}
-                        />
+                        /> */}
+                        <AutoCompleteInput/>
                     </div>
                     <div className="mb-8">
                         <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="others">Anything Else</label>
@@ -122,13 +126,16 @@ function PartnerPage() {
                     </div>
                     <button
                         type="submit"
-                        className="bg-blue-400 w-32 h-14 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-700"
+                        className="bg-blue-400 w-32 h-14 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-700 cursor-pointer"
+                        disabled={loading}
                     >
-                        Sign me up
+                        {loading ? "loading...": "Sign me up"}
                     </button>
                 </form>
             </div>
-            <div className="hidden lg:block absolute top-0 right-0 bottom-0 w-1/2 bg-[url('https://storage.prompt-hunt.workers.dev/cc21c6f2-9f26-4b1e-8ede-04597b9bba15')]"></div>
+            <div className="hidden lg:block absolute top-0 right-0 bottom-0 w-1/2">
+                <Map/>
+            </div>
         </div>
     );
 }

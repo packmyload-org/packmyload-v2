@@ -1,7 +1,6 @@
 'use client'
 import Map from '@/components/Map';
 import BookingIndexForm from '@/components/book_a_move_comp/BookingIndexForm';
-import { Col } from 'antd';
 
 export default function Booking() {
 
