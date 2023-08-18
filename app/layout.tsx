@@ -7,6 +7,7 @@ import { LoadingProvider } from '@/context/LoadingContext';
 import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
 import { usePathname } from 'next/navigation';
+import { InputContextProvider } from '@/context/InputContext';
 export default function RootLayout({
   children,
 }: {
@@ -29,16 +30,18 @@ export default function RootLayout({
         <div className='w-full'>
           <main className='w-full overflow-y-hidden'>
             <LoadingProvider>
-              <StyledComponentsRegistry>
-                <App>
-                  <Nav/>
-                  {
+              <InputContextProvider>
+                <StyledComponentsRegistry>
+                  <App>
+                    <Nav/>
+                    {
                     pathname.includes("book_a_move") ? <BookingProgress /> : null
-                  }
-                    {children}
-                  <Footer/>
-                </App>
-              </StyledComponentsRegistry>
+                    } 
+                      {children}
+                    <Footer/>
+                  </App>
+                </StyledComponentsRegistry>
+              </InputContextProvider>
             </LoadingProvider>
           </main>
         </div>

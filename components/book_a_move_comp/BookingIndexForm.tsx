@@ -24,7 +24,7 @@ export default function BookingIndexForm() {
         </div> */}
 
          {/* Form  */}
-         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/steps') }}>
+         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/') }}>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
             <input

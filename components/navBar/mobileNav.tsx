@@ -30,7 +30,7 @@ const items: MenuProps['items'] = [
  {
    key: '5',
     label: (
-      <Link href='https://pack-my-load-booking.vercel.app/'  className='flex justify-evenly items-center p-[8px] w-full  bg-blue-100 rounded-lg hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold text-xs'>
+      <Link href='/book_a_move'  className='flex justify-evenly items-center p-[8px] w-full  bg-blue-100 rounded-lg hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold text-xs'>
         BOOK NOW 
       </Link>
   ),

@@ -1,59 +1,56 @@
-import React from 'react'
-import { useJsApiLoader,GoogleMap,Marker, 
-  Autocomplete } from "@react-google-maps/api";
+import React, { useState, useEffect } from 'react';
+import { useJsApiLoader, GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
+import Loading from '@/app/loading';
+import { useInputContext } from '@/context/InputContext';
+import { calculateRoute } from '@/hooks/useDirections-hook';
+
 function Map() {
- const { isLoaded} = useJsApiLoader({
-  googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-  libraries:['places']
- })
- if (!isLoaded) {
-  return <>loading...</>
- }
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
+    libraries: ['places']
+  });
 
- let center = {lat: 48.8584, lng:2.2945 }
+  const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
+  const { locationValue } = useInputContext();
+  const [routeData, setRouteData] = useState<{ direction: google.maps.DirectionsResult | null, distance: string | undefined, duration: string | undefined } | null>(null);
 
- return (
-  <div className='w-full h-full'>
-   <GoogleMap
-    center={center}
-    zoom={15}
-    mapContainerStyle={{ width: '100%', height: '100%' }}
-    options={{
-     streetViewControl: false,
-     zoomControl: false,
-     mapTypeControl: false,
-     fullscreenControl: false,
-    }}
-   >
-    <Marker position={center}/>
-   </GoogleMap>
-   </div>
-  )
+  useEffect(() => {
+    async function fetchRouteData() {
+      const result = await calculateRoute();
+      if (result) {
+        setRouteData(result);
+        console.log(result)
+      }
+    }
+    fetchRouteData();
+  }, []);
+
+  if (!isLoaded) {
+    return (
+      <div className='w-full h-screen'>
+        <Loading />
+      </div>
+    );
+  }
+
+  return (
+    <div className='w-full h-full'>
+      <GoogleMap
+        center={locationValue || mapCenter}
+        zoom={15}
+        mapContainerStyle={{ width: '100%', height: '100%' }}
+        options={{
+          streetViewControl: false,
+          zoomControl: false,
+          mapTypeControl: false,
+          fullscreenControl: false,
+        }}
+      >
+        <Marker position={locationValue || mapCenter} />
+        {routeData?.direction &&<DirectionsRenderer directions={routeData.direction}/> }
+      </GoogleMap>
+    </div>
+  );
 }
 
-export default Map
-
-export const AutoCompleteInput = () => {
-  const { isLoaded} = useJsApiLoader({
-  googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-  libraries:['places']
- })
- if (!isLoaded) {
-  return <>loading...</>
- }
- return (
- <>
-  <Autocomplete>
-     <input
-         id="location"
-         name="storeAddress"
-         type="text"
-         className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-         placeholder="Destination, Area, Street"
-         required
-         // onChange={handleInputChange}
-               />
-  </Autocomplete>
- </>
- )
-}
+export default Map;

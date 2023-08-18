@@ -1,5 +1,7 @@
 'use client'
-import Map, { AutoCompleteInput } from '@/components/Map';
+import { AutoCompleteInput } from '@/components/AutoCompleteInput';
+import Map from '@/components/Map';
+import { useInputContext } from '@/context/InputContext';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 interface PartnerData {
     emailAddress: string,
@@ -19,7 +21,7 @@ function PartnerPage() {
     reason: '',
   });
   const [loading,setLoading]= useState(false)
-   
+   const {inputValue} = useInputContext()
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setData((prevData) => ({ ...prevData, [name]: value }));
@@ -27,8 +29,14 @@ function PartnerPage() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+      let obj = {
+          ...data
+      }
+      if (!data.storeAddress) {
+         obj['storeAddress'] = inputValue
+      }
        // Check if any required fields are empty
-  if (!data.storeName || !data.fullName || !data.emailAddress || !data.mobileNumber || !data.storeAddress) {
+  if (!data.storeName || !data.fullName || !data.emailAddress || !data.mobileNumber) {
     alert('Please fill out all required fields.');
     return;
   }
@@ -37,7 +45,7 @@ function PartnerPage() {
       setLoading(!loading)
       const res = await fetch('api/partner', {
                 method: 'POST',
-                body: JSON.stringify(data)
+                body: JSON.stringify(obj)
       })
        if (res.ok) {
            alert('application successful')
@@ -103,16 +111,13 @@ function PartnerPage() {
                     </div>
                     <div className="mb-8">
                         <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="location">Store Address *</label>
-                        {/* <input
-                            id="location"
-                            name="storeAddress"
-                            type="text"
-                            className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
+
+                        <AutoCompleteInput
+                            inputName='storeAddress'
+                            type='text'
+                            inputStyle="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
                             placeholder="Destination, Area, Street"
-                            required
-                            onChange={handleInputChange}
-                        /> */}
-                        <AutoCompleteInput/>
+                        />
                     </div>
                     <div className="mb-8">
                         <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="others">Anything Else</label>
