@@ -27,8 +27,8 @@ function Map() {
 
   if (!isLoaded) {
     return (
-      <div className='w-full h-screen'>
-        <Loading />
+      <div className='w-full'>
+        loading ...
       </div>
     );
   }
