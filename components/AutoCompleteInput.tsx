@@ -23,7 +23,7 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
   const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
 
   if (!isLoaded) {
-    return <Loading />;
+    return <>loading...</>
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +35,7 @@ const { handlePlaceChanged } = useInputPlaceContext(autocomplete, inputName);
 
 
   return (
-    <>
+   <>
       <Autocomplete onLoad={(auto) => setAutocomplete(auto)} onPlaceChanged={handlePlaceChanged}>
         <input
           name={inputName}

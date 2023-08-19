@@ -1,9 +1,14 @@
 'use client'
-import Nav from '@/components/Nav'
+import dynamic from 'next/dynamic'
+const Nav = dynamic(() => import('@/components/Nav'),
+{ssr: false})
 import './globals.css'
-import Footer from '@/components/Footer'
+const Footer = dynamic(() => import('@/components/Footer'),
+{ssr: false})
+// import Footer from '@/components/Footer'
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
-import { LoadingProvider } from '@/context/LoadingContext';
+// import { LoadingProvider } from '@/context/LoadingContext';
+
 import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
 import { usePathname } from 'next/navigation';
@@ -29,7 +34,7 @@ export default function RootLayout({
       <body className='font-satoshi'>
         <div className='w-full'>
           <main className='w-full overflow-y-hidden'>
-            <LoadingProvider>
+            {/* <LoadingProvider> */}
               <InputContextProvider>
                 <StyledComponentsRegistry>
                   <App>
@@ -42,7 +47,7 @@ export default function RootLayout({
                   </App>
                 </StyledComponentsRegistry>
               </InputContextProvider>
-            </LoadingProvider>
+            {/* </LoadingProvider> */}
           </main>
         </div>
         </body>

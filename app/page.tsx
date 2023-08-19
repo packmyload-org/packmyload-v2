@@ -1,10 +1,20 @@
 'use client'
 import React, { useEffect } from 'react'
-import HeroSection from '@/components/landing/HeroSection'
-import ServiceSection from '@/components/landing/ServiceSection'
-import Section3 from '@/components/landing/Section3'
-import Procedure from '@/components/landing/Procedure'
-import Faq from '@/components/landing/Faq'
+import dynamic from "next/dynamic"
+
+const HeroSection = dynamic(
+  () => import('@/components/landing/HeroSection'),
+  { ssr: false }
+)
+const ServiceSection = dynamic(() => import('@/components/landing/ServiceSection'),
+  {ssr: false})
+const Section3 = dynamic(() => import('@/components/landing/Section3'),
+   {ssr: false})
+const Procedure= dynamic(()=>import('@/components/landing/Procedure'),
+   {ssr: false})
+const Faq = dynamic(() => import('@/components/landing/Faq'),
+  { ssr: false })
+     
 function Home() {
  
   return(

@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/landing/Procedure.jsx"
+    "components/landing/Procedure.jsx",
+    "app/loading.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,0 +1,134 @@
+BBQ
++
+Bed Frame
++
+Bike
++
+Bookshelf (Short)
++
+Box(Large)
++
+Box(Medium)
++
+Box(Small)
+-
+
+1
++
+
+Buffet
++
+Chair - Table
++
+Coat rack
++
+Coffee Table
++
+Computer Monitor
++
+Console Table/Entry Table
++
+Couch/Sofa (2-seat)
++
+Couch/Sofa (3-seat)
++
+Couch/Sofa (4-seat)
++
+Couch/Sofa (5-seat)
++
+Couch/Sofa (6-seat)
++
+Crib with Mattress
++
+Desk
++
+Desk Office Chair
++
+Dining Table (4-seater)
++
+Dishwasher
++
+Dresser (3-drawer)
++
+Dresser (6-drawer)
++
+Dryer
++
+End Table
++
+Exercise bike
++
+File Cabinet (3-drawer)
++
+Frames
++
+Futon Frame
++
+Futon Mattress
++
+Lamp (Table)
++
+Lamp (tall)
++
+Large frame
++
+Mattress or Boxspring (Full)
++
+Mattress or Boxspring (King)
++
+Mattress or Boxspring (Queen)
++
+Mattress or Boxspring (Twin)
++
+Mirror (Large)
++
+Mirror (Small)
++
+Misc Medium Item
++
+Misc Small Item
++
+Nightstand/Bedside Table
++
+Ottoman
++
+Oven
++
+Patio Umbrella
++
+Patio table
++
+Refrigerator
++
+Rug (Large Roll)
++
+Rug (Small Roll)
++
+Side Table
++
+Stool
++
+Storage Tote (10 Gallon)
++
+Storage Tote (20 Gallon)
++
+Storage Tote (30 Gallon)
++
+Stove
++
+Swing bench
++
+TV
++
+TV Stand
++
+Tire(s)
++
+Treadmill
++
+Vacuum
++
+Wardrobe Box
++
+Washing machine
++
