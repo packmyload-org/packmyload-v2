@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useJsApiLoader, GoogleMap, Marker, DirectionsRenderer ,  useLoadScript} from "@react-google-maps/api";
+import { GoogleMap, Marker, DirectionsRenderer ,  useLoadScript} from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
-// import { calculateRoute } from '@/hooks/useDirections-hook';
+import { calculateRoute } from '@/hooks/useDirections-hook';
 
 function Map() {
 
@@ -12,18 +12,18 @@ function Map() {
 
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const { locationValue } = useInputContext();
-  // const [routeData, setRouteData] = useState<{ direction: google.maps.DirectionsResult | null, distance: string | undefined, duration: string | undefined } | null>(null);
+  const [routeData, setRouteData] = useState<{ direction: google.maps.DirectionsResult | null, distance: string | undefined, duration: string | undefined } | null>(null);
 
-  // useEffect(() => {
-  //   async function fetchRouteData() {
-  //     const result = await calculateRoute();
-  //     if (result) {
-  //       setRouteData(result);
-  //       console.log(result)
-  //     }
-  //   }
-  //   fetchRouteData();
-  // }, []);
+  useEffect(() => {
+    async function fetchRouteData() {
+      const result = await calculateRoute();
+      if (result) {
+        setRouteData(result);
+        console.log(result)
+      }
+    }
+    fetchRouteData();
+  }, []);
 
   if (!isLoaded) {
     return (
@@ -47,7 +47,7 @@ function Map() {
         }}
       >
         <Marker position={locationValue || mapCenter} />
-        {/* {routeData?.direction &&<DirectionsRenderer directions={routeData.direction}/> } */}
+        {routeData?.direction &&<DirectionsRenderer directions={routeData.direction}/> }
       </GoogleMap>
     </div>
   );
