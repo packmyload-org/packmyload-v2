@@ -1,58 +1,70 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, Marker, DirectionsRenderer ,  useLoadScript} from "@react-google-maps/api";
+import { GoogleMap, Marker, DirectionsRenderer, useLoadScript, Libraries } from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
-// import { calculateRoute } from '@/hooks/useDirections-hook';
+
+interface RouteData {
+  direction: google.maps.DirectionsResult | null;
+  distance: string | undefined;
+  duration: string | undefined;
+}
 
 function Map() {
-
-  const { isLoaded } = useLoadScript({
+  let libraries: Libraries = ['places']
+  const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: ['places']
+    libraries: libraries,
   });
 
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const { locationValue } = useInputContext();
-  const [routeData, setRouteData] = useState<{ direction: google.maps.DirectionsResult | null, distance: string | undefined, duration: string | undefined } | null>(null);
- const calculateRoute = async () => {
-  const pickUp = localStorage.getItem('pickUp');
-  const destination = localStorage.getItem('destination');
+  const [routeData, setRouteData] = useState<RouteData | null>(null);
 
-  if (!pickUp || !destination) {
-    return null;
-  }
-console.log('pickup',pickUp)
-console.log('drop',destination)
-  const directionService = new google.maps.DirectionsService();
-  const results = await directionService.route({
-    origin: pickUp,
-    destination: destination,
-    travelMode: google.maps.TravelMode.DRIVING,
-  });
-  console.log('results', results)
-  return {
-    direction: results,
-    distance: results.routes[0].legs[0].distance?.text,
-    duration: results.routes[0].legs[0].duration?.text,
+  const calculateRoute = async () => {
+    const pickUp = localStorage.getItem('pickUp');
+    const destination = localStorage.getItem('destination');
+
+    if (!pickUp || !destination) {
+      return null;
+    }
+
+    try {
+      const directionService = new google.maps.DirectionsService();
+      const results = await directionService.route({
+        origin: pickUp,
+        destination: destination,
+        travelMode: google.maps.TravelMode.DRIVING,
+      });
+
+      return {
+        direction: results,
+        distance: results.routes[0].legs[0].distance?.text,
+        duration: results.routes[0].legs[0].duration?.text,
+      };
+    } catch (error) {
+      console.error('Error calculating route:', error);
+      return null;
+    }
   };
-};
 
   useEffect(() => {
     async function fetchRouteData() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
-        console.log(result)
+        console.log(result);
       }
     }
-    fetchRouteData();
-  }, []);
+    if (isLoaded) {
+      fetchRouteData();
+    }
+  }, [isLoaded]);
+
+  if (loadError) {
+    return <div>Error loading Google Maps</div>;
+  }
 
   if (!isLoaded) {
-    return (
-      <div className='w-full'>
-        {isLoaded || 'loading...'}
-      </div>
-    );
+    return <div>Loading...</div>;
   }
 
   return (
@@ -69,7 +81,7 @@ console.log('drop',destination)
         }}
       >
         <Marker position={locationValue || mapCenter} />
-        {routeData?.direction &&<DirectionsRenderer directions={routeData.direction}/> }
+        {routeData?.direction && <DirectionsRenderer directions={routeData.direction} />}
       </GoogleMap>
     </div>
   );

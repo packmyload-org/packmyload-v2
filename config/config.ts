@@ -1,1 +1,1 @@
-export const library = 'places'
+export const library = ['places','directions']
