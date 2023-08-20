@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useJsApiLoader, GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
-import Loading from '@/app/loading';
+import { useJsApiLoader, GoogleMap, Marker, DirectionsRenderer ,  useLoadScript} from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
 import { calculateRoute } from '@/hooks/useDirections-hook';
 
 function Map() {
-  const { isLoaded } = useJsApiLoader({
+
+  const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
     libraries: ['places']
   });
@@ -28,7 +28,7 @@ function Map() {
   if (!isLoaded) {
     return (
       <div className='w-full'>
-        loading ...
+        {isLoaded || 'loading...'}
       </div>
     );
   }
