@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect } from 'react'
 import dynamic from "next/dynamic"
+import { clearStore } from '@/hooks/useDirections-hook'
 // import { InputContextProvider } from '@/context/InputContext'
 
 const HeroSection = dynamic(
@@ -17,6 +18,9 @@ const Faq = dynamic(() => import('@/components/landing/Faq'),
   { ssr: false })
      
 function Home() {
+ useEffect(() => {
+  clearStore()
+ }, [])
  
   return(
     <div className='w-full text-black'style={{marginTop: '130px'}}>

@@ -13,20 +13,20 @@ const nextConfig = {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     return config;
   },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value:
-              "script-src 'self' 'unsafe-inline' https://apis.google.com https://maps.googleapis.com",
-          },
-        ],
-      },
-    ];
-  },
 };
+// async headers() {
+//   return [
+//     {
+//       source: "/(.*)",
+//       headers: [
+//         {
+//           key: "Content-Security-Policy",
+//           value:
+//             "script-src 'self' 'unsafe-inline' https://apis.google.com https://maps.googleapis.com",
+//         },
+//       ],
+//     },
+//   ];
+// },
 
 module.exports = nextConfig;

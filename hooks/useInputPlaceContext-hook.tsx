@@ -24,7 +24,7 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
 
               if (latitude !== undefined && longitude !== undefined) {
                 let location = { lat: latitude, lng: longitude };
-                setPlaceValueWithLocalStorage(location, inputName+'location');
+                setPlaceValueWithLocalStorage(location, inputName+'Location');
               }
             }
           }

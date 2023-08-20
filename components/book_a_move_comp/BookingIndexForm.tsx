@@ -3,6 +3,7 @@ import { ArrowCircleLeft, ListNumbers } from "@phosphor-icons/react";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { serviceList, serviceFor, serviceType } from "@/utils/bookingService";
+import { AutoCompleteInput } from "../AutoCompleteInput";
 export default function BookingIndexForm() {
    const router = useRouter()
   const [displayType, setDisplayType] = useState(false)
@@ -27,22 +28,34 @@ export default function BookingIndexForm() {
          <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/') }}>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
-            <input
+            {/* <input
               type="text"
               id='MovingFrom'
               placeholder="Destination From"
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
+            /> */}
+          <AutoCompleteInput
+            type="text"
+            inputName="pickUp"
+            inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+            placeholder="Destination From"
             />
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
-            <input
+            {/* <input
               type="text"
               id='MovingTo'
               placeholder="Destination To"
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
+            /> */}
+          <AutoCompleteInput
+            type="text"
+            inputName="destination"
+            inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+            placeholder="Destination To"
             />
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">

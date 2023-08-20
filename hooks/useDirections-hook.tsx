@@ -3,3 +3,8 @@ export function useStore() {
   const destination = localStorage.getItem('destination');
   return { pickUp, destination };
 }
+
+
+export function clearStore() {
+ localStorage.clear()
+}

@@ -24,7 +24,7 @@ export default function HeroSection() {
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-5/12 justify-between border-r-2'>
                   <AutoCompleteInput
                     inputName='pickUp'
-                    inputStyle='p-2 h-10 focus:outline-0 text-gray-500 '
+                    inputStyle='p-2 h-10 focus:outline-0 text-gray-500 w-full'
                     placeholder='Pickup Address'
                     type='text'
                   />
@@ -35,7 +35,7 @@ export default function HeroSection() {
                 <div className='flex bg-gray-100 flex-nowrap py-1 px-3 w-full lg:w-5/12 justify-between'>
                    <AutoCompleteInput
                     inputName='destination'
-                    inputStyle='p-2 h-10 focus:outline-0 text-gray-500 '
+                    inputStyle='p-2 h-10 focus:outline-0 text-gray-500 w-full'
                     placeholder='Destination Address'
                     type='text'
                   />

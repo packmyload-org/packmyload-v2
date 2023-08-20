@@ -16,9 +16,8 @@ function Map() {
   });
 
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
-  const { locationValue } = useInputContext();
   const [routeData, setRouteData] = useState<RouteData | null>(null);
-
+  const {locationValue} = useInputContext()
   const calculateRoute = async () => {
     const pickUp = localStorage.getItem('pickUp');
     const destination = localStorage.getItem('destination');
@@ -51,13 +50,15 @@ function Map() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
-        console.log(result);
       }
     }
     if (isLoaded) {
       fetchRouteData();
+      setMapCenter(locationValue)
     }
   }, [isLoaded]);
+
+
 
   if (loadError) {
     return <div>Error loading Google Maps</div>;
@@ -70,7 +71,7 @@ function Map() {
   return (
     <div className='w-full h-full'>
       <GoogleMap
-        center={locationValue || mapCenter}
+        center={mapCenter}
         zoom={15}
         mapContainerStyle={{ width: '100%', height: '100%' }}
         options={{
@@ -80,7 +81,7 @@ function Map() {
           fullscreenControl: false,
         }}
       >
-        <Marker position={locationValue || mapCenter} />
+        <Marker position={mapCenter} />
         {routeData?.direction && <DirectionsRenderer directions={routeData.direction} />}
       </GoogleMap>
     </div>
