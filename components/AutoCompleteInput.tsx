@@ -1,5 +1,5 @@
 'use client'
-import Loading from '@/app/loading';
+import { library } from '@/config/config';
 import { useInputContext } from '@/context/InputContext';
 import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'; 
 import {useJsApiLoader,Autocomplete} from '@react-google-maps/api'
@@ -15,7 +15,7 @@ interface AutoCompleteInputProps {
 export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }: AutoCompleteInputProps) => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: ['places']
+    libraries: [library],
   });
  
 
