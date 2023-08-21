@@ -1,0 +1,39 @@
+import nodemailer from "nodemailer";
+
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "packmyloadpro@gmail.com",
+    pass: "Mrpacker123@",
+  },
+});
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error.message);
+  } else {
+    console.log({
+      success: success,
+      message: "mail server is ready for your messages",
+    });
+  }
+});
+
+async function sendEmail(to, subject, text, html) {
+  try {
+    const mailOptions = {
+      from: '"PackmyLoad" <packmyloadpro@gmail.com>',
+      to,
+      subject,
+      text,
+      html,
+    };
+
+    this.transporter.sendMail(mailOptions);
+    console.log("Email sent successfully!");
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
+
+export default sendEmail;

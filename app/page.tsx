@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react'
 import dynamic from "next/dynamic"
 import { clearStore } from '@/hooks/useDirections-hook'
-// import { InputContextProvider } from '@/context/InputContext'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'),
@@ -25,13 +24,11 @@ function Home() {
   return(
     <div className='w-full text-black'style={{marginTop: '130px'}}>
       <>
-        {/* <InputContextProvider> */}
           <HeroSection/>
           <ServiceSection/>
           <Section3/>
           <Procedure/>
           <Faq/> 
-        {/* </InputContextProvider> */}
       </>
      
         </div>

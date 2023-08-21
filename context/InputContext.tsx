@@ -6,7 +6,8 @@ interface InputContextType {
  setInputValueWithLocalStorage: (value: string, name: string) => void;
  setPlaceValueWithLocalStorage: (value: any, name: string) => void;
  locationValue: any;
- // setHasInputValue:React.Dispatch<React.SetStateAction<boolean>>;
+ setTriggerCalculateRoute: React.Dispatch<React.SetStateAction<boolean>>;
+ triggerCalculateRoute: boolean;
 }
 
 const InputContext = createContext<InputContextType | undefined>(undefined);
@@ -24,6 +25,7 @@ export const InputContextProvider = ({ children }: { children: React.ReactNode }
 
  const [inputValue, setInputValue] = useState<string>('');
  const [locationValue, SetLocationValue] = useState<any>()
+ const [triggerCalculateRoute, setTriggerCalculateRoute] = useState<boolean>(false)
 
   const setInputValueWithLocalStorage = (value: string, name: string) => {
     setInputValue(value);
@@ -34,7 +36,7 @@ export const InputContextProvider = ({ children }: { children: React.ReactNode }
    localStorage.setItem(name, JSON.stringify(value)); 
  };
   return (
-    <InputContext.Provider value={{ inputValue, setInputValue, setInputValueWithLocalStorage, setPlaceValueWithLocalStorage, locationValue }}>
+    <InputContext.Provider value={{ inputValue, setInputValue, setInputValueWithLocalStorage, setPlaceValueWithLocalStorage, locationValue ,triggerCalculateRoute, setTriggerCalculateRoute}}>
       {children}
     </InputContext.Provider>
   );

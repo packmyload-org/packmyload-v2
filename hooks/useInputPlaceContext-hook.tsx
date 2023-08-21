@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
 import { useInputContext } from '@/context/InputContext';
+import { usePathname } from 'next/navigation';
 
 export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomplete | null, inputName: string) => {
+ const path = usePathname()
   const {
     setInputValueWithLocalStorage,
     setPlaceValueWithLocalStorage,
+    setTriggerCalculateRoute,
   } = useInputContext();
 
   const handlePlaceChanged = () => {
@@ -24,7 +26,8 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
 
               if (latitude !== undefined && longitude !== undefined) {
                 let location = { lat: latitude, lng: longitude };
-                setPlaceValueWithLocalStorage(location, inputName+'Location');
+               setPlaceValueWithLocalStorage(location, inputName + 'Location');
+               path.includes('book_a_move') && inputName === 'destination' ? setTriggerCalculateRoute(true): setTriggerCalculateRoute(false)
               }
             }
           }

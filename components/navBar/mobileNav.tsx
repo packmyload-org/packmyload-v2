@@ -23,7 +23,15 @@ const items: MenuProps['items'] = [
     key: '3',
     label: (
      <Link href='/partner'>
-      Partner
+      Partner with us
+     </Link>
+    ),
+  },
+  {
+    key: '4',
+    label: (
+     <Link href='/become_a_packer'>
+      Become a PacMan
      </Link>
     ),
  },

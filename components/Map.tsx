@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, Marker, DirectionsRenderer, useLoadScript, Libraries } from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
+import { usePathname } from 'next/navigation';
 
 interface RouteData {
   direction: google.maps.DirectionsResult | null;
@@ -10,6 +11,7 @@ interface RouteData {
 
 function Map() {
   let libraries: Libraries = ['places']
+  const path = usePathname()
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
     libraries: libraries,
@@ -17,7 +19,7 @@ function Map() {
 
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
-  const {locationValue} = useInputContext()
+  const {locationValue, triggerCalculateRoute} = useInputContext()
   const calculateRoute = async () => {
     const pickUp = localStorage.getItem('pickUp');
     const destination = localStorage.getItem('destination');
@@ -52,13 +54,19 @@ function Map() {
         setRouteData(result);
       }
     }
-    if (isLoaded) {
+    if (isLoaded && path.includes("book_a_move")) {
       fetchRouteData();
+    }
+    if (isLoaded && triggerCalculateRoute) {
+      fetchRouteData()
+    }
+  }, [isLoaded, triggerCalculateRoute]);
+
+  useEffect(() => {
+    if (path.includes('partner') && isLoaded) {
       setMapCenter(locationValue)
     }
-  }, [isLoaded]);
-
-
+  },[locationValue,isLoaded])
 
   if (loadError) {
     return <div>Error loading Google Maps</div>;
@@ -82,7 +90,7 @@ function Map() {
         }}
       >
         <Marker position={mapCenter} />
-        {routeData?.direction && <DirectionsRenderer directions={routeData.direction} />}
+        {routeData?.direction && path.includes('book_a_move') && <DirectionsRenderer directions={routeData.direction} />}
       </GoogleMap>
     </div>
   );
