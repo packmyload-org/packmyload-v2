@@ -19,7 +19,7 @@ function Map() {
 
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
-  const {locationValue, triggerCalculateRoute} = useInputContext()
+  const {locationValue, triggerCalculateRoute, setTriggerCalculateRoute} = useInputContext()
   const calculateRoute = async () => {
     const pickUp = localStorage.getItem('pickUp');
     const destination = localStorage.getItem('destination');
@@ -59,6 +59,7 @@ function Map() {
     }
     if (isLoaded && triggerCalculateRoute) {
       fetchRouteData()
+      setTriggerCalculateRoute(!triggerCalculateRoute)
     }
   }, [isLoaded, triggerCalculateRoute]);
 
