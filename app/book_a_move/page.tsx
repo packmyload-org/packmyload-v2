@@ -1,6 +1,6 @@
 'use client'
 import Map from '@/components/Map';
-import BookingIndexForm from '@/components/book_a_move_comp/BookingIndexForm';
+import BookingIndexForm from '@/components/faq/book_a_move_comp/BookingIndexForm';
 // import { calculateRoute } from '@/hooks/useDirections-hook';
 
 export default function Booking() {
