@@ -33,7 +33,7 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
           }
         });
       }
-    }
+   }
   };
 
   return { handlePlaceChanged };

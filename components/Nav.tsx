@@ -7,21 +7,11 @@ import {Phone} from '@phosphor-icons/react'
 import MobileNav from './navBar/mobileNav';
 import TabletsNav from './navBar/tabletsNav';
 import Services from './navBar/Service';
-// import { useLoading } from '@/context/LoadingContext'
 import { usePathname } from 'next/navigation'
-// import Loading from '@/app/loading'
-function Nav() {
-  // const { isLoading, setIsLoading } = useLoading()
-  
+function Nav() {  
   const pathname = usePathname()
- 
-  // useEffect(() => {
-  //   setIsLoading(false)
-  // },[])
   return (
     <>
-    {/* {!isLoading ? ( */}
-
     <nav className="flex-between w-full px-10 py-3 bg-white border-b-2 border-[#9d9d9d] fixed top-0 z-30">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     <Image 
@@ -63,11 +53,6 @@ function Nav() {
         {/* Mobile Nav  */}
       <MobileNav/>
     </nav>
-        {/* ) : (
-        // Render a loading spinner or skeleton components
-        <Loading/>
-  )
-} */}
         </>
   )
 }

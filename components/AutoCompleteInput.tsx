@@ -2,8 +2,8 @@
 import { useInputContext } from '@/context/InputContext';
 import { useStore } from '@/hooks/useDirections-hook';
 import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'; 
-import {useJsApiLoader,Autocomplete, Libraries} from '@react-google-maps/api'
-import { useEffect, useState } from 'react';
+import {Autocomplete} from '@react-google-maps/api'
+import { useState } from 'react';
 interface AutoCompleteInputProps {
   inputStyle: string;
   inputName: string;
@@ -13,31 +13,20 @@ interface AutoCompleteInputProps {
 
 
 export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }: AutoCompleteInputProps) => {
- let libraries: Libraries = ['places']
-
- const { isLoaded } = useJsApiLoader({
-  googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-  libraries: libraries
- });
- 
 
  const { setInputValueWithLocalStorage } = useInputContext();
  const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
- if (!isLoaded) {
-  return <h1>{isLoaded || 'loading... '}</h1>
- }
 
  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setInputValueWithLocalStorage(event.target.value, event.target.name);
  };
 
  const { handlePlaceChanged } = useInputPlaceContext(autocomplete, inputName);
- const { pickUp, destination } = useStore()
-
-const name = inputName.toLowerCase()
+ const storeData = useStore()
+ const name = inputName.toLowerCase()
   return (
    <>
-      <Autocomplete onLoad={(auto) => setAutocomplete(auto)} onPlaceChanged={handlePlaceChanged} className='w-full grid place-items-start'>
+    <Autocomplete onLoad={(auto) => setAutocomplete(auto)} onPlaceChanged={handlePlaceChanged} className='w-full grid place-items-start'>
         <input
           name={inputName}
           type={type}
@@ -45,7 +34,7 @@ const name = inputName.toLowerCase()
           placeholder={placeholder}
           required
           onChange={handleInputChange}
-          defaultValue={name === 'pickup' ? pickUp ?? '' : name === 'destination' ? destination ?? '' : ''}
+          defaultValue={name === 'pickup' ? storeData?.pickUp ?? '' : name === 'destination' ? storeData?.destination ?? '' : ''}
         />
       </Autocomplete>
     </>

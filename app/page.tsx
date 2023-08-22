@@ -18,7 +18,7 @@ const Faq = dynamic(() => import('@/components/landing/Faq'),
      
 function Home() {
  useEffect(() => {
-  clearStore()
+   clearStore()
  }, [])
  
   return(

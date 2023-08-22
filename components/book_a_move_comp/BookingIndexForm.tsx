@@ -1,8 +1,7 @@
 'use client'
-import { ArrowCircleLeft, ListNumbers } from "@phosphor-icons/react";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { serviceList, serviceFor, serviceType } from "@/utils/bookingService";
+import { serviceList, serviceType } from "@/utils/bookingService";
 import { AutoCompleteInput } from "../AutoCompleteInput";
 export default function BookingIndexForm() {
    const router = useRouter()
@@ -10,8 +9,8 @@ export default function BookingIndexForm() {
   return (
    <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
-        {/* <div className="w-full md:w-[80%] mx-auto space-y-3">
-            <div className="flex flex-nowrap w-full justify-between ">
+        <div className="w-full md:w-[80%] mx-auto mb-4">
+            {/* <div className="flex flex-nowrap w-full justify-between ">
                   <ArrowCircleLeft size={24} className='text-white' />
                 <div className="flex w-[70%] justify-between">
                 <h2 className="text-lg text-white font-satoshi font-semibold"> Price ${0.32}</h2>
@@ -20,21 +19,15 @@ export default function BookingIndexForm() {
                     <ListNumbers size={24} className='text-white'/>
                 </div>
                 </div>
-            </div>
+            </div> */}
             <h2 className="w-full text-2xl text-white font-bold font-mono text-center">Let's Get Started </h2>
-        </div> */}
+        </div>
 
          {/* Form  */}
-         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/') }}>
+         <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/book_a_move/locations-details') }}>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
-            {/* <input
-              type="text"
-              id='MovingFrom'
-              placeholder="Destination From"
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-            /> */}
+          
           <AutoCompleteInput
             type="text"
             inputName="pickUp"
@@ -44,13 +37,7 @@ export default function BookingIndexForm() {
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
-            {/* <input
-              type="text"
-              id='MovingTo'
-              placeholder="Destination To"
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-            /> */}
+          
           <AutoCompleteInput
             type="text"
             inputName="destination"

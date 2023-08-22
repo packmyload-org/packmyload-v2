@@ -10,13 +10,7 @@ interface RouteData {
 }
 
 function Map() {
-  let libraries: Libraries = ['places']
   const path = usePathname()
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: libraries,
-  });
-
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
   const {locationValue, triggerCalculateRoute, setTriggerCalculateRoute} = useInputContext()
@@ -54,28 +48,20 @@ function Map() {
         setRouteData(result);
       }
     }
-    if (isLoaded && path.includes("book_a_move")) {
+    if (path.includes("book_a_move")) {
       fetchRouteData();
     }
-    if (isLoaded && triggerCalculateRoute) {
+    if (triggerCalculateRoute) {
       fetchRouteData()
       setTriggerCalculateRoute(!triggerCalculateRoute)
     }
-  }, [isLoaded, triggerCalculateRoute]);
+  }, [path, triggerCalculateRoute]);
 
   useEffect(() => {
-    if (path.includes('partner') && isLoaded) {
+    if (path.includes('partner') ) {
       setMapCenter(locationValue)
     }
-  },[locationValue,isLoaded])
-
-  if (loadError) {
-    return <div>Error loading Google Maps</div>;
-  }
-
-  if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
+  },[locationValue])
 
   return (
     <div className='w-full h-full'>
