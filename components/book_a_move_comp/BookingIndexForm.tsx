@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { serviceList, serviceType } from "@/utils/bookingService";
 import { AutoCompleteInput } from "../AutoCompleteInput";
+
 export default function BookingIndexForm() {
    const router = useRouter()
   const [displayType, setDisplayType] = useState(false)
