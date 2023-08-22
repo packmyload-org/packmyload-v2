@@ -23,11 +23,11 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
 
             if (formattedAddress) {
               setInputValueWithLocalStorage(formattedAddress, inputName);
+              path.includes('book_a_move') && setTriggerCalculateRoute(true)
 
-              if (latitude !== undefined && longitude !== undefined) {
+              if (latitude !== undefined && longitude !== undefined && !path.includes('book_a_move') ) {
                 let location = { lat: latitude, lng: longitude };
                setPlaceValueWithLocalStorage(location, inputName + 'Location');
-               path.includes('book_a_move') && setTriggerCalculateRoute(true)
               }
             }
           }
