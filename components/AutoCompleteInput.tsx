@@ -32,7 +32,6 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
           type={type}
           className={inputStyle}
           placeholder={placeholder}
-          required
           onChange={handleInputChange}
           defaultValue={name === 'pickup' ? storeData?.pickUp ?? '' : name === 'destination' ? storeData?.destination ?? '' : ''}
         />

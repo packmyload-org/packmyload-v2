@@ -1,6 +1,7 @@
 'use client'
 import { AutoCompleteInput } from '@/components/AutoCompleteInput';
 import Map from '@/components/Map';
+import Alert from '@/components/alert/Alert';
 import { useInputContext } from '@/context/InputContext';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 interface PartnerData {
@@ -19,39 +20,49 @@ function PartnerPage() {
     mobileNumber: '',
     storeAddress: '',
     reason: '',
-  });
-  const [loading,setLoading]= useState(false)
-   const {inputValue} = useInputContext()
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setData((prevData) => ({ ...prevData, [name]: value }));
-  };
+   });
+       const { inputValue } = useInputContext();
+     const [showAlert, setShowAlert] = useState(false);
+    const [alertContent, setAlertContent] = useState('');
+    const [loading, setLoading]= useState(false)
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setData((prevData) => ({ ...prevData, [name]: value }));
+    };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      let obj = {
-          ...data
-      }
-      if (!data.storeAddress) {
-         obj['storeAddress'] = inputValue
-      }
-       // Check if any required fields are empty
-  if (!data.storeName || !data.fullName || !data.emailAddress || !data.mobileNumber) {
-    alert('Please fill out all required fields.');
-    return;
-  }
-    // Handle form submission and data storage
-      console.log('Form data to be submitted:', data);
-      setLoading(!loading)
-      const res = await fetch('api/partner', {
-                method: 'POST',
-                body: JSON.stringify(obj)
-      })
-       if (res.ok) {
-           alert('application successful')
-      }
-      setLoading(!loading)
-  };
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        let obj = {
+            ...data
+        };
+
+        if (!data.storeAddress) {
+            obj['storeAddress'] = inputValue;
+        }
+
+        if (!data.storeName || !data.fullName || !data.emailAddress || !data.mobileNumber || !data.storeAddress) {
+            let content = 'Please fill out all required fields.';
+            setAlertContent(content);
+            setShowAlert(true);
+            return
+        }
+        setShowAlert(!true);
+        console.log('Form data to be submitted:', data);
+        setLoading(true)
+        const res = await fetch('api/partner', {
+            method: 'POST',
+            body: JSON.stringify(obj)
+        });
+
+        if (res.ok) {
+            let content = 'Application successful.';
+            setAlertContent(content);
+            setShowAlert(true);
+        }
+        setLoading(false)
+        setShowAlert(false)
+    };
+
     return (
         <div className="flex justify-left min-h-screen bg-gray-100 mt-20">
             <div className="w-full md:w-1/2 lg:w-1/2 p-8 max-h-[85vh] overflow-y-scroll scrollbar-hide">
@@ -69,7 +80,7 @@ function PartnerPage() {
                             type="text"
                             className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
                             placeholder="Home Again Furniture"
-                            required
+                        
                             onChange={handleInputChange}
                         />
                     </div>
@@ -81,7 +92,7 @@ function PartnerPage() {
                             type="text"
                             className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
                             placeholder="John Doe"
-                            required
+                        
                             onChange={handleInputChange}
                         />
                     </div>
@@ -93,7 +104,7 @@ function PartnerPage() {
                             type="email"
                             className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
                             placeholder="Johndoe@mail.com"
-                            required
+                        
                             onChange={handleInputChange}
                         />
                     </div>
@@ -105,7 +116,7 @@ function PartnerPage() {
                             type="tel"
                             className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
                             placeholder="(070)-7273-27-26)"
-                            required
+                        
                             onChange={handleInputChange}
                         />
                     </div>
@@ -137,6 +148,7 @@ function PartnerPage() {
                         {loading ? "loading...": "Sign me up"}
                     </button>
                 </form>
+                {showAlert && <Alert content={alertContent} /> }
             </div>
             <div className="hidden lg:block absolute top-0 right-0 bottom-0 w-1/2">
                 <Map/>
