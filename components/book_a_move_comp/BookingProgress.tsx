@@ -34,9 +34,9 @@ const BookingProgress: React.FC = () => {
             let newPathNumber = active - 1;
             setActive(newPathNumber);
         if (newPathNumber === 2) {
-            return router.push('/book_a_move/locations-details');
+            return router.push('/book_a_move/items');
         } else if (newPathNumber === 3) {
-            return router.push('/book_a_move/checkout');
+            return router.push('/book_a_move/locations-details');
         }else if (newPathNumber === 1) {
             return router.push('/book_a_move')
         }
@@ -50,9 +50,9 @@ const BookingProgress: React.FC = () => {
         let newPathNumber = active + 1;
         setActive(newPathNumber);
         if (newPathNumber === 2) {
-            return router.push('/book_a_move/locations-details');
+            return router.push('/book_a_move/items');
         } else if (newPathNumber === 3) {
-            return router.push('/book_a_move/checkout');
+            return router.push('/book_a_move/locations-details');
         }else if (newPathNumber === 1) {
             return router.push('/book_a_move')
         }
@@ -80,13 +80,13 @@ const BookingProgress: React.FC = () => {
                 </li>
                 <li 
                     className={active === 2 ? activeStyle : defaultStyle}
-                    onClick={()=>{router.push('/book_a_move/locations-details'); setActive(2)}}
+                    onClick={()=>{router.push('/book_a_move/items'); setActive(2)}}
                     >
                     2
                 </li>
                 <li 
                     className={ active === 3 ? activeStyle : defaultStyle}
-                    onClick={()=>{router.push('/book_a_move/checkout'); setActive(3)}}
+                    onClick={()=>{router.push('/book_a_move/locations-details'); setActive(3)}}
                     >
                     3
                 </li>

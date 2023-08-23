@@ -27,8 +27,9 @@ const ItemsCounter: React.FC<itemsProps> = ({ title}) => {
     )
 
     return (
-        <div className="bg-blue-200 flex justify-between rounded-md shadow-md p-4 w-full mt-5">
-            <p className="text-lg" title={title}>{title}</p>
+        <div className="bg-blue-200 flex justify-between rounded-md shadow-md p-4 
+ w-full md:w-1/4 mt-5 min-w-[200px] space-x-2">
+            <p className="text-lg w-full" title={title}>{title}</p>
             {counterButtons}
         </div>
     )

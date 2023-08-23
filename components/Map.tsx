@@ -79,11 +79,11 @@ function Map() {
   }, [])
   
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full  mb-4 rounded-md shadow-md'>
       <GoogleMap
         center={mapCenter}
         zoom={15}
-        mapContainerStyle={{ width: '100%', height: '100%' }}
+        mapContainerStyle={{ width: '100%', height: '100%' ,minHeight:'200px'}}
         options={{
           streetViewControl: false,
           zoomControl: false,
