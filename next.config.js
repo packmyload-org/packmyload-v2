@@ -21,7 +21,7 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "script-src 'self' 'unsafe-inline' https://apis.google.com https://maps.googleapis.com",
+              "script-src 'self' https://apis.google.com https://maps.googleapis.com 'unsafe-inline' 'unsafe-eval'",
           },
         ],
       },
