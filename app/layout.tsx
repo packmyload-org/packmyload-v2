@@ -13,7 +13,7 @@ import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
 import { usePathname } from 'next/navigation';
 import Provider from '@/providers/provider'
-import { Libraries, useLoadScript } from '@react-google-maps/api'
+import { Libraries, useJsApiLoader } from '@react-google-maps/api'
 import Loading from './loading'
 export default function RootLayout({
   children,
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   let libraries: Libraries = ['places']
   const pathname = usePathname()
-  const { isLoaded, loadError } = useLoadScript({
+  const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
     libraries: libraries,
   });
