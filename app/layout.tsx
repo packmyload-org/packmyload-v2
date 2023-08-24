@@ -26,7 +26,8 @@ export default function RootLayout({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
     libraries: libraries,
   });
-
+  console.log(isLoaded)
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
   if (loadError) {
     return <div>Error loading Google Maps</div>
   }
