@@ -32,7 +32,7 @@ export default function RootLayout({
     return <div>Error loading Google Maps</div>
   }
   return (
-    <html lang="en">
+    <html lang="en">cc
       <meta name="description" content="packmyload.com offers is one of the best packing and moving companies in Lagos, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move.
 "></meta>
 <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.png"/>
