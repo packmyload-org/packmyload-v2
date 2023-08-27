@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect } from 'react'
 import dynamic from "next/dynamic"
-import { clearStore } from '@/hooks/useDirections-hook'
+// import { clearStore } from '@/hooks/useDirections-hook'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'),
@@ -18,7 +18,8 @@ const Faq = dynamic(() => import('@/components/landing/Faq'),
      
 function Home() {
  useEffect(() => {
-   clearStore()
+  //  clearStore()
+   localStorage.clear()
  }, [])
  
   return(
