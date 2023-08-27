@@ -1,7 +1,6 @@
 'use client'
 import { useInputContext } from '@/context/InputContext';
 // import { useStore } from '@/hooks/useDirections-hook';
-import { Libraries, useJsApiLoader } from '@react-google-maps/api'
 import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'; 
 import {Autocomplete} from '@react-google-maps/api'
 import { useState } from 'react';
@@ -28,19 +27,7 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
     destination:''
  }
   const name = inputName.toLowerCase()
-   let libraries: Libraries = ['places']
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: libraries,
-  });
-  if (loadError) {
-    return <div>Error loading Google Maps</div>
-  }
-  if (!isLoaded) {
-    return <h1>
-      loading...
-    </h1>
-  }
+  
   return (
    <>
     <Autocomplete onLoad={(auto) => setAutocomplete(auto)} onPlaceChanged={handlePlaceChanged} className='w-full grid place-items-start'>
