@@ -1,7 +1,9 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import dynamic from "next/dynamic"
 import { clearStore } from '@/hooks/useDirections-hook'
+import { useGoogleMaps } from '@/context/GoogleMapsContext'
+import Loading from './loading'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'),
@@ -15,12 +17,20 @@ const Procedure= dynamic(()=>import('@/components/landing/Procedure'),
    {ssr: false})
 const Faq = dynamic(() => import('@/components/landing/Faq'),
   { ssr: false })
-     
-function Home() {
- useEffect(() => {
+  function Home() {
+  const {isLoaded, loadError}= useGoogleMaps()
+  const [loading,setLoading]= useState(false)
+  useEffect(() => {
+    if (!isLoaded) {
+      setLoading(!loading)
+    }
+    setLoading(false)
    clearStore()
- }, [])
- 
+  }, [])
+  
+    if (loading) {
+      return <Loading/>
+    }
   return(
     <div className='w-full text-black'style={{marginTop: '130px'}}>
       <>

@@ -14,20 +14,6 @@ interface AutoCompleteInputProps {
 
 
 export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }: AutoCompleteInputProps) => {
-  let libraries: Libraries = ['places']
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: libraries,
-  });
-  console.log(isLoaded)
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
-  if (loadError) {
-    return <div>Error loading Google Maps</div>
-  }
-
-  if (!isLoaded) {
-    return <>loading...</>
-  }
  const { setInputValueWithLocalStorage } = useInputContext();
  const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
 

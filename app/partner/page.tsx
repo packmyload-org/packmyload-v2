@@ -2,8 +2,10 @@
 import { AutoCompleteInput } from '@/components/AutoCompleteInput';
 import Map from '@/components/Map';
 import Alert from '@/components/alert/Alert';
+import { useGoogleMaps } from '@/context/GoogleMapsContext';
 import { useInputContext } from '@/context/InputContext';
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import Loading from '../loading';
 interface PartnerData {
     emailAddress: string,
     storeAddress: string,
@@ -21,10 +23,12 @@ function PartnerPage() {
     storeAddress: '',
     reason: '',
    });
-       const { inputValue } = useInputContext();
+    const { inputValue } = useInputContext();
+    const{isLoaded}=useGoogleMaps()
      const [showAlert, setShowAlert] = useState(false);
     const [alertContent, setAlertContent] = useState('');
-    const [loading, setLoading]= useState(false)
+    const [loading, setLoading] = useState(false)
+    const [scriptLoaded,setScriptLoaded]=useState(false)
     const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setData((prevData) => ({ ...prevData, [name]: value }));
@@ -62,6 +66,17 @@ function PartnerPage() {
         setLoading(false)
         setShowAlert(false)
     };
+
+    useEffect(() => {
+    if (!isLoaded) {
+      setScriptLoaded(!scriptLoaded)
+        }
+      setScriptLoaded(false)
+    }, [])
+    
+    if (scriptLoaded) {
+        return <Loading/>
+    }
 
     return (
         <div className="flex justify-left min-h-screen bg-gray-100 mt-20">
