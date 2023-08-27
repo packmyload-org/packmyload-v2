@@ -13,24 +13,14 @@ import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
 import { usePathname } from 'next/navigation';
 import Provider from '@/providers/provider'
-import { Libraries, useJsApiLoader } from '@react-google-maps/api'
+
 import Loading from './loading'
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  let libraries: Libraries = ['places']
   const pathname = usePathname()
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: libraries,
-  });
-  console.log(isLoaded)
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
-  if (loadError) {
-    return <div>Error loading Google Maps</div>
-  }
   return (
     <html lang="en">
       <meta name="description" content="packmyload.com offers is one of the best packing and moving companies in Lagos, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move.
@@ -49,19 +39,12 @@ export default function RootLayout({
               <Provider>
                 <StyledComponentsRegistry>
                   <App>
-                    {
-                    isLoaded ?
-                    (
-                    <>
                     <Nav/>
                     {
                       pathname.includes("book_a_move") ? <BookingProgress /> : null
                     } 
                       {children}
                     <Footer/>
-                    </>
-                    ): <Loading/>
-                    }
                   </App>
                 </StyledComponentsRegistry>
               </Provider>

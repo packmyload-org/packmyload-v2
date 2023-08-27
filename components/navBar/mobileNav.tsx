@@ -47,7 +47,7 @@ const items: MenuProps['items'] = [
 function mobileNav() {
   return (
  <div className="sm:hidden flex justify-center items-center relative">
-    <Dropdown menu={{ items }} className='w-16 cursor-pointer' key={items?.length}>
+    <Dropdown menu={{ items }} className='w-16 cursor-pointer'>
     <a onClick={(e) => e.preventDefault()} className='text-gray-500 cursor-pointer'>
       <Space className='bg-blue-100 p-1 rounded-sm hover:bg-blue-700'>
         <List size={32} color="#667280" weight="thin" />

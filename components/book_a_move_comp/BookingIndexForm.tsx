@@ -7,7 +7,6 @@ import { AutoCompleteInput } from "../AutoCompleteInput";
 export default function BookingIndexForm() {
    const router = useRouter()
   const [displayType, setDisplayType] = useState(false)
-  let min = new Date().toISOString().split("T")[0]
   return (
    <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
@@ -52,8 +51,7 @@ export default function BookingIndexForm() {
             <input
               type="date"
               id='MovingFrom'
-            className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              min={min}
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
             />
           </div>
