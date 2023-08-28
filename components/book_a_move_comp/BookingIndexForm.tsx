@@ -1,12 +1,20 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { serviceList, serviceType } from "@/utils/bookingService";
 import { AutoCompleteInput } from "../AutoCompleteInput";
+import { useBookingForm } from '@/context/BookingFormContext';
 
 export default function BookingIndexForm() {
-   const router = useRouter()
+  const router = useRouter()
+   const { state, dispatch } = useBookingForm();
   const [displayType, setDisplayType] = useState(false)
+    const handleFieldChange = (field: string, value: string) => {
+    dispatch({ type: 'UPDATE_FIELD', field, value });
+  };
+  let currentDay = new Date().toISOString();
+  let minDate = currentDay.split("T")[0]
+
   return (
    <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
@@ -50,9 +58,13 @@ export default function BookingIndexForm() {
             <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Move Date <span className='text-red-600'>*</span></label>
             <input
               type="date"
-              id='MovingFrom'
+              id='MovingOn'
+              min={minDate}
+            
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
+              value={state.MovingOn}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />
           </div>
           <div className="w-[90%] mx-auto flex flex-col items-start">

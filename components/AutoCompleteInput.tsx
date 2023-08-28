@@ -4,7 +4,9 @@ import { useInputContext } from '@/context/InputContext';
 import { Libraries, useJsApiLoader } from '@react-google-maps/api'
 import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'; 
 import {Autocomplete} from '@react-google-maps/api'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useBookingForm } from '@/context/BookingFormContext';
 interface AutoCompleteInputProps {
   inputStyle: string;
   inputName: string;
@@ -15,19 +17,18 @@ interface AutoCompleteInputProps {
 
 export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }: AutoCompleteInputProps) => {
  const { setInputValueWithLocalStorage } = useInputContext();
- const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
-
+  const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
+ 
+  const path = usePathname()
+  const {state}=useBookingForm()
  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setInputValueWithLocalStorage(event.target.value, event.target.name);
  };
 
  const { handlePlaceChanged } = useInputPlaceContext(autocomplete, inputName);
-  const storeData = {
-    pickUp: '',
-    destination:''
- }
+
   const name = inputName.toLowerCase()
-  
+
   return (
    <>
     <Autocomplete onLoad={(auto) => setAutocomplete(auto)} onPlaceChanged={handlePlaceChanged} className='w-full grid place-items-start'>
@@ -36,8 +37,7 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
           type={type}
           className={inputStyle}
           placeholder={placeholder}
-          onChange={handleInputChange}
-          defaultValue={name === 'pickup' ? storeData?.pickUp ?? '' : name === 'destination' ? storeData?.destination ?? '' : ''}
+          defaultValue={path.includes('book_a_move') && name === 'pickup' ? state.pickUp : path.includes('book_a_move') && name === 'destination' ? state.destination : ''}
         />
       </Autocomplete>
     </>

@@ -1,15 +1,27 @@
 export const serviceList = [
   {
     key: "1",
-    label: "HELP ME MOVE",
+    label: "HOME RELOCATION",
   },
   {
     key: "2",
-    label: "HELP ME PACK",
+    label: "OFFICE RELOCATION",
   },
   {
     key: "3",
+    label: "INTERNATIONAL RELOCATION",
+  },
+  {
+    key: "4",
     label: "CLEANING SERVICES",
+  },
+  {
+    key: "5",
+    label: "STORAGE SERVICES",
+  },
+  {
+    key: "6",
+    label: "JUNK REMOVAL SERVICES",
   },
 ];
 
@@ -34,10 +46,14 @@ export const serviceFor = [
   },
   {
     key: "3",
-    label: "House",
+    label: "Storey Building",
   },
   {
     key: "4",
-    label: "Business",
+    label: "Bungalow",
+  },
+  {
+    key: "5",
+    label: "Duplex",
   },
 ];

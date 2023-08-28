@@ -39,10 +39,10 @@ function Nav() {
         </a> 
         {
           !pathname.includes("book_a_move") ?
-          <Link href='/book_a_move'  className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[8px] border-[#9d9d9d] border-[10px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold rounded-full text-xs'>
+          <Link href='/book_a_move'  className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[8px] border-inherit/20 border-[10px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold rounded-full text-xs'>
             BOOK NOW 
             <span className='font-extrabold text-lg max-h-5 text-center flex justify-center items-center'>
-            + 
+              + 
             </span>
           </Link> : null
         }

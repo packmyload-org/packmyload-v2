@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, Marker, DirectionsRenderer, useLoadScript, Libraries } from "@react-google-maps/api";
+import { GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
 import { usePathname } from 'next/navigation';
-import { message } from 'antd';
 
 interface RouteData {
   direction: google.maps.DirectionsResult | null;
@@ -14,16 +13,16 @@ function Map() {
   const path = usePathname()
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
-  const {locationValue, triggerCalculateRoute, setTriggerCalculateRoute} = useInputContext()
+  const { locationValue, triggerCalculateRoute, setTriggerCalculateRoute } = useInputContext()
+  
   const calculateRoute = async () => {
-    const pickUp = window.localStorage.getItem('pickUp');
-    const destination = window.localStorage.getItem('destination');
+    const pickUp = localStorage.getItem('pickUp');
+    const destination = localStorage.getItem('destination');
 
     if (!pickUp || !destination) {
       return null;
     }
     
-    // console.log(pickUp, destination)
     try {
       const directionService = new google.maps.DirectionsService();
       const results = await directionService.route({
@@ -62,7 +61,8 @@ function Map() {
     if (path.includes('partner') ) {
       setMapCenter(locationValue)
     }
-  },[locationValue])
+  }, [locationValue])
+  
   useEffect(() => {
      async function fetchRouteData() {
       const result = await calculateRoute();
@@ -92,7 +92,7 @@ function Map() {
         }}
       >
         {
-       ! routeData?.direction && <Marker position={mapCenter} />
+       !path.includes('book_a_move') && <Marker position={mapCenter} />
         }
           
         {routeData?.direction && path.includes('book_a_move') && <DirectionsRenderer directions={routeData.direction} />}

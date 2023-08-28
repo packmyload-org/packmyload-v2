@@ -2,11 +2,16 @@ import Image from 'next/image';
 import { AutoCompleteInput } from '../AutoCompleteInput';
 import { useRouter } from 'next/navigation';
 import { FormEvent } from 'react';
+import { useBookingForm } from '@/context/BookingFormContext';
 export default function HeroSection() {
   const router = useRouter()
+  const {state}=useBookingForm()
  
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+    e.preventDefault();
+    if (!state.pickUp && !state.destination) {
+      return alert('All fields required')
+    }
     router.push('book_a_move')
   }
     return (
@@ -20,7 +25,7 @@ export default function HeroSection() {
 									a new house or business address, we are here to help you with
 									managing the stress.</p>
           <div className="sm:w-full sm:mt-10 ">
-            <form onSubmit={handleSubmit} className='border-[#9d9d9d] bg-[#9d9d9d] border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[70%] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
+            <form onSubmit={handleSubmit} className='border-[#9d9d9d]/20 bg-[#9d9d9d]/20 border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[70%] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-5/12 justify-between border-r-2'>
                   <AutoCompleteInput
                     inputName='pickUp'

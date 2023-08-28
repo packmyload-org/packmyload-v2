@@ -1,3 +1,4 @@
+import { useBookingForm } from '@/context/BookingFormContext';
 import { useInputContext } from '@/context/InputContext';
 import { usePathname } from 'next/navigation';
 
@@ -8,6 +9,11 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
     setPlaceValueWithLocalStorage,
     setTriggerCalculateRoute,
   } = useInputContext();
+const { state, dispatch } = useBookingForm();
+
+  const handleFieldChange = (field: string, value: string) => {
+    dispatch({ type: 'UPDATE_FIELD', field, value });
+  };
 
   const handlePlaceChanged = () => {
     if (autocomplete) {
@@ -21,8 +27,8 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
             const latitude = place.geometry?.location?.lat();
             const longitude = place.geometry?.location?.lng();
 
-            if (formattedAddress) {
-              setInputValueWithLocalStorage(formattedAddress, inputName);
+            if (formattedAddress && inputName !== "pickUp" || "destination") {
+              setInputValueWithLocalStorage(formattedAddress ?? '', inputName);
               path.includes('book_a_move') && setTriggerCalculateRoute(true)
 
               if (latitude !== undefined && longitude !== undefined && !path.includes('book_a_move') ) {
@@ -30,6 +36,9 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
                setPlaceValueWithLocalStorage(location, inputName + 'Location');
               }
             }
+                      setInputValueWithLocalStorage(formattedAddress ?? '', inputName);
+              path.includes('book_a_move') && setTriggerCalculateRoute(true)
+          handleFieldChange(inputName,formattedAddress  ?? '')
           }
         });
       }
