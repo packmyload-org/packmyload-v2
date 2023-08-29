@@ -1,6 +1,5 @@
 "use client";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
-import Alert from "@/components/alerts/Alert";
 export default function Checkout(){
     return(
         <>
