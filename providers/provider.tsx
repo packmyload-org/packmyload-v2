@@ -7,13 +7,13 @@ import React from 'react'
 function Provider({children}:{children: React.ReactNode}) {
   return (
     <LoadingProvider>
-      <GoogleMapsProvider>
-        <BookingFormProvider>
-          <InputContextProvider>
-            {children}
-          </InputContextProvider>
-        </BookingFormProvider>
-      </GoogleMapsProvider>
+        <GoogleMapsProvider>
+          <BookingFormProvider>
+            <InputContextProvider>
+              {children}
+            </InputContextProvider>
+          </BookingFormProvider>
+        </GoogleMapsProvider>
     </LoadingProvider>
   )
 }

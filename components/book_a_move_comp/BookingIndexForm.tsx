@@ -1,48 +1,48 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { serviceList, serviceType } from "@/utils/bookingService";
 import { AutoCompleteInput } from "../AutoCompleteInput";
 import { useBookingForm } from '@/context/BookingFormContext';
+import { CustomModal } from '../modals/CustomModal';
 
 export default function BookingIndexForm() {
   const router = useRouter()
    const { state, dispatch } = useBookingForm();
   const [displayType, setDisplayType] = useState(false)
+  const [displayModal, setDisplayModal] = useState(true)
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
   let currentDay = new Date().toISOString();
   let minDate = currentDay.split("T")[0]
 
+  useEffect(() => {
+    if (state.MovingOn) {
+      setDisplayModal(true)
+    }
+  },[state.MovingOn])
+
   return (
    <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
         <div className="w-full md:w-[80%] mx-auto mb-4">
-            {/* <div className="flex flex-nowrap w-full justify-between ">
-                  <ArrowCircleLeft size={24} className='text-white' />
-                <div className="flex w-[70%] justify-between">
-                <h2 className="text-lg text-white font-satoshi font-semibold"> Price ${0.32}</h2>
-                <div className="hidden relative w-10 h-[30px] flex-col items-center justify-end ">
-                    <p className="absolute top-0 right-0 text-sm text-white font-bold">0</p>
-                    <ListNumbers size={24} className='text-white'/>
-                </div>
-                </div>
-            </div> */}
-            <h2 className="w-full text-2xl text-white font-bold font-mono text-center">Let's Get Started </h2>
+            <h2 className="w-full text-2xl text-white font-bold text-center">Let's Get Started </h2>
         </div>
 
          {/* Form  */}
          <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/book_a_move/locations-details') }}>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
-          
-          <AutoCompleteInput
-            type="text"
-            inputName="pickUp"
-            inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-            placeholder="Destination From"
+          <>
+            <AutoCompleteInput
+              type="text"
+              inputName="pickUp"
+              inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              placeholder="Destination From"
             />
+              <p className='text-gray-700'>we carry out services from <b className='uppercase text-red-500'>Lagos</b> and <b className='uppercase text-red-500'>Abuja</b>{' '}only.</p>
+          </>
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-white font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
@@ -66,10 +66,11 @@ export default function BookingIndexForm() {
               value={state.MovingOn}
               onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />
-          </div>
-          <div className="w-[90%] mx-auto flex flex-col items-start">
+        </div>
+      
+          <div className="w-[90%] mx-auto pt-3 flex flex-col items-start">
              <select className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-            e.target.value === serviceList[0].label ? setDisplayType(true) : setDisplayType(false)
+            e.target.value.includes('RELOCATION') ? setDisplayType(true) : setDisplayType(false)
             }}>
           
                 <option hidden>
@@ -85,7 +86,7 @@ export default function BookingIndexForm() {
             </select>
           </div>
            {displayType && (
-            <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
+            <div className="w-[90%] mx-auto pt-3 flex flex-col gap-1 items-start">
               <select name="category" id="" className='w-full p-3 px-0 border border-gray-400 text-gray-500 rounded-md bg-white outline-none'>
                  <option value="" hidden>Service Type</option>
                  {serviceType.map(item => <option
@@ -103,7 +104,16 @@ export default function BookingIndexForm() {
             >
               Proceed
           </button>
-        </form>
+         </form>
+      
+      {/* Form Modal  */}
+      {displayModal &&
+        <CustomModal
+          displayModal={displayModal}
+          title={'TIME OF MOVE'}
+          setDisplayModal={setDisplayModal}
+          />
+      }
     </div>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 import { AutoCompleteInput } from '@/components/AutoCompleteInput';
 import Map from '@/components/Map';
-import Alert from '@/components/alert/Alert';
 import { useGoogleMaps } from '@/context/GoogleMapsContext';
 import { useInputContext } from '@/context/InputContext';
 import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
@@ -163,7 +162,6 @@ function PartnerPage() {
                         {loading ? "loading...": "Sign me up"}
                     </button>
                 </form>
-                {showAlert && <Alert content={alertContent} /> }
             </div>
             <div className="hidden lg:block absolute top-0 right-0 bottom-0 w-1/2">
                 <Map/>

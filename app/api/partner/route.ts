@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDB } from '@/utils/database';
 import Partner from '@/models/partner';
-import sendEmail  from '@/utils/mailer';
+import sendEmail  from '@/public/utils/mailer';
 export async function POST(request: Request) {
  await connectToDB();
  try {

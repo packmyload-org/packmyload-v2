@@ -19,7 +19,6 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
  const { setInputValueWithLocalStorage } = useInputContext();
   const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
  
-  const path = usePathname()
   const {state}=useBookingForm()
  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setInputValueWithLocalStorage(event.target.value, event.target.name);
@@ -28,16 +27,16 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
  const { handlePlaceChanged } = useInputPlaceContext(autocomplete, inputName);
 
   const name = inputName.toLowerCase()
-
+ 
   return (
-   <>
+    <>
     <Autocomplete onLoad={(auto) => setAutocomplete(auto)} onPlaceChanged={handlePlaceChanged} className='w-full grid place-items-start'>
         <input
           name={inputName}
           type={type}
           className={inputStyle}
           placeholder={placeholder}
-          defaultValue={path.includes('book_a_move') && name === 'pickup' ? state.pickUp : path.includes('book_a_move') && name === 'destination' ? state.destination : ''}
+          defaultValue={name === "pickup" ? state.pickUp : name === 'destination' ? state.destination : '' }
         />
       </Autocomplete>
     </>

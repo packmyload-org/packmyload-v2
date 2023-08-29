@@ -1,9 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import dynamic from "next/dynamic"
-import { clearStore } from '@/hooks/useDirections-hook'
 import { useGoogleMaps } from '@/context/GoogleMapsContext'
 import Loading from './loading'
+import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'
+import AppToast from '@/components/alerts/AppToast'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'),
@@ -18,14 +19,14 @@ const Procedure= dynamic(()=>import('@/components/landing/Procedure'),
 const Faq = dynamic(() => import('@/components/landing/Faq'),
   { ssr: false })
   function Home() {
-  const {isLoaded, loadError}= useGoogleMaps()
-  const [loading,setLoading]= useState(false)
+  const { isLoaded, loadError } = useGoogleMaps()
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     if (!isLoaded) {
       setLoading(!loading)
     }
     setLoading(false)
-   clearStore()
+    localStorage.clear()
   }, [])
   
     if (loading) {
@@ -33,7 +34,7 @@ const Faq = dynamic(() => import('@/components/landing/Faq'),
     }
   return(
     <div className='w-full text-black'style={{marginTop: '130px'}}>
-      <>
+      <>  
           <HeroSection/>
           <ServiceSection/>
           <Section3/>

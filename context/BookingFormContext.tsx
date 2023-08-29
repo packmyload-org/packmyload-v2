@@ -1,4 +1,4 @@
-import React, { ChangeEvent, createContext, useContext, useReducer } from 'react';
+import React, {  createContext, useContext, useReducer } from 'react';
 
 // Define the form state interface
 interface BookingFormState {
@@ -8,6 +8,7 @@ interface BookingFormState {
   MovingOn: string;
   pickUp: string;
   destination: string;
+  pickUpError: string;
 }
 
 // Define action types
@@ -20,7 +21,8 @@ const initialFormState: BookingFormState = {
   email: '',
   MovingOn: '',
   pickUp: '',
-  destination:'',
+  destination: '',
+  pickUpError: '',
 };
 
 // Create context
@@ -34,6 +36,8 @@ const formReducer = (state: BookingFormState, action: Action): BookingFormState 
   switch (action.type) {
     case 'UPDATE_FIELD':
       return { ...state, [action.field]: action.value };
+    // case 'PICKUP_FIELD_ERROR':
+    //   return {...state, [action.field]: 'Not available in this location'}
     default:
       return state;
   }
