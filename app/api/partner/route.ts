@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDB } from '@/utils/database';
 import Partner from '@/models/partner';
-import sendEmail  from '@/public/utils/mailer';
 export async function POST(request: Request) {
  await connectToDB();
  try {
@@ -17,6 +16,6 @@ export async function POST(request: Request) {
   //   })
     return new Response(JSON.stringify(partner),{status:201})
   } catch (error) {
-    return new Response("failed",{status:500})
+    return new Response("failed",{status:400})
   }
 }
