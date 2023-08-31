@@ -9,6 +9,8 @@ interface BookingFormState {
   pickUp: string;
   destination: string;
   pickUpError: string;
+  moveTime: string;
+  phoneNumber: string;
 }
 
 // Define action types
@@ -23,6 +25,8 @@ const initialFormState: BookingFormState = {
   pickUp: '',
   destination: '',
   pickUpError: '',
+  moveTime: '',
+  phoneNumber:'',
 };
 
 // Create context

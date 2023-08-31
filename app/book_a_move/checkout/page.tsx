@@ -1,12 +1,14 @@
 "use client";
+import { useBookingForm } from "@/context/BookingFormContext";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
-export default function Checkout(){
+export default function Checkout() {
+    const {state}=useBookingForm()
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
             {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
-                    <h1 className="text-2xl font-bold">Your Move</h1>
+                    <h1 className="text-2xl font-bold">Your Move{' '}{state.fullName.split(' ')[0]}</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
                         <MapPin size={25} color="#444646" weight="fill" />
                         <div className="ml-2 text-lg font-medium">                   

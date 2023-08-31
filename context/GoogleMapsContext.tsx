@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { Libraries, useJsApiLoader } from '@react-google-maps/api';
+import { Libraries, LoadScript } from '@react-google-maps/api';
 
 interface GoogleMapsContextProps {
   children: React.ReactNode;
@@ -22,22 +22,13 @@ export const useGoogleMaps = () => {
 
 export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children }) => {
   const libraries: Libraries = ['places'];
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '',
-    libraries: libraries,
-  });
-
-  const [hasLoadError, setHasLoadError] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (loadError) {
-      setHasLoadError(true);
-    }
-  }, [loadError]);
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
 
   return (
-    <GoogleMapsContext.Provider value={{ isLoaded, loadError: hasLoadError }}>
-      {children}
-    </GoogleMapsContext.Provider>
+    <LoadScript googleMapsApiKey={apiKey} libraries={libraries}>
+      <GoogleMapsContext.Provider value={{ isLoaded: true, loadError: false }}>
+        {children}
+      </GoogleMapsContext.Provider>
+    </LoadScript>
   );
 };
