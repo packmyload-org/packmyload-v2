@@ -10,7 +10,7 @@ export default function BookingIndexForm() {
   const router = useRouter()
    const { state, dispatch } = useBookingForm();
   const [displayType, setDisplayType] = useState(false)
-  const [displayModal, setDisplayModal] = useState(true)
+  const [displayModal, setDisplayModal] = useState(false)
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
@@ -27,13 +27,13 @@ export default function BookingIndexForm() {
    <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
         <div className="w-full md:w-[80%] mx-auto mb-4">
-            <h2 className="w-full text-2xl text-white font-bold text-center">Let's Get Started </h2>
+            <h2 className="w-full text-2xl ext-gray-900 font-bold text-center">Let's Get Started </h2>
         </div>
 
          {/* Form  */}
          <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center " onSubmit={(e) => { e.preventDefault(); router.push('/book_a_move/locations-details') }}>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
+            <label className="text-md ext-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
           <>
             <AutoCompleteInput
               type="text"
@@ -45,7 +45,7 @@ export default function BookingIndexForm() {
           </>
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-white font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
+            <label className="text-md ext-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
           
           <AutoCompleteInput
             type="text"
@@ -55,7 +55,7 @@ export default function BookingIndexForm() {
             />
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-white font-semibold" htmlFor="MovingFrom">Move Date <span className='text-red-600'>*</span></label>
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Move Date <span className='text-red-600'>*</span></label>
             <input
               type="date"
               id='MovingOn'
