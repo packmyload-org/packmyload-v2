@@ -25,10 +25,10 @@ function Services() {
   return (
     <div>
         <Dropdown menu={{ items }} className='flex w-16'>
-          <a onClick={(e) => e.preventDefault()} className='text-gray-500 cursor-pointer'>
+          <a onClick={(e) => e.preventDefault()} className='text-white cursor-pointer'>
             <Space className='flex items-center'>
               Partners
-              <CaretDown size={16} color="#667280" weight="fill" />
+              <CaretDown size={16} color="white" weight="fill" />
             </Space>
           </a>
         </Dropdown>
