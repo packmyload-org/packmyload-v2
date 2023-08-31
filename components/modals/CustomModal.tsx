@@ -15,15 +15,15 @@ export const CustomModal = (props: Props) => {
   };
   return (
    <Modal
-    className=''
+    className='modal__style '
     open={props.displayModal}
     onCancel={() => props.setDisplayModal(false)}
     width={700}
       footer={null}
       
     >
-      <Col span={24} className='bg-blue-100 text-center space-y-4 py-4 mt-6 mb-4 input_shadow rounded-lg'>
-        <h1 className='font-bold text-gray-900 w-full text-2xl'>{props.title}</h1>
+      <Col span={24} className='text-center bg-blue-300 space-y-4 py-4 mt-6 mb-4 input_shadow rounded-lg '>
+        <h1 className='font-extrabold text-gray-900 w-full text-2xl'>{props.title}</h1>
         <form className='bg-white/20 w-[90%] mx-auto space-y-4 p-4 rounded-lg'>
            <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Full Name <span className='text-red-600'>*</span></label>
@@ -46,6 +46,19 @@ export const CustomModal = (props: Props) => {
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
               value={state.email}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
+            />
+          </div>
+           <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Phone  <span className='text-red-600'>*</span></label>
+            <input
+              type="text"
+              id='phoneNumber'
+              placeholder='+66 703 78932'
+              min={11}
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              required
+              value={state.phoneNumber}
               onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />
           </div>

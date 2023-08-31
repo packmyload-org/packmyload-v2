@@ -8,7 +8,6 @@ interface BookingFormState {
   MovingOn: string;
   pickUp: string;
   destination: string;
-  pickUpError: string;
   moveTime: string;
   phoneNumber: string;
 }
@@ -24,7 +23,6 @@ const initialFormState: BookingFormState = {
   MovingOn: '',
   pickUp: '',
   destination: '',
-  pickUpError: '',
   moveTime: '',
   phoneNumber:'',
 };

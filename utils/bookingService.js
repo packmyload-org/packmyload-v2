@@ -28,11 +28,11 @@ export const serviceList = [
 export const serviceType = [
   {
     key: "1",
-    label: "Large Move",
+    label: "Full House Move",
   },
   {
     key: "2",
-    label: "Small Moves and Furniture Delivery",
+    label: "Item Pick up and Furniture Delivery",
   },
 ];
 export const serviceFor = [

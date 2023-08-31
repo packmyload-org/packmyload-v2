@@ -45,7 +45,7 @@ function Nav() {
             
         {
           !pathname.includes("book_a_move") ?
-          <Link href='/book_a_move'  className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[8px] border-inherit/20 border-[10px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-white font-bold rounded-full text-xs '>
+          <Link href='/book_a_move'  className='flex justify-evenly items-center hover:animate-pulse w-[130px] p-[8px] border-inherit/20 border-[6px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-white font-bold rounded-full text-xs '>
             BOOK NOW 
             {/* <span className='font-extrabold text-lg max-h-5 text-center flex justify-center items-center'>
               + 

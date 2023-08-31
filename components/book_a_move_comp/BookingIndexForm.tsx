@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { serviceList, serviceType } from "@/utils/bookingService";
 import { AutoCompleteInput } from "../AutoCompleteInput";
 import { useBookingForm } from '@/context/BookingFormContext';
@@ -24,8 +24,14 @@ export default function BookingIndexForm() {
     }
   },[state.MovingOn])
 
-  const handleProceed = (e: SubmitEvent) => {
+  const handleProceed = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(state)
+    if (!state.email || !state.phoneNumber || !state.fullName || state.moveTime) {
+      alerts.error('Invalid Form Submission', 'All fields required')
+      setDisplayModal(true)
+      return;
+    }
     if (!state.pickUp|| !state.destination|| !state.phoneNumber || !state.email || !state.MovingOn || !state.moveTime ) {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
@@ -41,9 +47,9 @@ export default function BookingIndexForm() {
         </div>
 
          {/* Form  */}
-      <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center" onSubmit={()=>handleProceed} >
+      <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center" onSubmit={handleProceed} >
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md ext-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
+            <label className="text-md text-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
           <>
             <AutoCompleteInput
               type="text"
@@ -51,7 +57,6 @@ export default function BookingIndexForm() {
               inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               placeholder="Destination From"
             />
-              <p className='text-gray-700'>we carry out services from <b className='uppercase text-red-500'>Lagos</b> and <b className='uppercase text-red-500'>Abuja</b>{' '}only.</p>
           </>
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
