@@ -50,7 +50,7 @@ export const CustomModal = (props: Props) => {
             />
           </div>
            <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">moveTime <span className='text-red-600'>*</span></label>
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Time <span className='text-red-600'>*</span></label>
             <input
               type="text"
               id='moveTime'

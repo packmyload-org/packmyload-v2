@@ -18,6 +18,9 @@
   color: rgba(255, 255, 255, 0.51);
   font-size: 13px;
 }
+.place_font::placeholder{
+  font-weight: 700;
+}
 .main {
   width: 100vw;
   min-height: 100vh;
