@@ -23,7 +23,7 @@ export default function HeroSection() {
 
       <div className='my-auto section-title h-1/2 w-full z-10 '>
         <main className='container flex flex-col items-center text-center space-y-8'>
-         <h2 className='text-4xl sm:text-3xl font-inter w-full font-semibold text-gray-100'>Moving as easy as <span className='font-extrabold sm:mt-10'>ABC</span></h2>
+         <h2 className='text-4xl sm:text-3xl font-inter w-full font-semibold text-blue-500'>Moving as easy as <span className='font-extrabold sm:mt-10'>ABC</span></h2>
          <p className='w-5/6 sm:w-ful'>Whether moving down the street, to another state, or to
 									a new house or business address, we are here to help you with
 									managing the stress.</p>
