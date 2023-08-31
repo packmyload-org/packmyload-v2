@@ -16,7 +16,7 @@ export default function Services(){
               loading='lazy'
               className="object-cover w-full h-auto rounded transition-transform duration-300 transform-gpu hover:scale-110" 
             />
-            <div className="absolute bottom-4 font-sans left-0 p-2 text-white text-lg font-bold">
+            <div className="absolute bottom-4 left-0 p-2 text-white text-lg font-bold">
               {item.title}
             </div>
           </div>

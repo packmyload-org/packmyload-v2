@@ -23,7 +23,7 @@ export default function HeroSection() {
 
       <div className='my-auto h-1/2 w-full z-10 '>
         <main className='container flex flex-col w-full items-center text-center space-y-8'>
-            <h2 className='text-[4rem] sm:text-3xl font-inter w-full font-extrabold text-blue-300' style={{fontSize:'3.5rem'}}>
+            <h2 className='text-[4rem] sm:text-3xl font-bold w-full font-extrabold text-blue-300' style={{fontSize:'3.5rem'}}>
               We make your move feel effortless
             </h2>
          <p className='w-[50%] sm:w-full mx-auto text-2xl font-normal' style={{fontSize:'18px'}}>Every Move Is Unique and we have the right relocation solution for you.<br/> From full service and DIY relocation solutions to vehicle transport services for domestic and international moving.</p>

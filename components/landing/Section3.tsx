@@ -9,7 +9,7 @@ export default function Section3() {
   <section className="w-full py-[100px] bg-gray-200">
    <div className="container">
      <div className='gap-6 flex flex-col section-title'>
-          <h2 className="w-full font-bold text-4xl text-center font-satoshi">We've got your back</h2>
+          <h2 className="w-full font-bold text-4xl text-center">We've got your back</h2>
           <span className="section-separator"></span>
           <p className='w-full text-center '>Browse through our services to find the one relevant to you.</p>
       </div>
@@ -31,7 +31,7 @@ export default function Section3() {
        </Col>
         <Col span={24} lg={8} className='min-h-[200px]  justify-center items-center section-title '>
         <div className='h-max mt-[20%] gap-4 flex flex-col'>
-          <h2 className="w-[70%] font-bold text-4xl text-center font-satoshi">Strong PackMen</h2>
+          <h2 className="w-[70%] font-bold text-4xl text-center">Strong PackMen</h2>
           <span className="section-separator"></span>
           <p className='w-[70%] text-center text-sm mx-auto '>Every Pack comes with strong professional packmen who are vetted for a 5-star experience. They will do the impossible to load, haul and deliver your items safely.</p>
         </div>
@@ -46,7 +46,7 @@ export default function Section3() {
          />
        </Col>
        <Col span={20} className=' flex flex-col justify-center items-center section-title gap-4'>
-          <h2 className="w-full font-bold text-4xl text-center font-satoshi">A truck for all your moving needs</h2>
+          <h2 className="w-full font-bold text-4xl text-center">A truck for all your moving needs</h2>
           <p className='w-full text-center text-sm '>From Pickup Trucks to Cargo Vans and Sprinter Vans.</p>
        </Col>
        <Col span={24}>
