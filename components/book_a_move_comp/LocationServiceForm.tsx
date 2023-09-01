@@ -29,7 +29,7 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                    {item.label}
                 </option>)}
             </select>
-            <div className="flex justify-between mt-3" >
+            {/* <div className="flex justify-between mt-3" >
                 <div className="flex items-center">
                     <div className="bg-slate-50 rounded-full p-2">
                         <SquareHalf size={32} color="#5bc7dc" />
@@ -47,7 +47,7 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                     required
                     />
                 </div>
-            </div>
+            </div> */}
             <div className="flex justify-between mt-3" >
                 <div className="flex items-center">
                     <div className="bg-slate-50 rounded-full p-2">
@@ -63,6 +63,7 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                     id='floors'
                     placeholder="#"
                     className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+                    min={0}
                     required
                     />
                 </div>
