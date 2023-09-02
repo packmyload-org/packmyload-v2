@@ -5,7 +5,7 @@ import Services from '@/components/services/Services';
 export default function Service() {
 
     return (
-    <section>
+    <section style={{marginTop: '100px'}}>
       <Services />
       <Faq />
     </section>

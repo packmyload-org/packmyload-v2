@@ -26,7 +26,7 @@ function Nav() {
     </Link>
     
     {/* Desktop Navigation  */}
-    <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-[47%]">
+    <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-[57%]">
         <div className='text-white w-full gap-6 flex justify-evenly items-center'>
         <Link href='/services' className=' w-16 text-white cursor-pointer font-bold'>
           Services

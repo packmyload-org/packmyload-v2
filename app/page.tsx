@@ -5,6 +5,11 @@ import { useGoogleMaps } from '@/context/GoogleMapsContext'
 import Loading from './loading'
 import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'
 import AppToast from '@/components/alerts/AppToast'
+// import StepCard from '@/components/landing/custom/StepCard'
+import PackSection from '@/components/landing/PackSection'
+import { MovingServices } from '@/components/landing/MovingServices'
+import { Reviews } from '@/components/landing/Reviews'
+import { Banner } from '@/components/landing/Banner'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'),
@@ -36,9 +41,14 @@ const Faq = dynamic(() => import('@/components/landing/Faq'),
     <div className='w-full text-black'style={{marginTop: '130px'}}>
       <>  
           <HeroSection/>
+          <Banner />
           <ServiceSection/>
+          {/* <StepCard /> */}
           <Section3/>
+          <MovingServices />
+          <PackSection />
           <Procedure/>
+          <Reviews />
           <Faq/> 
       </>
      

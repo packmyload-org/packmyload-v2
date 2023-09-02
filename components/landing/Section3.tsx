@@ -14,7 +14,7 @@ export default function Section3() {
           <p className='w-full text-center '>Browse through our services to find the one relevant to you.</p>
       </div>
       <div className="w-full">
-       <Row className=' w-full mt-14 gap-4 lg:gap-0 px-[3%]' justify={'center'}>
+       <Row className=' w-full mt-14 gap-4 lg:gap-6 px-[3%]' justify={'center'}>
        <Col span={24} lg={8} className='relative' >
        <div className="video-box fl-wrap w-full lg:mb-[20px]">
         <Image 
@@ -31,7 +31,7 @@ export default function Section3() {
        </Col>
         <Col span={24} lg={8} className='min-h-[200px]  justify-center items-center section-title '>
         <div className='h-max mt-[20%] gap-4 flex flex-col'>
-          <h2 className="w-[70%] font-bold text-4xl text-center">Strong PackMen</h2>
+          <h2 className="w-[70%] font-bold text-4xl text-center">Strong Packmen</h2>
           <span className="section-separator"></span>
           <p className='w-[70%] text-center text-sm mx-auto '>Every Pack comes with strong professional packmen who are vetted for a 5-star experience. They will do the impossible to load, haul and deliver your items safely.</p>
         </div>
