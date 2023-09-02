@@ -23,7 +23,7 @@ export default function Checkout() {
                             Pickup Location
                         </div>
                         <div className="mt-1 text-sm">                   
-                            6301 Silver Dart Drive, Mississauga, ON
+                            {state.pickUp}
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
@@ -31,7 +31,7 @@ export default function Checkout() {
                             Dropoff Location
                         </div>
                         <div className="mt-1 text-sm">                   
-                            6301 Silver Dart Drive, Mississauga, ON
+                            {state.destination}
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@ export default function Checkout() {
                             Date
                         </div>
                         <div className="mt-1 text-sm">                   
-                            19/08/2023
+                            {state.MovingOn}
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
@@ -59,7 +59,7 @@ export default function Checkout() {
                             Time
                         </div>
                         <div className="mt-1 text-sm">                   
-                            8:00:00 PM
+                            {state.moveTime}
                         </div>
                     </div>
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
@@ -78,7 +78,7 @@ export default function Checkout() {
                             Move Type
                         </div>
                         <div className="mt-1 text-sm">                   
-                            Small moves & furniture delivery
+                            {state.moveType}
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">

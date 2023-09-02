@@ -86,6 +86,7 @@ export default function BookingIndexForm() {
           <div className="w-[90%] mx-auto pt-3 flex flex-col items-start">
              <select className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
             e.target.value.includes('HOME RELOCATION') ? setDisplayType(true) : setDisplayType(false)
+            handleFieldChange('service', e.target.value)
             }}>
           
                 <option hidden>
@@ -94,7 +95,6 @@ export default function BookingIndexForm() {
                {serviceList.map(item => <option
                  value={item.label}
                  key={item.key}
-                  onClick={()=>handleFieldChange('service', item.label)}
                >
                  {item.label}
                </option>)
@@ -103,12 +103,13 @@ export default function BookingIndexForm() {
           </div>
            {displayType && (
             <div className="w-[90%] mx-auto pt-3 flex flex-col gap-1 items-start">
-              <select name="category" id="" className='w-full p-3 px-0 border border-gray-400 text-gray-500 rounded-md bg-white outline-none'>
+            <select name="category" id="" className='w-full p-3 px-0 border border-gray-400 text-gray-500 rounded-md bg-white outline-none'
+            onChange={(e)=>handleFieldChange('moveType', e.target.value)}>
                  <option value="" hidden>Service Type</option>
                  {serviceType.map(item => <option
                    value={item.label}
                    key={item.key}
-                    onClick={()=>handleFieldChange('moveType', item.label)}
+                    
                  >
                    {item.label}
                  </option>)}
