@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
 import { usePathname } from 'next/navigation';
+import { alerts } from './alerts/Alert';
 
 interface RouteData {
   direction: google.maps.DirectionsResult | null;
@@ -37,7 +38,7 @@ function Map() {
       };
     } catch (error) {
       console.warn('Error calculating route:', error);
-      alert('No route found between pickup and destination address')
+      alerts.error('Directions error','No route found by current travel mode.')
       return null;
     }
   };
