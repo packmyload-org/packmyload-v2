@@ -26,7 +26,7 @@ export default function Services(){
       ))
 
     return(
-        <div className="max-w-6xl mx-auto px-4 sm:px-6" style={{marginTop: '100px'}}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="py-12 md:py-20">
 
             {/* Section header */}

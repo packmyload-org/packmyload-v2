@@ -9,6 +9,7 @@ import AppToast from '@/components/alerts/AppToast'
 import PackSection from '@/components/landing/PackSection'
 import { MovingServices } from '@/components/landing/MovingServices'
 import { Reviews } from '@/components/landing/Reviews'
+import { Banner } from '@/components/landing/Banner'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'),
@@ -40,6 +41,7 @@ const Faq = dynamic(() => import('@/components/landing/Faq'),
     <div className='w-full text-black'style={{marginTop: '130px'}}>
       <>  
           <HeroSection/>
+          <Banner />
           <ServiceSection/>
           {/* <StepCard /> */}
           <Section3/>
