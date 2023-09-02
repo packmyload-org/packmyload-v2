@@ -237,7 +237,7 @@ body {
   width: 100%;
   position: relative;
   color: #566985;
-  line-height: 44px;
+  line-height: 5px;
   font-size: 34px;
 }
 #about-font2,h3,p{
@@ -315,7 +315,7 @@ p {
   float: left;
   width: 100%;
   position: relative;
-  margin: 8px 0;
+  margin: 15px 0;
 }
 span{
   border: none;
