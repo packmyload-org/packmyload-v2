@@ -27,12 +27,12 @@ export default function BookingIndexForm() {
   const handleProceed = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(state)
-    if (!state.email || !state.phoneNumber || !state.fullName || state.moveTime) {
+    if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
       alerts.error('Invalid Form Submission', 'All fields required')
       setDisplayModal(true)
       return;
     }
-    if (!state.pickUp|| !state.destination|| !state.phoneNumber || !state.email || !state.MovingOn || !state.moveTime ) {
+    if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
     }
@@ -94,6 +94,7 @@ export default function BookingIndexForm() {
                {serviceList.map(item => <option
                  value={item.label}
                  key={item.key}
+                  onClick={()=>handleFieldChange('service', item.label)}
                >
                  {item.label}
                </option>)
@@ -107,6 +108,7 @@ export default function BookingIndexForm() {
                  {serviceType.map(item => <option
                    value={item.label}
                    key={item.key}
+                    onClick={()=>handleFieldChange('moveType', item.label)}
                  >
                    {item.label}
                  </option>)}

@@ -4,31 +4,22 @@ import { useEffect, useState } from "react"
 import { usePathname, useRouter } from 'next/navigation';
 
 const BookingProgress: React.FC = () => {
-    let activeStyle = 'flex items-center justify-center px-4 h-10 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white'
-    let defaultStyle = 'flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+    let activeStyle = "flex md:w-full items-center text-blue-600 dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-600 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700"
+    let defaultStyle = "flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-600 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700"
     const [active, setActive] = useState(0)
     const path = usePathname()
     const router = useRouter()
     useEffect(() => {
-        if (path === '/book_a_move') {
+        // alert(path)
+        if (path === '/book_a_move' ||'/book_a_move/items' ) {
             setActive(1)
         }else if (path === '/book_a_move/locations-details') {
             setActive(2)
         }else if (path === '/book_a_move/checkout') {
             setActive(3)
         }
-    }, [])
-    {/** Works tho */}
-    // const handlePrevPage = () => {
-    //     if (active > 1) {
-    //         setActive((prev) => prev - 1)
-    //         let newPathNumber = active - 1
-    //         newPathNumber === 2 ? router.push('/book_a_move/locations-details') : newPathNumber === 3 ? router.push('/book_a_move/checkout') : router.push('/book_a_move')
-    //         // router.push(`${routes[newPathNumber]}`)
-    //         return
-    //     }
-    //     setActive(active)
-    // }
+    }, [path])
+
     const handlePrevPage = () => {
         if (active > 1) {
             let newPathNumber = active - 1;
@@ -99,22 +90,27 @@ const BookingProgress: React.FC = () => {
         <nav aria-label="Page navigation example" className="max-w-6xl mx-auto" style={{marginTop:'110px'}}>
 
             <ol className="flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
-                <li className="flex md:w-full items-center text-blue-600 dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-600 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+                <li className={`${active === 1 ? activeStyle : defaultStyle}`}>
                     <span className="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
-                        <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        {active === 1 ? <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                        </svg>
+                        </svg>: <span className="mr-2">1</span>}
                         Getting <span className="hidden sm:inline-flex sm:ml-2">Started</span>
                     </span>
                 </li>
-                <li className="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-600 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+                <li className={`${active === 2 ? activeStyle : defaultStyle}`}>
+                {/* <li className={active === 2 ? activeStyle : defaultStyle}> */}
                     <span className="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
-                        <span className="mr-2">2</span>
+                        {active === 2 ? <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>: <span className="mr-2">2</span>}
                         Location <span className="hidden sm:inline-flex sm:ml-2">Details</span>
                     </span>
                 </li>
-                <li className="flex items-center">
-                    <span className="mr-2">3</span>
+                <li className={active === 3 ? activeStyle : defaultStyle}>
+                    {active === 3 ? <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>: <span className="mr-2">3</span>}
                     Confirmation
                 </li>
             </ol>

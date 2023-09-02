@@ -10,12 +10,21 @@ interface BookingFormState {
   destination: string;
   moveTime: string;
   phoneNumber: string;
+  moveType: string,
+  items: Array<{
+    item: string;
+    numberOfItems: string;
+  }>;
+  buildingType: string,
+  floors: string,
+  parking:string,
+  service:string,
 }
 
 // Define action types
 type Action =
-  | { type: 'UPDATE_FIELD'; field: string; value: string };
-
+  | { type: 'UPDATE_FIELD'; field: string; value: string }
+  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string }[] };
 // Define initial form state
 const initialFormState: BookingFormState = {
   fullName: '',
@@ -25,6 +34,12 @@ const initialFormState: BookingFormState = {
   destination: '',
   moveTime: '',
   phoneNumber:'',
+  moveType: 'Item Pick Up and Furniture Delivery',
+  items: [],
+  buildingType: '',
+  floors: '',
+  parking: '',
+  service:''
 };
 
 // Create context
@@ -34,16 +49,18 @@ const BookingFormContext = createContext<{
 } | undefined>(undefined);
 
 // Define reducer function
+// Define reducer function
 const formReducer = (state: BookingFormState, action: Action): BookingFormState => {
   switch (action.type) {
     case 'UPDATE_FIELD':
       return { ...state, [action.field]: action.value };
-    // case 'PICKUP_FIELD_ERROR':
-    //   return {...state, [action.field]: 'Not available in this location'}
+    case 'UPDATE_ITEMS':
+      return { ...state, items: [...action.items] }; 
     default:
       return state;
   }
 };
+
 export const useBookingForm = () => {
   const context = useContext(BookingFormContext);
   if (context === undefined) {
