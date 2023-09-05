@@ -3,13 +3,13 @@ import { useBookingForm } from "@/context/BookingFormContext";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
 export default function Checkout() {
     const {state}=useBookingForm()
-    console.log(state)
+    console.log(state.distance)
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
             {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
-                    <h1 className="text-2xl font-bold">Your Move{' '}{state.fullName.split(' ')[0]}</h1>
+                    <h1 className="text-2xl font-bold">Your Move:{' '}{state.fullName}</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
                         <MapPin size={25} color="#444646" weight="fill" />
                         <div className="ml-2 text-lg font-medium">                   
@@ -110,7 +110,7 @@ export default function Checkout() {
                             Distance (km)
                         </div>
                         <div className="mt-1 text-sm">                   
-                            0.00
+                            {state.distance}
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
@@ -118,7 +118,7 @@ export default function Checkout() {
                             Your Team
                         </div>
                         <div className="mt-1 text-sm">                   
-                            1 Mates(s)   
+                            1 packer (s)   
                         </div>
                     </div>
 

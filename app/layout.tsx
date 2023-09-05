@@ -1,23 +1,24 @@
-'use client'
 import dynamic from 'next/dynamic'
-const Nav = dynamic(() => import('@/components/Nav'),
-{ssr: false})
+const Nav = dynamic(() => import('@/components/Nav'), {
+    loading: ()=> <Loading/>
+  })
 import './globals.css'
-const Footer = dynamic(() => import('@/components/Footer'),
-{ssr: false})
+const Footer = dynamic(() => import('@/components/Footer'), {
+    loading: ()=> <Loading/>
+  })
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
-import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import Provider from '@/providers/provider'
 import { ToastContainer } from 'react-toastify'
+import Loading from './loading'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname()
+  // const pathname = usePathname()
   return (
     <html lang="en">
       <meta name="description" content="packmyload.com offers is one of the best packing and moving companies in Lagos, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move.
@@ -37,9 +38,9 @@ export default function RootLayout({
                 <StyledComponentsRegistry>
                   <App>
                     <Nav/>
-                    {
+                    {/* {
                       pathname.includes("book_a_move") ? <BookingProgress /> : null
-                    } 
+                    }  */}
                       {children}
                   <Footer />
                    <ToastContainer

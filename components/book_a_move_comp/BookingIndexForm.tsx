@@ -6,6 +6,7 @@ import { AutoCompleteInput } from "../AutoCompleteInput";
 import { useBookingForm } from '@/context/BookingFormContext';
 import { CustomModal } from '../modals/CustomModal';
 import { alerts } from '../alerts/Alert';
+import { Row } from 'antd';
 
 export default function BookingIndexForm() {
   const router = useRouter()
@@ -15,21 +16,15 @@ export default function BookingIndexForm() {
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
+
   let currentDay = new Date().toISOString();
   let minDate = currentDay.split("T")[0]
-
-  useEffect(() => {
-    if (state.MovingOn) {
-      setDisplayModal(true)
-    }
-  },[state.MovingOn])
 
   const handleProceed = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(state)
     if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
       alerts.error('Invalid Form Submission', 'All fields required')
-      setDisplayModal(true)
       return;
     }
     if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
@@ -69,7 +64,8 @@ export default function BookingIndexForm() {
             placeholder="Destination To"
             />
           </div>
-          <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
+        <Row className="w-[90%] mx-auto " justify={'space-between'}>
+          <div className="w-[45%] flex flex-col gap-1 items-start">
             <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Move Date <span className='text-red-600'>*</span></label>
             <input
               type="date"
@@ -82,7 +78,57 @@ export default function BookingIndexForm() {
               onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />
         </div>
-      
+        <div className="w-[45%]  flex flex-col gap-1 items-start">
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Time <span className='text-red-600'>*</span></label>
+            <input
+              type="text"
+              id='moveTime'
+              placeholder='Enter your preferred move time: 8am-9am'
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              required
+              value={state.moveTime}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
+            />
+          </div>
+          </Row>
+
+            <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Full Name <span className='text-red-600'>*</span></label>
+            <input
+              type="text"
+              id='fullName'
+              placeholder='John Doe'
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              required
+              value={state.fullName}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
+            />
+          </div>
+           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Email <span className='text-red-600'>*</span></label>
+            <input
+              type="email"
+              id='email'
+              placeholder='example@example.com'
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              required
+              value={state.email}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
+            />
+          </div>
+           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
+            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Phone  <span className='text-red-600'>*</span></label>
+            <input
+              type="text"
+              id='phoneNumber'
+              placeholder='+66 703 78932'
+              min={11}
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              required
+              value={state.phoneNumber}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
+            />
+          </div>
           <div className="w-[90%] mx-auto pt-3 flex flex-col items-start">
              <select className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
             e.target.value.includes('HOME RELOCATION') ? setDisplayType(true) : setDisplayType(false)

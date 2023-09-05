@@ -44,13 +44,16 @@ function Map() {
       return null;
     }
   };
-
+   const handleFieldChange = (field: string, value: string) => {
+    dispatch({ type: 'UPDATE_FIELD', field, value });
+  };
   useEffect(() => {
     async function fetchRouteData() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
-
+        // dispatch(type: "UPDATE_FIELD", 'distance', result.distance)
+        handleFieldChange('distance', result?.direction.toString())
       }
     }
     // console.log('isTriggered', triggerCalculateRoute)
@@ -72,7 +75,7 @@ function Map() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
-
+        handleFieldChange('distance', result?.direction.toString())
       }
     }
     if (path.includes("book_a_move")) {

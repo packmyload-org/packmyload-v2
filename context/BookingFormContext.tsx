@@ -1,4 +1,5 @@
-import React, {  createContext, useContext, useReducer } from 'react';
+'use client'
+import React, { createContext, useContext, useReducer } from 'react';
 
 // Define the form state interface
 interface BookingFormState {
