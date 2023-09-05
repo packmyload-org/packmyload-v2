@@ -38,7 +38,7 @@ function tabletsNav() {
       </Space>
     </a>
         </Dropdown>
-      <a href="tel:+2347007225776" className='text-gray-500 flex-between w-16 cursor-pointer'>
+      <a href="tel:+2347007225776" className='text-gray-500 flex justify-between w-16 cursor-pointer'>
         <Phone size={16} color="#667280" weight="fill" />
           call us
         </a>

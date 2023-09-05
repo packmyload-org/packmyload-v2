@@ -3,6 +3,7 @@ import { GoogleMap, Marker, DirectionsRenderer } from "@react-google-maps/api";
 import { useInputContext } from '@/context/InputContext';
 import { usePathname } from 'next/navigation';
 import { alerts } from './alerts/Alert';
+import { useBookingForm } from '@/context/BookingFormContext';
 
 interface RouteData {
   direction: google.maps.DirectionsResult | null;
@@ -15,6 +16,7 @@ function Map() {
   const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
   const { locationValue, triggerCalculateRoute, setTriggerCalculateRoute } = useInputContext()
+  const {dispatch}=useBookingForm()
   
   const calculateRoute = async () => {
     const pickUp = localStorage.getItem('pickUp');
@@ -48,6 +50,7 @@ function Map() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
+
       }
     }
     // console.log('isTriggered', triggerCalculateRoute)
@@ -69,6 +72,7 @@ function Map() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
+
       }
     }
     if (path.includes("book_a_move")) {

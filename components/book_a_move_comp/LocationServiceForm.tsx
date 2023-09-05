@@ -88,13 +88,13 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                 <div className="w-[55%] flex justify-between gap-1 items-start mt-2">
                     <button
                             className={`w-[45%] px-4 py-2 rounded-md transition-colors duration-300 ${activeButton === 'yes' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'}`}
-                        onClick={() => { setActiveButton('yes'); handleFieldChange('parking', "Yes")}}
+                        onClick={() => { setActiveButton('yes'); {title.includes('Start') ? handleFieldChange('parkingStart', "Yes") : handleFieldChange('parkingEnd', "Yes")}}}
                         >
                             Yes
                         </button>
                         <button
                             className={`w-[45%] px-4 py-2 rounded-md transition-colors duration-300 ${activeButton === 'no' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'}`}
-                        onClick={() => { setActiveButton('no'); handleFieldChange('parking', "No")}}
+                        onClick={() => { setActiveButton('no'); {title.includes('Start') ? handleFieldChange('parkingStart', "No") : handleFieldChange('parkingEnd', "No")}}}
                         >
                             No
                     </button>

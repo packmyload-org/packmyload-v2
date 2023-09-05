@@ -17,8 +17,10 @@ interface BookingFormState {
   }>;
   buildingType: string,
   floors: string,
-  parking:string,
-  service:string,
+  parkingStart:string,
+  parkingEnd:string,
+  service: string,
+  distance: string,
 }
 
 // Define action types
@@ -38,8 +40,10 @@ const initialFormState: BookingFormState = {
   items: [],
   buildingType: '',
   floors: '',
-  parking: '',
-  service:''
+  parkingStart: '',
+  parkingEnd: '',
+  service: '',
+  distance:'',
 };
 
 // Create context

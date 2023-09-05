@@ -14,7 +14,7 @@ function Nav() {
   const pathname = usePathname()
   return (
     <>
-    <nav className="flex-between w-full px-10 py-3 bg-[#2E5F9E] fixed top-0 z-30">
+    <nav className="flex justify-between w-full px-10 py-3 bg-[#2E5F9E] fixed top-0 z-30">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     <Image 
       src={ Logo }
@@ -38,7 +38,7 @@ function Nav() {
         <Link href='/services' className=' w-16 text-white cursor-pointer font-bold'>
           About Us
         </Link>
-        <a href="tel:+2347007225776" className='text-white flex-between w-16 cursor-pointer font-bold'>
+        <a href="tel:+2347007225776" className='text-white flex justify-between w-16 cursor-pointer font-bold'>
         <Phone size={16} color='white' weight="fill" />
           call us
         </a> 
