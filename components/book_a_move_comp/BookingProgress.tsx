@@ -12,7 +12,7 @@ const BookingProgress: React.FC = () => {
         <nav aria-label="Page navigation example" className="max-w-6xl mx-auto" style={{marginTop:'110px'}}>
 
             <ol className="flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
-                <li className={`${['/book_a_move' ,'/book_a_move/items'].some((url)=>url === path ? activeStyle : defaultStyle)}` }>
+                <li className={`${(path === '/book_a_move' || path === '/book_a_move/items') ? activeStyle : defaultStyle}` }>
                     <span className="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
                         {(path === '/book_a_move' || path === '/book_a_move/items') ?
                         <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
