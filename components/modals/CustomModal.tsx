@@ -26,55 +26,8 @@ export const CustomModal = (props: Props) => {
       <Col span={24} className='text-center bg-blue-300 space-y-4 py-4 mt-6 mb-4 input_shadow rounded-lg '>
         <h1 className='font-extrabold text-gray-900 w-full text-2xl'>{props.title}</h1>
         <div className='w-[90%] mx-auto space-y-4 p-4 rounded-lg'>
-           <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Full Name <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='fullName'
-              placeholder='John Doe'
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-              value={state.fullName}
-              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
-            />
-          </div>
-           <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Email <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='email'
-              placeholder='example@example.com'
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-              value={state.email}
-              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
-            />
-          </div>
-           <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Phone  <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='phoneNumber'
-              placeholder='+66 703 78932'
-              min={11}
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-              value={state.phoneNumber}
-              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
-            />
-          </div>
-           <div className="w-[85%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Time <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='moveTime'
-              placeholder='Enter your preferred move time: 8am-9am'
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-              required
-              value={state.moveTime}
-              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
-            />
-          </div>
+       
+           
           <div className=" w-full md:w-1/2 mx-auto flex justify-evenly ">
               <button className='w-[120px] p-3 rounded-lg text-gray-100 bg-blue-800 hover:bg-red-500' onClick={() => props.setDisplayModal(false)}>
                 Go Back

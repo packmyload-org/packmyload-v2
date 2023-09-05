@@ -1,15 +1,16 @@
 "use client";
 import { useBookingForm } from "@/context/BookingFormContext";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
+import { Table } from "antd";
 export default function Checkout() {
     const {state}=useBookingForm()
-    console.log(state)
+    console.log(state.distance)
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
             {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
-                    <h1 className="text-2xl font-bold">Your Move{' '}{state.fullName.split(' ')[0]}</h1>
+                    <h1 className="text-2xl font-bold">{state.fullName}{"'s "}Move</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
                         <MapPin size={25} color="#444646" weight="fill" />
                         <div className="ml-2 text-lg font-medium">                   
@@ -20,7 +21,7 @@ export default function Checkout() {
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
 
                     <div className="flex justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Pickup Location
                         </div>
                         <div className="mt-1 text-sm">                   
@@ -28,7 +29,7 @@ export default function Checkout() {
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Dropoff Location
                         </div>
                         <div className="mt-1 text-sm">                   
@@ -48,7 +49,7 @@ export default function Checkout() {
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
 
                     <div className="flex justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Date
                         </div>
                         <div className="mt-1 text-sm">                   
@@ -56,7 +57,7 @@ export default function Checkout() {
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Time
                         </div>
                         <div className="mt-1 text-sm">                   
@@ -67,7 +68,7 @@ export default function Checkout() {
 
                     <div className="flex mt-2" style={{width: 'fit-content'}}>
                         <Truck size={27} color="#444646" weight="fill" />
-                        <div className="ml-2 text-lg font-medium">                   
+                        <div className="ml-2 text-lg font-medium ">                   
                             Move Summary
                         </div>
                     </div>
@@ -75,7 +76,7 @@ export default function Checkout() {
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
 
                     <div className="flex justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Service
                         </div>
                         <div className="mt-1 text-sm">                   
@@ -83,7 +84,7 @@ export default function Checkout() {
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Move Type
                         </div>
                         <div className="mt-1 text-sm">                   
@@ -95,7 +96,8 @@ export default function Checkout() {
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
                     {/* Move Items Table */}
 
-
+                    <Table className="w-[90%] mx-auto" dataSource={state.items} />
+                    <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
                     <div className="flex" style={{width: 'fit-content'}}>
                         <CurrencyNgn size={28} color="#444646" weight="fill" />
                         <div className="ml-2 text-lg font-medium">                   
@@ -106,19 +108,27 @@ export default function Checkout() {
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
                     
                     <div className="flex justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Distance (km)
                         </div>
                         <div className="mt-1 text-sm">                   
-                            0.00
+                            {state.distance}
+                        </div>
+                    </div>
+                     <div className="flex justify-between">
+                        <div className="text-base min-w-max mr-5">                   
+                            Volume (km)
+                        </div>
+                        <div className="mt-1 text-sm">                   
+                            {/* {state.volume} */}
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
-                        <div className="text-base">                   
+                        <div className="text-base min-w-max mr-5">                   
                             Your Team
                         </div>
                         <div className="mt-1 text-sm">                   
-                            1 Mates(s)   
+                            1 packer (s)   
                         </div>
                     </div>
 

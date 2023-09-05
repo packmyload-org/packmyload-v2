@@ -12,17 +12,23 @@ import { Reviews } from '@/components/landing/Reviews'
 import { Banner } from '@/components/landing/Banner'
 
 const HeroSection = dynamic(
-  () => import('@/components/landing/HeroSection'),
-  { ssr: false }
+  () => import('@/components/landing/HeroSection'), {
+    loading: () => <Loading />,
+    ssr: false
+  }
 )
-const ServiceSection = dynamic(() => import('@/components/landing/ServiceSection'),
-  {ssr: false})
-const Section3 = dynamic(() => import('@/components/landing/Section3'),
-   {ssr: false})
-const Procedure= dynamic(()=>import('@/components/landing/Procedure'),
-   {ssr: false})
-const Faq = dynamic(() => import('@/components/landing/Faq'),
-  { ssr: false })
+const ServiceSection = dynamic(() => import('@/components/landing/ServiceSection'), {
+    loading: ()=> <Loading/>
+  })
+const Section3 = dynamic(() => import('@/components/landing/Section3'), {
+    loading: ()=> <Loading/>
+  })
+const Procedure= dynamic(()=>import('@/components/landing/Procedure'), {
+    loading: ()=> <Loading/>
+  })
+const Faq = dynamic(() => import('@/components/landing/Faq'), {
+    loading: ()=> <Loading/>
+  })
   function Home() {
   const { isLoaded, loadError } = useGoogleMaps()
   const [loading, setLoading] = useState(false)
