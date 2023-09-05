@@ -3,6 +3,7 @@ import { useBookingForm } from "@/context/BookingFormContext";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
 export default function Checkout() {
     const {state}=useBookingForm()
+    console.log(state)
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
@@ -67,7 +68,7 @@ export default function Checkout() {
                     <div className="flex mt-2" style={{width: 'fit-content'}}>
                         <Truck size={27} color="#444646" weight="fill" />
                         <div className="ml-2 text-lg font-medium">                   
-                            Move Type
+                            Move Summary
                         </div>
                     </div>
 
@@ -75,26 +76,29 @@ export default function Checkout() {
 
                     <div className="flex justify-between">
                         <div className="text-base">                   
+                            Service
+                        </div>
+                        <div className="mt-1 text-sm">                   
+                            {state.service}
+                        </div>
+                    </div>
+                    <div className="flex mt-2 justify-between">
+                        <div className="text-base">                   
                             Move Type
                         </div>
                         <div className="mt-1 text-sm">                   
                             {state.moveType}
                         </div>
                     </div>
-                    <div className="flex mt-2 justify-between">
-                        <div className="text-base">                   
-                            My Items
-                        </div>
-                        <div className="mt-1 text-sm">                   
-                            1 Bed Frame
-                        </div>
-                    </div>
                 </div>
                 {/* Section 2 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
+                    {/* Move Items Table */}
+
+
                     <div className="flex" style={{width: 'fit-content'}}>
                         <CurrencyNgn size={28} color="#444646" weight="fill" />
-                        <div className="ml-2 text-lg font-medium font-medium">                   
+                        <div className="ml-2 text-lg font-medium">                   
                         Price Breakdown
                         </div>
                     </div>
@@ -107,14 +111,6 @@ export default function Checkout() {
                         </div>
                         <div className="mt-1 text-sm">                   
                             0.00
-                        </div>
-                    </div>
-                    <div className="flex mt-2 justify-between">
-                        <div className="text-base">                   
-                            Volume
-                        </div>
-                        <div className="mt-1 text-sm">                   
-                            Approx. 6 cubic feet    
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">

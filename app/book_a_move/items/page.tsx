@@ -47,7 +47,7 @@ export default function Page() {
         </div>
         <div className='flex gap-12 w-full  flex-wrap pb-3'>
           {filteredItems.map((item, index) => (
-            <ItemsCounter key={index} title={item.item} />
+            <ItemsCounter key={item.item} title={item.item} />
           ))}
         </div>
       </div>
