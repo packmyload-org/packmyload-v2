@@ -1,5 +1,5 @@
 'use client'
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 // Define the form state interface
 interface BookingFormState {
@@ -11,23 +11,25 @@ interface BookingFormState {
   destination: string;
   moveTime: string;
   phoneNumber: string;
-  moveType: string,
+  moveType: string;
   items: Array<{
     item: string;
     numberOfItems: string;
   }>;
-  buildingType: string,
-  floors: string,
-  parkingStart:string,
-  parkingEnd:string,
-  service: string,
-  distance: string,
+  buildingType: string;
+  floors: string;
+  parkingStart: string;
+  parkingEnd: string;
+  service: string;
+  distance: string;
 }
 
 // Define action types
 type Action =
   | { type: 'UPDATE_FIELD'; field: string; value: string }
-  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string }[] };
+  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string }[] }
+  | { type: 'RESTORE_STATE'; payload: BookingFormState };
+
 // Define initial form state
 const initialFormState: BookingFormState = {
   fullName: '',
@@ -36,7 +38,7 @@ const initialFormState: BookingFormState = {
   pickUp: '',
   destination: '',
   moveTime: '',
-  phoneNumber:'',
+  phoneNumber: '',
   moveType: 'Item Pick Up and Furniture Delivery',
   items: [],
   buildingType: '',
@@ -44,8 +46,11 @@ const initialFormState: BookingFormState = {
   parkingStart: '',
   parkingEnd: '',
   service: '',
-  distance:'',
+  distance: '',
 };
+
+// Define a key for localStorage
+const LOCAL_STORAGE_KEY = 'bookingFormState';
 
 // Create context
 const BookingFormContext = createContext<{
@@ -54,13 +59,14 @@ const BookingFormContext = createContext<{
 } | undefined>(undefined);
 
 // Define reducer function
-// Define reducer function
 const formReducer = (state: BookingFormState, action: Action): BookingFormState => {
   switch (action.type) {
     case 'UPDATE_FIELD':
       return { ...state, [action.field]: action.value };
     case 'UPDATE_ITEMS':
-      return { ...state, items: [...action.items] }; 
+      return { ...state, items: [...action.items] };
+    case 'RESTORE_STATE':
+      return action.payload;
     default:
       return state;
   }
@@ -74,8 +80,21 @@ export const useBookingForm = () => {
   return context;
 };
 
-export const BookingFormProvider = ({ children }:{children: React.ReactNode}) => {
+export const BookingFormProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(formReducer, initialFormState);
+
+  // Load initial state from localStorage (if available)
+  useEffect(() => {
+    const savedState = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedState) {
+      dispatch({ type: 'RESTORE_STATE', payload: JSON.parse(savedState) });
+    }
+  }, []);
+
+  // Update localStorage whenever the state changes
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
+  }, [state]);
 
   return (
     <BookingFormContext.Provider value={{ state, dispatch }}>
@@ -83,5 +102,3 @@ export const BookingFormProvider = ({ children }:{children: React.ReactNode}) =>
     </BookingFormContext.Provider>
   );
 };
-
-
