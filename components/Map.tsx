@@ -53,7 +53,7 @@ function Map() {
       if (result) {
         setRouteData(result);
         // dispatch(type: "UPDATE_FIELD", 'distance', result.distance)
-        handleFieldChange('distance', result?.direction.toString())
+        handleFieldChange('distance', result?.distance ?? '')
       }
     }
     // console.log('isTriggered', triggerCalculateRoute)
@@ -75,7 +75,7 @@ function Map() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
-        handleFieldChange('distance', result?.direction.toString())
+        handleFieldChange('distance', result?.distance ?? '')
       }
     }
     if (path.includes("book_a_move")) {

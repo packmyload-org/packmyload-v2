@@ -7,6 +7,7 @@ import { useBookingForm } from '@/context/BookingFormContext';
 import { CustomModal } from '../modals/CustomModal';
 import { alerts } from '../alerts/Alert';
 import { Row } from 'antd';
+import { getMinDate } from '@/utils/helpers';
 
 export default function BookingIndexForm() {
   const router = useRouter()
@@ -17,8 +18,7 @@ export default function BookingIndexForm() {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
 
-  let currentDay = new Date().toISOString();
-  let minDate = currentDay.split("T")[0]
+  let minDate = getMinDate()
 
   const handleProceed = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

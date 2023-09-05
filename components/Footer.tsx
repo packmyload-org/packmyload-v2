@@ -3,10 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 import { Col, Row } from 'antd'
 import { EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, Phone, PinterestLogo, TwitterLogo, YoutubeLogo } from '@phosphor-icons/react'
+import { usePathname } from 'next/navigation'
 export default function Footer() {
+	const path = usePathname()
   return (
     <footer className='w-full bg-blue-800 dark-footer main-footer'>
-			<div className="container">
+	{['/book_a_move','/book_a_move/items','/book_a_move/locations-details','/book_a_move/checkout'].some((url)=> url === path)?null: 		<div className="container">
 				<Row className='w-full h-max' justify={'space-between'} align={'middle'} gutter={[10,50]}>
 						<Col span={24} lg={6} className='md:h-[350px] mb-0 lg:mb-6'>
 							<div className="space-y-8 text-gray-400">
@@ -90,7 +92,7 @@ export default function Footer() {
 							</div>
 						</Col>
 					</Row>
-			</div>
+			</div>}
 				<div className="bg-slate-800 py-6 ">
 					<Row className='w-full mt-6 container' justify={'space-between'} align={'middle'}>
 						<div className="mb-2 md:mb-0 w-[60%] ">
