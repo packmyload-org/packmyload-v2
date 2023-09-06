@@ -12,6 +12,7 @@ export default function HeroSection() {
     e.preventDefault();
     console.log(state.pickUp,state.destination)
     if (!state.pickUp || !state.destination) {
+      alert('this')
       alerts.error('Invalid Form Submission', 'All fields required', 1500)
       return;
     }

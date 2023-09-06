@@ -2,16 +2,18 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AppToast from './AppToast';
 import Image from "next/image";
+import success from '@/public/images/AlertSuccess.svg'
+import error from '@/public/images/AlertError.svg'
 export const alerts = {
   success: (heading: React.ReactNode, body: React.ReactNode, duration?: number) => {
     return toast(<AppToast heading={heading} body={body} />, {
-      icon: <Image src='@/public/img/AlertSuccess.svg' alt='success toast' width={18} height={18} />,
+      icon: <Image src={success} alt='success toast' width={18} height={18} />,
       autoClose: duration
     });
   },
   error: (heading: React.ReactNode, body: React.ReactNode, duration?: number) => {
     return toast(<AppToast heading={heading} body={body} />, {
-      // icon: ,
+      icon: <Image src={error} alt='success toast' width={18} height={18} />,
       autoClose: duration
     });
   },

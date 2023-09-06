@@ -44,6 +44,11 @@ footer.main-footer {
   padding-bottom: 10px;
   border-bottom: 1px dashed #ffffff36;
 }
+.svg_fix{
+  path {
+    fill: #4bcbfe;
+  }
+}
 
 .dark-footer {
   background: #2C3B5A;

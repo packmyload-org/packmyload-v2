@@ -34,8 +34,8 @@ export default function Page() {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <div className='py-3 space-y-3'>
-        <div className='w-full flex justify-between pt-6 '>
+      <div className='py-3 space-y-3 min-h-[50vh]'>
+        <div className='w-[90%] mx-auto md:w-full flex justify-between gap-4 pt-6 overflow-y-scroll scrollbar-hide'>
           {data.map((category) => (
             <ItemsTabs
               key={category.categoryName}
@@ -45,7 +45,7 @@ export default function Page() {
             />
           ))}
         </div>
-        <div className='flex gap-12 w-full  flex-wrap pb-3'>
+        <div className='flex gap-4 md:gap-6 w-[90%] mx-auto md:w-full flex-wrap pt-4'>
           {filteredItems.map((item, index) => (
             <ItemsCounter key={item.item} title={item.item} />
           ))}
@@ -77,7 +77,7 @@ const ItemsTabs = (props: ItemsTabsProps) => {
       }`}
       onClick={props.onClick}
     >
-      <p>{props.name}</p>
+      <p className='text-lg font-semibold'>{props.name}</p>
     </section>
   );
 };

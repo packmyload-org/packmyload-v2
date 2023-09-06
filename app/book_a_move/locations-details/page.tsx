@@ -19,7 +19,7 @@ const {state}=useBookingForm()
                 </div>
                 <div className=' w-1/2 mx-auto flex'>
                     <div className='bg-blue-800 mx-auto text-center w-[160px]  font-bold text-md text-gray-600 hover:text-gray-100 hover:bg-red-500 p-2 rounded-lg'>
-                        <Link href={'/book_a_move/locations-details'}>GO BACK</Link>
+                        <Link href={'/book_a_move/items'}>GO BACK</Link>
                     </div>
                     <div className='bg-blue-600 mx-auto text-center w-[160px]  font-bold text-md text-gray-600 hover:text-gray-100 hover:bg-blue-300 p-2 rounded-lg'>
                         <Link href={'/book_a_move/checkout'}>Proceed</Link>

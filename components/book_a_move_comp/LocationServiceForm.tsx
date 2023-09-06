@@ -66,12 +66,12 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                 <div className="w-[55%] flex flex-col gap-1 items-start mt-2">
                     <input
                     type="text"
-                    id='floors'
+                    id={title.includes('Start') ?'floorsStart':'floorsEnd'}
                     placeholder="#"
                     className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
-                        min={0}
-                        onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
-                        value={state.floors}
+                    min={0}
+                    onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
+                    value={title.includes('Start') ?state.floorsStart: state.floorsEnd}
                     required
                     />
                 </div>

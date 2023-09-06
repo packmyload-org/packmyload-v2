@@ -17,7 +17,8 @@ interface BookingFormState {
     numberOfItems: string;
   }>;
   buildingType: string;
-  floors: string;
+  floorsStart: string;
+  floorsEnd: string;
   parkingStart: string;
   parkingEnd: string;
   service: string;
@@ -42,7 +43,8 @@ const initialFormState: BookingFormState = {
   moveType: 'Item Pick Up and Furniture Delivery',
   items: [],
   buildingType: '',
-  floors: '',
+  floorsStart: '',
+  floorsEnd: '',
   parkingStart: '',
   parkingEnd: '',
   service: '',
