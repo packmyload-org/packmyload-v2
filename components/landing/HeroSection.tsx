@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { FormEvent } from 'react';
 import { useBookingForm } from '@/context/BookingFormContext';
 import { alerts } from '../alerts/Alert';
+
 export default function HeroSection() {
   const router = useRouter()
   const {state}=useBookingForm()
