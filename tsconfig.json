@@ -28,8 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/loading.js",
-    "app/not-found.js"
+    "app/loading.ts",
+    "app/not-found.tsx"
   ],
   "exclude": ["node_modules"]
 }

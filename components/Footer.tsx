@@ -4,11 +4,12 @@ import Image from 'next/image'
 import { Col, Row } from 'antd'
 import { EnvelopeSimple, FacebookLogo, InstagramLogo, LinkedinLogo, Phone, PinterestLogo, TwitterLogo, YoutubeLogo } from '@phosphor-icons/react'
 import { usePathname } from 'next/navigation'
+import Threads from '@/public/images/threads.svg'
 export default function Footer() {
 	const path = usePathname()
   return (
-    <footer className='w-full bg-blue-800 dark-footer main-footer'>
-	{['/book_a_move','/book_a_move/items','/book_a_move/locations-details','/book_a_move/checkout'].some((url)=> url === path)?null: 		<div className="container">
+    <footer className={` main-footer w-full ${['/book_a_move','/book_a_move/items','/book_a_move/locations-details','/book_a_move/checkout'].some((url)=> url === path)? 'bg-inherit': 'dark-footer'}`}>
+	{['/book_a_move','/book_a_move/items','/book_a_move/locations-details','/book_a_move/checkout'].some((url)=> url === path)? null : 		<div className="container">
 				<Row className='w-full h-max' justify={'space-between'} align={'middle'} gutter={[10,50]}>
 						<Col span={24} lg={6} className='md:h-[350px] mb-0 lg:mb-6'>
 							<div className="space-y-8 text-gray-400">
@@ -59,6 +60,9 @@ export default function Footer() {
 															<a className='text-gray-400' href="/Junk-moves" title=""> Junk Removal</a>
 													</li>
 													<li className="clearfix">
+															<a className='text-gray-400' href="/storage" title="">Storage</a>
+											</li>
+												<li className="clearfix">
 															<a className='text-gray-400' href="/storage" title="">Storage</a>
 													</li>
 												</ul>
@@ -140,6 +144,17 @@ export default function Footer() {
 									<li>
 										<a href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ" target="_blank">
 												<YoutubeLogo weight='fill' color='#4bcbfe' size={20}/>
+										</a>
+								</li>
+								<li>
+										<a href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ" target="_blank">
+										<Image 
+											src={Threads}
+											alt='threads'
+											width={20}
+											height={18}
+											className='svg_fix'
+										/>
 										</a>
 								</li>
 								</ul>

@@ -42,7 +42,7 @@ export const serviceFor = [
   },
   {
     key: "2",
-    label: "Condo",
+    label: "Terrace",
   },
   {
     key: "3",
