@@ -7,6 +7,7 @@ import MobileNav from './navBar/mobileNav';
 import TabletsNav from './navBar/tabletsNav';
 import Services from './navBar/Service';
 import { usePathname } from 'next/navigation'
+import Partners from './navBar/Parnters';
 
 const Logo = "https://res.cloudinary.com/packmyload/image/upload/v1545994681/PML1x.png"
 
@@ -29,12 +30,14 @@ function Nav() {
     <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-[57%]">
         <div className='text-white w-full gap-6 flex justify-evenly items-center'>
         <Link href='/services' className=' w-16 text-white cursor-pointer font-bold'>
-          Services
+          <Services/>
         </Link>
         <Link href='/gallery' className=' w-16 text-white cursor-pointer font-bold'>
           Gallery
-        </Link>
-        <Services/>
+            </Link>
+            
+            <Partners />
+            
         <Link href='/services' className=' w-16 text-white cursor-pointer font-bold'>
           About Us
         </Link>

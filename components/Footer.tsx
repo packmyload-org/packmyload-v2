@@ -156,7 +156,6 @@ export default function Footer() {
 											alt='threads'
 											width={20}
 											height={18}
-											className='svg_fix'
 										/>
 										</a>
 								</li>
