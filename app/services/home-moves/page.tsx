@@ -40,7 +40,7 @@ export default function HomeMoves(){
                 <div className="flex flex-col items-center justify-end h-full">
                     <button 
                     onClick={handleButtonClick}
-                    className="text-white shadow-lg border-2 shadow-white text-base font-bold p-3 w-[150px] bg-[#4BCBFE] outline-none">GET STARTED</button>
+                    className="text-white shadow-lg border-2 shadow-white text-2xl font-bold p-4 w-[200px] bg-[#4BCBFE] outline-none">GET STARTED</button>
                 </div>
             </div>
 
@@ -127,7 +127,7 @@ We disassemble & reassemble: Beds, Sectional desks, Shelves out of bookcases, En
                     </section>
                 </div>
                 <div className='md:w-[30%] sm:w-[90%]'> 
-                    <section className='flex gap-3 mt-4'>
+                    <section className='flex gap-2 items-start mt-4'>
                         <Image 
                             src="/images/icons/recycle-icon.png"
                             alt='recycle-icon'
@@ -140,7 +140,7 @@ We disassemble & reassemble: Beds, Sectional desks, Shelves out of bookcases, En
                             <p className='mt-2 text-[#878C9F]'>Your junk is taken to licensed recycling facilities or passed on for reuse.</p>
                         </div>
                     </section>
-                    <section className='flex gap-3 mt-12'>
+                    <section className='flex gap-2 items-start mt-12'>
                         <Image 
                             src="/images/icons/check-icon.png"
                             alt='check-icon'
@@ -153,7 +153,7 @@ We disassemble & reassemble: Beds, Sectional desks, Shelves out of bookcases, En
                             <p className='mt-2 text-[#878C9F]'>Once the team has loaded all the unwanted items, they will give the area one last sweep up and tidy to ensure you are good to go.</p>
                         </div>
                     </section>
-                    <section className='flex gap-3 mt-12'>
+                    <section className='flex gap-2 items-start mt-12'>
                         <Image 
                             src="/images/icons/aid-support.png"
                             alt='aid-support'
@@ -166,7 +166,7 @@ We disassemble & reassemble: Beds, Sectional desks, Shelves out of bookcases, En
                             <p className='mt-2 text-[#878C9F]'>Packmyload.com is proud to offer 24 hours support. When you call the Packmyload.com support team, you’ll speak to a person immediately, addressing any issues and ensuring prompt resolution.</p>
                         </div>
                     </section>
-                    <section className='flex gap-3 mt-12'>
+                    <section className='flex gap-2 items-start mt-12'>
                         <Image 
                             src="/images/icons/guarantee-icon.png"
                             alt='gurantee-icon'

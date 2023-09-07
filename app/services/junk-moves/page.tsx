@@ -6,7 +6,7 @@ import { FormEvent,useRef  } from 'react';
 import { alerts } from '@/components/alerts/Alert';
 import { useBookingForm } from '@/context/BookingFormContext';
 
-export default function OfficeMoves(){
+export default function JunkMoves(){
 
     const router = useRouter()
     const {state} = useBookingForm()
@@ -36,7 +36,7 @@ export default function OfficeMoves(){
 
     return (
         <main className='bg-[#F9F9F9]'>
-            <div className="w-full h-[300px] mt-[68px] bg-[url('/images/moving-company-lagos-nigeria-packmyload.com-office_moves-banner_image.png')]" style={divStyle}>
+            <div className="w-full h-[300px] mt-[68px] bg-[url('/images/moving-company-lagos-nigeria-packmyload.com-junk_removal-banner_image.png')]" style={divStyle}>
                 <div className="flex flex-col items-center justify-end h-full">
                     <button 
                     onClick={handleButtonClick}
@@ -48,8 +48,8 @@ export default function OfficeMoves(){
 
                 <div 
                 className="text-4xl font-bold opacity-5" style={{position: 'absolute'}}
-                >OFFICE RELOCATION SERVICES WITHIN NIGERIA</div>
-                <div className="text-3xl text-[#566985] mt-4 font-bold" style={{ position: 'relative' }}>Office Relocation within Nigeria</div>
+                >JUNK REMOVAL SERVICES WITHIN NIGERIA</div>
+                <div className="text-3xl text-[#566985] mt-4 font-bold" style={{ position: 'relative' }}>Junk Removal</div>
                 <span className="section-separator"></span>
             </div>
             <br />
@@ -94,50 +94,60 @@ export default function OfficeMoves(){
             <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block">
                 <div className='bg-white md:w-[70%] sm:w-[90%] p-6 rounded-md border-2 border-[#eee]'>
                     <section>
-                        <h1 className='text-xl font-bold text-[#566985]'>Office Moving Company Nigeria</h1>
+                        <h1 className='text-xl font-bold text-[#566985]'>Junk Removal</h1>
                         <p className='mt-2 text-[#878C9F]'>
-                        If you’re planning to move into a new office space, packmyload.com can help with customized solutions for small to medium sized moves and inter-office moves. We are experts at disassembling, moving, reassembling and positioning.
+                        We offer a cost efficient, convenient and professional solution to all your rubbish removal needs. We currently service Lagos City and all surrounding suburbs. We also cover the rural area. No matter where you are based Packmyload.com Junk Removal is a quick and easy solution for all your junk removal needs.
                         </p>
                     </section>
                     <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>Coporate Relocation Services</h1>
+                        <h1 className='text-xl font-bold text-[#566985]'>Residential Removals</h1>
                         <p className='mt-2 text-[#878C9F]'>
-                        With a full range of corporate relocation services, we take care of all the corporate relocation details, providing a quality experience for transferring your employees. From a corporate relocation program developed to cater to your employees and their families to making sure your offices are moved without a hitch, and with minimal disruption of business, our corporate relocation services are designed to meet every need and exceed your expectations. Our full-service move offerings include packing, crating, storage and vehicle shipping. Additionally, your single source relocation coordinator will assist employees in choosing which services will best suit your employees and their individual relocations.
+                        Whether you are moving home or you just need a clear out, Packmyload.com Junk Removal can help. We are happy to remove all kinds of unwanted items from green waste to household junk and will take them from where they are currently so you don't need to lift a finger.
+                        <br />
+                        Packmyload Junk Removal offers the complete service so all you have to do is point at the items you want removed and we will take care of the rest. We endeavour to recycle as much as possible through various local charity's and second hand shops and whatever we cannot donate is taken to the transfer station. We provide up front rates based on volume which include all disposal fees and labour costs, so you only pay once. Because of our up front transparent pricing you are quoted before we do the work and we only charge for the space your items take up. Sometimes it is difficult for our customer to be on site for the collection so we can also visit your premises while you are at work and if the items are outside we can call you before we start the job to give you the quote and if you are happy we can remove the items and even take payment over the phone or via bank transfer.
                         </p>
                     </section>
                     <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>Preparing for the Move</h1>
+                        <h1 className='text-xl font-bold text-[#566985]'>Commercial/Local Businesses</h1>
                         <p className='mt-2 text-[#878C9F]'>
-                        Packmyload.com can disassemble cubicles and office furniture and reassemble everything at your new location. If you need felt pads placed at the bottom of furniture legs to prevent floor damage, we can supply those too! If you’re not sure how your existing furniture will fit in the new space, ask us to take measurements!
+                        No matter what business you are in, the friendly team at Packmyload Junk Removal can provide a service for your business. We offer a fast, on-time, reliable and friendly removal service. Within shops, offices and commercial premises waste can build up very quickly and getting rid of this waste can be very time consuming and costly for a business owner if there is no building management responsible for removing the waste. Here at Packmyload Junk Removal we can help you with small regular collections right through to one off total office clearances. Top End Junk Removal can take care of all your commercial waste saving you time and money and leaving you to focus on your business.
                         </p>
                     </section>
                     <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>Moving Supplies</h1>
+                        <h1 className='text-xl font-bold text-[#566985]'>Construction</h1>
                         <p className='mt-2 text-[#878C9F]'>
-                        Packmyload.com can shrink wrap your office furniture for extra protection from dirt and moisture. The cost of shrink wrapping two items is included in a standard move and extra can be purchased . Alternatively, packmyload.com provides furniture pads and moving blankets at no extra charge.
-                        </p>
-                    </section>
-                    <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>Loading & Moving</h1>
-                        <p className='mt-2 text-[#878C9F]'>
-                        packmyload.com's expert movers will load your office furniture into a moving truck with care. Your items will be transported to their new location and unloaded and moved into your new space.
-                        </p>
-                    </section>
-                    <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>Office Set-Up</h1>
-                        <p className='mt-2 text-[#878C9F]'>
-                        Once all of your office furniture arrives and is unloaded at your new location, packmyload.com can: Assist with unpacking Assemble new furniture quickly and correctly Re-assemble your office furniture Position furniture
-                        </p>
-                    </section>
-                    <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>Office Cleaning & Junk Removal</h1>
-                        <p className='mt-2 text-[#878C9F]'>
-                        Ask Packmyload.com to clean your old space after you move out. We use eco-friendly cleaning products. Our cleaning service includes: Dusting, sweeping, vacuuming or mopping Cleaning interior windows Dusting & wiping baseboards Removing all garbage and debris including packaging Dropping off recyclables and donations
+                        It is important to keep work sites tidy at all stages of a project so that work can progress. Packmyload Junk Removal can assist your business in saving time and effort by looking after the whole clean-up process from the beginning to the end of the project. Our service can assist you no matter the size of job so whether you are doing a small reno or a complete building reno, Packmyload Junk Removal can take care of the junk while you do what you do best! Simply schedule your construction clean out appointment by calling 070-PACK-PRO. Our friendly team will call you 15 minutes before arrival and when we arrive, just point to the items you want removed and we'll provide you with an up-front, all-inclusive price. Once you're happy with everything, we'll start hauling your debris away and finish by cleaning up the area.
                         </p>
                     </section>
                 </div>
                 <div className='md:w-[30%] sm:w-[90%]'> 
                     <section className='flex gap-2 items-start mt-4'>
+                        <Image 
+                            src="/images/icons/recycle-icon.png"
+                            alt='recycle-icon'
+                            width={100}
+                            height={100}
+                            className="object-contain " 
+                        />
+                        <div>
+                            <h1 className='text-lg text-[#4DB7FE] font-bold'>Responsible Disposal</h1>
+                            <p className='mt-2 text-[#878C9F]'>Your junk is taken to licensed recycling facilities or passed on for reuse.</p>
+                        </div>
+                    </section>
+                    <section className='flex gap-2 items-start mt-12'>
+                        <Image 
+                            src="/images/icons/check-icon.png"
+                            alt='check-icon'
+                            width={100}
+                            height={100}
+                            className="object-contain " 
+                        />
+                        <div>
+                            <h1 className='text-lg text-[#4DB7FE] font-bold'>Thorough</h1>
+                            <p className='mt-2 text-[#878C9F]'>Once the team has loaded all the unwanted items, they will give the area one last sweep up and tidy to ensure you are good to go.</p>
+                        </div>
+                    </section>
+                    <section className='flex gap-2 items-start mt-12'>
                         <Image 
                             src="/images/icons/aid-support.png"
                             alt='aid-support'

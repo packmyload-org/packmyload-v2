@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import servicesArr from './services.json'
+import Link from 'next/link';
 export default function Services(){
 
     const servicesItems = servicesArr.map((item,index) => (
@@ -7,19 +8,21 @@ export default function Services(){
           className="flex flex-col limitless-card rounded relative cursor-pointer" 
           key={index}
         >
-          <div className="relative w-full h-full overflow-hidden">
-            <Image 
-              src={item.img} 
-              alt="Read more" 
-              width={100} 
-              height={100} 
-              loading='lazy'
-              className="object-cover w-full h-auto rounded transition-transform duration-300 transform-gpu hover:scale-110" 
-            />
-            <div className="absolute bottom-4 left-0 p-2 text-white text-lg font-bold">
-              {item.title}
+          <Link href={item.to}>
+            <div className="relative w-full h-full overflow-hidden">
+              <Image 
+                src={item.img} 
+                alt="Read more" 
+                width={100} 
+                height={100} 
+                loading='lazy'
+                className="object-cover w-full h-auto rounded transition-transform duration-300 transform-gpu hover:scale-110" 
+              />
+              <div className="absolute bottom-4 left-0 p-2 text-white text-xl font-bold">
+                {item.title}
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
     
     

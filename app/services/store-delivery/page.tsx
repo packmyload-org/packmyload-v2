@@ -2,7 +2,7 @@
 import { AutoCompleteInput } from '@/components/AutoCompleteInput';
 import Image from 'next/image'
 import {useRouter} from 'next/navigation'
-import { FormEvent,useRef  } from 'react';
+import { FormEvent, useRef } from 'react';
 import { alerts } from '@/components/alerts/Alert';
 import { useBookingForm } from '@/context/BookingFormContext';
 
@@ -40,7 +40,7 @@ export default function StoreDelivery(){
                 <div className="flex flex-col items-center justify-end h-full">
                     <button 
                     onClick={handleButtonClick}
-                    className="text-white shadow-lg border-2 shadow-white text-base font-bold p-3 w-[150px] bg-[#4BCBFE] outline-none">GET STARTED</button>
+                    className="text-white shadow-lg border-2 shadow-white text-2xl font-bold p-4 w-[200px] bg-[#4BCBFE] outline-none">GET STARTED</button>
                 </div>
             </div>
 
@@ -118,35 +118,59 @@ export default function StoreDelivery(){
                         </p>
                     </section>
                     <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>We Onload
-</h1>
+                        <h1 className='text-xl font-bold text-[#566985]'>We Onload</h1>
                         <p className='mt-2 text-[#878C9F]'>
                         Your goods will be unloaded and placed into position and packaging materials will be disposed of.
                         </p>
                     </section>
                     <section className='mt-3'>
-                        <h1 className='text-xl font-bold text-[#566985]'>And More
-</h1>
+                        <h1 className='text-xl font-bold text-[#566985]'>And More</h1>
                         <p className='mt-2 text-[#878C9F]'>
-                        OAssembly, Installation, Removing old furniture and appliances - GoGetter will be available to assist for any additional jobs you might think of at the time.e
+                        Assembly, Installation, Removing old furniture and appliances - GoGetter will be available to assist for any additional jobs you might think of at the time.e
                         </p>
                     </section>
                 </div>
                 <div className='md:w-[30%] sm:w-[90%]'> 
-                    <section className='flex gap-3 mt-4'>
+                    <section className='flex items-start gap-2 mt-4'>
                         <Image 
-                            src="/images/icons/aid-support.png"
+                            src="/images/icons/truck-icon.png"
                             alt='aid-support'
                             width={100}
                             height={100}
                             className="object-contain " 
                         />
                         <div>
-                            <h1 className='text-lg text-[#4DB7FE] font-bold'>24 Hours Support</h1>
-                            <p className='mt-2 text-[#878C9F]'>Packmyload.com is proud to offer 24 hours support. When you call the Packmyload.com support team, you’ll speak to a person immediately, addressing any issues and ensuring prompt resolution.</p>
+                            <h1 className='text-lg text-[#4DB7FE] font-bold'>Pick up from any store</h1>
+                            <p className='mt-2 text-[#878C9F]'>Shop at all your favorite places. We pick up from any store within our service area.</p>
                         </div>
                     </section>
-                    <section className='flex gap-3 mt-12'>
+                    <section className='flex items-start gap-2 mt-4'>
+                        <Image 
+                            src="/images/icons/calendar-icon.png"
+                            alt='aid-support'
+                            width={100}
+                            height={100}
+                            className="object-contain " 
+                        />
+                        <div>
+                            <h1 className='text-lg text-[#4DB7FE] font-bold'>Same day delivery.</h1>
+                            <p className='mt-2 text-[#878C9F]'>Your purchases delivered in under 1-hour or any time that works best for you.</p>
+                        </div>
+                    </section>
+                    <section className='flex items-start gap-2 mt-4'>
+                        <Image 
+                            src="/images/icons/secure-icon.png"
+                            alt='aid-support'
+                            width={100}
+                            height={100}
+                            className="object-contain " 
+                        />
+                        <div>
+                            <h1 className='text-lg text-[#4DB7FE] font-bold'>Your purchase protected.</h1>
+                            <p className='mt-2 text-[#878C9F]'>Your delivery with Lugg will be backed by our multi-million dollar insurance policy.</p>
+                        </div>
+                    </section>
+                    <section className='flex items-start gap-2 mt-12'>
                         <Image 
                             src="/images/icons/guarantee-icon.png"
                             alt='gurantee-icon'
