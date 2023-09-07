@@ -19,9 +19,12 @@ export default function Footer() {
 										technology and created to move more than just your belongings.
 										We'll move you with our hardwork and genuine smiles.</p>
 									<ul className="footer-contacts fl-wrap space-y-2">
+										<li className='w-full flex no-wrap items-center'><a className='text-gray-100 hover:text-gray-950' href="/privacy">PRIVACY POLICY</a></li>
+										<li className='w-full flex no-wrap items-center'><a className='text-gray-100 hover:text-gray-950' href="/terms">TERMS & CONDITIONS</a></li>
 											<li className='w-full flex no-wrap items-center'><span className='flex items-center gap-1 mr-2'><EnvelopeSimple color="#4bcbfe"/> Mail:</span><a className='text-gray-400 hover:text-gray-950' href="#" target="_blank">book@packmyload.com</a></li>
 									
 										<li className='w-full flex no-wrap items-center'><span className='flex items-center gap-1 mr-2'><Phone size={16} color='#4bcbfe' weight="fill" /> Phone:</span><a className='text-gray-400 hover:text-gray-950' href="#">0700- PACK-PRO (0700-722-5776)</a></li>
+												
 									</ul>
 								</div>
 							</div>
@@ -63,7 +66,7 @@ export default function Footer() {
 															<a className='text-gray-400' href="/storage" title="">Storage</a>
 											</li>
 												<li className="clearfix">
-															<a className='text-gray-400' href="/storage" title="">Storage</a>
+															<a className='text-gray-400' href="/storage" title="">Storage Delivery</a>
 													</li>
 												</ul>
 										</Col>
@@ -87,8 +90,8 @@ export default function Footer() {
 													</button>
 											</form>
 											<ul className='text-white uppercase inline-flex gap-5 hover:text-gray-950'>
-													<li><a href="/Faqs">FAQs </a></li>
-													<li><a href="">Blog</a></li>
+													<li><a href="/faqs">FAQs </a></li>
+													<li><a href="/blog">Blog</a></li>
 													<li><a href="/partner">Partner</a></li>
 													<li><a href="/become_a_packer">Become a Packer</a></li>
 											</ul>

@@ -1,13 +1,14 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import { serviceList, serviceType } from "@/utils/bookingService";
+import { serviceType } from "@/utils/bookingService";
 import { AutoCompleteInput } from "../AutoCompleteInput";
 import { useBookingForm } from '@/context/BookingFormContext';
 import { CustomModal } from '../modals/CustomModal';
 import { alerts } from '../alerts/Alert';
 import { Row } from 'antd';
 import { getMinDate } from '@/utils/helpers';
+import services from '@/components/services/services.json'
 
 export default function BookingIndexForm() {
   const router = useRouter()
@@ -138,11 +139,11 @@ export default function BookingIndexForm() {
                 <option hidden>
                   Select Service 
                </option>
-               {serviceList.map(item => <option
-                 value={item.label}
-                 key={item.key}
+               {services.map(item => <option
+                 value={item.title}
+                 key={item.title}
                >
-                 {item.label}
+                 {item.title}
                </option>)
                }
             </select>
