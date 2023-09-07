@@ -6,12 +6,11 @@ import './globals.css'
 const Footer = dynamic(() => import('@/components/Footer'), {
     loading: ()=> <Loading/>
   })
+// import Nav from '@/components/Nav';
+// import Footer from '@/components/Footer';
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
-// import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
 import { App } from 'antd';
-// import { usePathname } from 'next/navigation';
 import Provider from '@/providers/provider'
-import { ToastContainer } from 'react-toastify'
 import Loading from './loading'
 
 export default function RootLayout({
@@ -38,23 +37,8 @@ export default function RootLayout({
                 <StyledComponentsRegistry>
                   <App>
                     <Nav/>
-                    {/* {
-                      pathname.includes("book_a_move") ? <BookingProgress /> : null
-                    }  */}
                       {children}
-                  <Footer />
-                   <ToastContainer
-                        position="top-right"
-                        // className={"app__toast"}
-                        // bodyClassName={"app__toast__body"}
-                        autoClose={5000}
-                        hideProgressBar={true}
-                        closeOnClick={false}
-                        rtl={false}
-                        draggable
-                        pauseOnFocusLoss
-                        theme="light"
-                      />
+                    <Footer />
                   </App>
                 </StyledComponentsRegistry>
               </Provider>

@@ -4,7 +4,7 @@ import Map from '@/components/Map';
 import { useGoogleMaps } from '@/context/GoogleMapsContext';
 import { useInputContext } from '@/context/InputContext';
 import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import Loading from '../loading';
+import Loading from '../../loading';
 interface PartnerData {
     emailAddress: string,
     storeAddress: string,

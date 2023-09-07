@@ -1,6 +1,7 @@
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Libraries, LoadScript } from '@react-google-maps/api';
+import Loading from '@/app/loading';
 
 interface GoogleMapsContextProps {
   children: React.ReactNode;
@@ -24,12 +25,37 @@ export const useGoogleMaps = () => {
 export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children }) => {
   const libraries: Libraries = ['places'];
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
+  const [isLoaded, setIsLoaded] = useState(false); // State for loading status
+  const [loadError, setLoadError] = useState(false); // State for load error
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=${libraries.join(',')}`;
+    script.async = true;
+
+    script.onload = () => {
+      setIsLoaded(true); // Google Maps is loaded
+    };
+
+    script.onerror = () => {
+      setLoadError(true); // Error occurred during Google Maps load
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up script tag if component unmounts
+      document.body.removeChild(script);
+    };
+  }, [apiKey, libraries]);
+
+  if (!isLoaded) {
+    return <Loading/>
+  }
 
   return (
-    <LoadScript googleMapsApiKey={apiKey} libraries={libraries}>
-      <GoogleMapsContext.Provider value={{ isLoaded: true, loadError: false }}>
-        {children}
-      </GoogleMapsContext.Provider>
-    </LoadScript>
+    <GoogleMapsContext.Provider value={{ isLoaded, loadError }}>
+      {children}
+    </GoogleMapsContext.Provider>
   );
 };

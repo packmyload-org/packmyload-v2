@@ -4,7 +4,24 @@ import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react
 import { Table } from "antd";
 export default function Checkout() {
     const {state}=useBookingForm()
-    console.log(state.distance)
+    // console.log(state.distance)
+    const columns = [
+  {
+    title: 'Items',
+    dataIndex: 'item',
+    key: 'item',
+  },
+  {
+    title: 'Qty',
+    dataIndex: 'numberOfItems',
+    key: 'numberOfItems',
+  },
+  {
+    title: 'Price',
+    dataIndex: 'price',
+    key: 'price',
+  },
+];
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
@@ -91,23 +108,7 @@ export default function Checkout() {
                             {state.moveType}
                         </div>
                     </div>
-                </div>
-                {/* Section 2 */}
-                <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
-                    {/* Move Items Table */}
-
-                    <Table className="w-[90%] mx-auto" dataSource={state.items} />
-                    <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <div className="flex" style={{width: 'fit-content'}}>
-                        <CurrencyNgn size={28} color="#444646" weight="fill" />
-                        <div className="ml-2 text-lg font-medium">                   
-                        Price Breakdown
-                        </div>
-                    </div>
-
-                    <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    
-                    <div className="flex justify-between">
+                     <div className="flex  justify-between">
                         <div className="text-base min-w-max mr-5">                   
                             Distance (km)
                         </div>
@@ -115,7 +116,7 @@ export default function Checkout() {
                             {state.distance}
                         </div>
                     </div>
-                     <div className="flex justify-between">
+                     <div className="flex  justify-between">
                         <div className="text-base min-w-max mr-5">                   
                             Volume (km)
                         </div>
@@ -131,6 +132,22 @@ export default function Checkout() {
                             1 packer (s)   
                         </div>
                     </div>
+                </div>
+                {/* Section 2 */}
+                <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
+                    {/* Move Items Table */}
+
+                    <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
+                    <div className="flex" style={{width: 'fit-content'}}>
+                        <CurrencyNgn size={28} color="#444646" weight="fill" />
+                        <div className="ml-2 text-lg font-medium">                   
+                        Price Breakdown
+                        </div>
+                    </div>
+
+                    <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
+                    <Table className="w-[90%] mx-auto" dataSource={state.items} columns={columns}/>
+                    
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
 
