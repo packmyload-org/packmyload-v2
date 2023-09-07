@@ -36,20 +36,20 @@ export default function Footer() {
 										<Col span={24} lg={10}>
 												<ul className='space-y-4 h-full'>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/home-moves" title="">Home Moves</a>
+															<a className='text-gray-400' href="/services/home-moves" title="">Home Moves</a>
 													</li>
 													<li className="clearfix">
-														<a className='text-gray-400' href="/home-moves" title="">Office Relocation</a>
+														<a className='text-gray-400' href="/services/office-moves" title="">Office Relocation</a>
 													</li>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/student-moves" title="Student Moves">Student
+															<a className='text-gray-400' href="/services/student-moves" title="Student Moves">Student
 																Moves</a>
 													</li>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/cleaning" title="Cleaning">Cleaning Services</a>
+															<a className='text-gray-400' href="/services/cleaning" title="Cleaning">Cleaning Services</a>
 													</li>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/wedding-handling" title="">Wedding Gift
+															<a className='text-gray-400' href="/services/wedding-handling" title="">Wedding Gift
 																Handling</a>
 													</li>
 												</ul>
@@ -57,16 +57,16 @@ export default function Footer() {
 										<Col span={24} lg={10}>
 												<ul className='space-y-4 h-full md:mt-0 mt-2'>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/home-moves" title="">Small Moves</a>
+															<a className='text-gray-400' href="/services/international-relocations" title="">International Relocation</a>
 													</li>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/Junk-moves" title=""> Junk Removal</a>
+															<a className='text-gray-400' href="/services/junk-moves" title=""> Junk Removal</a>
 													</li>
 													<li className="clearfix">
-															<a className='text-gray-400' href="/storage" title="">Storage</a>
+															<a className='text-gray-400' href="/services/storage" title="">Storage</a>
 											</li>
 												<li className="clearfix">
-															<a className='text-gray-400' href="/storage" title="">Storage Delivery</a>
+															<a className='text-gray-400' href="/services/store-delivery" title="">Store Delivery</a>
 													</li>
 												</ul>
 										</Col>
