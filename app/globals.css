@@ -337,6 +337,11 @@ span{
 .main-search-input{
   margin-top: 50px;
 }
+.scrollbar-hide{
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scrollbar-color: blue;
+}
 .scrollbar-hide::-webkit-scrollbar {
   width: 0.4em;
 }
