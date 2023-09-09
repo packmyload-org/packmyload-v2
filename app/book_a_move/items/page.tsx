@@ -6,13 +6,13 @@ import smallMove from '@/utils/SmallMoves.json';
 
 interface Category {
   categoryName: string;
-  items: { item: string; price: number }[];
+  items: { item: string; volume: number }[];
 }
 
 export default function Page() {
   const [data] = useState<Category[]>(smallMove);
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [filteredItems, setFilteredItems] = useState<{ item: string; price: number }[]>([]);
+  const [filteredItems, setFilteredItems] = useState<{ item: string; volume: number }[]>([]);
   const [selectedTab, setSelectedTab] = useState<string>('All');
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Page() {
         </div>
         <div className='flex gap-4 md:gap-6 w-[90%] mx-auto md:w-full flex-wrap pt-4'>
           {filteredItems.map((item, index) => (
-            <ItemsCounter key={item.item} title={item.item} />
+            <ItemsCounter key={item.item} title={item.item} volume={item.volume} />
           ))}
         </div>
       </div>

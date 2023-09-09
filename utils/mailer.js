@@ -1,11 +1,15 @@
 import nodemailer from "nodemailer";
 
 let transporter = nodemailer.createTransport({
-  service: "gmail",
+  port: 465,
+  host: "smtp.zoho.com",
+  from: "info@bluehouseng.com",
+  secure: true,
   auth: {
-    user: "packmyloadpro@gmail.com",
-    pass: "Mrpacker123@",
+    user: process.env.MAILER_USERNAME,
+    pass: process.env.MAILER_PASSWORD,
   },
+  tls: { rejectUnauthorized: false },
 });
 
 transporter.verify((error, success) => {

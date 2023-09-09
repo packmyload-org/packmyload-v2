@@ -4,9 +4,10 @@ import { useBookingForm } from '@/context/BookingFormContext';
 
 interface ItemsProps {
   title: string;
+  volume: number;
 }
 
-const ItemsCounter: React.FC<ItemsProps> = ({ title }) => {
+const ItemsCounter: React.FC<ItemsProps> = ({ title, volume }) => {
   const [countItem, setCountItem] = useState<number>(0);
   const { state: bookingFormState, dispatch: bookingFormDispatch } = useBookingForm();
   console.log(bookingFormState)
@@ -14,12 +15,34 @@ const ItemsCounter: React.FC<ItemsProps> = ({ title }) => {
     setCountItem((countItem) => countItem + 1);
     const itemIndex = bookingFormState.items.findIndex((item) => item.item === title);
 
-    if (itemIndex !== -1) {
+      let price: number = 0;
+      let multipliedByQty: number = 0;
+      if (itemIndex !== -1) {
+       if (volume <= 100) {
+           price = 1000;
+        } else if (volume > 100 && volume <= 500) {
+          price = 5000;
+        }else if (volume > 500) {
+          price = 9000
+        }
+        if (price)
+         multipliedByQty = price * (countItem + 1)
         const updatedItems = [...bookingFormState.items];
         updatedItems[itemIndex].numberOfItems = (countItem + 1).toString();
+        updatedItems[itemIndex].price = multipliedByQty;
+        updatedItems[itemIndex].volume = volume;
         bookingFormDispatch({ type: 'UPDATE_ITEMS', items: updatedItems });
     } else {
-        const newItem = { item: title, numberOfItems: (countItem + 1).toString() };
+        if (volume <= 100) {
+          price = 1000;
+        } else if (volume > 100 && volume <= 500) {
+          price = 5000;
+        }else if (volume > 500) {
+          price = 9000
+        }
+        if (price)
+         multipliedByQty = (price * (countItem + 1)) 
+        const newItem = { item: title, numberOfItems: (countItem + 1).toString(), price: multipliedByQty, volume: volume };
         bookingFormDispatch({ type: 'UPDATE_ITEMS', items: [...bookingFormState.items, newItem] });
     }
     };
@@ -27,11 +50,23 @@ const ItemsCounter: React.FC<ItemsProps> = ({ title }) => {
     const decreaseCountItem = () => {
     if (countItem > 0) {
         setCountItem((countItem) => countItem - 1);
-        const itemIndex = bookingFormState.items.findIndex((item) => item.item === title);
-
-        if (itemIndex !== -1) {
+      const itemIndex = bookingFormState.items.findIndex((item) => item.item === title);
+      let price: number = 0;
+      let multipliedByQty: number = 0;
+      if (itemIndex !== -1) {
+        if (volume <= 100) {
+           price = 1000;
+        } else if (volume > 100 && volume <= 500) {
+          price = 5000;
+        }else if (volume > 500) {
+          price = 9000
+        }
+        if (price)
+         multipliedByQty = price * (countItem - 1)
         const updatedItems = [...bookingFormState.items];
         updatedItems[itemIndex].numberOfItems = (countItem - 1).toString();
+        updatedItems[itemIndex].price = multipliedByQty;
+        updatedItems[itemIndex].volume = volume;
         bookingFormDispatch({ type: 'UPDATE_ITEMS', items: updatedItems });
         }
     }

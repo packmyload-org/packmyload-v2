@@ -15,6 +15,8 @@ interface BookingFormState {
   items: Array<{
     item: string;
     numberOfItems: string;
+    price: number;
+    volume: number;
   }>;
   buildingType: string;
   floorsStart: string;
@@ -28,7 +30,7 @@ interface BookingFormState {
 // Define action types
 type Action =
   | { type: 'UPDATE_FIELD'; field: string; value: string }
-  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string }[] }
+  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string; price: number; volume: number }[] }
   | { type: 'RESTORE_STATE'; payload: BookingFormState };
 
 // Define initial form state

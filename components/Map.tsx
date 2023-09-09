@@ -13,10 +13,10 @@ interface RouteData {
 
 function Map() {
   const path = usePathname()
-  const [mapCenter, setMapCenter] = useState({ lat: 48.8584, lng: 2.2945 });
+  const [mapCenter, setMapCenter] = useState({ lat: 6.465422, lng: 3.406448 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
   const { locationValue, triggerCalculateRoute, setTriggerCalculateRoute } = useInputContext()
-  const {dispatch}=useBookingForm()
+  const {dispatch}  =useBookingForm()
   
   const calculateRoute = async () => {
     const pickUp = localStorage.getItem('pickUp');
@@ -82,7 +82,7 @@ function Map() {
       fetchRouteData();
     }
      if (path.includes('partner') ) {
-      setMapCenter({ lat: 48.8584, lng: 2.2945 })
+      setMapCenter({ lat: 6.465422, lng: 3.406448 })
     }
   }, [])
   

@@ -4,263 +4,263 @@
     "items": [
       {
         "item": "BBQ",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Bed Frame",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Bike",
-        "price": 100
+        "volume": 150
       },
       {
         "item": "Bookshelf (Short)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Box(Large)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Box(Medium)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Box(Small)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Buffet",
-        "price": 100
+        "volume": 900
       },
       {
         "item": "Chair - Table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Coat rack",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Coffee Table",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Computer Monitor",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Console Table/Entry Table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Couch/Sofa (2-seat)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Couch/Sofa (3-seat)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Couch/Sofa (4-seat)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Couch/Sofa (5-seat)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Couch/Sofa (6-seat)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Crib with Mattress",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Desk",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Desk Office Chair",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dining Table (4-seater)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dishwasher",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dresser (3-drawer)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dresser (6-drawer)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dryer",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "End Table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Exercise bike",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "File Cabinet (3-drawer)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Frames",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Futon Frame",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Futon Mattress",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Lamp (Table)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Lamp (tall)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Large frame",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Mattress or Boxspring (Full)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Mattress or Boxspring (King)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Mattress or Boxspring (Queen)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mattress or Boxspring (Twin)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Mirror (Large)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Mirror (Small)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Misc Medium Item",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Misc small Item",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Nightstand/Bedside Table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Ottoman",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Oven",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Patio Umbrella",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Patio table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Refrigerator",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Rug (Large Roll)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Rug (Small Roll)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Side Table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Stool",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Storage Tote (10 Gallon)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Storage Tote (20 Gallon)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Storage Tote (30 Gallon)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Stove",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Swing bench",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "TV",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "TV Stand",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Tire(s)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Treadmill",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Vacuum",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Wardrobe Box",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Washing machine",
-        "price": 100
+        "volume": 100
       }
     ]
   },
@@ -269,115 +269,115 @@
     "items": [
       {
         "item": "Chair - Table",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Coat rack",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Console Table/Entry Table",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Couch/Sofa (2-seat)",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Couch/Sofa (3-seat)",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Couch/Sofa (4-seat)",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Couch/Sofa (5-seat)",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Couch/Sofa (6-seat)",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Coffee Table",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Computer Monitor",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Desk",
-        "price": 100
+        "volume": 300
       },
       {
         "item": "Desk Office Chair",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "End Table",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "File Cabinet (3-drawer)",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Frames",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Lamp (Table)",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Lamp (tall)",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Large frame",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Misc Medium Item",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Misc small Item",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Ottoman",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Rug (Large Roll)",
-        "price": 100
+        "volume": 550
       },
       {
         "item": "Rug (Small Roll)",
-        "price": 100
+        "volume": 200
       },
       {
         "item": "Side Table",
-        "price": 100
+        "volume": 200
       },
       {
         "item": "Stool",
-        "price": 100
+        "volume": 200
       },
       {
         "item": "TV",
-        "price": 100
+        "volume": 200
       },
       {
         "item": "TV Stand",
-        "price": 100
+        "volume": 200
       },
       {
         "item": "Vacuum",
-        "price": 100
+        "volume": 200
       }
     ]
   },
@@ -386,11 +386,11 @@
     "items": [
       {
         "item": "Buffet",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dining Table (4-seater)",
-        "price": 100
+        "volume": 200
       }
     ]
   },
@@ -399,51 +399,51 @@
     "items": [
       {
         "item": "Dresser (3-drawer)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Dresser (6-drawer)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Futon Frame",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Futon Mattress",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mirror (Large)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mirror (Small)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mattress or Boxspring (Full)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mattress or Boxspring (King)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mattress or Boxspring (Queen)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Mattress or Boxspring (Twin)",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Nightstand/Bedside Table",
-        "price": 100
+        "volume": 800
       },
       {
         "item": "Wardrobe Box",
-        "price": 100
+        "volume": 800
       }
     ]
   },
@@ -452,27 +452,27 @@
     "items": [
       {
         "item": "Dishwasher",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Dryer",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Oven",
-        "price": 100
+        "volume": 900
       },
       {
         "item": "Refrigerator",
-        "price": 100
+        "volume": 900
       },
       {
         "item": "Stove",
-        "price": 100
+        "volume": 200
       },
       {
         "item": "Washing machine",
-        "price": 100
+        "volume": 1000
       }
     ]
   },
@@ -481,59 +481,59 @@
     "items": [
       {
         "item": "BBQ",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Storage Tote (10 Gallon)",
-        "price": 100
+        "volume": 600
       },
       {
         "item": "Storage Tote (20 Gallon)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Storage Tote (30 Gallon)",
-        "price": 100
+        "volume": 600
       },
       {
         "item": "Box(Large)",
-        "price": 100
+        "volume": 600
       },
       {
         "item": "Box(Medium)",
-        "price": 100
+        "volume": 600
       },
       {
         "item": "Box(Small)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Patio Umbrella",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Patio table",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Exercise bike",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Swing bench",
-        "price": 100
+        "volume": 350
       },
       {
         "item": "Bike",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Tire(s)",
-        "price": 100
+        "volume": 100
       },
       {
         "item": "Treadmill",
-        "price": 100
+        "volume": 800
       }
     ]
   }

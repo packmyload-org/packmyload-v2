@@ -17,5 +17,23 @@ export function getMinDate(): string {
 }
 
 
+export function sumVolume(objects: { volume: number }[]): any {
+  let totalVolume = 0;
+
+  for (const obj of objects) {
+    if (obj && obj.volume) {
+      totalVolume += obj.volume;
+    }
+  }
+
+  return totalVolume;
+}
+
+
+
+
+
+
+
 
 

@@ -27,17 +27,17 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
         placeService.getDetails({ placeId }, (place, status) => {
           if (status === google.maps.places.PlacesServiceStatus.OK && place) {
             // Check if the place has address components
-            if (place.address_components) {
+            // if (place.address_components) {
               // Check if the place has 'street_address' or 'premise' types
-              const hasStreetAddress = place.address_components.some(component =>
-                component.types.includes('street_address')
-              );
+              // const hasStreetAddress = place.address_components.some(component =>
+              //   component.types.includes('street_address')
+              // );
 
-              const hasPremise = place.address_components.some(component =>
-                component.types.includes('premise')
-              );
+              // const hasPremise = place.address_components.some(component =>
+              //   component.types.includes('premise')
+              // );
 
-              if (hasStreetAddress || hasPremise) {
+              // if (hasStreetAddress || hasPremise) {
                 const formattedAddress = place.formatted_address;
                 const latitude = place.geometry?.location?.lat();
                 const longitude = place.geometry?.location?.lng();
@@ -72,14 +72,14 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
                 setInputValueWithLocalStorage(formattedAddress ?? '', inputName);
                 handleFieldChange(inputName, formattedAddress ?? '');
                 path.includes('book_a_move') && setTriggerCalculateRoute(true);
-              } else {
-                // Display an error message if the place doesn't have the required address types
-                alerts.error(`Invalid Address`, `Please provide a valid street or residential address.`);
-              }
-            } else {
-              // Handle cases where address_components are not available
-              alerts.error(`Invalid Address`, `Please provide a valid street or residential address.`);
-            }
+              // } else {
+              //   // Display an error message if the place doesn't have the required address types
+              //   alerts.error(`Invalid Address`, `Please provide a valid street or residential address.`);
+              // }
+            // } else {
+            //   // Handle cases where address_components are not available
+            //   alerts.error(`Invalid Address`, `Please provide a valid street or residential address.`);
+            // }
           }
         });
       }

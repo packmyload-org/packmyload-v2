@@ -1,10 +1,12 @@
 "use client";
 import { useBookingForm } from "@/context/BookingFormContext";
+import { sumVolume } from "@/utils/helpers";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
 import { Table } from "antd";
+import { useState } from "react";
 export default function Checkout() {
     const {state}=useBookingForm()
-    // console.log(state.distance)
+    const [currentPage, setCurrentPage] = useState(1);
     const columns = [
   {
     title: 'Items',
@@ -21,7 +23,19 @@ export default function Checkout() {
     dataIndex: 'price',
     key: 'price',
   },
-];
+    ];
+
+  const handleChangePage = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const pagination = {
+    current: currentPage,
+    pageSize: 5, 
+    total: state.items.length,
+    onChange: handleChangePage,
+  };
+    const volume = sumVolume(state.items)
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
@@ -47,7 +61,7 @@ export default function Checkout() {
                     </div>
                     <div className="flex mt-2 justify-between">
                         <div className="text-base min-w-max mr-5">                   
-                            Dropoff Location
+                            DropOff Location
                         </div>
                         <div className="mt-1 text-sm">                   
                             {state.destination}
@@ -100,7 +114,7 @@ export default function Checkout() {
                             {state.service}
                         </div>
                     </div>
-                    <div className="flex mt-2 justify-between">
+                    <div className="flex mt-3 justify-between">
                         <div className="text-base min-w-max mr-5">                   
                             Move Type
                         </div>
@@ -108,7 +122,7 @@ export default function Checkout() {
                             {state.moveType}
                         </div>
                     </div>
-                     <div className="flex  justify-between">
+                     <div className="flex mt-3 justify-between">
                         <div className="text-base min-w-max mr-5">                   
                             Distance (km)
                         </div>
@@ -116,15 +130,15 @@ export default function Checkout() {
                             {state.distance}
                         </div>
                     </div>
-                     <div className="flex  justify-between">
+                     <div className="flex mt-3 justify-between">
                         <div className="text-base min-w-max mr-5">                   
-                            Volume (km)
+                            Volume (cubits)
                         </div>
                         <div className="mt-1 text-sm">                   
-                            {/* {state.volume} */}
+                            {volume}
                         </div>
                     </div>
-                    <div className="flex mt-2 justify-between">
+                    <div className="flex mt-3 justify-between">
                         <div className="text-base min-w-max mr-5">                   
                             Your Team
                         </div>
@@ -146,7 +160,7 @@ export default function Checkout() {
                     </div>
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <Table className="w-[90%] mx-auto" dataSource={state.items} columns={columns}/>
+                    <Table className="w-[90%] mx-auto" dataSource={state.items} columns={columns} pagination={pagination}/>
                     
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
