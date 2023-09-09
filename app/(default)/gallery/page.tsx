@@ -1,11 +1,18 @@
 import React from 'react'
 
-function page() {
+function Gallery() {
+
   return (
-   <div>
-    <h1 className='text-3xl font-mono font-bold text-center'>This feature is coming soon!</h1>
+   <div className='mt-[70px] max-w-6xl mx-auto'>
+      <iframe
+          src="//lightwidget.com/widgets/682b9263b5d158bb80e0366b2f49e1f4.html"
+          className="lightwidget-widget"
+          style={{ width: '100%', height: '100vh', border: '0' }}
+          allow="height"
+        ></iframe>
+        <br />
     </div>
   )
 }
 
-export default page
+export default Gallery
