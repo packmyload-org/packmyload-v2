@@ -1,17 +1,15 @@
 [
-  
-   
   {
     "categoryName": "Living Room / Dining ",
     "items": [
       {
         "item": "Art Work(meduim)",
         "volume": 300
-      },  
+      },
       {
         "item": "Art Work(large)",
         "volume": 300
-      },  
+      },
       {
         "item": "Book Rack",
         "volume": 300
@@ -32,7 +30,7 @@
         "item": "Couch/Sofa (4-seat)",
         "volume": 300
       },
-     
+
       {
         "item": "Coffee Table",
         "volume": 300
@@ -97,7 +95,7 @@
         "item": "Side Table",
         "volume": 200
       },
-      
+
       {
         "item": "TV (over 52 inches)",
         "volume": 200
@@ -110,13 +108,11 @@
         "item": "Piano",
         "volume": 300
       }
-     
     ]
   },
   {
     "categoryName": "Kitchen ",
     "items": [
-    
       {
         "item": "Breakfast Chairs",
         "volume": 200
@@ -173,7 +169,6 @@
         "item": "Dish Rack ",
         "volume": 200
       }
-
     ]
   },
   {
@@ -319,311 +314,313 @@
       }
     ]
   },
-  { "categoryName": "All",
-  "items": [
-    {
-      "item": "BBQ",
-      "volume": 300
-    },
-    {
-      "item": "Bed Frame",
-      "volume": 100
-    },
-    {
-      "item": "Bike",
-      "volume": 150
-    },
-    {
-      "item": "Bookshelf (Short)",
-      "volume": 100
-    },
-    {
-      "item": "Box(Large)",
-      "volume": 100
-    },
-    {
-      "item": "Box(Medium)",
-      "volume": 100
-    },
-    {
-      "item": "Box(Small)",
-      "volume": 100
-    },
-    {
-      "item": "Buffet",
-      "volume": 900
-    },
-    {
-      "item": "Chair - Table",
-      "volume": 100
-    },
-    {
-      "item": "Coat rack",
-      "volume": 100
-    },
-    {
-      "item": "Coffee Table",
-      "volume": 800
-    },
-    {
-      "item": "Computer Monitor",
-      "volume": 800
-    },
-    {
-      "item": "Console Table/Entry Table",
-      "volume": 100
-    },
-    {
-      "item": "Couch/Sofa (2-seat)",
-      "volume": 100
-    },
-    {
-      "item": "Couch/Sofa (3-seat)",
-      "volume": 100
-    },
-    {
-      "item": "Couch/Sofa (4-seat)",
-      "volume": 100
-    },
-    {
-      "item": "Couch/Sofa (5-seat)",
-      "volume": 100
-    },
-    {
-      "item": "Couch/Sofa (6-seat)",
-      "volume": 100
-    },
-    {
-      "item": "Crib with Mattress",
-      "volume": 100
-    },
-    {
-      "item": "Desk",
-      "volume": 100
-    },
-    {
-      "item": "Desk Office Chair",
-      "volume": 100
-    },
-    {
-      "item": "Dining Table (4-seater)",
-      "volume": 100
-    },
-    {
-      "item": "Dishwasher",
-      "volume": 100
-    },
-    {
-      "item": "Dresser (3-drawer)",
-      "volume": 100
-    },
-    {
-      "item": "Dresser (6-drawer)",
-      "volume": 100
-    },
-    {
-      "item": "Dryer",
-      "volume": 100
-    },
-    {
-      "item": "End Table",
-      "volume": 100
-    },
-    {
-      "item": "Exercise bike",
-      "volume": 100
-    },
-    {
-      "item": "File Cabinet (3-drawer)",
-      "volume": 100
-    },
-    {
-      "item": "Frames",
-      "volume": 100
-    },
-    {
-      "item": "Futon Frame",
-      "volume": 100
-    },
-    {
-      "item": "Futon Mattress",
-      "volume": 100
-    },
-    {
-      "item": "Lamp (Table)",
-      "volume": 100
-    },
-    {
-      "item": "Lamp (tall)",
-      "volume": 100
-    },
-    {
-      "item": "Large frame",
-      "volume": 100
-    },
-    {
-      "item": "Mattress or Boxspring (Full)",
-      "volume": 100
-    },
-    {
-      "item": "Mattress or Boxspring (King)",
-      "volume": 100
-    },
-    {
-      "item": "Mattress or Boxspring (Queen)",
-      "volume": 800
-    },
-    {
-      "item": "Mattress or Boxspring (Twin)",
-      "volume": 100
-    },
-    {
-      "item": "Mirror (Large)",
-      "volume": 100
-    },
-    {
-      "item": "Mirror (Small)",
-      "volume": 800
-    },
-    {
-      "item": "Misc Medium Item",
-      "volume": 800
-    },
-    {
-      "item": "Misc small Item",
-      "volume": 100
-    },
-    {
-      "item": "Nightstand/Bedside Table",
-      "volume": 100
-    },
-    {
-      "item": "Ottoman",
-      "volume": 100
-    },
-    {
-      "item": "Oven",
-      "volume": 100
-    },
-    {
-      "item": "Patio Umbrella",
-      "volume": 100
-    },
-    {
-      "item": "Patio table",
-      "volume": 100
-    },
-    {
-      "item": "Refrigerator",
-      "volume": 800
-    },
-    {
-      "item": "Rug (Large Roll)",
-      "volume": 800
-    },
-    {
-      "item": "Rug (Small Roll)",
-      "volume": 800
-    },
-    {
-      "item": "Side Table",
-      "volume": 100
-    },
-    {
-      "item": "Stool",
-      "volume": 100
-    },
-    {
-      "item": "Storage Tote (10 Gallon)",
-      "volume": 800
-    },
-    {
-      "item": "Storage Tote (20 Gallon)",
-      "volume": 800
-    },
-    {
-      "item": "Storage Tote (30 Gallon)",
-      "volume": 100
-    },
-    {
-      "item": "Stove",
-      "volume": 100
-    },
-    {
-      "item": "Swing bench",
-      "volume": 100
-    },
-    {
-      "item": "TV",
-      "volume": 100
-    },
-    {
-      "item": "TV Stand",
-      "volume": 100
-    },
-    {
-      "item": "Tire(s)",
-      "volume": 100
-    },
-    {
-      "item": "Treadmill",
-      "volume": 100
-    },
-    {
-      "item": "Vacuum",
-      "volume": 100
-    },
-    {
-      "item": "Wardrobe Box",
-      "volume": 100
-    },
-    {
-      "item": "Washing machine",
-      "volume": 100
-    }, {
-      "item": "Breakfast Chairs",
-      "volume": 200
-    },
-    {
-      "item": "Breakfast Table",
-      "volume": 200
-    },
-    {
-      "item": "High Chair",
-      "volume": 200
-    },
-    {
-      "item": "Serving Cart",
-      "volume": 200
-    },
-    {
-      "item": "Ironing Board",
-      "volume": 200
-    },
-    {
-      "item": "Kitchen Cabinet",
-      "volume": 200
-    },
-    {
-      "item": "Deep Freezer",
-      "volume": 200
-    },
-    {
-      "item": "Stool",
-      "volume": 200
-    },
-    {
-      "item": "Utility Cabinet",
-      "volume": 200
-    },
-    {
-      "item": "Fridge",
-      "volume": 200
-    },
-    {
-      "item": "Table",
-      "volume": 200
-    }
-  ]
-}
+  {
+    "categoryName": "All",
+    "items": [
+      {
+        "item": "BBQ",
+        "volume": 300
+      },
+      {
+        "item": "Bed Frame",
+        "volume": 100
+      },
+      {
+        "item": "Bike",
+        "volume": 150
+      },
+      {
+        "item": "Bookshelf (Short)",
+        "volume": 100
+      },
+      {
+        "item": "Box(Large)",
+        "volume": 100
+      },
+      {
+        "item": "Box(Medium)",
+        "volume": 100
+      },
+      {
+        "item": "Box(Small)",
+        "volume": 100
+      },
+      {
+        "item": "Buffet",
+        "volume": 900
+      },
+      {
+        "item": "Chair - Table",
+        "volume": 100
+      },
+      {
+        "item": "Coat rack",
+        "volume": 100
+      },
+      {
+        "item": "Coffee Table",
+        "volume": 800
+      },
+      {
+        "item": "Computer Monitor",
+        "volume": 800
+      },
+      {
+        "item": "Console Table/Entry Table",
+        "volume": 100
+      },
+      {
+        "item": "Couch/Sofa (2-seat)",
+        "volume": 100
+      },
+      {
+        "item": "Couch/Sofa (3-seat)",
+        "volume": 100
+      },
+      {
+        "item": "Couch/Sofa (4-seat)",
+        "volume": 100
+      },
+      {
+        "item": "Couch/Sofa (5-seat)",
+        "volume": 100
+      },
+      {
+        "item": "Couch/Sofa (6-seat)",
+        "volume": 100
+      },
+      {
+        "item": "Crib with Mattress",
+        "volume": 100
+      },
+      {
+        "item": "Desk",
+        "volume": 100
+      },
+      {
+        "item": "Desk Office Chair",
+        "volume": 100
+      },
+      {
+        "item": "Dining Table (4-seater)",
+        "volume": 100
+      },
+      {
+        "item": "Dishwasher",
+        "volume": 100
+      },
+      {
+        "item": "Dresser (3-drawer)",
+        "volume": 100
+      },
+      {
+        "item": "Dresser (6-drawer)",
+        "volume": 100
+      },
+      {
+        "item": "Dryer",
+        "volume": 100
+      },
+      {
+        "item": "End Table",
+        "volume": 100
+      },
+      {
+        "item": "Exercise bike",
+        "volume": 100
+      },
+      {
+        "item": "File Cabinet (3-drawer)",
+        "volume": 100
+      },
+      {
+        "item": "Frames",
+        "volume": 100
+      },
+      {
+        "item": "Futon Frame",
+        "volume": 100
+      },
+      {
+        "item": "Futon Mattress",
+        "volume": 100
+      },
+      {
+        "item": "Lamp (Table)",
+        "volume": 100
+      },
+      {
+        "item": "Lamp (tall)",
+        "volume": 100
+      },
+      {
+        "item": "Large frame",
+        "volume": 100
+      },
+      {
+        "item": "Mattress or Boxspring (Full)",
+        "volume": 100
+      },
+      {
+        "item": "Mattress or Boxspring (King)",
+        "volume": 100
+      },
+      {
+        "item": "Mattress or Boxspring (Queen)",
+        "volume": 800
+      },
+      {
+        "item": "Mattress or Boxspring (Twin)",
+        "volume": 100
+      },
+      {
+        "item": "Mirror (Large)",
+        "volume": 100
+      },
+      {
+        "item": "Mirror (Small)",
+        "volume": 800
+      },
+      {
+        "item": "Misc Medium Item",
+        "volume": 800
+      },
+      {
+        "item": "Misc small Item",
+        "volume": 100
+      },
+      {
+        "item": "Nightstand/Bedside Table",
+        "volume": 100
+      },
+      {
+        "item": "Ottoman",
+        "volume": 100
+      },
+      {
+        "item": "Oven",
+        "volume": 100
+      },
+      {
+        "item": "Patio Umbrella",
+        "volume": 100
+      },
+      {
+        "item": "Patio table",
+        "volume": 100
+      },
+      {
+        "item": "Refrigerator",
+        "volume": 800
+      },
+      {
+        "item": "Rug (Large Roll)",
+        "volume": 800
+      },
+      {
+        "item": "Rug (Small Roll)",
+        "volume": 800
+      },
+      {
+        "item": "Side Table",
+        "volume": 100
+      },
+      {
+        "item": "Stool",
+        "volume": 100
+      },
+      {
+        "item": "Storage Tote (10 Gallon)",
+        "volume": 800
+      },
+      {
+        "item": "Storage Tote (20 Gallon)",
+        "volume": 800
+      },
+      {
+        "item": "Storage Tote (30 Gallon)",
+        "volume": 100
+      },
+      {
+        "item": "Stove",
+        "volume": 100
+      },
+      {
+        "item": "Swing bench",
+        "volume": 100
+      },
+      {
+        "item": "TV",
+        "volume": 100
+      },
+      {
+        "item": "TV Stand",
+        "volume": 100
+      },
+      {
+        "item": "Tire(s)",
+        "volume": 100
+      },
+      {
+        "item": "Treadmill",
+        "volume": 100
+      },
+      {
+        "item": "Vacuum",
+        "volume": 100
+      },
+      {
+        "item": "Wardrobe Box",
+        "volume": 100
+      },
+      {
+        "item": "Washing machine",
+        "volume": 100
+      },
+      {
+        "item": "Breakfast Chairs",
+        "volume": 200
+      },
+      {
+        "item": "Breakfast Table",
+        "volume": 200
+      },
+      {
+        "item": "High Chair",
+        "volume": 200
+      },
+      {
+        "item": "Serving Cart",
+        "volume": 200
+      },
+      {
+        "item": "Ironing Board",
+        "volume": 200
+      },
+      {
+        "item": "Kitchen Cabinet",
+        "volume": 200
+      },
+      {
+        "item": "Deep Freezer",
+        "volume": 200
+      },
+      {
+        "item": "Stool",
+        "volume": 200
+      },
+      {
+        "item": "Utility Cabinet",
+        "volume": 200
+      },
+      {
+        "item": "Fridge",
+        "volume": 200
+      },
+      {
+        "item": "Table",
+        "volume": 200
+      }
+    ]
+  }
 ]

@@ -1,4 +1,3 @@
-'use client'
 import dynamic from 'next/dynamic'
 const Nav = dynamic(() => import('@/components/Nav'), {
     loading: ()=> <Loading/>
@@ -24,11 +23,11 @@ export default function RootLayout({
       <head>
         {/* <!-- Google Tag Manager --> */}
         <script
-          dangerouslySetInnerHTML={{__html: `function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P4998J87'`}}
+})(window,document,'script','dataLayer','GTM-P4998J87');`}}
         />
         {/* <!-- End Google Tag Manager --> */}
         <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
@@ -45,21 +44,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <body className='font-satoshi'>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4998J87"
           height="0" width="0"
-          style={{ display: "none", visibility: "hidden" }}>
+        >
         </iframe> 
-        <div className='w-full'>
-          <main className='w-full overflow-y-hidden'>
-              <Provider>
-                <StyledComponentsRegistry>
-                  <App>
-                    <Nav/>
-                      {children}
-                    <Footer />
-                  </App>
-                </StyledComponentsRegistry>
-              </Provider>
-          </main>
-        </div>
+          <div className='w-full'>
+            <main className='w-full overflow-y-hidden'>
+                <Provider>
+                  <StyledComponentsRegistry>
+                    <App>
+                      <Nav/>
+                        {children}
+                      <Footer />
+                    </App>
+                  </StyledComponentsRegistry>
+                </Provider>
+            </main>
+          </div>
         </body>
     </html>
   )

@@ -16,7 +16,7 @@ const nextConfig = {
   },
   async headers() {
     let configValue =
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://*.ggpht.com http://*.googleusercontent.com blob";
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://*.ggpht.com http://*.googleusercontent.com blob https://www.googletagmanager.com https://cdn.lightwidget.com ";
     return [
       {
         source: "/(.*)",
