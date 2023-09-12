@@ -1,47 +1,47 @@
 [
-    {
-      "img": "images/Assets/m1.png",
-      "title": "Home Relocations.",
-      "to": "/services/home-moves"
-    },
-    {
-      "img": "images/Assets/m2.png",
-      "title": "Office Relocations.",
-      "to": "/services/office-moves"
-    },
-    {
-      "img": "images/Assets/m3.png",
-      "title": "Store Delivery.",
-      "to": "/services/store-delivery"
-    },
-    {
-      "img": "images/Assets/m4.png",
-      "title": "Student Moves.",
-      "to": "/services/student-moves"
-    },
-    {
-      "img": "images/Assets/m5.png",
-      "title": "Junk Removal.",
-      "to": "/services/junk-moves"
-    },
-    {
-      "img": "images/Assets/m6.png",
-      "title": "Wedding Gifts Handling.",
-      "to": "/services/wedding-handling"
-    },
-    {
-      "img": "images/Assets/m7.png",
-      "title": "International Relocations.",
-      "to": "/services/international-relocations"
-    },
-    {
-      "img": "images/Assets/m8.png",
-      "title": "Cleaning Services.",
-      "to": "/services/cleaning"
-    },
-    {
-      "img": "images/Assets/m9.png",
-      "title": "Storage.",
-      "to": "/services/storage"
-    }
-  ]
+  {
+    "img": "/images/Assets/m1.png",
+    "title": "Home Relocations.",
+    "to": "/services/home-moves"
+  },
+  {
+    "img": "/images/Assets/m2.png",
+    "title": "Office Relocations.",
+    "to": "/services/office-moves"
+  },
+  {
+    "img": "/images/Assets/m3.png",
+    "title": "Store Delivery.",
+    "to": "/services/store-delivery"
+  },
+  {
+    "img": "/images/Assets/m4.png",
+    "title": "Student Moves.",
+    "to": "/services/student-moves"
+  },
+  {
+    "img": "/images/Assets/m5.png",
+    "title": "Junk Removal.",
+    "to": "/services/junk-moves"
+  },
+  {
+    "img": "/images/Assets/m6.png",
+    "title": "Wedding Gifts Handling.",
+    "to": "/services/wedding-handling"
+  },
+  {
+    "img": "/images/Assets/m7.png",
+    "title": "International Relocations.",
+    "to": "/services/international-relocations"
+  },
+  {
+    "img": "/images/Assets/m8.png",
+    "title": "Cleaning Services.",
+    "to": "/services/cleaning"
+  },
+  {
+    "img": "/images/Assets/m9.png",
+    "title": "Storage.",
+    "to": "/services/storage"
+  }
+]

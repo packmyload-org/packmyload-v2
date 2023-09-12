@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import NotFoundImage from "@/public/images/iconpackmyload.png"
+import NotFoundImage from "@/public/images/clouds.png"
 
 export default function NotFound() {
   return (
