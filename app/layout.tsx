@@ -34,7 +34,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.png"/>
             <meta property="og:image:type" content="image/png"></meta>
             <meta property="og:image:height" content="342"></meta>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=no"></meta>
             <meta property="og:title" content="packmyload.com"/>
           <link rel="icon" href="/favicon.ico"  />
           <title>Packmyload</title>
