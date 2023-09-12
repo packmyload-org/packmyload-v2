@@ -1,16 +1,16 @@
 import dynamic from 'next/dynamic'
 const Nav = dynamic(() => import('@/components/Nav'), {
-    loading: ()=> <Loading/>
+  loading: () => <Loading />,
+  ssr: false
   })
 import './globals.css'
 const Footer = dynamic(() => import('@/components/Footer'), {
-    loading: ()=> <Loading/>
+  loading: () => <Loading />,
+  ssr: false
   })
-// import Nav from '@/components/Nav';
-// import Footer from '@/components/Footer';
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import { App } from 'antd';
-import Provider from '@/providers/provider'
+const Provider = dynamic(()=> import ( '@/providers/provider'),{loading:()=><Loading/>, ssr: false})
 import Loading from './loading'
 
 export default function RootLayout({
@@ -34,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.png"/>
             <meta property="og:image:type" content="image/png"></meta>
             <meta property="og:image:height" content="342"></meta>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,"></meta>
             <meta property="og:title" content="packmyload.com"/>
           <link rel="icon" href="/favicon.ico"  />
           <title>Packmyload</title>
@@ -47,13 +47,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div className='w-full'>
             <main className='w-full overflow-y-hidden'>
                 <Provider>
-                  <StyledComponentsRegistry>
-                    <App>
+                  {/* <StyledComponentsRegistry>
+                    <App> */}
                       <Nav/>
                         {children}
                       <Footer />
-                    </App>
-                  </StyledComponentsRegistry>
+                    {/* </App>
+                  </StyledComponentsRegistry> */}
                 </Provider>
             </main>
           </div>

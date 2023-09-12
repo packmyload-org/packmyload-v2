@@ -6,18 +6,15 @@ const getData = async() => {
   
   const insta_url = process.env.INSTAGRAM_URL
 
+  if(!insta_url){
+    throw new Error("Missing Instagram Url")
+  }
   try {
-
-    if(!insta_url){
-      throw new Error("Missing Instagram Url")
-    }
-
-
     const res = await fetch(insta_url)
-    const data = await res.json()
-    const feed = data.data
+    // const data = await res.json()
+    // const feed = data.data
 
-    return feed
+    return await res.json()
 
   } catch (error) {
     throw new Error("Failed to fetch data")
@@ -39,11 +36,11 @@ const Gallery = async() => {
     IMAGE: 3,
   }
 
-  const sortedFeed = feed.sort((a: { media_type: string },b: { media_type: string }) => mediaTypeOrder[a.media_type] - mediaTypeOrder[b.media_type])
+  const sortedFeed = feed?.data.sort((a: { media_type: string },b: { media_type: string }) => mediaTypeOrder[a.media_type] - mediaTypeOrder[b.media_type])
 
   return (
-   <div className='mt-[70px] bg-[#F9F9F9]'>
-      <div className="mx-auto max-w-6xl mt-10 flex flex-col items-center">
+   <div className='mt-[100px] bg-[#F9F9F9]'>
+      <div className="mx-auto max-w-6xl mt-8 flex flex-col items-center">
         <div className="md:text-4xl text-2xl font-bold opacity-5" style={{position: 'absolute'}}>
           PACKMYLOAD ON INSTAGRAM</div>
         <div className="md:text-3xl text-xl text-[#566985] mt-4 font-bold" style={{ position: 'relative' }}>Packmyload on Instagram</div>

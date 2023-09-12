@@ -1,10 +1,7 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import dynamic from "next/dynamic"
-import { useGoogleMaps } from '@/context/GoogleMapsContext'
-import Loading from './loading'
-import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'
-// import StepCard from '@/components/landing/custom/StepCard'
+// import Loading from './loading'
 import PackSection from '@/components/landing/PackSection'
 import { MovingServices } from '@/components/landing/MovingServices'
 import { Reviews } from '@/components/landing/Reviews'
@@ -12,22 +9,24 @@ import { Banner } from '@/components/landing/Banner'
 
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'), {
-    loading: () => <Loading />,
     ssr: false
   }
 )
-const ServiceSection = dynamic(() => import('@/components/landing/ServiceSection'), {
-    loading: ()=> <Loading/>
-  })
+import ServiceSection from '@/components/landing/ServiceSection'
+// const ServiceSection = dynamic(() => import('@/components/landing/ServiceSection'), {
+//   ssr: false
+//   })
 const Section3 = dynamic(() => import('@/components/landing/Section3'), {
-    loading: ()=> <Loading/>
-  })
-const Procedure= dynamic(()=>import('@/components/landing/Procedure'), {
-    loading: ()=> <Loading/>
-  })
-const Faq = dynamic(() => import('@/components/landing/Faq'), {
-    loading: ()=> <Loading/>
-  })
+  ssr: false
+})
+import Procedure from '@/components/landing/Procedure'
+// const Procedure = dynamic(() => import('@/components/landing/Procedure'), {
+//   ssr: false
+//   })
+import Faq from "@/components/landing/Faq";
+// const Faq = dynamic(() => import('@/components/landing/Faq'), {
+//   ssr: false
+//   })
 import { ToastContainer } from 'react-toastify'
 
   function Home() {
