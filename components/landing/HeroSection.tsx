@@ -38,9 +38,9 @@ export default function HeroSection() {
                     placeholder='Moving From'
                     type='text'
                   />
-              <Image src="/images/ic_pickup.svg" 
-              className='hover:animate-ping'
-              alt="moving company lagos nigeria-student moving pickup indicator" width={20} height={20}/>
+              <Image src="/images/marker.png" 
+              className='hover:animate-ping object-contain'
+              alt="moving company lagos nigeria-student moving pickup indicator" width={20} height={10}/>
               </div>
                 <div className='flex bg-gray-100 flex-nowrap py-1 px-3 w-full lg:w-5/12 justify-between'>
                    <AutoCompleteInput
@@ -49,9 +49,9 @@ export default function HeroSection() {
                     placeholder='Moving To'
                     type='text'
                   />
-              <Image src="/images/ic_dropdown.svg"
-              className='hover:animate-ping'
-              alt="moving company lagos nigeria-student moving pickup indicator" width={20} height={20}/>
+              <Image src="/images/marker.png"
+              className='hover:animate-ping object-contain'
+              alt="moving company lagos nigeria-student moving destination indicator" width={20} height={10}/>
               </div>
               <button type="submit" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3  w-full lg:w-[180px] rounded-lg lg:rounded-r-full border-[#9d9d9d]/20  text-gray-100 border-8 lg:border-none uppercase text-xs font-bold'>
                 Get Quote
