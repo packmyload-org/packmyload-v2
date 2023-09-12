@@ -1,9 +1,7 @@
 // next.config.js
 
 const nextConfig = {
-  output: "export",
   images: {
-    unoptimized: true,
     domains: ["images.unsplash.com", "res.cloudinary.com"],
   },
   experimental: {
