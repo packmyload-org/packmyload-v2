@@ -47,9 +47,9 @@ export default function JunkMoves(){
             <div className="mx-auto mt-8 flex flex-col items-center" ref={content}>
 
                 <div 
-                className="text-4xl font-bold opacity-5" style={{position: 'absolute'}}
+                className="md:text-4xl text-2xl font-bold opacity-5" style={{position: 'absolute'}}
                 >JUNK REMOVAL SERVICES WITHIN NIGERIA</div>
-                <div className="text-3xl text-[#566985] mt-4 font-bold" style={{ position: 'relative' }}>Junk Removal</div>
+                <div className="md:text-3xl text-xl text-[#566985] mt-4 font-bold" style={{ position: 'relative' }}>Junk Removal</div>
                 <span className="section-separator"></span>
             </div>
             <br />
