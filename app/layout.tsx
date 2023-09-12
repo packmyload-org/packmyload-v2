@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-M8S8P8C8')`}}
         />
         {/* <!-- End Google Tag Manager --> */}
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
         <meta name="description" content="packmyload.com is the preferred and rated number one packing and moving company in Lagos and Abuja, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move."></meta>
             <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.png"/>
             <meta property="og:image:type" content="image/png"></meta>

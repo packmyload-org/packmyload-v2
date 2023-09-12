@@ -1,5 +1,4 @@
 import { VideoPlayer } from '@/components/gallery/VideoPlayer'
-import { NextPage } from 'next'
 import InstagramCarousel from '../../../components/gallery/InstagramCarousel'
 import Link from 'next/link'
 
@@ -26,7 +25,7 @@ const getData = async() => {
   
 }
 
-const Gallery: NextPage = async() => {
+const Gallery = async() => {
 
   const feed = await getData()
 
@@ -44,7 +43,7 @@ const Gallery: NextPage = async() => {
 
   return (
    <div className='mt-[70px] bg-[#F9F9F9]'>
-      <div className="mx-auto max-w-6xl mt-8 flex flex-col items-center">
+      <div className="mx-auto max-w-6xl mt-10 flex flex-col items-center">
         <div className="md:text-4xl text-2xl font-bold opacity-5" style={{position: 'absolute'}}>
           PACKMYLOAD ON INSTAGRAM</div>
         <div className="md:text-3xl text-xl text-[#566985] mt-4 font-bold" style={{ position: 'relative' }}>Packmyload on Instagram</div>
