@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Our Story.",
+    "description": "Learn about our company's history and journey.",
+    "to": "/"
+  },
+  {
+    "title": "Executive Leadership.",
+    "description": "Meet our dedicated executive team leading our organization.",
+    "to": "/"
+  },
+  {
+    "title": "Newsroom.",
+    "description": "Stay updated with the latest news and press releases from our company.",
+    "to": "/"
+  },
+  {
+    "title": "Careers.",
+    "description": "Explore exciting career opportunities and join our team.",
+    "to": "/"
+  },
+  {
+    "title": "Track my orders.",
+    "description": "Track the status and location of your orders in real-time.",
+    "to": "/"
+  },
+  {
+    "title": "Become an Agent.",
+    "description": "Learn how to become an agent and partner with us.",
+    "to": "/"
+  },
+  {
+    "title": "File a Claim.",
+    "description": "File a claim for any issues or concerns related to our services.",
+    "to": "/"
+  },
+  {
+    "title": "Drive for PackMyLoad.",
+    "description": "Discover opportunities to become a driver for our logistics services.",
+    "to": "/"
+  },
+  {
+    "title": "Gallery.",
+    "description": "Explore a collection of photos and images showcasing our work and achievements.",
+    "to": "/"
+  }
+]
