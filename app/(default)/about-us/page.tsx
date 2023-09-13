@@ -12,14 +12,13 @@ const aboutItems = aboutdata.map((item,index) => (
     key={index}
   >
     
-      <div className="relative w-full h-full overflow-hidden">
-       
-        <div className="absolute bottom-4 left-0 p-2 text-white text-xl font-bold">
-          {item.title}
-          <p >{item.description}</p>
-        </div>
+    <div className="relative w-full h-full">
+      
+      <div className="absolute p-2 text-black text-xl font-bold">
+        {item.title}
+        <p >{item.description}</p>
       </div>
-    
+    </div>
   </div>
  
 
@@ -57,8 +56,8 @@ export default function Home() {
 
     </div>
     <div className=" mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none">
-                {aboutItems}
-            </div>                                        
+        {aboutItems}
+    </div>                                        
   </div>
   </div>
   </div>
