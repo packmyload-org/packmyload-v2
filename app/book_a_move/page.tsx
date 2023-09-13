@@ -1,8 +1,9 @@
 'use client'
-import dynamic from 'next/dynamic';
-const Map = dynamic(() => import('@/components/Map'))
-const BookingIndexForm = dynamic(() => import('@/components/book_a_move_comp/BookingIndexForm'))
-
+// import dynamic from 'next/dynamic';
+// const Map = dynamic(() => import('@/components/Map'))
+// const BookingIndexForm = dynamic(() => import('@/components/book_a_move_comp/BookingIndexForm'))
+import Map from "@/components/Map"
+import BookingIndexForm from "@/components/book_a_move_comp/BookingIndexForm"
 
 export default function Booking() {
  return (

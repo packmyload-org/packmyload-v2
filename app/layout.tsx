@@ -1,17 +1,16 @@
+import './globals.css'
 import dynamic from 'next/dynamic'
 const Nav = dynamic(() => import('@/components/Nav'), {
   loading: () => <Loading />,
   ssr: false
   })
-import './globals.css'
 const Footer = dynamic(() => import('@/components/Footer'), {
   loading: () => <Loading />,
   ssr: false
   })
-import StyledComponentsRegistry from '@/lib/AntdRegistry';
-import { App } from 'antd';
 const Provider = dynamic(()=> import ( '@/providers/provider'),{loading:()=><Loading/>, ssr: false})
 import Loading from './loading'
+import Script from 'next/script';
 
 export default function RootLayout({
   children,
@@ -30,6 +29,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-M8S8P8C8')`}}
         />
         {/* <!-- End Google Tag Manager --> */}
+        {/* <!-- Google tag (gtag.js) --> */}
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-MSZNSN4W23"/>
+          <Script>
+          {` window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-MSZNSN4W23');`}
+          </Script>
         <meta name="description" content="packmyload.com is the preferred and rated number one packing and moving company in Lagos and Abuja, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move."></meta>
             <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.png"/>
             <meta property="og:image:type" content="image/png"></meta>
@@ -40,23 +48,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
 
       <body className='font-satoshi'>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8S8P8C8"
+        <iframe title='google_tag_manager_iframe' src="https://www.googletagmanager.com/ns.html?id=GTM-M8S8P8C8"
           height="0" width="0"
         ></iframe>
           <div className='w-full'>
             <main className='w-full overflow-y-hidden'>
                 <Provider>
-                  {/* <StyledComponentsRegistry>
-                    <App> */}
                       <Nav/>
                         {children}
                       <Footer />
-                    {/* </App>
-                  </StyledComponentsRegistry> */}
                 </Provider>
             </main>
           </div>
-        </body>
+      </body>
     </html>
   )
 }
