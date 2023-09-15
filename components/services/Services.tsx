@@ -29,7 +29,7 @@ export default function Services(){
       ))
 
     return(
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 ">
             <div className="py-12 md:py-20">
 
             {/* Section header */}
@@ -44,7 +44,7 @@ export default function Services(){
             </div><br />
 
             {/* Items */}
-            <div className="bg-white mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none">
+            <div className="bg-white mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none p-3">
                 {servicesItems}
             </div>
             </div>
