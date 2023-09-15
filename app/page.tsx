@@ -3,7 +3,6 @@ import React, { useEffect} from 'react'
 import dynamic from "next/dynamic"
 // import Loading from './loading'
 import PackSection from '@/components/landing/PackSection'
-import { MovingServices } from '@/components/landing/MovingServices'
 import { Reviews } from '@/components/landing/Reviews'
 import { Banner } from '@/components/landing/Banner'
 
@@ -19,7 +18,10 @@ const Section3 = dynamic(() => import('@/components/landing/Section3'), {
 import Procedure from '@/components/landing/Procedure'
 import Faq from "@/components/landing/Faq";
 import { ToastContainer } from 'react-toastify'
-import SeemlessExperience from '@/components/landing/custom/SeemlessExperience'
+import { AdSection } from '@/components/landing/AdSection'
+import { ServicesMarket } from '@/components/landing/ServicesMarket'
+import { ProcedureCards } from '@/components/landing/ProcedureCards'
+import SeemlessExperience from '@/components/landing/SeemlessExperience'
 
   function Home() {
   useEffect(() => {
@@ -29,14 +31,14 @@ import SeemlessExperience from '@/components/landing/custom/SeemlessExperience'
     <div className='w-full text-black'style={{marginTop: '130px'}}>
       <>  
           <HeroSection/>
+          <AdSection />
+          <ServicesMarket />
+          <ProcedureCards/>
           <Banner />
           <ServiceSection />
           <SeemlessExperience/>
-          {/* <StepCard /> */}
-          <Section3/>
-          <MovingServices />
+          {/* <Section3/> */}
           <PackSection />
-          <Procedure/>
           <Reviews />
         <Faq /> 
          <ToastContainer

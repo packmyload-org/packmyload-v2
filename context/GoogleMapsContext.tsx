@@ -32,6 +32,7 @@ export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children 
     const script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=${libraries.join(',')}`;
     script.async = true;
+    script.id = 'google-maps-script'; // Add an id to the script element
 
     script.onload = () => {
       setIsLoaded(true); // Google Maps is loaded
@@ -44,8 +45,11 @@ export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children 
     document.body.appendChild(script);
 
     return () => {
-      // Clean up script tag if component unmounts
-      document.body.removeChild(script);
+      // Clean up script tag by id if component unmounts
+      const scriptElement = document.getElementById('google-maps-script');
+      if (scriptElement && scriptElement.parentNode) {
+        scriptElement.parentNode.removeChild(scriptElement);
+      }
     };
   }, [apiKey, libraries]);
 

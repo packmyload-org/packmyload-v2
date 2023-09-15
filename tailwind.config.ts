@@ -28,6 +28,17 @@ const config: Config = {
         "gray-700": "#9d9d9d",
         "gray-950": "#ffffff36",
       },
+       keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+      },
+
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+        change: "change 10s infinite ease-in-out",
+      },
     },
   },
   plugins: [],
