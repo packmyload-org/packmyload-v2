@@ -65,11 +65,12 @@ function Map() {
   }, [triggerCalculateRoute]);
 
   useEffect(() => {
-    if (path.includes('partner') ) {
+    if (path.includes('partner')) {
       setMapCenter(locationValue)
     }
   }, [locationValue])
   
+  console.log(localStorage.getItem('storeAddress' + 'Location'))
   useEffect(() => {
      async function fetchRouteData() {
       const result = await calculateRoute();

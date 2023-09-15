@@ -6,7 +6,7 @@ import { Eye } from '@phosphor-icons/react';
 
 export default function ServiceSection() {
   return (
-    <div className='pb-10 w-full bg-white'>
+    <div className='pb-10 w-full bg-[#F9F9F9]'>
       <Services />
       <div className="container items-start">
        {/* Portfolio end  */}

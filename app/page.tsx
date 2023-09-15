@@ -12,24 +12,16 @@ const HeroSection = dynamic(
   }
 )
 import ServiceSection from '@/components/landing/ServiceSection'
-// const ServiceSection = dynamic(() => import('@/components/landing/ServiceSection'), {
-//   ssr: false
-//   })
 const Section3 = dynamic(() => import('@/components/landing/Section3'), {
   ssr: false
 })
 import Procedure from '@/components/landing/Procedure'
-// const Procedure = dynamic(() => import('@/components/landing/Procedure'), {
-//   ssr: false
-//   })
 import Faq from "@/components/landing/Faq";
-// const Faq = dynamic(() => import('@/components/landing/Faq'), {
-//   ssr: false
-//   })
 import { ToastContainer } from 'react-toastify'
 import { AdSection } from '@/components/landing/AdSection'
 import { ServicesMarket } from '@/components/landing/ServicesMarket'
 import { ProcedureCards } from '@/components/landing/ProcedureCards'
+import SeemlessExperience from '@/components/landing/custom/SeemlessExperience'
 
   function Home() {
   useEffect(() => {
@@ -42,7 +34,8 @@ import { ProcedureCards } from '@/components/landing/ProcedureCards'
           <AdSection />
           <ServicesMarket />
           <Banner />
-          <ServiceSection/>
+          <ServiceSection />
+          <SeemlessExperience/>
           {/* <StepCard /> */}
           <Section3/>
           <ProcedureCards/>

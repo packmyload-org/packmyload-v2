@@ -43,10 +43,10 @@ export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children 
 
     document.body.appendChild(script);
 
-    // return () => {
-    //   // Clean up script tag if component unmounts
-    //   document.body.removeChild(script);
-    // };
+    return () => {
+      // Clean up script tag if component unmounts
+      document.body.removeChild(script);
+    };
   }, [apiKey, libraries]);
 
   if (!isLoaded) {
