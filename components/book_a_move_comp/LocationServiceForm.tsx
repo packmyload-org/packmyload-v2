@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Buildings, SquareHalf, Elevator, Car } from "@phosphor-icons/react";
-import { serviceFor } from "@/utils/bookingService";
+import { serviceFor } from "@/utils/data";
 import { useBookingForm } from "@/context/BookingFormContext";
 interface DetailsProps {
     title: string;
