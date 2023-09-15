@@ -4,7 +4,7 @@ import aboutdata from './about-us.json';
 
 const AboutCard = ({ title, description }) => (
   <Col span={24} sm={12} md={8} lg={6} className="mb-7">
-    <Card title={title} className="w-full md:w-[300px] lg:w-[400px]"> 
+    <Card title={title} className="w-full md:w-[300px] lg:w-[400px] bg-[#F4F3F0]  border-t-4 border-blue-500"> 
       <p>{description}</p>
     </Card>
   </Col>
