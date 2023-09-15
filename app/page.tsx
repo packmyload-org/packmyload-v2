@@ -21,7 +21,7 @@ import { ToastContainer } from 'react-toastify'
 import { AdSection } from '@/components/landing/AdSection'
 import { ServicesMarket } from '@/components/landing/ServicesMarket'
 import { ProcedureCards } from '@/components/landing/ProcedureCards'
-import SeemlessExperience from '@/components/landing/custom/SeemlessExperience'
+import SeemlessExperience from '@/components/landing/SeemlessExperience'
 
   function Home() {
   useEffect(() => {
@@ -36,7 +36,6 @@ import SeemlessExperience from '@/components/landing/custom/SeemlessExperience'
           <Banner />
           <ServiceSection />
           <SeemlessExperience/>
-          {/* <StepCard /> */}
           <Section3/>
           <ProcedureCards/>
           <PackSection />

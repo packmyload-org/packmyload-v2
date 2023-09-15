@@ -6,7 +6,7 @@ export const AdSection: React.FC = () => {
         <section 
             className="max-w-6xl mx-auto mt-10 p-4 "
         >
-            <div className="bg-[#2E5F9E] w-[95%] md:w-[80%] mx-auto flex flex-col md:flex-row p-11 rounded-2xl justify-between shadow shadow-[0px 4px 4px 0px rgba(0, 0, 0, 0.25)]">
+            <div className="bg-[#2E5F9E] w-[95%]  mx-auto flex flex-col md:flex-row p-11 rounded-2xl justify-between shadow shadow-[0px 4px 4px 0px rgba(0, 0, 0, 0.25)]">
 
                 <section className="w-[100%] md:w-[50%] p-4 mt-0 md:mt-11">
                     <span className="flex gap-3 text-white text-3xl font-bold">

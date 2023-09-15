@@ -1,7 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import { serviceType } from "@/utils/bookingService";
+import { serviceType } from "@/utils/data";
 import { AutoCompleteInput } from "../AutoCompleteInput";
 import { useBookingForm } from '@/context/BookingFormContext';
 import { CustomModal } from '../modals/CustomModal';
