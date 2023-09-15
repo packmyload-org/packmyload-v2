@@ -12,9 +12,9 @@ const PackSection: React.FC = () => {
     };
 
     return (
-        <div className="grid grid-cols-1 p-6 md:grid-cols-2 max-w-6xl mx-auto gap-[30px] mt-8">
+        <div className="grid grid-cols-1 p-8 md:grid-cols-2 max-w-6xl mx-auto gap-[30px] mt-8">
             {/* First Card */}
-            <div className={`bg-[#f3f7ff] p-3 border w-[550px] border-gray-200 rounded-lg shadow bg-[url('/images/Packmyload.com-home-office-relocations.png')]`} style={divStyle}>
+            <div className={`bg-[#f3f7ff] p-3 border w-[550px] border-gray-200 rounded-xl shadow bg-[url('/images/Packmyload.com-home-office-relocations.png')]`} style={divStyle}>
                 <Image 
                 src={calendar}
                 width={40}
@@ -34,7 +34,7 @@ const PackSection: React.FC = () => {
                 </div>
             </div>
             {/* Second Card */}
-            <div className={`bg-[#f3f7ff] p-3 border w-[550px] border-gray-200 rounded-lg shadow bg-[url('/images/packmyload-insure.png')]`} style={divStyle}>
+            <div className={`bg-[#f3f7ff] p-3 border w-[550px] border-gray-200 rounded-xl shadow bg-[url('/images/packmyload-insure.png')]`} style={divStyle}>
                 <Image 
                     src={secure} 
                     width={40}

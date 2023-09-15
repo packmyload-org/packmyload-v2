@@ -3,7 +3,6 @@ import React, { useEffect} from 'react'
 import dynamic from "next/dynamic"
 // import Loading from './loading'
 import PackSection from '@/components/landing/PackSection'
-import { MovingServices } from '@/components/landing/MovingServices'
 import { Reviews } from '@/components/landing/Reviews'
 import { Banner } from '@/components/landing/Banner'
 
@@ -28,6 +27,9 @@ import Faq from "@/components/landing/Faq";
 //   ssr: false
 //   })
 import { ToastContainer } from 'react-toastify'
+import { AdSection } from '@/components/landing/AdSection'
+import { ServicesMarket } from '@/components/landing/ServicesMarket'
+import { ProcedureCards } from '@/components/landing/ProcedureCards'
 
   function Home() {
   useEffect(() => {
@@ -37,13 +39,14 @@ import { ToastContainer } from 'react-toastify'
     <div className='w-full text-black'style={{marginTop: '130px'}}>
       <>  
           <HeroSection/>
+          <AdSection />
+          <ServicesMarket />
           <Banner />
           <ServiceSection/>
           {/* <StepCard /> */}
           <Section3/>
-          <MovingServices />
+          <ProcedureCards/>
           <PackSection />
-          <Procedure/>
           <Reviews />
         <Faq /> 
          <ToastContainer

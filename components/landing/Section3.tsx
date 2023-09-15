@@ -50,7 +50,7 @@ export default function Section3() {
           <p className='w-full text-center text-sm '>From Pickup Trucks to Cargo Vans and Sprinter Vans.</p>
        </Col>
        <Col span={24}>
-        <Row className='w-full mb-11' gutter={[10,30]} justify={'space-between'}>
+        <Row className='w-full mb-11 ' gutter={[10,30]} justify={'space-between'}>
         <Col span={24} lg={6} className='min-h-[350px] min-w-[350px] flex text-center flex-col justify-center items-center section-title gap-4'>
          <div className='flex flex-col justify-center gap-3 items-center'>
           <Image src="/images/secure.svg" alt="moving company lagos nigeria secure feature " width={100} height={80} loading='lazy'/>
