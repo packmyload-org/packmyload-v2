@@ -12,6 +12,25 @@
 .gradient-bg{
   position: relative;
 }
+@keyframes change {
+  0% {
+    background-image: url('/images/packmyload-request-move.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  50% {
+    background-image: url('/images/packmyload-covers-move.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  100% {
+    background-image: url('/images/packmyload-rate-and-review.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 .box-widget-item .list-single-tags a:hover, .gradient-bg, .list-single-header-cat a, .listing-geodir-category, .nav-holder nav li a::before {
   background: -webkit-linear-gradient(top, rgb(62, 170, 253), rgb(73, 206, 255));
 }

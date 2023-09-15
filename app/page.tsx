@@ -33,11 +33,11 @@ import SeemlessExperience from '@/components/landing/SeemlessExperience'
           <HeroSection/>
           <AdSection />
           <ServicesMarket />
+          <ProcedureCards/>
           <Banner />
           <ServiceSection />
           <SeemlessExperience/>
-          <Section3/>
-          <ProcedureCards/>
+          {/* <Section3/> */}
           <PackSection />
           <Reviews />
         <Faq /> 
