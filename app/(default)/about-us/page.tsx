@@ -2,15 +2,22 @@ import { Col, Row, Card } from 'antd';
 import React from 'react';
 import aboutdata from './about-us.json';
 
+
+
+
 const AboutCard = ({ title, description }) => (
   <Col span={24} sm={12} md={8} lg={6} className="mb-7">
-    <Card title={title} className="w-full md:w-[300px] lg:w-[400px] lg:h-[250px] bg-[#F4F3F0]  border-t-8 border-blue-500"> 
+    <Card
+      title={title}
+      className="w-full md:w-[300px] lg:w-[400px] lg:h-[250px] bg-[#F4F3F0] border-t-8 border-blue-500"
+      style={{
+        borderBottomRightRadius: '70px', 
+      }}
+    >
       <p>{description}</p>
     </Card>
   </Col>
-
 );
-
 export default function Home() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
@@ -35,17 +42,21 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='pl-10'>
-          <div className='pt-10'>
+        <div className='pl-12'>
+          <div className='pt-36'>
             <h1 className="text-3xl font-bold">Learn more about PackMyLoad below</h1>
           </div>
-          <div className=" mx-auto  grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none pt-14">
+          <div className=" mx-auto  grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none pt-10">
             {aboutdata.map((item, index) => (
               <AboutCard key={index} title={item.title} description={item.description} />
             ))}
           </div>
         </div>
-
+<div>
+  <div>
+    
+  </div>
+</div>
 
       </div>
     </div>
