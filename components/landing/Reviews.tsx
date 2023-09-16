@@ -1,4 +1,4 @@
-import { ReviewCard } from "./custom/ReviewCard"
+import { ReviewCard } from './custom/ReviewCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
