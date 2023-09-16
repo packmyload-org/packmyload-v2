@@ -4,7 +4,7 @@ import aboutdata from './about-us.json';
 
 const AboutCard = ({ title, description }) => (
   <Col span={24} sm={12} md={8} lg={6} className="mb-7">
-    <Card title={title} className="w-full md:w-[300px] lg:w-[400px] bg-[#F4F3F0]  border-t-4 border-blue-500"> 
+    <Card title={title} className="w-full md:w-[300px] lg:w-[400px] lg:h-[250px] bg-[#F4F3F0]  border-t-8 border-blue-500"> 
       <p>{description}</p>
     </Card>
   </Col>
@@ -35,16 +35,18 @@ export default function Home() {
           </div>
         </section>
 
-        <div>
-          <div>
+        <div className='pl-10'>
+          <div className='pt-10'>
             <h1 className="text-3xl font-bold">Learn more about PackMyLoad below</h1>
           </div>
-          <div className=" mx-auto  grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none ">
+          <div className=" mx-auto  grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none pt-14">
             {aboutdata.map((item, index) => (
               <AboutCard key={index} title={item.title} description={item.description} />
             ))}
           </div>
         </div>
+
+
       </div>
     </div>
   );
