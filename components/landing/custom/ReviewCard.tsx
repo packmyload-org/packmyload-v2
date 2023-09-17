@@ -1,9 +1,12 @@
 
 interface ReviewProp{
-    text: string
+    text: string,
+    name: string
 }
 
-export const ReviewCard: React.FC<ReviewProp> = ({text}) => {
+export const ReviewCard: React.FC<ReviewProp> = ({text,name}) => {
+
+    const nameInitial = name.charAt(0)
 
     const quote_right = (
 
@@ -48,24 +51,27 @@ export const ReviewCard: React.FC<ReviewProp> = ({text}) => {
 
     return (
 
-        <div className="bg-[#F3F7FF] p-4 rounded-md shadow">
+        <div className="relative bg-[#F3F7FF] p-2 sm:p-2 md:p-4 rounded-md shadow h-[330px] sm:h-[330px] md:h-[390px]">
 
             <div className="float-right">
                 {quote_right}
             </div>
-            <p className="clear-both p-8">{text}</p>
+            <p className="clear-both p-4 sm:p-4 md:p-8">{text}</p>
 
             <div>
                 {quote_left}
             </div>
-            <div className="flex justify-between mt-1">
-                <div className="name flex gap-2">
-                    <div className="relative inline-flex items-center justify-center w-[30px] h-[30px] overflow-hidden bg-gray-500 rounded-full dark:bg-gray-600">
-                        <span className="font-medium text-gray-600">E</span>
+            <div className="absolute bottom-3 w-[90%]">
+
+                <div className="flex justify-between mt-1" id="rating">
+                    <div className="name flex gap-2">
+                        <div className="relative inline-flex items-center justify-center w-[30px] h-[30px] overflow-hidden bg-gray-500 rounded-full dark:bg-gray-600">
+                            <span className="font-medium text-gray-600">{nameInitial}</span>
+                        </div>
+                        <p className="text-sm mt-1">{name}</p>
                     </div>
-                    <p className="text-base mt-1">ENO SABO</p>
+                    {rating}
                 </div>
-                {rating}
             </div>
         </div>
     )
