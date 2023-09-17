@@ -20,7 +20,7 @@ export default function HeroSection() {
     router.push('book_a_move')
   }
     return (
-    <section className={`w-full h-max pb-4 md:pb-0 md:h-[85dvh] xl:h-[550px] relative flex flex-col justify-center animate-change `}>
+    <section className={`w-full h-max pb-4 md:pb-0 md:h-[85dvh] xl:h-[550px] relative flex flex-col justify-center bg-[url('/images/bg/bg-cover.png')] bg-contain`}>
      {/* <div className='gradient h-full w-full z-0 absolute' /> */}
 
       <div className='my-auto w-full z-10 '>
