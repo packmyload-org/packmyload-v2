@@ -1,6 +1,6 @@
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { Libraries, LoadScript } from '@react-google-maps/api';
+import { Libraries } from '@react-google-maps/api';
 import Loading from '@/app/loading';
 
 interface GoogleMapsContextProps {

@@ -241,11 +241,7 @@ body {
 .input_shadow{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-/* Tailwind Styles */
 
-.app {
-  @apply relative z-10 flex justify-center items-center flex-col mx-auto sm:px-4 px-0 w-full;
-}
 .container {
   width: 90%;
   margin: 0 auto;
@@ -298,7 +294,7 @@ p {
 }
 .video-box {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius:  10px;
   -webkit-transform: translate3d(0, 0, 0);
   box-shadow: 0 0 0 7px rgba(255, 255, 255, .2);
 }

@@ -1,5 +1,4 @@
 'use client'
-// import { MapPin } from "@phosphor-icons/react";
 import { SkewLoader } from "react-spinners";
 
 export default function Loading() {
@@ -8,7 +7,7 @@ export default function Loading() {
       <SkewLoader
         color="#4bcbfe"
         loading={true}
-        className=""
+        size={50}
       />
     </div>
   );

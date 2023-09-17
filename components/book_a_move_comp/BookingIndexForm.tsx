@@ -23,7 +23,6 @@ export default function BookingIndexForm() {
 
   const handleProceed = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(state)
     if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
@@ -34,7 +33,17 @@ export default function BookingIndexForm() {
     }
     return router.push('/book_a_move/items');
   }
-
+const handleProceedOptions = () => {
+    // if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
+    //   alerts.error('Invalid Form Submission', 'All fields required')
+    //   return;
+    // }
+    // if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
+    //   alerts.error('Invalid Form Submission', 'All fields required')
+    //   return;
+    // }
+    return setDisplayModal(true)
+  }
   return (
    <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
@@ -163,19 +172,27 @@ export default function BookingIndexForm() {
               </select>
             </div>
           )}
-            <button
-             type='submit'
-             className='bg-blue-600 w-[40%] font-bold text-md text-gray-600 hover:text-gray-100 hover:bg-blue-300 p-2 rounded-lg'
+            <div className='w-full pt-4 flex justify-evenly'>
+              <button
+            className='bg-blue-600 w-[43%] text-[14px] font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
+            onClick={handleProceedOptions}
             >
-              Proceed
+              Schedule A Meet
           </button>
+          <button
+             type='submit'
+             className='bg-blue-600 w-[43%] text-[14px] font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
+            >
+              Select My Items
+          </button>
+            </div>
          </form>
       
       {/* Form Modal  */}
       {displayModal &&
         <CustomModal
           displayModal={displayModal}
-          title={'PROFILE AND MOVE SETUP'}
+          title={'SCHEDULE A MEETUP'}
           setDisplayModal={setDisplayModal}
           />
       }
