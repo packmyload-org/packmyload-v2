@@ -158,16 +158,15 @@ ul {
 }
 .join-wrap-btn {
     box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 7px;
-    background: rgb(7, 154, 217);
     border-radius: 30px;
 }
 .join-wrap-btn, .join-wrap-text {
     display: inline-table;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 800;
     position: relative;
     top: 15px;
-    padding: 20px 55px;
+    padding: 15px 50px;
 }
 .color-bg-link, .footer-menu li a, .header-sec-link a, .images-collage-title, .join-wrap-btn, .list-single-header-contacts li a, .main-register h3 span, .section-subtitle, .showshare span {
     text-transform: uppercase;
