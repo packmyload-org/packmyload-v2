@@ -7,7 +7,7 @@ const items: MenuProps['items'] = [
     key: '1',
      label: (
       <Link href='/partner'>
-       Partner with us
+       Partner
      </Link>
    ),
   },
@@ -15,10 +15,26 @@ const items: MenuProps['items'] = [
     key: '2',
     label: (
       <Link href='/become_a_packer'>
+        Explore partnerships
+      </Link>
+    ),
+  },
+  {
+  key: '3',
+    label: (
+      <Link href='/become_a_packer'>
+        Move for us
+      </Link>
+    ),
+  },
+  {
+    key: '4',
+    label: (
+      <Link href='/become_a_packer'>
         Become A PacMan
       </Link>
     ),
-  }
+  },
 ];
 
 function Partners() {

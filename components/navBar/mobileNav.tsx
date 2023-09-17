@@ -54,10 +54,10 @@ function mobileNav() {
       </Space>
     </a>
         </Dropdown>
-      <a href="tel:+2347007225776" className='text-gray-500 flex justify-between w-16 cursor-pointer'>
-        <Phone size={16} color="#" weight="fill" />
+      <a href="tel:+2347007225776" className='text-white flex justify-between w-16 cursor-pointer font-bold'>
+        <Phone size={16} color='white' weight="fill" />
           call us
-        </a>
+        </a> 
     </div>
   )
 }

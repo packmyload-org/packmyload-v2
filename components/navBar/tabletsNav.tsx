@@ -38,10 +38,10 @@ function tabletsNav() {
       </Space>
     </a>
         </Dropdown>
-      <a href="tel:+2347007225776" className='text-gray-500 flex justify-between w-16 cursor-pointer'>
-        <Phone size={16} color="#667280" weight="fill" />
+      <a href="tel:+2347007225776" className='text-white flex justify-between w-16 cursor-pointer font-bold'>
+        <Phone size={16} color='white' weight="fill" />
           call us
-        </a>
+        </a> 
         <Link href='/book_a_move' className='flex justify-evenly items-center hover:animate-pulse w-[160px] p-[8px] border-inherit/20 border-[10px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-gray-500 font-bold rounded-full text-xs'>
         BOOK NOW 
         <span>

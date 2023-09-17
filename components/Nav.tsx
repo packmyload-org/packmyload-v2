@@ -39,7 +39,7 @@ function Nav() {
             
             <Partners />
             
-        <Link href='/services' className=' w-16 text-white cursor-pointer font-bold'>
+        <Link href='/about-us' className=' w-16 text-white cursor-pointer font-bold'>
           About Us
         </Link>
         <a href="tel:+2347007225776" className='text-white flex justify-between w-16 cursor-pointer font-bold'>
