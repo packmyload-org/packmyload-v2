@@ -2,7 +2,7 @@
 import { useBookingForm } from "@/context/BookingFormContext";
 import { sumVolume } from "@/utils/helpers";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
-import { Table } from "antd";
+import { Table, Col } from "antd";
 import { useState } from "react";
 export default function Checkout() {
     const {state}=useBookingForm()
@@ -160,7 +160,7 @@ export default function Checkout() {
                     </div>
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <Table className="w-[90%] mx-auto" dataSource={state.items} columns={columns} pagination={pagination}/>
+                    <Table className="w-[90%] mx-auto min-h-[45vh]" dataSource={state.items} columns={columns} pagination={pagination}/>
                     
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
@@ -176,7 +176,7 @@ export default function Checkout() {
                     <div className="flex mt-2 justify-between">
                         <div className="text-base">                   
                             Total
-                        </div>
+                        </div> 
                         <div className="mt-1 text-sm flex">                   
                             <CurrencyNgn size={20} color="#444646" /> 0.00    
                         </div>
@@ -184,11 +184,26 @@ export default function Checkout() {
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
 
+                <Col span={24} className="space-y-4">
+                    <div className="flex w-full pt-3">
+                        <input type="checkbox" name="accepted-terms" className="mr-3 w-4" />
+                        <p className="text-sm text-gray-800">
+                            Confirm that you read and accept our <span><a href="/terms" className="text-sm text-gray-800 underline">terms and conditions</a></span> policy.
+                        </p>
+                    </div>
+                    <div className="flex flex-row-reverse w-full justify-evenly">
                     <button
-                        className={`text-white hover:text-gray-400 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-lg font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
                     >
-                        Continue
+                        PROCEED TO CHECKOUT
                     </button>
+                    <button
+                        className={`text-lg font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                    >
+                        MAIL ME MY QUOTE
+                    </button>
+                    </div>
+                </Col>
                 </div>
             </div>
         </>
