@@ -22,6 +22,7 @@ import { AdSection } from '@/components/landing/AdSection'
 import { ServicesMarket } from '@/components/landing/ServicesMarket'
 import { ProcedureCards } from '@/components/landing/ProcedureCards'
 import SeemlessExperience from '@/components/landing/SeemlessExperience'
+import { AnimatedWrapper } from '@/components/AnimatedWrapper'
 
   function Home() {
   useEffect(() => {
@@ -30,17 +31,45 @@ import SeemlessExperience from '@/components/landing/SeemlessExperience'
   return(
     <div className='w-full text-black'style={{marginTop: '84px'}}>
       <>  
+        <AnimatedWrapper>
           <HeroSection/>
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>
           <AdSection />
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>
           <ServicesMarket />
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>
           <ProcedureCards/>
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>
           <Banner />
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>
           <ServiceSection />
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>  
           <SeemlessExperience/>
-          {/* <Section3/> */}
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>  
           <PackSection />
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>
           <Reviews />
-        <Faq /> 
+        </AnimatedWrapper>
+
+        <AnimatedWrapper>   
+          <Faq /> 
+        </AnimatedWrapper>
          <ToastContainer
             position="top-right"
             autoClose={5000}
