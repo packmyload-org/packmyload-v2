@@ -2,8 +2,11 @@ import { Col, Row, Card, Button, Rate } from 'antd';
 import React from 'react';
 import aboutdata from './about-us.json';
 import Link from 'next/link';
-
-const AboutCard = ({ title, description }) => (
+interface About{
+  title: string;
+  description: string;
+}
+const AboutCard = ({ title, description }: About) => (
   <Col span={24} sm={12} md={8} lg={6} className="mb-7">
    <Card
   title={title}

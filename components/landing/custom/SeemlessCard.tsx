@@ -6,7 +6,7 @@ type Props = {
 export function SeemlessCard({ heading, body, icon }: Props) {
   return (
    <div className='flex flex-col items-center space-y-2 sm:space-y-4 w-full min-w-[230px] py-8 border-b-[0.3px] border-blue-100'>
-    <div className='w-full flex gap-2 items-center'>
+    <div className='w-max mx-auto flex gap-2 items-center'>
        <figure className='p-3 bg-[#f9f9f9] rounded-lg'>
         {icon} 
        </figure>
