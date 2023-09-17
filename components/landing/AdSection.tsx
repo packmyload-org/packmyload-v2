@@ -4,9 +4,11 @@ export const AdSection: React.FC = () => {
 
     return (
         <section 
-            className="max-w-6xl mx-auto mt-10 p-4 "
+            className="bg-[#2E5F9E] w-[100%] mt-10 p-4 bg-[url('/images/bg/shapes-big-new.png')] "
         >
-            <div className="bg-[#2E5F9E] w-[95%]  mx-auto flex flex-col md:flex-row p-11 rounded-2xl justify-between shadow shadow-[0px 4px 4px 0px rgba(0, 0, 0, 0.25)]">
+            <div 
+                className={`max-w-6xl mx-auto flex flex-col md:flex-row p-11 justify-evenly`}
+            >
 
                 <section className="w-[100%] md:w-[50%] p-4 mt-0 md:mt-11">
                     <span className="flex gap-3 text-white text-3xl font-bold">

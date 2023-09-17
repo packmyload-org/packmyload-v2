@@ -28,7 +28,7 @@ import SeemlessExperience from '@/components/landing/SeemlessExperience'
     localStorage.clear()
   }, [])
   return(
-    <div className='w-full text-black'style={{marginTop: '130px'}}>
+    <div className='w-full text-black'style={{marginTop: '84px'}}>
       <>  
           <HeroSection/>
           <AdSection />

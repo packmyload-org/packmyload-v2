@@ -44,7 +44,7 @@ export default function Services(){
             </div><br />
 
             {/* Items */}
-            <div className="bg-white mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none p-3">
+            <div className="mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none p-3">
                 {servicesItems}
             </div>
             </div>

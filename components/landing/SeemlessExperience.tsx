@@ -7,8 +7,8 @@ export default function SeemlessExperience() {
   return (
    <section className='w-full flex flex-col text-center text-black'>
     <div className='max-w-6xl mx-auto px-4 sm:px-6 space-y-3 pt-[52px] mb-14'>
-     <h1 className='text-4xl font-bold'>One seemless experience</h1>
-     <p className='text-lg leading-4 text-[#777674]'>Our teams will treat your possessions like they would their own. <br/> ensuring that the greatest care and diligence is taken.</p>
+     <h1 className='text-4xl font-bold text-[#2E5F9E]'>One seamless experience</h1>
+     <p className='text-lg text-[#777674]'>Our teams will treat your possessions like they would their own. <br/> ensuring that the greatest care and diligence is taken.</p>
     </div>
     <div className='max-w-6xl mx-auto grid gap-4 md:gap-10 sm:grid-cols-2 lg:grid-cols-3 items-center p-5 sm:px-2'>
      {/* Card Section  */}
