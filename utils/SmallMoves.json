@@ -1,9 +1,9 @@
 [
   {
-    "categoryName": "Living_Room/Dining ",
+    "categoryName": "Living_Room/Dining",
     "items": [
       {
-        "item": "Art Work(meduim)",
+        "item": "Art Work(medium)",
         "volume": 300
       },
       {
@@ -111,7 +111,7 @@
     ]
   },
   {
-    "categoryName": "Kitchen ",
+    "categoryName": "Kitchen",
     "items": [
       {
         "item": "Breakfast Chairs",
