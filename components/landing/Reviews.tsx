@@ -18,10 +18,10 @@ export const Reviews: React.FC = () => {
     };
 
     return (
-        <section className="bg-[#EDF2F8] p-6">
+        <section className="bg-[#EDF2F8] p-2 md:p-6">
             <div className="max-w-6xl mx-auto">
                 <div className="w-[53px] h-[8px] bg-[#4DB7FE] rounded-full mx-8 mt-6" />
-                <h1 className="md:text-2xl mt-4 mx-8 font-extrabold text-[#2E5F9E]">
+                <h1 className="text-xl md:text-2xl mt-4 mx-8 font-extrabold text-[#2E5F9E]">
                 What Our Customers Say <br />
                 </h1>
                 <p className="mx-8 text-base font-meduim mt-4">

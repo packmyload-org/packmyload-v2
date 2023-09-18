@@ -10,7 +10,7 @@ export const AdServicesCard: React.FC<AdServicesCardProps> = ({Icon, text}) => {
             <div className="icon bg-white p-2">
                 {Icon}
             </div>
-            <p className="text-[#2E5F9E] text-sm md:text-base font-bold p-2">{text}</p>
+            <p className="text-[#2E5F9E] text-base md:text-base font-bold p-2">{text}</p>
         </div>
     )
 }

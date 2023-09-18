@@ -9,7 +9,7 @@ export const ProcedureCards: React.FC = () => {
                 <h1 className="text-lg md:text-xl text-[#2E5F9E] text-center font-extrabold">HOW TO BOOK</h1>
                 <h1 className="text-xl md:text-2xl text-center text-[#2E5F9E] font-bold mt-2">Book a move in three simple steps</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 mt-6 items-center">
+                <div className="md:grid md:grid-cols-3 gap-8 p-2 flex flex-col justify-center md:p-8 mt-6 items-center">
                     <StepCard 
                         title="Select Your Addresses" 
                         step="STEP 1"
