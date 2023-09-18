@@ -8,7 +8,7 @@ export default function Loading() {
         color="#4bcbfe"
         size={50}
         weight='fill'
-        className='animate-bounces'
+        className='animate-bounce'
       />
     </div>
   );
