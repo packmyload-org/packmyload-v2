@@ -13,7 +13,7 @@ export default function Page() {
   const [data] = useState<Category[]>(smallMove);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filteredItems, setFilteredItems] = useState<{ item: string; volume: number }[]>([]);
-  const [selectedTab, setSelectedTab] = useState<string>('All');
+  const [selectedTab, setSelectedTab] = useState<string>('Kitchen');
 
   useEffect(() => {
     const selectedCategory = data.find((category) => category.categoryName === selectedTab);
