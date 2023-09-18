@@ -40,51 +40,60 @@ export const Reviews: React.FC = () => {
                     breakpoints={breakpoints}
                     speed={800}
                     effect="slide"
-                    className="mySwiper mt-6 p-4"
+                    className="mySwiper mt-8 w-[95%] mx-auto h-[450px]"
                 >
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves."
+                        name='ENO SABO'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="The driver arrived super early and in great spirits. He handled my items with great care and the move was successful. I am happy about Packmyload services and would recommend it to anyone. Thank you!"
+                        name='Chukwuma Azodo'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="Never have I looked forward to packing, but these guys did it smoothly without any hassle and were timely also. Love their work ethics and professionalism. Best office relocation  and I they would do just to house relocation as well"
+                        name='Olajide Olatunji'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="No regrets contacting these guys 😍 excellent customer service, friendly, hardworking and efficient moving team. They were prompt and pretty timely. I will refer packmyload to friends and family any-day! Anytime !!"
+                        name='Olayinka adu'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="Thank you guys for doing an amazing job getting my mum moved. The process was stress free and easy. They were patient and very considerate and I will recommend them anytime any day! Thank you and thank you again. Keep up the good work."
+                        name='Millie Slade'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="Patrick and the team were amazing. Arrived early, worked hard throughout the day and did not leave till I was satisfied. If you need a great moving company, I strongly recommend Pack my load. Services: Moving-related packing, Oversized-item moving"
+                        name='Lawrence Olugbenga'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="We had to quickly move and searched the Internet for a moving company. First impression of the website was really great, and the customer service up till the moving process was superb. The guys did an amazing job and I would highly recommend packmyload"
+                        name='Tobi Adeniyi'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="If there was 10 stars, it would still not be enough. The guys at pack my load did amazing and we didn’t feel like we were moving. It was an ace team led by Sogo and nothing was much trouble for them. If you’re looking for a professional and reliable moving company in Lagos, then I’d recommend you look no further"
+                        name='Saheed Aloba'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
-                        text="So let me just say these guys are amazing. Mr. Shogo was very polite and gentle. They were quick, professional and helpful. They did an unbelievable job and we will be hiring them for all future moves"
+                        text="packing and unpacking has been a nightmare from my secondary school days. i trusted packmyload with my recent relocation and i was very impressed. no damages, no complains and very professional duties. STRESS FREE experience with them. I so much recommend their service for anyone that wants to relocate"
+                        name='Ayodeji Ajibade'
                     />
                     </SwiperSlide>
                 </Swiper>
