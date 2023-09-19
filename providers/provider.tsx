@@ -2,6 +2,7 @@ import { BookingFormProvider } from '@/context/BookingFormContext'
 import { GoogleMapsProvider } from '@/context/GoogleMapsContext'
 import { InputContextProvider } from '@/context/InputContext'
 import { LoadingProvider } from '@/context/LoadingContext'
+import { RefProvider } from '@/context/ServiceRefContext'
 import React from 'react'
 
 function Provider({children}:{children: React.ReactNode}) {
@@ -10,7 +11,9 @@ function Provider({children}:{children: React.ReactNode}) {
         <GoogleMapsProvider>
           <BookingFormProvider>
             <InputContextProvider>
-              {children}
+              <RefProvider>    
+                {children}
+              </RefProvider>
             </InputContextProvider>
           </BookingFormProvider>
         </GoogleMapsProvider>
