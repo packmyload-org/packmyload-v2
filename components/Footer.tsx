@@ -35,7 +35,7 @@ export default function Footer() {
         "/book_a_move/locations-details",
         "/book_a_move/checkout",
       ].some((url) => url === path) ? null : (
-        <div className="container">
+        <div className="container sm:pb-20 xl:pb-0">
           <Row
             className="w-full h-max"
             justify={"space-between"}
@@ -220,16 +220,20 @@ export default function Footer() {
                     >
                       Subscribe
                     </button>
+                    <div className="clearfix"></div>
                   </form>
                   <ul className="text-white uppercase inline-flex gap-5 hover:text-gray-950">
-                    <li>
-                      <a href="/faqs">FAQs </a>
+                    <li className="flex gap-3 items-center">
+                        <a href="/faqs">FAQs </a>
+                        <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li>
+                    <li className="flex gap-3 items-center">
                       <a href="/blog">Blog</a>
+                      <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li>
+                    <li className="flex gap-3 items-center">
                       <a href="/partner">Partner</a>
+                      <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
                     <li>
                       <a href="/become_a_packer">Become a Packer</a>
