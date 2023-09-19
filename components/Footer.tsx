@@ -13,7 +13,7 @@ import {
   YoutubeLogo,
 } from "@phosphor-icons/react";
 import { usePathname } from "next/navigation";
-import Threads from "@/public/images/threads.svg";
+import Threads from "@/public/images/icons/threads.svg";
 export default function Footer() {
   const path = usePathname();
   return (

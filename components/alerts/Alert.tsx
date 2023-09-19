@@ -2,8 +2,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AppToast from './AppToast';
 import Image from "next/image";
-import success from '@/public/images/AlertSuccess.svg'
-import error from '@/public/images/AlertError.svg'
+import success from '@/public/images/icons/AlertSuccess.svg'
+import error from '@/public/images/icons/AlertError.svg'
 export const alerts = {
   success: (heading: React.ReactNode, body: React.ReactNode, duration?: number) => {
     return toast(<AppToast heading={heading} body={body} />, {

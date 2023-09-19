@@ -46,18 +46,17 @@ const items: MenuProps['items'] = [
 ];
 function mobileNav() {
   return (
- <div className="sm:hidden flex justify-center items-center relative">
-    <Dropdown menu={{ items }} className='w-16 cursor-pointer'>
-    <a onClick={(e) => e.preventDefault()} className='text-gray-500 cursor-pointer'>
+ <div className="sm:hidden flex justify-center items-center relative gap-4">
+    <div onClick={() => alert('mobile menu')} className='text-gray-500 cursor-pointer'>
       <Space className='bg-blue-100 p-1 rounded-sm hover:bg-blue-700'>
-        <List size={32} color="#667280" weight="thin" />
+        <List size={32} color="#fff"  />
       </Space>
-    </a>
-        </Dropdown>
-      <a href="tel:+2347007225776" className='text-white flex justify-between w-16 cursor-pointer font-bold'>
-        <Phone size={16} color='white' weight="fill" />
-          call us
-        </a> 
+    </div>
+    <a href="tel:+2347007225776" className='text-white flex gap-2 items-center cursor-pointer font-bold w-max'>
+                <Phone size={16} color='white' weight="fill" />
+                  call us
+    </a> 
+    
     </div>
   )
 }
