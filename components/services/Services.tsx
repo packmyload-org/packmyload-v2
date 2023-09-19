@@ -36,8 +36,8 @@ export default function Services(){
             <div className="section-title w-full relative  ">
 
                 <div className='gap-6 flex flex-col'>
-                    <h2 className="w-full font-bold text-4xl text-center">Services</h2>
-                    <div className="section-subtitle uppercase">CATALOG OF SERVICES</div>
+                    <h2 className="w-full font-bold text-xl sm:text-xl md:text-4xl text-center mt-2 md:mt-0">Services</h2>
+                    <div className="section-subtitle uppercase text-3xl sm:text-3xl md:text-[4rem]">CATALOG OF SERVICES</div>
                     <span className="section-separator"></span>
                     <p className='w-full text-center '>Browse through our services to find the one relevant to you.</p>
                 </div>

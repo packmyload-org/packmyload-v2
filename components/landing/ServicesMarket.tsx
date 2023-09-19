@@ -13,17 +13,18 @@ import {
     PawPrint
  } from "@phosphor-icons/react"
 import { AdServicesCard } from "./custom/AdServicesCard"
+
 export const ServicesMarket: React.FC = () => {
 
     return (
         <section className="max-w-6xl mx-auto mt-[90px]">
-            <h1 className="text-[#2E5F9E] font-extrabold text-xl md:text-3xl text-center">Packmyload is your one-stop moving market place</h1>
+            <h1 className="text-[#2E5F9E] p-4 md:p-0 font-extrabold text-2xl md:text-3xl text-center">Packmyload is your one-stop moving market place</h1>
 
-            <p className="mt-4 text-xs md:text-base font-medium text-center">
+            <p className="mt-4 p-4 md:p-0 text-xs md:text-base font-medium text-center">
                 Through a quick chat, you can organize your entire move and access exculsive discounts from out verfiled vendors. <br /> Discover a world of benefits with us
             </p>
 
-            <section className="grid grid-cols-2 md:grid-cols-4 gap-8 p-5 md:p-9">
+            <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 p-5 md:p-9">
 
                 <AdServicesCard 
                     Icon = {<Package size={28} color="#2E5F9E" weight="fill" />}

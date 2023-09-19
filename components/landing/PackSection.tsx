@@ -14,7 +14,7 @@ const PackSection: React.FC = () => {
     return (
         <section className='bg-[#F9F9F9] w-full'>
 
-            <div className="grid grid-cols-1 p-8 md:grid-cols-2 max-w-6xl mx-auto gap-[30px] mt-8">
+            <div className="grid grid-cols-1 p-2 lg:p-8 md:grid-cols-2 max-w-6xl mx-auto gap-[30px] mt-8">
                 {/* First Card */}
                 <div className={`bg-[#f3f7ff] p-3 border w-[550px] border-gray-200 rounded-xl shadow bg-[url('/images/Packmyload.com-home-office-relocations.png')]`} style={divStyle}>
                     <Image 

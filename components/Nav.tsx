@@ -30,19 +30,19 @@ function Nav() {
     {/* Desktop Navigation  */}
     <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-[57%]">
         <div className='text-white w-full gap-6 flex justify-evenly items-center'>
-        <Link href='/services' className=' w-16 text-white cursor-pointer font-bold'>
+        <Link href='/services' className=' text-white cursor-pointer font-bold'>
           <Services/>
         </Link>
-        <Link href='/gallery' className=' w-16 text-white cursor-pointer font-bold'>
+        <Link href='/gallery' className=' text-white cursor-pointer font-bold'>
           Gallery
             </Link>
             
-            <Partners />
+            <Partners /> 
             
-        <Link href='/about-us' className=' w-16 text-white cursor-pointer font-bold'>
+        <Link href='/about-us' className=' text-white cursor-pointer font-bold'>
           About Us
         </Link>
-        <a href="tel:+2347007225776" className='text-white flex justify-between w-16 cursor-pointer font-bold'>
+        <a href="tel:+2347007225776" className='text-white flex justify-between cursor-pointer font-bold'>
         <Phone size={16} color='white' weight="fill" />
           call us
         </a> 
