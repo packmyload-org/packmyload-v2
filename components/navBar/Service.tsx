@@ -49,8 +49,8 @@ const items: MenuProps['items'] = [
   {
     key: '6',
     label: (
-      <Link href='/services/student-moves'>
-        Student Moves
+      <Link href='/services/Interstate-Car-Transport'>
+        Interstate Car Transport
       </Link>
     ),
   },
@@ -79,6 +79,7 @@ const items: MenuProps['items'] = [
     ),
   }
 ];
+
 
 function Services() {
   return (
