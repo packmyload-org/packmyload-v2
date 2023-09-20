@@ -2,8 +2,6 @@ import Link from 'next/link';
 import React from 'react'
 import { MenuProps, Dropdown, Space } from 'antd';
 import { CaretDown } from '@phosphor-icons/react';
-import {redirect} from 'next/navigation'
-import InternationRelocation from '../../app/services/international-relocations/page';
 
 const items: MenuProps['items'] = [
   {
@@ -26,7 +24,7 @@ const items: MenuProps['items'] = [
     key: '3',
     label: (
       <Link href='/services/international-relocations'>
-        International Relocation
+        InterNational Relocation
       </Link>
     ),
   },
@@ -49,9 +47,9 @@ const items: MenuProps['items'] = [
   {
     key: '6',
     label: (
-      <Link href='/services/student-moves'>
-        Student Moves
-      </Link>
+      <a href='/services/interstate-Car-Transport'>
+        InterState Car Transport
+      </a>
     ),
   },
   {

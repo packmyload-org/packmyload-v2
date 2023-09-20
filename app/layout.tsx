@@ -44,12 +44,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           height="0" width="0"
         ></iframe>
           <div className='w-full'>
-            <main className='w-full overflow-y-hidden'>
-                <Provider>
-                  <Nav/>
-                    {children}
-                  <Footer />
-                </Provider>
+            <main className='w-full overflow-y-hidden relative'>
+              <Provider>
+                <Nav/>
+                  {children}
+                <Footer />
+              </Provider>
             </main>
           </div>
       </body>

@@ -22,18 +22,18 @@ function Nav() {
       alt='Logo'
       width={100}
       height={37}
-            className='object-contain md:w-[170px]'
-            priority
+      className='object-contain md:w-[170px]'
+      priority
       />
     </Link>
     
     {/* Desktop Navigation  */}
-    <div className="lg:flex hidden no-wrap items-center text-sm md:w-5/6 lg:w-[57%]">
+    <div className="lg:flex hidden no-wrap items-center relative text-sm md:w-5/6 lg:w-[57%]">
         <div className='text-white w-full gap-6 flex justify-evenly items-center'>
         <Link href='/services' className=' text-white cursor-pointer font-black w-max'>
           <Services/>
         </Link>
-        <Link href='/gallery' className=' text-white cursor-pointer font-black w-max'>
+        <Link href='/gallery' className='text-white cursor-pointer font-bold w-max'>
           Gallery
             </Link>
             
