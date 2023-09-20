@@ -36,14 +36,25 @@ export const CustomModal = (props: Props) => {
             </div>
             <div>
               {showPhoneInput && !showWhatsAppInput ?
-                'open' :
-                <button className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-lg' onClick={() => { setShowPhoneInput(true); setShowWhatsAppInput(false); }}>Phone Call</button>
+                <div className='h-12 w-full flex justify-between items-center'>
+                  <label htmlFor="phone" className='w-[25%] h-[90%] bg-blue-300 ring-2 ring-black rounded-lg text-center text-white flex items-center justify-center text-lg font-semibold'>
+                    Phone No
+                  </label>
+                  <input className='w-[72%] h-[75%] py-[5%] rounded-lg text-base' defaultValue={state.phoneNumber} />
+                </div>
+                :
+                <button className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-base' onClick={() => { setShowPhoneInput(true); setShowWhatsAppInput(false); handleFieldChange('contactBy', 'phoneCall'); }}>Phone Call</button>
               }
             </div>
             <div>
               {showWhatsAppInput && !showPhoneInput ?
-                "open" :
-                <button className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-lg' onClick={() => { setShowPhoneInput(false); setShowWhatsAppInput(true); }}>What'sApp Message</button>
+                 <div className='h-12 w-full flex justify-between items-center'>
+                  <label htmlFor="phone" className='w-[25%] h-[90%] bg-blue-300 ring-2 ring-black rounded-lg text-center text-white flex items-center justify-center text-base font-semibold whitespace-nowrap'>
+                    What'sApp No
+                  </label>
+                  <input className='w-[72%] h-[75%] py-[5%] rounded-lg text-base' />
+                </div>:
+                <button className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-lg' onClick={() => { setShowPhoneInput(false); setShowWhatsAppInput(true); handleFieldChange('contactBy', "What'sApp"); }}>What'sApp Message</button>
               }
             </div>
           </div>
