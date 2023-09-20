@@ -48,7 +48,6 @@ export const ReviewCard: React.FC<ReviewProp> = ({text,name}) => {
             {star}
         </div>
     )
-
     return (
 
         <div className="relative bg-[#F3F7FF] p-2 sm:p-2 md:p-4 rounded-md shadow h-[330px] sm:h-[330px] md:h-[390px]">
@@ -63,10 +62,10 @@ export const ReviewCard: React.FC<ReviewProp> = ({text,name}) => {
             </div>
             <div className="absolute bottom-3 w-[90%]">
 
-                <div className="flex justify-between mt-1" id="rating">
+  m              <div className="flex justify-between mt-1" id="rating">
                     <div className="name flex gap-2">
                         <div className="relative inline-flex items-center justify-center w-[30px] h-[30px] overflow-hidden bg-gray-500 rounded-full dark:bg-gray-600">
-                            <span className="font-medium text-gray-600">{nameInitial}</span>
+                            <span className="font-medium text-blue-300 ">{nameInitial}</span>
                         </div>
                         <p className="text-sm mt-1">{name}</p>
                     </div>
