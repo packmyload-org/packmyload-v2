@@ -33,7 +33,7 @@ export const ServicesHeader: React.FC<Props> = ({bgImage, firstText, secondText}
                 <div className="flex flex-col items-center justify-end h-full">
                 <button
                     onClick={handleButtonClick}
-                    className="text-white shadow-lg border-2 text-2xl font-bold p-4 w-[200px] bg-[#4BCBFE] outline-none transition-colors duration-600 hover:bg-white hover:text-black"
+                    className="text-white shadow-lg border-2 text-2xl font-bold p-4 w-[200px] bg-[#4BCBFE] outline-none transition-colors duration-600 hover:animate-pulse hover:bg-white hover:text-black"
                     >
                     GET STARTED
                 </button>
