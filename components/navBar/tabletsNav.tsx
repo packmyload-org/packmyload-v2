@@ -16,8 +16,8 @@ function tabletsNav() {
             </Space>
           </div>
             <div className='px-3 flex items-center w-max gap-4'> 
-                <a href="tel:+2347007225776" className='text-white flex gap-2 items-center cursor-pointer font-bold w-max'>
-                <Phone size={16} color='white' weight="fill" />
+                <a href="tel:+2347007225776" className='text-white hover:text-blue-100 flex gap-2 items-center cursor-pointer font-bold w-max'>
+                <Phone size={16} className='text-inherit' weight="fill" />
                   call us
                 </a> 
         <div id='show-horizontal-line' className='h-[30px] w-[1px] bg-gray-100/20'></div>

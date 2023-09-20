@@ -13,8 +13,8 @@ function mobileNav() {
         <List size={32} color="#fff"  />
       </Space>
     </div>
-    <a href="tel:+2347007225776" className='text-white flex gap-2 items-center cursor-pointer font-bold w-max'>
-      <Phone size={16} color='white' weight="fill" />
+    <a href="tel:+2347007225776" className='text-white hover:text-blue-100 flex gap-2 items-center cursor-pointer font-bold w-max'>
+      <Phone size={16} className='text-inherit' weight="fill" />
         call us
       </a> 
       {displayMenu && <CustomMenu />}

@@ -30,28 +30,28 @@ export default function CustomMenu({ }: Props) {
      {!flip ?
       (
         <>
-              <p  className='w-[80%] mx-auto text-base font-extrabold mt-2 flex items-center justify-between'
+              <p  className='w-[80%] mx-auto text-base font-extrabold mt-2 flex items-center justify-between hover:text-blue-100'
                 onClick={()=>handleShowDropMenu("services")}
              >
                 Services
                 <BiSolidRightArrow color='#4bcbfe' className='w-3'/>
               </p>
-              <p className='w-[80%] mx-auto text-base font-extrabold mt-2'
+              <p className='w-[80%] mx-auto text-base font-extrabold mt-2 hover:text-blue-100'
                 onClick={() => router.push('/gallery')}>
                 Gallery
               </p>
-             <p className='w-[80%] mx-auto text-base font-extrabold mt-2 flex items-center justify-between'
+             <p className='w-[80%] mx-auto text-base font-extrabold mt-2 flex items-center justify-between hover:text-blue-100'
                onClick={() => handleShowDropMenu('partners')}
              >
                 Partners
                 <BiSolidRightArrow color='#4bcbfe' className='w-3'/>
               </p>
-              <p className='w-[80%] mx-auto text-base font-extrabold mt-2'
+              <p className='w-[80%] mx-auto text-base font-extrabold mt-2 hover:text-blue-100'
                 onClick={() => router.push('/about-us')}>
                   About Us
               </p>
           {!pathname.includes("book_a_move") &&
-              <p className='w-[80%] mx-auto text-base font-extrabold text-white mt-2 p-[3px] sm:hidden bg-blue-100 text-center rounded-md'
+              <p className='w-[80%] mx-auto text-base font-extrabold hover:text-gray-900 text-white mt-2 p-[3px] sm:hidden bg-blue-100 text-center rounded-md'
                 onClick={() => router.push('/book_a_move')}>
                 Book Now
               </p>
@@ -69,7 +69,7 @@ export default function CustomMenu({ }: Props) {
                   <p
                     key={item.name}
                     onClick={() => handleMenuItemClick(item.to)}
-                    className='w-[95%] ml-[5%] text-base font-bold'
+                    className='w-[95%] ml-[5%] text-base font-bold hover:text-blue-300'
                   >
                   {item.name}
                   </p>)

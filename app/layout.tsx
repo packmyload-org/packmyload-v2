@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <title>Packmyload</title>
       </head>
 
-      <body className='font-satoshi'>
+      <body>
         <iframe title='google_tag_manager_iframe' src="https://www.googletagmanager.com/ns.html?id=GTM-M8S8P8C8"
           height="0" width="0"
         ></iframe>

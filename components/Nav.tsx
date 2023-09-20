@@ -33,29 +33,26 @@ function Nav() {
         <Link href='/services' className=' text-white cursor-pointer font-black w-max'>
           <Services/>
         </Link>
-        <Link href='/gallery' className='text-white cursor-pointer font-bold w-max'>
+        <Link href='/gallery' className='text-white  hover:text-blue-100 cursor-pointer font-bold w-max'>
           Gallery
             </Link>
             
             <Partners /> 
             
-        <Link href='/about-us' className='text-white cursor-pointer font-black whitespace-nowrap w-max'>
+        <Link href='/about-us' className='text-white  hover:text-blue-100 cursor-pointer font-black whitespace-nowrap w-max'>
           About{' '}Us
         </Link>
             <div className='px-3 flex items-center w-max gap-4'> 
-                <a href="tel:+2347007225776" className='text-white flex gap-2 items-center cursor-pointer font-black w-max'>
-                <Phone size={16} color='white' weight="fill" />
+                <a href="tel:+2347007225776" className='text-white hover:text-blue-100 flex gap-2 items-center cursor-pointer font-black w-max'>
+                <Phone size={16} className='text-inherit' weight="fill" />
                   call us
                 </a> 
                 <div id='show-horizontal-line' className='h-[30px] w-[1px] bg-gray-100/20'></div>
             {
-              !pathname.includes("book_a_move") ?
+              !pathname.includes("book_a_move") &&
               <Link href='/book_a_move'  className='flex justify-evenly items-center hover:animate-pulse w-[130px] p-[8px] border-inherit/20 border-[6px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-white font-black rounded-full text-xs '>
                 BOOK NOW 
-                {/* <span className='font-black text-lg max-h-5 text-center flex justify-center items-center'>
-                  + 
-                </span> */}
-              </Link> : null
+              </Link> 
             }
             </div>
       </div>

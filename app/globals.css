@@ -385,6 +385,11 @@ span{
   background-position: center;
 }
 
+.custom-dropdown-overlay{
+  .ant-dropdown-menu-title-content:hover{
+    color: #4bcbfe
+  }
+}
 
 
 .flex-center {
