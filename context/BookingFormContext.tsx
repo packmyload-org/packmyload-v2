@@ -25,6 +25,7 @@ interface BookingFormState {
   parkingEnd: string;
   service: string;
   distance: string;
+  contactBy: string;
 }
 
 // Define action types
@@ -51,6 +52,7 @@ const initialFormState: BookingFormState = {
   parkingEnd: '',
   service: '',
   distance: '',
+  contactBy:'',
 };
 
 // Define a key for localStorage

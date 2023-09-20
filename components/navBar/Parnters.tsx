@@ -14,23 +14,25 @@ const items: MenuProps['items'] = [
   {
     key: '2',
     label: (
-      <Link href='/become_a_packer'>
+      <Link href='/become_a_packer' >
         Explore partnerships
       </Link>
     ),
+    disabled: true
   },
   {
   key: '3',
     label: (
-      <Link href='/become_a_packer'>
+      <Link href='/become_a_packer' >
         Move for us
       </Link>
     ),
+    disabled: true
   },
   {
     key: '4',
     label: (
-      <Link href='/become_a_packer'>
+      <Link href='/become_a_packer' >
         Become A PacMan
       </Link>
     ),
@@ -40,11 +42,11 @@ const items: MenuProps['items'] = [
 function Partners() {
   return (
     <div>
-        <Dropdown menu={{ items }} className='flex w-16'>
-          <a onClick={(e) => e.preventDefault()} className='text-white cursor-pointer'>
+        <Dropdown menu={{ items }} className='flex w-16'  overlayClassName='custom-dropdown-overlay'>
+          <a onClick={(e) => e.preventDefault()} className='text-white hover:text-blue-100 cursor-pointer'>
             <Space className='flex items-center font-bold'>
               Partner
-              <CaretDown size={16} color="white" weight="fill" />
+              <CaretDown size={16} className='text-inherit' weight="fill" />
             </Space>
           </a>
         </Dropdown>

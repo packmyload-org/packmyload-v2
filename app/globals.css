@@ -135,6 +135,7 @@ ul {
 .bg {
   background-origin: content-box;
   background-position: center center;
+  background-repeat: no-repeat;
   background-image: url('/images/bg/circle.png');
 }
 .bg, .shapes-bg-big::before, .shapes-bg-small::before {
@@ -385,6 +386,11 @@ span{
   background-position: center;
 }
 
+.custom-dropdown-overlay{
+  .ant-dropdown-menu-title-content:hover{
+    color: #4bcbfe
+  }
+}
 
 
 .flex-center {

@@ -21,7 +21,7 @@ export const MovingForm: React.FC = () => {
         router.push('book_a_move')
     }
     return (
-        <div className="w-5/6 sm:w-full pt-4 sm:mt-14">
+        <div className="w-5/6 pt-4 sm:mt-14">
             <form onSubmit={handleSubmit} className='border-blue-300/20 bg-[#9d9d9d]/20 border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[800px] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-5/12 justify-between border-r-2'>
                   <AutoCompleteInput
@@ -45,7 +45,7 @@ export const MovingForm: React.FC = () => {
               className='hover:animate-ping object-contain'
               alt="moving company lagos nigeria-student moving destination indicator" width={20} height={10}/>
               </div>
-              <button type="submit" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3  w-full lg:w-[180px] rounded-lg lg:rounded-r-full border-[#9d9d9d]/20  text-gray-100 border-8 lg:border-none uppercase text-xs font-bold'>
+              <button type="submit" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3  w-full lg:w-[180px] md:rounded-lg lg:rounded-r-full md:border-[#9d9d9d]/20  text-gray-100 md:border-8 lg:border-none uppercase text-xs font-bold'>
                 Get Quote
               </button>
             </form>

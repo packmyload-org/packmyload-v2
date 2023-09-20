@@ -128,10 +128,10 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-gray-400"
-                          href="/services/student-moves"
+                          href="/services/interstate-Car-Transport"
                           title="Student Moves"
                         >
-                          Student Moves
+                          Interstate Car Transport
                         </a>
                       </li>
                       <li className="clearfix">
@@ -223,19 +223,19 @@ export default function Footer() {
                     <div className="clearfix"></div>
                   </form>
                   <ul className="text-white uppercase inline-flex gap-5 hover:text-gray-950">
-                    <li className="flex gap-3 items-center">
+                    <li className="flex gap-3 items-center text-xs sm:text-base">
                         <a href="/faqs">FAQs </a>
                         <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li className="flex gap-3 items-center">
+                    <li className="flex gap-3 items-center text-xs sm:text-base">
                       <a href="/blog">Blog</a>
                       <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li className="flex gap-3 items-center">
+                    <li className="flex gap-3 items-center text-xs sm:text-base">
                       <a href="/partner">Partner</a>
                       <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li>
+                    <li className='text-xs sm:text-base whitespace-nowrap'>
                       <a href="/become_a_packer">Become a Packer</a>
                     </li>
                   </ul>
@@ -247,7 +247,7 @@ export default function Footer() {
       )}
       <div className="bg-slate-800 py-6 ">
         <Row
-          className="w-full mt-6 container"
+          className="w-full mt-6 sm:container"
           justify={"space-between"}
           align={"middle"}
         >
