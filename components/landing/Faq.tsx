@@ -5,7 +5,7 @@ export default function Faq() {
   return (
    <section className="gradient-bg grid items-center py-[20px] min-h-[250px]">
    <div className="cirle-bg ">
-    <div className="bg object-cover" ></div>   
+    <div className="bg object-contain" ></div>   
    </div>
    <div className="container py-12">
     <div className="join-wrap fl-wrap text-white">

@@ -10,6 +10,20 @@ import {
   Package,
 } from "@phosphor-icons/react";
 
+export const Time = [
+  {
+    key: "1",
+    label: "8 am",
+  },
+  {
+    key: "2",
+    label: "10 am",
+  },
+  {
+    key: "3",
+    label: "12 noon",
+  },
+];
 export const serviceList = [
   {
     key: "1",

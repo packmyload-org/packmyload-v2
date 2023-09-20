@@ -135,6 +135,7 @@ ul {
 .bg {
   background-origin: content-box;
   background-position: center center;
+  background-repeat: no-repeat;
   background-image: url('/images/bg/circle.png');
 }
 .bg, .shapes-bg-big::before, .shapes-bg-small::before {

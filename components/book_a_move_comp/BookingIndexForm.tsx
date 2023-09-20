@@ -9,6 +9,7 @@ import { alerts } from '../alerts/Alert';
 import { Row } from 'antd';
 import { getMinDate } from '@/utils/helpers';
 import services from '@/components/services/services.json'
+import { Time } from '@/utils/data';
 
 export default function BookingIndexForm() {
   const router = useRouter()
@@ -34,14 +35,14 @@ export default function BookingIndexForm() {
     return router.push('/book_a_move/items');
   }
 const handleProceedOptions = () => {
-    // if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
-    //   alerts.error('Invalid Form Submission', 'All fields required')
-    //   return;
-    // }
-    // if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
-    //   alerts.error('Invalid Form Submission', 'All fields required')
-    //   return;
-    // }
+    if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
+      alerts.error('Invalid Form Submission', 'All fields required')
+      return;
+    }
+    if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
+      alerts.error('Invalid Form Submission', 'All fields required')
+      return;
+    }
     return setDisplayModal(true)
   }
   return (
@@ -90,15 +91,24 @@ const handleProceedOptions = () => {
         </div>
         <div className="w-[45%]  flex flex-col gap-1 items-start">
             <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Time <span className='text-red-600'>*</span></label>
-            <input
-              type="text"
-              id='moveTime'
-              placeholder='Enter your preferred move time: 8am-9am'
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+             <select className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none'
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+            handleFieldChange('moveTime', e.target.value)
+              }}
               required
-              value={state.moveTime}
-              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
-            />
+          >
+          
+                <option hidden>
+                  Time 
+               </option>
+               {Time.map(item => <option
+                 value={item.label}
+                 key={item.key}
+               >
+                 {item.label}
+               </option>)
+               }
+            </select>
           </div>
           </Row>
 
@@ -119,7 +129,6 @@ const handleProceedOptions = () => {
             <input
               type="email"
               id='email'
-              placeholder='example@example.com'
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
               value={state.email}
@@ -140,10 +149,12 @@ const handleProceedOptions = () => {
             />
           </div>
           <div className="w-[90%] mx-auto pt-3 flex flex-col items-start">
-             <select className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none' onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
-            e.target.value.includes('HOME RELOCATION') ? setDisplayType(true) : setDisplayType(false)
+          <select className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none'
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+            e.target.value.includes('HOME RELOCATIONS') ? setDisplayType(true) : setDisplayType(false)
             handleFieldChange('service', e.target.value)
-            }}>
+          }}
+          >
           
                 <option hidden>
                   Select Service 
@@ -177,7 +188,7 @@ const handleProceedOptions = () => {
             className='bg-blue-600 w-[43%] text-[14px] font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
             onClick={handleProceedOptions}
             >
-              Schedule A Meet
+              Speak with A Agent
           </button>
           <button
              type='submit'
@@ -192,7 +203,7 @@ const handleProceedOptions = () => {
       {displayModal &&
         <CustomModal
           displayModal={displayModal}
-          title={'SCHEDULE A MEETUP'}
+          title={'Speak With A Agent'}
           setDisplayModal={setDisplayModal}
           />
       }
