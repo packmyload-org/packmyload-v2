@@ -17,7 +17,7 @@ function mobileNav() {
       <Phone size={16} className='text-inherit' weight="fill" />
         call us
       </a> 
-      {displayMenu && <CustomMenu />}
+      {displayMenu && <CustomMenu setDisplayMenu={setDisplayMenu} displayMenu={displayMenu} />}
   </div>
   )
 }

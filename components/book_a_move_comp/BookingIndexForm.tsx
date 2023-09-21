@@ -15,7 +15,7 @@ export default function BookingIndexForm() {
   const router = useRouter()
    const { state, dispatch } = useBookingForm();
   const [displayType, setDisplayType] = useState(false)
-  const [displayModal, setDisplayModal] = useState(false)
+  const [displayModal, setDisplayModal] = useState(true)
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };

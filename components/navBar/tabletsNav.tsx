@@ -27,7 +27,7 @@ function tabletsNav() {
               </Link> 
               }
       </div>
-      {displayMenu && <CustomMenu />}
+      {displayMenu && <CustomMenu displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />}
     </div>
   )
 }
