@@ -15,7 +15,7 @@ export default function BookingIndexForm() {
   const router = useRouter()
    const { state, dispatch } = useBookingForm();
   const [displayType, setDisplayType] = useState(false)
-  const [displayModal, setDisplayModal] = useState(true)
+  const [displayModal, setDisplayModal] = useState(false)
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
@@ -141,9 +141,9 @@ const handleProceedOptions = () => {
               type="text"
               id='phoneNumber'
               placeholder='+66 703 78932'
-              min={11}
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
+              min={11}
               value={state.phoneNumber}
               onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />

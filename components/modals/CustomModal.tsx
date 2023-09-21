@@ -22,7 +22,7 @@ export const CustomModal = (props: Props) => {
    <Modal
     className='modal__style '
     open={props.displayModal}
-      onCancel={() => { props.setDisplayModal(false); handleFieldChange('contactBy', '')}}
+      onCancel={() => { props.setDisplayModal(false); handleFieldChange('contactBy', ''); }}
     width={700}
       footer={null}
     >
@@ -40,7 +40,13 @@ export const CustomModal = (props: Props) => {
                   <label htmlFor="phone" className='w-[25%] h-[90%] bg-blue-300 ring-2 ring-black rounded-lg text-center text-white flex items-center justify-center text-lg font-semibold'>
                     Phone No
                   </label>
-                  <input className='w-[72%] h-[75%] py-[5%] rounded-lg text-base' defaultValue={state.phoneNumber} />
+                  <input 
+                    className='w-[72%] h-[75%] py-[5%] rounded-lg text-base'
+                    id='phoneNumber'
+                    min={11}
+                    value={state.phoneNumber}
+                    onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
+                    defaultValue={state.phoneNumber} />
                 </div>
                 :
                 <button className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-base' onClick={() => { setShowPhoneInput(true); setShowWhatsAppInput(false); handleFieldChange('contactBy', 'phoneCall'); }}>Phone Call</button>
@@ -52,9 +58,22 @@ export const CustomModal = (props: Props) => {
                   <label htmlFor="phone" className='w-[25%] h-[90%] bg-blue-300 ring-2 ring-black rounded-lg text-center text-white flex items-center justify-center text-base font-semibold whitespace-nowrap'>
                     What'sApp No
                   </label>
-                  <input className='w-[72%] h-[75%] py-[5%] rounded-lg text-base' />
+                  <input
+                    className='w-[72%] h-[75%] py-[5%] rounded-lg text-base'
+                    value={state.whatsApp}
+                    defaultValue={state.whatsApp}
+                    id='whatsApp'
+                    onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
+                    placeholder='+66 8350 983 4444'
+                  />
                 </div>:
-                <button className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-lg' onClick={() => { setShowPhoneInput(false); setShowWhatsAppInput(true); handleFieldChange('contactBy', "What'sApp"); }}>What'sApp Message</button>
+                <button
+                  className='py-4 w-full bg-white rounded-lg hover:bg-blue-300 ring-black hover:ring hover:text-white font-semibold text-lg'
+                  onClick={() => {
+                    setShowPhoneInput(false);
+                    setShowWhatsAppInput(true);
+                    handleFieldChange('contactBy', "WhatsApp");
+                  }}>What'sApp Message</button>
               }
             </div>
           </div>
@@ -64,6 +83,7 @@ export const CustomModal = (props: Props) => {
               alerts.error('Invalid Submission', 'Please choose a mode for contact')
               return
             }
+            props.setDisplayModal(!props.displayModal)
             router.push('/book_a_move/checkout')
           }}>PREVIEW INFORMATION</button>
         </div>

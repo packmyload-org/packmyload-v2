@@ -26,6 +26,7 @@ interface BookingFormState {
   service: string;
   distance: string;
   contactBy: string;
+  whatsApp: string;
 }
 
 // Define action types
@@ -52,7 +53,8 @@ const initialFormState: BookingFormState = {
   parkingEnd: '',
   service: '',
   distance: '',
-  contactBy:'',
+  contactBy: '',
+  whatsApp:''
 };
 
 // Define a key for localStorage
