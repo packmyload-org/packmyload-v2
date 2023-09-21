@@ -1,4 +1,3 @@
-import { User } from '@phosphor-icons/react'
 import React from 'react'
 import {seemlessData} from '@/utils/data'
 import { SeemlessCard } from './custom/SeemlessCard'

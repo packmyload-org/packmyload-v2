@@ -10,10 +10,10 @@ const {state}=useBookingForm()
             <section className="mt-10 mb-4 space-y-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 ">
                     {/* Your items go here */}
-                    <div className="p-5">
+                    <div className="p-3  sm:px-[7rem] lg:px-5">
                         <LocationServiceForm title={"Your Start Location"} location={state.pickUp} />
                     </div>
-                    <div className="p-5">
+                    <div className="p-3  sm:px-[7rem] lg:px-5">
                         <LocationServiceForm title={"Your End Location"} location={state.destination} />
                     </div>
                 </div>

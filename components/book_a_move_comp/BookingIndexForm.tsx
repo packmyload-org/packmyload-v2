@@ -46,7 +46,7 @@ const handleProceedOptions = () => {
     return setDisplayModal(true)
   }
   return (
-   <div className='bg-blue-200 p-6 h-full mb-4 rounded-md shadow-md'>
+   <div className='bg-blue-200 p-6 px-1 md:px-0 h-full mb-4 rounded-md shadow-md'>
              {/* Form Header  */}
         <div className="w-full md:w-[80%] mx-auto mb-4">
             <h2 className="w-full text-2xl ext-gray-900 font-bold text-center">Let's Get Started </h2>
@@ -185,14 +185,14 @@ const handleProceedOptions = () => {
           )}
             <div className='w-full pt-4 flex justify-evenly'>
               <button
-            className='bg-blue-600 w-[43%] text-[14px] font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
+            className='bg-blue-600 w-[43%] text-[12px] md:font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
             onClick={handleProceedOptions}
             >
               Speak with A Agent
           </button>
           <button
              type='submit'
-             className='bg-blue-600 w-[43%] text-[14px] font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
+             className='bg-blue-600 w-[43%] text-[12px] md:font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
             >
               Select My Items
           </button>

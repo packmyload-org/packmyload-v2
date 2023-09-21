@@ -10,10 +10,10 @@ export default function Booking() {
   <>
         <div className="grid grid-cols-1 md:p-0 p-4 lg:grid-cols-2 max-w-6xl mx-auto md:gap-4 mt-8">
             {/* Your items go here */}
-            <div className="p-5 sm:px-[7rem] lg:px-0"> 
+            <div className="p-2 sm:px-[7rem] lg:px-0"> 
               <Map/>
             </div>
-            <div className="p-5 sm:px-[7rem] lg:px-0">
+            <div className="p-2 sm:px-[7rem] lg:px-0">
               <BookingIndexForm/>
             </div>
         </div>
