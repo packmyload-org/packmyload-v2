@@ -22,7 +22,7 @@ export const MovingForm: React.FC = () => {
     }
     return (
         <div className="w-5/6 pt-4 sm:mt-14">
-            <form onSubmit={handleSubmit} className='border-blue-300/20 bg-[#9d9d9d]/20 border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[800px] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
+            <form onSubmit={handleSubmit} className='border-white/20 bg-white/20 border-[15px] lg:border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[800px] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-5/12 justify-between border-r-2'>
                   <AutoCompleteInput
                     inputName='pickUp'
