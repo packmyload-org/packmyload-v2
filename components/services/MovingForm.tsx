@@ -45,7 +45,8 @@ export const MovingForm: React.FC = () => {
               className='hover:animate-ping object-contain'
               alt="moving company lagos nigeria-student moving destination indicator" width={20} height={10}/>
               </div>
-              <button type="submit" className='bg-blue-100 hover:bg-blue-600 hover:animate-pulse p-3  w-full lg:w-[180px] md:rounded-lg lg:rounded-r-full md:border-[#9d9d9d]/20  text-gray-100 md:border-8 lg:border-none uppercase text-xs font-bold'>
+              <button type="submit" 
+                className='bg-blue-100 hover:bg-white p-3 w-full lg:w-[180px] md:rounded-lg lg:rounded-r-full md:border-[#9d9d9d]/20  text-gray-100 hover:text-blue-300 md:border-8 lg:border-none uppercase text-xs font-bold'>
                 Get Quote
               </button>
             </form>

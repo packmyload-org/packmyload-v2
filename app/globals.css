@@ -40,7 +40,8 @@
   font-size: 13px;
 }
 .place_font::placeholder{
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 14px;
 }
 .main {
   width: 100vw;
