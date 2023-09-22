@@ -1,16 +1,23 @@
 'use client'
 import React, { useEffect} from 'react'
 import dynamic from "next/dynamic"
-// import Loading from './loading'
 import PackSection from '@/components/landing/PackSection'
 import { Reviews } from '@/components/landing/Reviews'
 import { Banner } from '@/components/landing/Banner'
-
+import Loading from './loading'
 const HeroSection = dynamic(
   () => import('@/components/landing/HeroSection'), {
     ssr: false
   }
 )
+const Nav = dynamic(() => import('@/components/Nav'), {
+  loading: () => <Loading />,
+  ssr: false
+  })
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => <Loading />,
+  ssr: false
+  })
 import ServiceSection from '@/components/landing/ServiceSection'
 const Section3 = dynamic(() => import('@/components/landing/Section3'), {
   ssr: false
@@ -31,6 +38,7 @@ import { AnimatedWrapper } from '@/components/AnimatedWrapper'
   return(
     <div className='w-full text-black'style={{marginTop: '84px'}}>
       <>  
+        <Nav />
         <AnimatedWrapper>
           <HeroSection/>
         </AnimatedWrapper>
@@ -70,6 +78,8 @@ import { AnimatedWrapper } from '@/components/AnimatedWrapper'
         <AnimatedWrapper>   
           <Faq /> 
         </AnimatedWrapper>
+        
+        <Footer />
          <ToastContainer
             position="top-right"
             autoClose={5000}
@@ -79,7 +89,7 @@ import { AnimatedWrapper } from '@/components/AnimatedWrapper'
             draggable
             pauseOnFocusLoss
             theme="light"
-          />
+        />
       </>
      
         </div>
