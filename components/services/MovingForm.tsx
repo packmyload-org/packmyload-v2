@@ -14,7 +14,7 @@ import {useState} from 'react';
 export const MovingForm: React.FC = () => {
     const router = useRouter()
     const {state}=useBookingForm()
-    const [calendarVisible,setCalendarVisible]=useState(true)
+    const [calendarVisible,setCalendarVisible]=useState(false)
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!state.pickUp || !state.destination) {
