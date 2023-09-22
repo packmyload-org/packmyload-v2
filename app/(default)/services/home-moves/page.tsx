@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { MovingForm } from '@/components/services/MovingForm';
 import { ServicesHeader } from '@/components/services/ServicesHeader';
 
 export default function HomeMoves(){
@@ -12,10 +11,6 @@ export default function HomeMoves(){
                 firstText='Home Relocation within Nigeria'
                 secondText='Home Relocation within Nigeria'
             />
-
-            <div className="max-w-4xl mx-auto sm:w-full flex flex-col items-center">
-                <MovingForm />
-            </div>
 
             <br />
 

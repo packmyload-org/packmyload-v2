@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { MovingForm } from '@/components/services/MovingForm';
 import { ServicesHeader } from '@/components/services/ServicesHeader';
 
 export default function Cleaning(){
@@ -13,9 +12,6 @@ export default function Cleaning(){
                 secondText='Cleaning Services'
             />
 
-            <div className="max-w-4xl mx-auto sm:w-full flex flex-col items-center">
-                <MovingForm />
-            </div>
 
             <br />
 

@@ -1,4 +1,3 @@
-import { MovingForm } from '@/components/services/MovingForm'
 import { ServicesHeader } from '@/components/services/ServicesHeader'
 import Image from 'next/image'
 
@@ -11,10 +10,6 @@ export default function StudentMoves(){
                 firstText='Interstate Car Transport'
                 secondText='Interstate Car Transport'
             />
-            <div className="max-w-4xl mx-auto sm:w-full flex flex-col items-center">
-                <MovingForm />
-            </div>
-
             <br />
 
             <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block">
