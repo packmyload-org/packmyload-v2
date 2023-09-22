@@ -22,7 +22,7 @@ function Nav() {
       alt='Logo'
       width={100}
       height={37}
-      className='object-contain md:w-[170px]'
+      className='object-contain w-[150px]'
       priority
       />
     </Link>
