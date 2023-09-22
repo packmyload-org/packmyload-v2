@@ -38,7 +38,7 @@ import {usePathname} from 'next/navigation'
   }, [])
 
   return(
-    <div className='w-full text-black'style={{marginTop: '84px'}}>
+    <div className='w-full text-black'style={{marginTop: '70px'}}>
       <>  
         <Nav />
         <AnimatedWrapper>

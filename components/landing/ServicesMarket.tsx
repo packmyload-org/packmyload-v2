@@ -17,7 +17,7 @@ import { AdServicesCard } from "./custom/AdServicesCard"
 export const ServicesMarket: React.FC = () => {
 
     return (
-        <section className="max-w-6xl mx-auto mt-[90px]">
+        <section className="max-w-6xl mx-auto mt-[90px] hidden sm:hidden lg:block">
             <h1 className="text-[#2E5F9E] p-4 md:p-0 font-extrabold text-2xl md:text-3xl text-center">Packmyload is your one-stop moving market place</h1>
 
             <p className="mt-4 p-4 md:p-0 text-xs md:text-base font-medium text-center">
