@@ -23,13 +23,15 @@ import { ServicesMarket } from '@/components/landing/ServicesMarket'
 import { ProcedureCards } from '@/components/landing/ProcedureCards'
 import SeemlessExperience from '@/components/landing/SeemlessExperience'
 import { AnimatedWrapper } from '@/components/AnimatedWrapper'
+import {usePathname} from 'next/navigation'
 
   function Home() {
   useEffect(() => {
     localStorage.clear()
   }, [])
+
   return(
-    <div className='w-full text-black'style={{marginTop: '84px'}}>
+    <div className='w-full text-black'style={{marginTop: '70px'}}>
       <>  
         <AnimatedWrapper>
           <HeroSection/>
@@ -38,14 +40,15 @@ import { AnimatedWrapper } from '@/components/AnimatedWrapper'
         <AnimatedWrapper>
           <AdSection />
         </AnimatedWrapper>
+        
+        <AnimatedWrapper>
+          <ProcedureCards/>
+        </AnimatedWrapper>
 
         <AnimatedWrapper>
           <ServicesMarket />
         </AnimatedWrapper>
 
-        <AnimatedWrapper>
-          <ProcedureCards/>
-        </AnimatedWrapper>
 
         <AnimatedWrapper>
           <Banner />

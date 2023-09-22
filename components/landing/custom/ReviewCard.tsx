@@ -1,10 +1,11 @@
 
 interface ReviewProp{
     text: string,
-    name: string
+    name: string,
+    profile?: string
 }
 
-export const ReviewCard: React.FC<ReviewProp> = ({text,name}) => {
+export const ReviewCard: React.FC<ReviewProp> = ({text, name, profile}) => {
 
     const nameInitial = name.charAt(0)
 
@@ -64,9 +65,14 @@ export const ReviewCard: React.FC<ReviewProp> = ({text,name}) => {
 
                 <div className="flex justify-between mt-1" id="rating">
                     <div className="name flex gap-2">
-                        <div className="relative inline-flex items-center justify-center w-[30px] h-[30px] overflow-hidden bg-gray-500 rounded-full dark:bg-gray-600">
-                            <span className="font-bold text-blue-300 ">{nameInitial}</span>
-                        </div>
+                        {
+                            profile ?
+                            <img src={profile} alt="review profile" className="w-[30px] h-[30px]" />
+                            :
+                            <div className="relative inline-flex items-center justify-center w-[30px] h-[30px] overflow-hidden bg-gray-500 rounded-full dark:bg-gray-600">
+                                <span className="font-bold text-white ">{nameInitial}</span>
+                            </div>
+                        }
                         <p className="text-sm mt-1">{name}</p>
                     </div>
                     {rating}

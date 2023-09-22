@@ -58,12 +58,14 @@ export const Reviews: React.FC = () => {
                     <ReviewCard 
                         text="Never have I looked forward to packing, but these guys did it smoothly without any hassle and were timely also. Love their work ethics and professionalism. Best office relocation  and I they would do just to house relocation as well"
                         name='Olajide Olatunji'
+                        profile='https://lh3.googleusercontent.com/a-/ALV-UjUfGfufE9f3NRUEVO-QfyB4h0Seiy4lgT5wuNpiia8eKn4=w120-h120-p-rp-mo-br100'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
                         text="No regrets contacting these guys 😍 excellent customer service, friendly, hardworking and efficient moving team. They were prompt and pretty timely. I will refer packmyload to friends and family any-day! Anytime !!"
                         name='Olayinka adu'
+                        profile='https://lh3.googleusercontent.com/a-/ALV-UjUHS2SfbFwuZHMRl56KquQenQ3UoAt5r0LPn1HAoDlTLiG-=w120-h120-p-rp-mo-br100'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
@@ -76,6 +78,7 @@ export const Reviews: React.FC = () => {
                     <ReviewCard 
                         text="Patrick and the team were amazing. Arrived early, worked hard throughout the day and did not leave till I was satisfied. If you need a great moving company, I strongly recommend Pack my load. Services: Moving-related packing, Oversized-item moving"
                         name='Lawrence Olugbenga'
+                        profile='https://lh3.googleusercontent.com/a-/ALV-UjXIJCttmFz8_DIUCDzbLriyuLkUPZDtituqdSRZsdHztg=w120-h120-p-rp-mo-br100'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
@@ -88,12 +91,14 @@ export const Reviews: React.FC = () => {
                     <ReviewCard 
                         text="If there was 10 stars, it would still not be enough. The guys at pack my load did amazing and we didn’t feel like we were moving. It was an ace team led by Sogo and nothing was much trouble for them. If you’re looking for a professional and reliable moving company in Lagos, then I’d recommend you look no further"
                         name='Saheed Aloba'
+                        profile='https://lh3.googleusercontent.com/a-/ALV-UjV5imxCAqBOkJ2KPSnssyMohJF7LMhc85RKHj6ZEXxvCg=w120-h120-p-rp-mo-br100'
                     />
                     </SwiperSlide>
                     <SwiperSlide>
                     <ReviewCard 
                         text="packing and unpacking has been a nightmare from my secondary school days. i trusted packmyload with my recent relocation and i was very impressed. no damages, no complains and very professional duties. STRESS FREE experience with them. I so much recommend their service for anyone that wants to relocate"
                         name='Ayodeji Ajibade'
+                        profile='https://lh3.googleusercontent.com/a-/ALV-UjVCBVdBdSX-OrwAk9S85LD2e8Jfg-ivOMdax8F_rNChZA=w120-h120-p-rp-mo-br100'
                     />
                     </SwiperSlide>
                 </Swiper>

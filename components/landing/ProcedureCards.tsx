@@ -14,16 +14,19 @@ export const ProcedureCards: React.FC = () => {
                         title="Select Your Addresses" 
                         step="STEP 1"
                         addon="Select pick up and drop off locations"
+                        imageUrl="/images/select-address.jpg"
                     />
                     <StepCard 
                         title="Select A Schedule" 
                         step="STEP 2"
                         addon="Reserve a time that suits your schedule"
+                        imageUrl="/images/select-schedule.jpg"
                     />
                     <StepCard 
                         title="Finalize Your Move" 
                         step="STEP 3"
                         addon="Edit your move if necessary"
+                        imageUrl="/images/select-address.jpg"
                     />
                 </div>
             </div>
