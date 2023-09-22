@@ -1,13 +1,5 @@
 import './globals.css'
 import dynamic from 'next/dynamic'
-const Nav = dynamic(() => import('@/components/Nav'), {
-  loading: () => <Loading />,
-  ssr: false
-  })
-const Footer = dynamic(() => import('@/components/Footer'), {
-  loading: () => <Loading />,
-  ssr: false
-  })
 const Provider = dynamic(()=> import ( '@/providers/provider'),{loading:()=><Loading/>, ssr: false})
 import Loading from './loading'
 import Script from 'next/script';
@@ -46,9 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div className='w-full'>
             <main className='w-full overflow-y-hidden relative'>
               <Provider>
-                <Nav/>
                   {children}
-                <Footer />
               </Provider>
             </main>
         </div>

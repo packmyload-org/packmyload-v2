@@ -40,7 +40,8 @@
   font-size: 13px;
 }
 .place_font::placeholder{
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 14px;
 }
 .main {
   width: 100vw;
@@ -239,8 +240,14 @@ body {
     padding: 0;
   }
 }
+
 .input_shadow{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 38px, rgba(0, 0, 0, 0.22) 0px 0px 38px;
+}
+
+.book-move{
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, .2);
 }
 
 .container {
