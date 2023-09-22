@@ -10,14 +10,7 @@ const HeroSection = dynamic(
     ssr: false
   }
 )
-const Nav = dynamic(() => import('@/components/Nav'), {
-  loading: () => <Loading />,
-  ssr: false
-  })
-const Footer = dynamic(() => import('@/components/Footer'), {
-  loading: () => <Loading />,
-  ssr: false
-  })
+
 import ServiceSection from '@/components/landing/ServiceSection'
 const Section3 = dynamic(() => import('@/components/landing/Section3'), {
   ssr: false
@@ -40,7 +33,6 @@ import {usePathname} from 'next/navigation'
   return(
     <div className='w-full text-black'style={{marginTop: '70px'}}>
       <>  
-        <Nav />
         <AnimatedWrapper>
           <HeroSection/>
         </AnimatedWrapper>
@@ -82,7 +74,6 @@ import {usePathname} from 'next/navigation'
           <Faq /> 
         </AnimatedWrapper>
         
-        <Footer />
          <ToastContainer
             position="top-right"
             autoClose={5000}

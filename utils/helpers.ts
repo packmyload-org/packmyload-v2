@@ -32,12 +32,12 @@ export function sumVolume(objects: { volume: number }[]): any {
 
 export function getAvailableTimes(selectedDate: Date | null): string[] {
   const currentUtcTime = new Date();
-  if (!selectedDate) return [];
+  if (selectedDate) {
+    const selectedUtcDate = new Date(selectedDate.toISOString());
 
-  const selectedUtcDate = new Date(selectedDate.toISOString());
-
-  if (selectedUtcDate > currentUtcTime) {
-    return ["8am", "10am", "12 noon"];
+    if (selectedUtcDate > currentUtcTime) {
+      return ["8am", "10am", "12 noon"];
+    }
   }
 
   if (currentUtcTime.getUTCHours() < 8) {
@@ -46,10 +46,11 @@ export function getAvailableTimes(selectedDate: Date | null): string[] {
     return ["10am", "12 noon"];
   } else if (currentUtcTime.getUTCHours() < 12) {
     return ["12 noon"];
-  } else {
-    return [];
   }
+
+  return [];
 }
+
 
 
 
