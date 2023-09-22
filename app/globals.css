@@ -41,7 +41,12 @@
 }
 .place_font::placeholder{
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+}
+.custom_placeholder{
+  input::placeholder{
+    color: #2E5F9E;
+  }
 }
 .main {
   width: 100vw;
