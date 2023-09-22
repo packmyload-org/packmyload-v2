@@ -1,9 +1,15 @@
 import { MovingForm } from '../services/MovingForm';
 
 export default function HeroSection() {
+
+  const divStyle = {
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom'
+  };
   
     return (
-    <section className={`w-full h-[80vh] sm:h-[80vh] pb-4 md:pb-0 md:h-[90vh] xl:h-[550px] relative flex flex-col justify-center bg-contain bg-[url('/images/herosection-straight-Img.jpg')] bg-no-repeat`}>
+    <section className={`w-full h-[80vh] sm:h-[80vh] pb-4 md:pb-0 md:h-[90vh] xl:h-[550px] relative flex flex-col justify-center bg-contain bg-[url('/images/herosection-straight-Img.jpg')] bg-no-repeat`} style={divStyle}>
      {/* <div className='gradient h-full w-full z-0 absolute' /> */}
 
       <div className='my-auto w-full z-10 '>

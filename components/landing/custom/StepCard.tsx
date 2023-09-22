@@ -16,9 +16,9 @@ const StepCard: React.FC<StepCardProps> = ({title, step, addon}) => {
                     <span className="font-bold text-sm">{addon}</span>
                 </h2>
                 <img 
-                    src={'https://assets.website-files.com/6087d5a85b7a0ab16e57710a/63c02ea6a263142f3563a8b6_v2-4-phones-01.png'} 
+                    src={'/images/select-address.jpg'} 
                     alt="step-image" 
-                    className="w-[200px] h-[300px] mx-auto mt-2"
+                    className="w-[400px] h-[300px] mx-auto mt-2 object-cover"
                 />
             </div>
         </div>

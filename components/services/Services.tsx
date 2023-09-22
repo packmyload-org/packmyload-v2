@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import servicesArr from './services.json'
 import Link from 'next/link';
