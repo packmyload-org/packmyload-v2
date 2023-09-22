@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { ServicesHeader } from '@/components/services/ServicesHeader';
-import { MovingForm } from '@/components/services/MovingForm';
 import { IconsSection } from './IconsSection';
 
 export default function Storage(){
@@ -12,10 +11,6 @@ export default function Storage(){
                 firstText='STORAGE SERVICES WITHIN NIGERIA'
                 secondText='Storage'
             />
-
-            <div className="max-w-4xl mx-auto sm:w-full flex flex-col items-center">
-                <MovingForm />
-            </div>
 
             <br />
 

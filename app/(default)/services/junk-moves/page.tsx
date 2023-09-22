@@ -1,4 +1,3 @@
-import { MovingForm } from '@/components/services/MovingForm'
 import { ServicesHeader } from '@/components/services/ServicesHeader'
 import Image from 'next/image'
 
@@ -12,10 +11,6 @@ export default function JunkMoves(){
                 firstText='JUNK REMOVAL SERVICES WITHIN NIGERIA'
                 secondText='Junk Removal'
             />
-
-            <div className="max-w-4xl mx-auto sm:w-full flex flex-col items-center">
-                <MovingForm />
-            </div>
 
             <br />
 

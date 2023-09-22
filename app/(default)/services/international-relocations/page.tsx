@@ -1,4 +1,3 @@
-import { MovingForm } from '@/components/services/MovingForm'
 import { ServicesHeader } from '@/components/services/ServicesHeader'
 import Image from 'next/image'
 
@@ -12,9 +11,6 @@ export default function InternationRelocation(){
                 firstText='INTERNATIONAL RELOCATION SERVICES WITHIN NIGERIA'
                 secondText='International Relocation'
             />
-            <div className="max-w-4xl mx-auto sm:w-full flex flex-col items-center">
-                <MovingForm />
-            </div>
 
             <br />
 
