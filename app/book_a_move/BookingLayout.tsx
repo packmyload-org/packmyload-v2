@@ -1,6 +1,6 @@
 import BookingProgress from "@/components/book_a_move_comp/BookingProgress"
 import Image from 'next/image'
-import { ArrowCircleLeft } from "@phosphor-icons/react"
+import Link from "next/link"
 import {IoChevronBackCircleOutline} from 'react-icons/io5'
 
 type BookingLayoutProps = {
@@ -18,15 +18,18 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             <aside className="md:w-[50%] bg-[#f7f6f6] p-4 h-auto sm:h-auto lg:h-[100vh] overflow-hidden">
                 <main className="lg:max-w-3xl lg:mx-auto">
 
-                    <Image 
-                        src="/images/icons/packmyload-blue-logo.svg"
-                        alt='Logo'
-                        width={100}
-                        height={40}
-                        className='object-contain w-[150px]'
-                        priority
-                    />
+                    <Link href={'/'}>
                     
+                        <Image 
+                            src="/images/icons/packmyload-blue-logo.svg"
+                            alt='Logo'
+                            width={100}
+                            height={40}
+                            className='object-contain w-[150px] cursor-pointer'
+                            priority
+                        />
+                    </Link>
+
                     <div className="mt-10 space-y-6">
 
                         <BookingProgress />
