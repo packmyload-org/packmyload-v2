@@ -41,7 +41,7 @@ export default function Checkout() {
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
             {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
-                    <h1 className="text-2xl font-bold">{state.fullName}{"'s "}Move</h1>
+                    <h1 className="text-2xl font-bold">{state.firstName}{"'s "}Move</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
                         <MapPin size={25} color="#444646" weight="fill" />
                         <div className="ml-2 text-lg font-medium">                   
@@ -84,7 +84,7 @@ export default function Checkout() {
                             Date
                         </div>
                         <div className="mt-1 text-sm">                   
-                            {state.MovingOn}
+                            {state.moveDate}
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
