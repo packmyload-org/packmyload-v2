@@ -20,7 +20,7 @@ export const ProcedureCards: React.FC = () => {
                         title="Select A Schedule" 
                         step="STEP 2"
                         addon="Reserve a time that suits your schedule"
-                        imageUrl="/images/select-schedule.jpg"
+                        imageUrl="/images/select-schedule2.jpg"
                     />
                     <StepCard 
                         title="Finalize Your Move" 
