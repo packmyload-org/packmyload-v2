@@ -46,7 +46,7 @@ const handleProceedOptions = () => {
     return setDisplayModal(true)
   }
   return (
-   <div className='bg-blue-200 p-6 px-1 md:px-0 h-full mb-4 rounded-md shadow-md'>
+   <div className='bg-blue-200 p-6 px-1 md:px-0 h-full mb-4 rounded-md'>
              {/* Form Header  */}
         <div className="w-full md:w-[80%] mx-auto mb-4">
             <h2 className="w-full text-2xl ext-gray-900 font-bold text-center">Let's Get Started </h2>
