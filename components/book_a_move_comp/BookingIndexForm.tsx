@@ -24,7 +24,7 @@ export default function BookingIndexForm() {
 
   const handleProceed = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
+    if (!state.lastName || !state.phoneNumber || !state.firstName || !state.moveTime) {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
     }
@@ -34,24 +34,7 @@ export default function BookingIndexForm() {
     }
     return router.push('/book_a_move/items');
   }
-const handleProceedOptions = () => {
-    if (!state.email || !state.phoneNumber || !state.fullName || !state.moveTime) {
-      alerts.error('Invalid Form Submission', 'All fields required')
-      return;
-    }
-    if (!state.pickUp|| !state.destination|| !state.moveDate || !state.service ) {
-      alerts.error('Invalid Form Submission', 'All fields required')
-      return;
-    }
-    return setDisplayModal(true)
-  }
 
-  console.log( [
-            state.pickUp,
-            state.destination,
-            state.moveDate,
-            state.moveTime
-          ].every((url) => url === ''))
   return (
       <form className="w-[90%] rounded-lg bg-blue-200 md:w-[87%]  pt-10 p-6 my-auto  mx-auto space-y-4 flex flex-col items-center" onSubmit={handleProceed} >
           {
@@ -118,17 +101,32 @@ const handleProceedOptions = () => {
           </Row>
           </> : null
           }
-            <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Full Name <span className='text-red-600'>*</span></label>
+            <div className="w-[90%] mx-auto grid grid-cols-2 gap-4 items-center">
+            <div className='flex flex-col'>
+                 <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">First Name <span className='text-red-600'>*</span></label>
             <input
               type="text"
-              id='fullName'
+              id='firstName'
               placeholder='John Doe'
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
-              value={state.fullName}
+              value={state.firstName}
               onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />
+        </div>
+        <div className='flex flex-col'>
+          <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Last Name <span className='text-red-600'>*</span></label>
+            <input
+              type="text"
+              id='lastName'
+              placeholder='John Doe'
+              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
+              required
+              value={state.lastName}
+              onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
+            />
+        </div>
+        
           </div>
            <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Email <span className='text-red-600'>*</span></label>
@@ -164,45 +162,37 @@ const handleProceedOptions = () => {
           
                 <option hidden>
                   Select Service 
-               </option>
-               {services.map(item => <option
-                 value={item.title}
-                 key={item.title}
+              </option>
+              {services.map(item => <option
+                value={item.title}
+                key={item.title}
                >
-                 {item.title}
-               </option>)
-               }
+                {item.title}
+              </option>)
+              }
             </select>
           </div>
-           {displayType && (
+          {displayType && (
             <div className="w-[90%] mx-auto pt-3 flex flex-col gap-1 items-start">
             <select name="category" id="" className='w-full p-3 px-0 border border-gray-400 text-gray-500 rounded-md bg-white outline-none'
             onChange={(e)=>handleFieldChange('moveType', e.target.value)}>
                  <option value="" hidden>Service Type</option>
                  {serviceType.map(item => <option
-                   value={item.label}
-                   key={item.key}
+                  value={item.label}
+                  key={item.key}
                     
-                 >
-                   {item.label}
-                 </option>)}
+                >
+                  {item.label}
+                </option>)}
               </select>
             </div>
           )}
-            <div className='w-full pt-4 flex justify-evenly'>
-              <button
-            className='bg-blue-600 w-[43%] text-[12px] md:font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
-            onClick={handleProceedOptions}
-            >
-              Speak with A Agent
-          </button>
           <button
-             type='submit'
-             className='bg-blue-600 w-[43%] text-[12px] md:font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
+            type='submit'
+            className='bg-blue-600 w-[43%] mx-auto text-[12px] md:font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
             >
-              Select My Items
+              Proceed
           </button>
-  </div>
   
          </form>
       

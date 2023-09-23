@@ -4,7 +4,8 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 // Define the form state interface
 interface BookingFormState {
   // Define your form fields here
-  fullName: string;
+  firstName: string;
+  lastName: string;
   email: string;
   moveDate: string;
   pickUp: string;
@@ -37,7 +38,8 @@ type Action =
 
 // Define initial form state
 const initialFormState: BookingFormState = {
-  fullName: '',
+  firstName: '',
+  lastName: '',
   email: '',
   moveDate: '',
   pickUp: '',

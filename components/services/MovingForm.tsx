@@ -46,8 +46,8 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
 };
 
     return (
-        <div className="w-5/6 pt-4 sm:mt-10">
-            <form onSubmit={handleSubmit} className='bg-[#9d9d9d]/20  rounded-lg lg:rounded-full w-full mx-auto lg:w-[950px] flex space-y-2 sm:space-y-0 flex-col md:flex-row book-move'>
+        <div className="w-5/6 pt-3 sm:mt-6">
+            <form onSubmit={handleSubmit} className='bg-[#9d9d9d]/20  rounded-lg lg:rounded-full w-full mx-auto lg:w-[950px] flex space-y-2 sm:space-y-0 flex-col md:flex-row input_shadow'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-[30%] justify-between border-r-2 items-center'>
                   <AutoCompleteInput
                     inputName='pickUp'

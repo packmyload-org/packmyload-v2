@@ -92,7 +92,7 @@ function Map() {
       <GoogleMap
         center={mapCenter}
         zoom={15}
-        mapContainerStyle={{ width: '100%', height: '100%' ,minHeight:'200px'}}
+        mapContainerStyle={{ width: '100%', height: '100%' ,minHeight:'230px'}}
         options={{
           streetViewControl: false,
           zoomControl: false,

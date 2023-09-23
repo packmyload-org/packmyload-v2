@@ -34,7 +34,7 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
 
                         <BookingProgress />
                         <div className="py-4 px-2 space-y-4">
-                        <h1 className="text-3xl font-black">{stepDescription}</h1>
+                        <h1 className="text-3xl font-black text-blue-300">{stepDescription}</h1>
                         {/* Render left content */}
                         {leftContent}
                         </div>
