@@ -7,15 +7,19 @@ interface About{
   description: string;
 }
 const AboutCard = ({ title, description }: About) => (
-  <Col span={24} sm={12} md={8} lg={6} className="mb-7">
-   <Card
-  title={title}
-  className="w-full md:w-[300px] lg:w-[400px] lg:h-[250px] bg-[#F4F3F0]"
-  style={topBorderStyle}
->
-  <p>{description}</p>
-</Card>
-
+  <Col xs={24} sm={12} md={8} lg={6} className="mb-7">
+    <Card
+      title={title}
+      className="w-full md:w-[300px] lg:w-[300px] sm:w-[90%] bg-[#F4F3F0]"
+      style={topBorderStyle}
+    >
+      <p>{description}</p>
+      <div className="learn-more-link">
+        <Link href="/learn_more" passHref>
+          <h1>Learn more {'<'}</h1>
+        </Link>
+      </div>
+    </Card>
   </Col>
 );
 
