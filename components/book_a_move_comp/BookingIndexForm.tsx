@@ -28,7 +28,7 @@ export default function BookingIndexForm() {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
     }
-    if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
+    if (!state.pickUp|| !state.destination|| !state.moveDate || !state.service ) {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
     }
@@ -39,31 +39,37 @@ const handleProceedOptions = () => {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
     }
-    if (!state.pickUp|| !state.destination|| !state.MovingOn || !state.service ) {
+    if (!state.pickUp|| !state.destination|| !state.moveDate || !state.service ) {
       alerts.error('Invalid Form Submission', 'All fields required')
       return;
     }
     return setDisplayModal(true)
   }
-  return (
-   <div className='bg-blue-200 p-6 px-1 md:px-0 h-full mb-4 rounded-md'>
-             {/* Form Header  */}
-        <div className="w-full md:w-[80%] mx-auto mb-4">
-            <h2 className="w-full text-2xl ext-gray-900 font-bold text-center">Let's Get Started </h2>
-        </div>
 
-         {/* Form  */}
-      <form className="w-full md:w-[80%] mx-auto space-y-4 flex flex-col items-center" onSubmit={handleProceed} >
-          <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
+  console.log( [
+            state.pickUp,
+            state.destination,
+            state.moveDate,
+            state.moveTime
+          ].every((url) => url === ''))
+  return (
+      <form className="w-[90%] rounded-lg bg-blue-200 md:w-[87%]  pt-10 p-6 my-auto  mx-auto space-y-4 flex flex-col items-center" onSubmit={handleProceed} >
+          {
+          [
+            state.pickUp,
+            state.destination,
+            state.moveDate,
+            state.moveTime
+          ].every((url) => url === '') ?
+            <>
+                 <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
-          <>
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
               inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               placeholder="Destination From"
             />
-          </>
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md ext-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
@@ -75,16 +81,16 @@ const handleProceedOptions = () => {
             placeholder="Destination To"
             />
           </div>
-        <Row className="w-[90%] mx-auto " justify={'space-between'}>
+          <Row className="w-[90%] mx-auto" justify={'space-between'}>
           <div className="w-[45%] flex flex-col gap-1 items-start">
             <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Move Date <span className='text-red-600'>*</span></label>
             <input
               type="date"
-              id='MovingOn'
+              id='moveDate'
               min={minDate}
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
-              value={state.MovingOn}
+              value={state.moveDate}
               onChange={(e)=>handleFieldChange(e.target.id,e.target.value)}
             />
         </div>
@@ -110,7 +116,8 @@ const handleProceedOptions = () => {
             </select>
           </div>
           </Row>
-
+          </> : null
+          }
             <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-gray-800 font-semibold" htmlFor="MovingFrom">Full Name <span className='text-red-600'>*</span></label>
             <input
@@ -195,17 +202,10 @@ const handleProceedOptions = () => {
             >
               Select My Items
           </button>
-            </div>
+  </div>
+  
          </form>
       
-      {/* Form Modal  */}
-      {displayModal &&
-        <CustomModal
-          displayModal={displayModal}
-          title={'Speak With A Agent'}
-          setDisplayModal={setDisplayModal}
-          />
-      }
-    </div>
+    
   )
 }

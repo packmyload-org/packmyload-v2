@@ -6,7 +6,8 @@ import {IoChevronBackCircleOutline} from 'react-icons/io5'
 type BookingLayoutProps = {
     leftContent: React.ReactNode,
     rightContent: React.ReactNode,
-    stepDescription?: string
+    stepDescription?: string,
+    prev?: string,
 }
 
 export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription}) => {
@@ -29,11 +30,11 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
                         />
                     </Link>
 
-                    <div className="mt-10">
+                    <div className="mt-10 space-y-6">
 
                         <BookingProgress />
-                        <h1 className="text-3xl">{stepDescription}</h1>
-                        <div className="py-4 px-2">
+                        <div className="py-4 px-2 space-y-4">
+                        <h1 className="text-3xl font-black">{stepDescription}</h1>
                         {/* Render left content */}
                         {leftContent}
                         </div>
@@ -42,9 +43,9 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             </aside>
 
             {/* Right section */}
-            <main className="md:w-[50%] bg-white p-4 h-auto sm:h-auto lg:h-[100vh] overflow-scroll">
-                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl lg:mx-auto">
+            <main className="md:w-[50%] bg-white p-4 h-auto md:h-[90vh] ">
                     <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2" />
+                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-full mt-4 pb-10 ">
                     {/* Render right content */}
                     {rightContent}
                 </div>

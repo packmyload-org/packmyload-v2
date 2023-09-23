@@ -11,7 +11,6 @@ export default function BookAMoveLayout({
  return(
   <>
         {children}
-
       <ToastContainer
         position="top-right"
         autoClose={5000}

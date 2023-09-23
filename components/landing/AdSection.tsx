@@ -22,7 +22,7 @@ const router =useRouter()
                     <p className="text-white text-base mt-2 mx-auto md:mx-0">
                         One concierge service to connect utilities and home services after a move
                     </p>
-                    <button className="mt-8 flex justify-evenly mx-auto md:mx-0 items-center hover:animate-pulse w-[180px] p-[8px] border-inherit/20 border-[6px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-white font-bold rounded-full text-xs" onClick={()=>router.push('/book_a_move')}>
+                    <button className="mt-8 flex justify-evenly mx-auto md:mx-0 items-center hover:animate-pulse w-[180px] p-[8px] border-inherit/20 border-[6px] bg-blue-100 hover:bg-white hover:text-blue-300 text-white font-bold rounded-full text-xs" onClick={()=>router.push('/book_a_move')}>
                         Get Estimate
                     </button>
                 </section>

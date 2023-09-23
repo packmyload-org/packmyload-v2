@@ -88,7 +88,7 @@ function Map() {
   }, [])
   
   return (
-    <div className='w-full h-full  mb-4 rounded-md shadow-md'>
+    <div className='w-full h-full mb-4 rounded-md shadow-md'>
       <GoogleMap
         center={mapCenter}
         zoom={15}
