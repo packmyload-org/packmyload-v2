@@ -23,7 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* <!-- Google Tag Manager --> */}
-        <script
+        <Script
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -53,9 +54,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {!path.includes('book_a_move') &&<Footer /> }
               </Provider>
             </main>
-        <Script
+        {/* <Script
         type="text/javascript"
-        strategy="lazyOnload"
+        
         dangerouslySetInnerHTML={{
           __html: `
           (function(d, t) {
@@ -73,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           })(document, 'script');
           `,
         }}
-        />
+        /> */}
         </div>
       </body>
     </html>

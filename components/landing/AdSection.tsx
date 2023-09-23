@@ -5,7 +5,7 @@ export const AdSection: React.FC = () => {
 const router =useRouter()
     return (
         <section 
-            className="bg-[#2E5F9E] w-[100%] mt-10 p-4 bg-[url('/images/bg/shapes-big-new.png')] "
+            className="bg-[#2E5F9E] w-[100%]  p-4 bg-[url('/images/bg/shapes-big-new.png')] "
         >
             <div 
                 className={`max-w-6xl mx-auto flex flex-col md:flex-row p-1 md:p-11 justify-evenly`}

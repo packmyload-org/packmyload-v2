@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image';
+// import Image from 'next/image';
 import { AutoCompleteInput } from '../AutoCompleteInput';
 import { useRouter } from 'next/navigation';
 import { FormEvent } from 'react';
@@ -34,21 +34,20 @@ export const MovingForm: React.FC = () => {
  const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
-  // const handleCalendarClose = () => {
-  //   setCalendarVisible(false);
-  // };
+  
 const handleDateSelect = (date: dayjs.Dayjs | null) => {
   if (date) {
     const formattedDate = date.format('DD-MM-YYYY');
     handleFieldChange('moveDate', formattedDate); 
+    handleFieldChange('moveTime', ''); 
     const times = getAvailableTimes(date.toDate());
     setAvailableTimes(times);
   }
 };
 
     return (
-        <div className="w-5/6 pt-4 sm:mt-14">
-            <form onSubmit={handleSubmit} className='md:border-[#9d9d9d]/20 bg-[#9d9d9d]/20 border-[10px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[950px] flex space-y-4 sm:space-y-0 flex-col md:flex-row input_shadow'>
+        <div className="w-5/6 pt-4 sm:mt-10">
+            <form onSubmit={handleSubmit} className='bg-[#9d9d9d]/20  rounded-lg lg:rounded-full w-full mx-auto lg:w-[950px] flex space-y-2 sm:space-y-0 flex-col md:flex-row book-move'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-[30%] justify-between border-r-2 items-center'>
                   <AutoCompleteInput
                     inputName='pickUp'
@@ -73,7 +72,7 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
               className='hover:animate-ping object-contain w-auto h-auto'
               alt="moving company lagos nigeria-student moving destination indicator" width={20} height={10}/> */}
               </div>
-                <div className='flex bg-gray-100 flex-nowrap py-1 px-3 w-full lg:w-[30%] justify-between' onClick={() => setCalendarVisible(!calendarVisible)}>
+                <div className='flex bg-gray-100 flex-nowrap py-1  w-full lg:w-[30%] justify-between' onClick={() => setCalendarVisible(!calendarVisible)}>
             <DatePicker
               className='w-full outline-none cursor-pointer custom_placeholder'
               suffixIcon={<Calendar color='#2E5F9E' size={30} weight='duotone'/>}
@@ -93,22 +92,12 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
                 <>
                 <div className='w-full p-2 px-3 grid grid-cols-3 gap-2'>
                   {availableTimes.map((time, index) => (
-                    <div key={index} className='text-center w-full rounded-full bg-blue-300 text-white hover:bg-inherit hover:text-blue-300 mt-6' onClick={()=> handleFieldChange('moveTime', time)}>
+                    <div key={index} className='text-center w-full rounded-full bg-blue-300 text-white hover:bg-inherit hover:text-blue-300 mt-6 cursor-pointer' onClick={()=> handleFieldChange('moveTime', time)}>
                       {time}
                     </div>
                   ))}
                   </div>
                   <p className='w-full text-sm px-5 my-4'>Moves scheduled during the weekend have up to 20% higher rates.</p>
-                  {/* <div className='w-full flex justify-center'>
-
-                    <button className='w-[30%] my-4 bg-blue-300 text-white hover:bg-inherit hover:text-blue-300 ' onClick={() => {
-                      if (state.moveTime === '') {
-                        setCalendarVisible(true);
-                        alerts.error('Invalid Submission', 'Please select a time.')
-                        return
-                      }
-                    }}>OK</button>
-                  </div> */}
                 </>
               }
             />

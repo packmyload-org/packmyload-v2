@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function SeemlessExperience() {
   return (
-   <section className='w-full flex flex-col text-center text-black hidden sm:hidden lg:block'>
+   <section className='w-full md:flex flex-col text-center text-black hidden  lg:block'>
     <div className='max-w-6xl mx-auto px-4 sm:px-6 space-y-3 pt-[52px]'>
      <h1 className='text-2xl md:text-4xl font-bold text-[#2E5F9E]'>One seamless experience</h1>
      <p className='text-base lg:w-[830px] mx-auto md:text-lg text-[#777674]'>Our teams will treat your possessions like they would their own. ensuring that the greatest care and diligence is taken.</p>

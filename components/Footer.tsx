@@ -35,7 +35,7 @@ export default function Footer() {
         "/book_a_move/locations-details",
         "/book_a_move/checkout",
       ].some((url) => url === path) ? null : (
-        <div className="container sm:pb-20 xl:pb-0">
+        <div className="px-8 sm:pb-20 xl:pb-0">
           <Row
             className="w-full h-max"
             justify={"space-between"}
@@ -247,7 +247,7 @@ export default function Footer() {
       )}
       <div className="bg-slate-800 py-6 ">
         <Row
-          className="w-full mt-6 sm:container"
+          className="w-full mt-6 px-8"
           justify={"space-between"}
           align={"middle"}
         >

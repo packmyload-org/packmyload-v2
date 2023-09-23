@@ -82,7 +82,6 @@ const handleProceedOptions = () => {
               type="date"
               id='MovingOn'
               min={minDate}
-            
               className="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               required
               value={state.MovingOn}
