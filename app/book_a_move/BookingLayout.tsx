@@ -6,7 +6,8 @@ import {IoChevronBackCircleOutline} from 'react-icons/io5'
 type BookingLayoutProps = {
     leftContent: React.ReactNode,
     rightContent: React.ReactNode,
-    stepDescription?: string
+    stepDescription?: string,
+    prev?: string,
 }
 
 export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription}) => {
@@ -39,9 +40,9 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             </aside>
 
             {/* Right section */}
-            <main className="md:w-[50%] bg-white p-4 h-auto sm:h-auto lg:h-[100vh] overflow-scroll">
-                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl lg:mx-auto">
+            <main className="md:w-[50%] bg-white p-4 h-auto lg:h-[100vh] ">
                     <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2" />
+                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-full">
                     {/* Render right content */}
                     {rightContent}
                 </div>

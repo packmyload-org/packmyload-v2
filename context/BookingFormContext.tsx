@@ -6,7 +6,7 @@ interface BookingFormState {
   // Define your form fields here
   fullName: string;
   email: string;
-  MovingOn: string;
+  moveDate: string;
   pickUp: string;
   destination: string;
   moveTime: string;
@@ -39,7 +39,7 @@ type Action =
 const initialFormState: BookingFormState = {
   fullName: '',
   email: '',
-  MovingOn: '',
+  moveDate: '',
   pickUp: '',
   destination: '',
   moveTime: '',
