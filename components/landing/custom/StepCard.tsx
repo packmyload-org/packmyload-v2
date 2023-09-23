@@ -19,7 +19,7 @@ const StepCard: React.FC<StepCardProps> = ({title, step, addon, imageUrl}) => {
                 <img 
                     src={imageUrl} 
                     alt="step-image" 
-                    className="w-[400px] h-[300px] mx-auto mt-2 object-cover"
+                    className="w-[450px] h-[350px] mx-auto mt-2 object-cover"
                 />
             </div>
         </div>
