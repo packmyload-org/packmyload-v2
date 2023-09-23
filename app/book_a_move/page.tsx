@@ -15,7 +15,7 @@ export default function Booking() {
   )
 
   const rightContent = (
-    <div className="p-2 sm:px-[7rem] lg:px-0 w-full lg:w-[90%] mx-auto my-auto">
+    <div className="p-2 sm:px-[7rem] lg:px-0 w-full lg:w-[90%] mx-auto my-auto ">
       <BookingIndexForm/>
     </div>
   )

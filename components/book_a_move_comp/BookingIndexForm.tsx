@@ -53,9 +53,9 @@ const handleProceedOptions = () => {
             state.moveTime
           ].every((url) => url === ''))
   return (
-      <form className="w-[90%] bg-blue-200 md:w-[87%] p-6 pt-8 my-auto  mx-auto space-y-4 flex flex-col items-center" onSubmit={handleProceed} >
+      <form className="w-[90%] rounded-lg bg-blue-200 md:w-[87%]  pt-10 p-6 my-auto  mx-auto space-y-4 flex flex-col items-center" onSubmit={handleProceed} >
           {
-          ![
+          [
             state.pickUp,
             state.destination,
             state.moveDate,
@@ -64,14 +64,12 @@ const handleProceedOptions = () => {
             <>
                  <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md text-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
-          <>
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
               inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none"
               placeholder="Destination From"
             />
-          </>
           </div>
           <div className="w-[90%] mx-auto flex flex-col gap-1 items-start">
             <label className="text-md ext-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
