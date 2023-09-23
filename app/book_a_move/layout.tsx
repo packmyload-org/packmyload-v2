@@ -1,28 +1,27 @@
 'use client'
-import BookingProgress from '@/components/book_a_move_comp/BookingProgress';
-// import Faq from '@/components/landing/Faq';
+
 import { ToastContainer } from 'react-toastify';
 
 export default function BookAMoveLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
+
  return(
   <>
-    <BookingProgress/>
         {children}
-      {/* <Faq /> */}
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={true}
-            closeOnClick={false}
-            rtl={false}
-            draggable
-            pauseOnFocusLoss
-            theme="light"
-          />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        closeOnClick={false}
+        rtl={false}
+        draggable
+        pauseOnFocusLoss
+        theme="light"
+      />
   </>
  )
 }
