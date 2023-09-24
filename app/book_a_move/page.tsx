@@ -10,12 +10,12 @@ export default function Booking() {
   const leftContent = (
     <div className="p-2 sm:px-[7rem] lg:px-0 "> 
       <Map />
-      {![
-            state.pickUp,
-            state.destination,
-            state.moveDate,
-            state.moveTime
-      ].every((url) => url === '') &&
+      {
+        state.pickUp !== '' ||
+        state.destination !== '' ||
+        state.moveDate !== '' ||
+        state.moveTime !== ''
+      &&
         <div className="flex flex-wrap gap-3 h-[20vh] w-full">
             <div className="m-auto flex flex-col gap-1 items-start">
               <label className="text-md text-blue-300 font-medium" htmlFor="MovingFrom">Moving From </label>

@@ -1,4 +1,5 @@
 'use client'
+import dayjs from 'dayjs';
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 // Define the form state interface
@@ -27,7 +28,7 @@ interface BookingFormState {
   service: string;
   distance: string;
   contactBy: string;
-  whatsApp: string;
+  countryCode: string;
 }
 
 // Define action types
@@ -56,7 +57,7 @@ const initialFormState: BookingFormState = {
   service: '',
   distance: '',
   contactBy: '',
-  whatsApp:''
+  countryCode:''
 };
 
 // Define a key for localStorage

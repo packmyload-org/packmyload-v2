@@ -35,14 +35,14 @@ export default function Footer() {
         "/book_a_move/locations-details",
         "/book_a_move/checkout",
       ].some((url) => url === path) ? null : (
-        <div className="px-8 sm:pb-20 xl:pb-0">
+        <div className="px-2 sm:pb-20 xl:pb-0">
           <Row
             className="w-full h-max"
             justify={"space-between"}
             align={"middle"}
             gutter={[10, 50]}
           >
-            <Col span={24} lg={6} className="md:h-[350px] mb-0 lg:mb-6">
+            <Col span={20} lg={6} className="md:h-[350px] mb-0 lg:mb-6">
               <div className="space-y-8 text-gray-400">
                 <h3 className="text-xl font-[600]">About Us</h3>
                 <div className="space-y-6 pt-8 border-t-2 border-t-gray-950">
@@ -94,7 +94,7 @@ export default function Footer() {
               </div>
             </Col>
             <Col
-              span={24}
+              span={20}
               lg={8}
               className="lg:h-[350px] min-h-max md:min-h-0 mb-6"
             >
@@ -222,7 +222,7 @@ export default function Footer() {
                     </button>
                     <div className="clearfix"></div>
                   </form>
-                  <ul className="text-white uppercase inline-flex gap-5 hover:text-gray-950">
+                  <ul className="text-white uppercase flex flex-wrap gap-5 hover:text-gray-950 w-[90%] mx-auto">
                     <li className="flex gap-3 items-center text-xs sm:text-base">
                         <a href="/faqs">FAQs </a>
                         <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
@@ -247,7 +247,7 @@ export default function Footer() {
       )}
       <div className="bg-slate-800 py-6 ">
         <Row
-          className="w-full mt-6 px-8"
+          className="w-full mt-6 px-2"
           justify={"space-between"}
           align={"middle"}
         >

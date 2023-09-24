@@ -43,11 +43,13 @@
   font-weight: 600;
   font-size: 12px;
 }
-.custom_placeholder{
-  input::placeholder{
+.custom_placeholder 
+.ant-picker-input 
+input::placeholder{
     color: #2E5F9E;
-  }
+    font-size: 600;
 }
+
 .main {
   width: 100vw;
   min-height: 100vh;
