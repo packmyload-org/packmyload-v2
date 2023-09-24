@@ -35,7 +35,7 @@ export default function Footer() {
         "/book_a_move/locations-details",
         "/book_a_move/checkout",
       ].some((url) => url === path) ? null : (
-        <div className="px-2 sm:pb-20 xl:pb-0">
+        <div className="px-2 sm:pb-20 xl:pb-0 max-w-6xl mx-auto">
           <Row
             className="w-full h-max"
             justify={"space-between"}
@@ -85,7 +85,7 @@ export default function Footer() {
                       <span className="flex items-center gap-1 mr-2">
                         <Phone size={16} color="#4bcbfe" weight="fill" /> Phone:
                       </span>
-                      <a className="text-gray-400 hover:text-gray-950" href="#">
+                      <a className="text-gray-400 hover:text-gray-950 lg:mt-5" href="#">
                         0700- PACK-PRO (0700-722-5776)
                       </a>
                     </li>
@@ -223,19 +223,19 @@ export default function Footer() {
                     <div className="clearfix"></div>
                   </form>
                   <ul className="text-white uppercase flex flex-wrap gap-5 hover:text-gray-950 w-[90%] mx-auto">
-                    <li className="flex gap-3 items-center text-xs sm:text-base">
+                    <li className="flex gap-3 items-center text-xs">
                         <a href="/faqs">FAQs </a>
                         <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li className="flex gap-3 items-center text-xs sm:text-base">
+                    <li className="flex gap-3 items-center text-xs">
                       <a href="/blog">Blog</a>
                       <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li className="flex gap-3 items-center text-xs sm:text-base">
+                    <li className="flex gap-3 items-center text-xs">
                       <a href="/partner">Partner</a>
                       <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
-                    <li className='text-xs sm:text-base whitespace-nowrap'>
+                    <li className='text-xs whitespace-nowrap'>
                       <a href="/become_a_packer">Become a Packer</a>
                     </li>
                   </ul>
