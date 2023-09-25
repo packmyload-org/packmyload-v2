@@ -16,13 +16,12 @@ function Map() {
   const [mapCenter, setMapCenter] = useState({ lat: 6.465422, lng: 3.406448 });
   const [routeData, setRouteData] = useState<RouteData | null>(null);
   const { locationValue, triggerCalculateRoute, setTriggerCalculateRoute } = useInputContext()
-  const {dispatch}  =useBookingForm()
+  const {state,dispatch}  =useBookingForm()
   
   const calculateRoute = async () => {
-    const pickUp = localStorage.getItem('pickUp');
-    const destination = localStorage.getItem('destination');
+    const {pickUp , destination} = state
 
-    if (!pickUp || !destination) {
+    if (pickUp === '' || destination === '') {
       return null;
     }
     

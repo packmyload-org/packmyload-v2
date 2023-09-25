@@ -1,14 +1,12 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import { serviceType } from "@/utils/data";
+import { useEffect, useState } from 'react';
 import { AutoCompleteInput } from "../AutoCompleteInput";
 import { useBookingForm } from '@/context/BookingFormContext';
-import { alerts } from '../alerts/Alert';
 import services from '@/components/services/services.json'
 import CustomDatePicker from '../Datepicker';
 import { myCountryCodesObject } from '@/hooks/useCountries'
-import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 
 interface FormData {
   firstName: string;
@@ -24,10 +22,10 @@ export default function BookingIndexForm() {
   const { state, dispatch } = useBookingForm();
   const [displayType, setDisplayType] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [loading1, setLoading1] = useState(false)
   const [upperForm, setUpperForm] = useState(false)
   const [calendarVisible, setCalendarVisible] = useState(false)
-    const { control, handleSubmit, formState: { errors } } = useForm<FormData>();
-
+  const { control, formState: { errors,  }, trigger ,getValues} = useForm<FormData>();
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
@@ -41,21 +39,43 @@ export default function BookingIndexForm() {
       }
   }, [])
   
-   const onSubmit: SubmitHandler<FormData> = (data) => {
-     // Handle form submission here
-    setLoading(true)
-    console.log(data);
-    handleFieldChange('email', data.email)
-    handleFieldChange('firstName', data.firstName)
-    handleFieldChange('lastName', data.lastName)
-    handleFieldChange('countryCode', data.countryCode)
-    handleFieldChange('phoneNumber', data.phoneNumber)
-    handleFieldChange('service', data.service)
-    router.push('/book_a_move/')
-    setLoading(false)
-  };
+  const handleSubmit = async(data:FormData) => {
+    // Handle form submission here
+    handleFieldChange('email', data.email);
+    handleFieldChange('firstName', data.firstName);
+    handleFieldChange('lastName', data.lastName);
+    handleFieldChange('countryCode', "+ " + data.countryCode);
+    handleFieldChange('phoneNumber', data.phoneNumber);
+    handleFieldChange('service', data.service);
+  }
+
+
+  const handleButtonClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    const buttonName = event.currentTarget.name;
+    const isValid = await trigger();
+
+    if (isValid) {
+    const formData = getValues(); 
+      // console.log('Form Data:', formData);
+      if (buttonName === 'submitButton1') {
+        // Handle button 1 click
+        setLoading1(true);
+        await handleSubmit(formData)
+        console.log('Button 1 clicked');
+        router.push('/book_a_move/items')
+        return;
+      } else if (buttonName === 'submitButton2') {
+        setLoading(true);
+        await handleSubmit(formData)
+        console.log('Button 2 clicked');
+        router.push('/book_a_move/contact-agent')
+        return;
+      }
+    }
+  }
+
   return (
-      <form className="w-[98%] md:w-[90%] rounded-lg bg-blue-200 pt-10 p-6 my-auto  mx-auto space-y-4 flex flex-col items-center" onSubmit={handleSubmit(onSubmit)} >
+    <form className = "w-[98%] md:w-[90%] rounded-lg bg-blue-200 pt-10 p-6 my-auto  mx-auto space-y-4 flex flex-col items-center">
           {
             upperForm
           &&
@@ -65,7 +85,7 @@ export default function BookingIndexForm() {
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
-              inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none place_font"
+              inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
               placeholder="Destination From"
             />
           </div>
@@ -75,11 +95,11 @@ export default function BookingIndexForm() {
           <AutoCompleteInput
             type="text"
             inputName="destination"
-            inputStyle="w-full h-10 p-4 text-gray-500 rounded-md outline-none place_font"
+            inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
             placeholder="Destination To"
             />
           </div>
-            <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start bg-white rounded-md mt-2"
+            <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start bg-white rounded-full mt-2"
               onClick={() => setCalendarVisible(!calendarVisible)}
             >
               
@@ -103,7 +123,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='firstName'
                 placeholder='John'
-                className="w-full h-10 p-4 text-gray-500 rounded-md outline-none place_font"
+                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
               />
             )}
           />
@@ -121,7 +141,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='lastName'
                 placeholder='Doe'
-                className="w-full h-10 p-4 text-gray-500 rounded-md outline-none place_font"
+                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
               />
             )}
           />
@@ -146,7 +166,7 @@ export default function BookingIndexForm() {
               {...field}
               type='email'
               id='email'
-              className="w-full h-10 p-4 text-gray-500 rounded-md outline-none place_font"
+              className="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
               placeholder='example@mail.com'
             />
           )}
@@ -201,7 +221,7 @@ export default function BookingIndexForm() {
           render={({ field }) => (
             <select
               {...field}
-              className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-md bg-white outline-none ring-blue-300 focus:ring-2'
+              className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-full bg-white outline-none ring-blue-300 focus:ring-2'
               onChange={(e) => {
                 e.target.value.includes('HOME RELOCATIONS') ? setDisplayType(true) : setDisplayType(false);
                 field.onChange(e);
@@ -218,13 +238,26 @@ export default function BookingIndexForm() {
         />
         {errors.service && <p className="text-red-600">{errors.service.message}</p>} 
       </div>
-          <button
-            type='submit'
-        className='bg-blue-600 w-[43%] mx-auto text-[12px] md:font-bold md:text-md text-white hover:text-gray-600 hover:bg-blue-700 p-2 rounded-lg'
-              disabled={loading}
-            >
-        {loading ? 'Loading...': 'Proceed' }
-      </button>
+      <div className='w-[95%] flex gap-4'>
+        <button
+          type='button' // Change the type to "button"
+          name='submitButton1'
+          className='bg-blue-300 w-[43%] mx-auto text-[12px] md:font-bold md:text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg'
+          disabled={loading1}
+          onClick={handleButtonClick} // Handle button click
+        >
+          {loading1 ? 'Loading...' : 'Book Online'}
+        </button>
+        <button
+          type='button' // Change the type to "button"
+          name='submitButton2'
+          className='bg-blue-300 w-[43%] mx-auto text-[12px] md:font-bold md:text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg'
+          disabled={loading}
+          onClick={handleButtonClick} // Handle button click
+        >
+          {loading ? 'Loading...' : 'Speak With Our Agent'}
+        </button>
+      </div>
   
          </form>
       

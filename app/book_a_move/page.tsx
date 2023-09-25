@@ -32,7 +32,7 @@ export default function Booking() {
   )
 
   const rightContent = (
-    <div className="p-1  lg:px-4 w-full mx-auto my-auto ">
+    <div className="p-1  lg:px-4 w-full mx-auto">
       <BookingIndexForm/>
     </div>
   )
@@ -42,7 +42,7 @@ export default function Booking() {
     <BookingLayout
       leftContent={leftContent}
       rightContent={rightContent}
-      stepDescription="Let's Get Started With Your Move"
+      stepDescription="Let's Get Started With Your Move 👋" 
      />
   </>
  )

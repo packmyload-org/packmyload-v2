@@ -31,6 +31,11 @@
     background-size: cover;
   }
 }
+.contact-bg {
+    background-image: url('/images/hero-img.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 .box-widget-item .list-single-tags a:hover, .gradient-bg, .list-single-header-cat a, .listing-geodir-category, .nav-holder nav li a::before {
   background: -webkit-linear-gradient(top, rgb(62, 170, 253), rgb(73, 206, 255));
 }
