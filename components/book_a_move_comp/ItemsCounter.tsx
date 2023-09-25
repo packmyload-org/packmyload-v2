@@ -8,8 +8,16 @@ interface ItemsProps {
 }
 
 const ItemsCounter: React.FC<ItemsProps> = ({ title, volume }) => {
-  const [countItem, setCountItem] = useState<number>(0);
   const { state: bookingFormState, dispatch: bookingFormDispatch } = useBookingForm();
+    // Initialize local count from global state
+  const initialCount = bookingFormState.items.reduce((count, item) => {
+    if (item.item === title) {
+      return parseInt(item.numberOfItems, 10);
+    }
+    return count;
+  }, 0);
+  const [countItem, setCountItem] = useState<number>(initialCount);
+
   console.log(bookingFormState)
     const increaseCountItem = () => {
     setCountItem((countItem) => countItem + 1);
@@ -76,7 +84,7 @@ const ItemsCounter: React.FC<ItemsProps> = ({ title, volume }) => {
     countItem === 0 ?
     <PlusCircle size={32} color="#444646" weight="fill" onClick={increaseCountItem} className='cursor-pointer' />
     :
-    <div className="bg-blue-500 text-white gap-4 flex justify-between shadow-md p-2 rounded-xl min-h-max">
+    <div className="bg-blue-500 text-white gap-2 flex justify-between shadow-md p-2 rounded-xl min-h-max">
       <Minus size={15} className='mt-1 cursor-pointer' color="white" type='button' onClick={decreaseCountItem} />
       {countItem}
       <Plus size={15} className='mt-1 cursor-pointer' color="white" type='button' onClick={increaseCountItem} />
@@ -84,7 +92,7 @@ const ItemsCounter: React.FC<ItemsProps> = ({ title, volume }) => {
   );
 
   return (
-    <div className="bg-blue-200 flex justify-between items-center rounded-md shadow-md p-3 w-[45%] mx-auto md:w-[200px] min-w-[140px]">
+    <div className="bg-blue-200 flex justify-center items-center rounded-md shadow-md p-3 w-[80%] sm:w-full mx-auto lg:w-[210px] min-w-[140px]">
       <p className="text-[16px] w-full" title={title}>{title}</p>
       {counterButtons}
     </div>

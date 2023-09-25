@@ -3,13 +3,7 @@ import Image from 'next/image';
 export default function Next_Page() {
  const leftContent = (
    <div className="p-1 lg:px-4 my-auto h-[45vh] w-full contact-bg">
-     {/* <Image 
-        src='/images/hero-img.jpg'
-        alt='Page background image'
-         width={100}
-        height={80}
-        className='w-full h-[45vh]'
-      /> */}
+   
     </div>
  )
   const rightContent = (
