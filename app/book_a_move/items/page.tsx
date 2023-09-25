@@ -56,10 +56,10 @@ export default function Page() {
       <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px]  font-black text-md text-white  hover:bg-white p-2 rounded-lg hover:text-blue-300' onClick={()=>router.push('/book_a_move')}>
           GO BACK
         </div>
-          <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px]  font-black text-md text-blue-300 hover:bg-white p-2 rounded-lg' onClick={()=>router.push('/book_a_move/locations-details')}>Proceed
+          <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px]  font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={()=>router.push('/book_a_move/locations-details')}>Proceed
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
       </div>
   )
   
@@ -75,7 +75,8 @@ export default function Page() {
       "Discover Move Magic: Craft your perfect move by choosing items from various rooms. Mix and match to create a moving symphony tailored just for you!"
       leftContent={leftContent}
       rightContent={rightContent}
-      prev='/book_a_move' />
+      prev='/book_a_move'
+    />
   );
 }
 

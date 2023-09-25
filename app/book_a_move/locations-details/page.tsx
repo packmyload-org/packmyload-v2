@@ -1,31 +1,31 @@
 "use client"
 import LocationServiceForm from "@/components/book_a_move_comp/LocationServiceForm"
 import { useBookingForm } from "@/context/BookingFormContext"
-import Link from "next/link"
-
+import {useRouter} from 'next/navigation'
+import { BookingLayout } from "../BookingLayout"
 export default function Location_Details(){
-const {state}=useBookingForm()
-    return (
-        <>
-            <section className="mt-10 mb-4 space-y-3">
-                <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 ">
-                    {/* Your items go here */}
-                    <div className="p-3  sm:px-[7rem] lg:px-5">
-                        <LocationServiceForm title={"Your Start Location"} location={state.pickUp} />
+    const { state } = useBookingForm()
+    const router = useRouter()
+    const leftContent = (
+        <div className="p-3 sm:px-5">
+            <LocationServiceForm title={"Your Start Location"} location={state.pickUp} />
+        </div>
+    )
+    const rightContent = (
+        <div className="p-3 sm:px-5 my-auto max-w-[200rem] mx-auto lg:fixed lg:bottom-6">
+            <LocationServiceForm title={"Your End Location"} location={state.destination} />
+                {/* <div className=' w-1/2 mx-auto flex'>
+                    <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px]  font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={() => router.push('/book_a_move/checkout')}>
+                        Proceed
                     </div>
-                    <div className="p-3  sm:px-[7rem] lg:px-5">
-                        <LocationServiceForm title={"Your End Location"} location={state.destination} />
-                    </div>
-                </div>
-                <div className=' w-1/2 mx-auto flex'>
-                    <div className='bg-blue-800 mx-auto text-center w-[160px]  font-bold text-md text-gray-600 hover:text-gray-100 hover:bg-red-500 p-2 rounded-lg'>
-                        <Link href={'/book_a_move/items'}>GO BACK</Link>
-                    </div>
-                    <div className='bg-blue-600 mx-auto text-center w-[160px]  font-bold text-md text-gray-600 hover:text-gray-100 hover:bg-blue-300 p-2 rounded-lg'>
-                        <Link href={'/book_a_move/checkout'}>Proceed</Link>
-                    </div>
-                </div>
-            </section>
-        </>
+                </div> */}
+        </div>
+    )
+    return(
+    <BookingLayout
+        leftContent={leftContent}
+        rightContent={rightContent}
+        stepDescription='Almost Done.'
+        />
     )
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Buildings, SquareHalf, Elevator, Car } from "@phosphor-icons/react";
 import { serviceFor } from "@/utils/data"
 import { useBookingForm } from "@/context/BookingFormContext";
@@ -10,31 +10,40 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
 
     const [activeButton, setActiveButton] = useState<string>('');
     const { state, dispatch } = useBookingForm()
+    const [flip,setFlip] = useState(false)
      const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
-  };
+    };
+    useEffect(() => {
+        if (state.buildingType === "Bungalow") {
+            setFlip(true)
+        }
+        setFlip(false)
+    },[state.buildingType])
     return (
-        <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
+        <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md w-full">
             <p className="text-2xl font-bold text-gray-900">{title}</p><br />
             <p className="text-lg">{location}</p>
-            <div className="flex items-center mt-10" style={{width: 'fit-content'}}>
-                <div className="bg-slate-50 rounded-full p-2">
-                    <Buildings size={32} color="#5bc7dc" />
+            <div className="flex justify-between mt-10">
+                <div className='flex items-center'>
+                    <div className="bg-slate-50 rounded-full p-2">
+                        <Buildings size={32} color="#5bc7dc" />
+                    </div>
+                    <div className="ml-2 text-lg">                   
+                        Building Type
+                    </div>
                 </div>
-                <div className="ml-2 text-lg">                   
-                    Building Type
-                </div>
+                <select name="category" id="" className='w-[55%] mt-3 p-3 px-0 border border-white rounded-md bg-slate-100 outline-none'>
+                <option value="" hidden>Service For</option>
+                {serviceFor.map(item => <option
+                    value={item.label}
+                    key={item.key}
+                    onClick={()=>handleFieldChange('buildingType', item.label)}
+                    >
+                    {item.label}
+                    </option>)}
+                </select>
             </div>
-            <select name="category" id="" className='w-full mt-3 p-3 px-0 border border-white rounded-md bg-slate-100 outline-none'>
-               <option value="" hidden>Service For</option>
-               {serviceFor.map(item => <option
-                   value={item.label}
-                   key={item.key}
-                   onClick={()=>handleFieldChange('buildingType', item.label)}
-                 >
-                   {item.label}
-                </option>)}
-            </select>
             {/* <div className="flex justify-between mt-3" >
                 <div className="flex items-center">
                     <div className="bg-slate-50 rounded-full p-2">
@@ -54,7 +63,9 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                     />
                 </div>
             </div> */}
-            <div className="flex justify-between mt-3" >
+            {
+                !flip &&
+                <div className="flex justify-between mt-3" >
                 <div className="flex items-center">
                     <div className="bg-slate-50 rounded-full p-2">
                         <Elevator size={32} color="#5bc7dc" />
@@ -75,7 +86,8 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location}) => {
                     required
                     />
                 </div>
-            </div>
+                </div>
+            }
             <div className="flex justify-between mt-3" >
                 <div className="flex items-center">
                     <div className="bg-slate-50 rounded-full p-2">
