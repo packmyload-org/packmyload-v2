@@ -1,4 +1,5 @@
-import BookingProgress from "@/components/book_a_move_comp/BookingProgress"
+// import BookingProgress from "@/components/book_a_move_comp/BookingProgress"
+import { BookingProgress } from './BookingProgress'
 import Image from 'next/image'
 import Link from "next/link"
 import {IoChevronBackCircleOutline} from 'react-icons/io5'
@@ -31,8 +32,12 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
                     </Link>
 
                     <div className="mt-10 space-y-6">
+                        <div className="p-2">
 
+                        <p className='text-base text-blue-300 font-bold'>Your steps</p>
+                        <br />
                         <BookingProgress />
+                        </div>
                         <div className="py-4 px-2 space-y-4">
                         <h1 className="text-3xl font-black text-blue-300">{stepDescription}</h1>
                         {/* Render left content */}
