@@ -38,12 +38,12 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
  };
   return (
     <DatePicker
-      className='w-full outline-none cursor-pointer custom_placeholder bg-white '
+      className='w-full outline-none cursor-pointer custom_placeholder bg-white text-gray-900 placeholder-blue-300 '
       suffixIcon={<Calendar color='#2E5F9E' size={30} weight='duotone'/>}
       bordered={false}
       picker='date'
       showToday={false}
-      placeholder='Move Date'
+      placeholder='Moving Date'
       disabledDate={disabledDate}
       open={calendarVisible}
       inputReadOnly={true}
