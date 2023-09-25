@@ -5,7 +5,7 @@ export const AdSection: React.FC = () => {
 const router =useRouter()
     return (
         <section 
-            className="bg-[#2E5F9E] w-[100%]  p-4 bg-[url('/images/bg/shapes-big-new.png')] "
+            className="bg-[#2E5F9E] w-[100%]  p-1 bg-[url('/images/bg/shapes-big-new.png')] "
         >
             <div 
                 className={`max-w-6xl mx-auto flex flex-col md:flex-row p-1 md:p-11 justify-evenly`}
@@ -26,9 +26,9 @@ const router =useRouter()
                         Get Estimate
                     </button>
                 </section>
-                <section className='flex flex-col items-center'>
+                <section className='flex flex-col items-center md:mt-8'>
                     <Image 
-                        src={"/images/packman-ad.png"}
+                        src={"/images/packman-ad 2.png"}
                         width={300}
                         height={300}
                         alt='packman'

@@ -12,7 +12,7 @@ const PackSection: React.FC = () => {
     };
 
     return (
-        <section className='bg-[#F9F9F9] w-full'>
+        <section className='bg-[#E7E7E7] w-full'>
 
             <div className="grid grid-cols-1 p-2 lg:p-8 md:grid-cols-2 max-w-6xl mx-auto gap-[40px] mt-8">
                 {/* First Card */}

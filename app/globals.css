@@ -47,7 +47,8 @@
 .ant-picker-input 
 input::placeholder{
     color: #2E5F9E;
-    font-size: 600;
+    font-size: 200;
+    font-weight: 600;
 }
 
 .main {
