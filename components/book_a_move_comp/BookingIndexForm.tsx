@@ -221,7 +221,7 @@ export default function BookingIndexForm() {
           render={({ field }) => (
             <select
               {...field}
-              className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full px-0 rounded-full bg-white outline-none ring-blue-300 focus:ring-2'
+              className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full rounded-full bg-white outline-none ring-blue-300 focus:ring-2'
               onChange={(e) => {
                 e.target.value.includes('HOME RELOCATIONS') ? setDisplayType(true) : setDisplayType(false);
                 field.onChange(e);
@@ -238,7 +238,7 @@ export default function BookingIndexForm() {
         />
         {errors.service && <p className="text-red-600">{errors.service.message}</p>} 
       </div>
-      <div className='w-[95%] flex gap-4'>
+      <div className='w-[95%] flex gap-4 mt-3'>
         <button
           type='button' // Change the type to "button"
           name='submitButton1'
