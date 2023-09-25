@@ -3,44 +3,36 @@
 import Map from "@/components/Map"
 import BookingIndexForm from "@/components/book_a_move_comp/BookingIndexForm"
 import { BookingLayout } from "./BookingLayout"
+import { DisplayUpperFormDetails } from "@/components/book_a_move_comp/DisplayUpperFormDetails"
 import { useBookingForm } from "@/context/BookingFormContext"
+import { useEffect, useState } from "react"
 
 export default function Booking() {
-  const {state}=useBookingForm()
+  const { state } = useBookingForm()
+  const {pickUp,destination,moveDate,moveTime}= state
+  const [displayDetails, setDisplayDetails] = useState(false)
+  
+  useEffect(() => {
+    if (pickUp !== '' || 
+      destination !== '' ||
+      moveDate !== '' ||
+      moveTime !== ''
+    ) {
+      return setDisplayDetails(true)
+    }
+  },[pickUp,destination,moveDate,moveTime])
   const leftContent = (
-    <div className="p-2 sm:px-[7rem] lg:px-0 "> 
+    <div className="p-1 lg:px-4 "> 
       <Map />
       {
-        state.pickUp !== '' ||
-        state.destination !== '' ||
-        state.moveDate !== '' ||
-        state.moveTime !== ''
-      &&
-        <div className="flex flex-wrap gap-3 h-[20vh] w-full">
-            <div className="m-auto flex flex-col gap-1 items-start">
-              <label className="text-md text-blue-300 font-medium" htmlFor="MovingFrom">Moving From </label>
-              <p className="text-blue-300 text-lg">{state.pickUp}</p>
-            </div>
-            <div className="m-auto flex flex-col gap-1 items-start">
-              <label className="text-md text-blue-300 font-medium" htmlFor="MovingTo">Moving To</label>
-            <p className="text-blue-300 text-lg">{state.destination}</p>
-
-            </div>
-            <div className="m-auto flex flex-col gap-1 items-start">
-              <label className="text-md text-blue-300 font-medium" htmlFor="MovingFrom">Date </label>
-            <p className="text-blue-300 text-lg">{state.moveDate}</p>
-          </div>
-          <div className="m-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-blue-300 font-medium" htmlFor="MovingFrom">Time</label>
-            <p className="text-blue-300 text-lg">{state.moveTime}</p>
-          </div>
-        </div>
-          }
+        displayDetails && 
+      <DisplayUpperFormDetails />
+      }
     </div>
   )
 
   const rightContent = (
-    <div className="p-2 sm:px-[7rem] lg:px-0 w-full lg:w-[90%] mx-auto my-auto ">
+    <div className="p-1  lg:px-4 w-full mx-auto my-auto ">
       <BookingIndexForm/>
     </div>
   )
