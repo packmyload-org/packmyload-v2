@@ -18,7 +18,7 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
     return (
         <div className="flex flex-col md:flex-row gap-4">
             {/* Left section */}
-            <aside className="md:w-[50%] bg-[#f7f6f6] p-4 h-auto sm:h-auto lg:h-[100vh] overflow-hidden">
+            <aside className="md:w-[50%] bg-[#f7f6f6] p-4 h-auto sm:h-auto lg:h-[100vh] overflow-y-scroll scrollbar-hide">
                 <main className="lg:max-w-3xl lg:mx-auto">
 
                     <Link href={'/'}>
