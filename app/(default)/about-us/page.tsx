@@ -2,31 +2,55 @@ import { Col, Row, Card, Button, Rate } from 'antd';
 import React from 'react';
 import aboutdata from './about-us.json';
 import Link from 'next/link';
-interface About{
-  title: string;
-  description: string;
-}
-const AboutCard = ({ title, description }: About) => (
-  <Col xs={24} sm={12} md={8} lg={6} className="mb-7">
-    <Card
-      title={title}
-      className="w-full md:w-[300px] lg:w-[300px] sm:w-[90%] bg-[#F4F3F0]"
-      style={topBorderStyle}
-    >
-      <p>{description}</p>
-      <div className="learn-more-link">
-        <Link href="/learn_more" passHref>
-          <h1>Learn more {'<'}</h1>
-        </Link>
-      </div>
-    </Card>
-  </Col>
-);
 
-const topBorderStyle = {
-  borderTop: '8px solid #43BCFE',
-  borderBottomRightRadius: '70px',
-};
+
+interface About {
+  title: string,
+  description: string,
+  icon: any,
+
+ }
+ const AboutCard = ({ title, description }: About) => (
+  
+    <div className='flex flex-col sm:space-y-4 items-center lg:items-start w-full min-w-[230px] py-4 border-b-[0.3px]'>
+     <div className='w-full flex gap-2 items-center justify-center lg:justify-start'>
+        <figure className='p-2 md:p-3 bg-[#f9f9f9] rounded-lg'>
+         
+        </figure>
+        <h2 className='font-bold text-base md:text-xl text-[#2E5F9E]'>{title}</h2>
+     </div>
+     <div className='bg-blue-100 rounded py-[1px] w-[60px] mt-2' />
+      <p className='text-[#777674] text-center lg:text-left text-sm w-4/5 mt-2'>{description}</p>
+     </div>
+   
+ )
+
+
+// interface About{
+//   title: string;
+//   description: string;
+// }
+// const AboutCard = ({ title, description }: About) => (
+//   <Col xs={24} sm={12} md={8} lg={6} className="mb-7">
+//     <Card
+//       title={title}
+//       className="w-full md:w-[300px] lg:w-[300px] sm:w-[90%] bg-[#F4F3F0]"
+//       style={topBorderStyle}
+//     >
+//       <p>{description}</p>
+//       <div className="learn-more-link">
+//         <Link href="/learn_more" passHref>
+//           <h1>Learn more {'<'}</h1>
+//         </Link>
+//       </div>
+//     </Card>
+//   </Col>
+// );
+
+// const topBorderStyle = {
+//   borderTop: '8px solid #43BCFE',
+//   borderBottomRightRadius: '70px',
+// };
 
 
 export default function Home() {
@@ -72,7 +96,8 @@ export default function Home() {
           <div className='pt-14'>
             <h1 className="text-3xl font-bold">Learn more about PackMyLoad below</h1>
           </div>
-          <div className=" mx-auto  grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none pt-10">
+          <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center p-2 sm:px-2'>
+     
             {aboutdata.map((item, index) => (
               <AboutCard key={index} title={item.title} description={item.description} />
             ))}
