@@ -5,6 +5,7 @@ import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react
 import { Table, Col } from "antd";
 import { useEffect, useState } from "react";
 import { useRouter, redirect } from 'next/navigation';
+import { BookingLayout } from "../BookingLayout";
 export default function Checkout() {
     const {state}=useBookingForm()
     const [currentPage, setCurrentPage] = useState(1);
@@ -54,10 +55,9 @@ export default function Checkout() {
             return redirect('/book_a_move/locations-details')
         }
     })
-    return(
-        <>
-            <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">
-            {/* Section 1 */}
+    const leftContent = (
+        <div>
+               {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
                     <h1 className="text-2xl font-bold">{state.firstName}{"'s "}Move</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
@@ -165,7 +165,11 @@ export default function Checkout() {
                         </div>
                     </div>
                 </div>
-                {/* Section 2 */}
+        </div>
+    )
+const rightContent=(
+            <div>
+                 {/* Section 2 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
                     {/* Move Items Table */}
 
@@ -223,7 +227,7 @@ export default function Checkout() {
                     </div>
                 </Col>
                 </div>
-            </div>
-        </>
+        </div>
     )
+    return <BookingLayout leftContent={leftContent} rightContent={rightContent} />
 }

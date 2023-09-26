@@ -214,7 +214,7 @@ export default function BookingIndexForm() {
           {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber.message}</p>} 
         </div>
       </div>
-      <div className="w-[98%] md:w-[90%] mx-auto pt-3 flex flex-col items-start">
+      <div className="w-[98%] md:w-[90%] mx-auto  flex flex-col items-start">
         <label className="text-md text-gray-800 font-semibold" htmlFor="service">Service <span className='text-red-600'>*</span></label>
         <Controller
           name='service'
@@ -239,7 +239,7 @@ export default function BookingIndexForm() {
         />
         {errors.service && <p className="text-red-600">{errors.service.message}</p>} 
       </div>
-      <div className='w-[95%] flex gap-4 mt-3'>
+      <div className='w-[95%] flex gap-4 mt-3 pt-4'>
         <button
           type='button' // Change the type to "button"
           name='submitButton1'
