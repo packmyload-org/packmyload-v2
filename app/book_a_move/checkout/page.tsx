@@ -3,7 +3,8 @@ import { useBookingForm } from "@/context/BookingFormContext";
 import { sumVolume } from "@/utils/helpers";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
 import { Table, Col } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter, redirect } from 'next/navigation';
 export default function Checkout() {
     const {state}=useBookingForm()
     const [currentPage, setCurrentPage] = useState(1);
@@ -36,6 +37,23 @@ export default function Checkout() {
     onChange: handleChangePage,
   };
     const volume = sumVolume(state.items)
+    
+    useEffect(() => {
+        if (
+            state.buildingTypeEnd === '' ||
+            state.buildingTypeStart === '' ||
+            state.firstName === '' ||
+            state.lastName === '' ||
+            state.destination === '' ||
+            state.email === '' ||
+            state.service === '' ||
+            state.moveDate === '' ||
+            state.moveTime === '' ||
+            state.pickUp === ''
+        ){
+            return redirect('/book_a_move/locations-details')
+        }
+    })
     return(
         <>
             <div className="grid grid-cols-1 md:p-0 p-4 md:grid-cols-2 max-w-6xl mx-auto gap-4 mt-8">

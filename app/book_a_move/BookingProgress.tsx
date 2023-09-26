@@ -33,21 +33,21 @@ export const BookingProgress: React.FC = () => {
     const {state} = useBookingForm()
 
     useEffect(() => {
-        if([state.firstName, state.lastName, state.email,state.pickUp,state.destination, state.phoneNumber].every(Boolean)){
+        if([state.firstName !== '', state.lastName !== '', state.email !== '',state.pickUp !== '',state.destination !== '', state.phoneNumber !== ''].every(Boolean)){
             progressLinks.map(item => {
                 if(item.id === 2){
                     return {...item, disabled: false}
                 }
             })
         }
-        if(state.items.length){
+        if(state.items.length !== null){
             progressLinks.map(item => {
                 if(item.id === 3){
                     return {...item, disabled: false}
                 }
             })
         }
-        if(state.buildingType){
+        if(state.buildingTypeStart !== '' && state.buildingTypeEnd !== ''){
             progressLinks.map(item => {
                 if(item.id === 4){
                     return {...item, disabled: false}
@@ -55,7 +55,7 @@ export const BookingProgress: React.FC = () => {
             })
         }
 
-    },[pathName])
+    },[pathName, state])
 
     return (
         <div className="flex gap-2 flex-wrap">
@@ -63,7 +63,7 @@ export const BookingProgress: React.FC = () => {
                 <button 
                     key={step.id}
                     className={
-                        `w-[40px] h-[8px] rounded-md ${!step.disabled ? 'bg-blue-300' : 'bg-slate-300'}`
+                        `w-[40px] cursor-pointer h-[8px] rounded-md ${!step.disabled ? 'bg-blue-300' : 'bg-slate-300'}`
                     }
                     onClick={() => router.push(step.to)}
                     disabled = {step.disabled}

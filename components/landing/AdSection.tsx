@@ -28,7 +28,7 @@ const router =useRouter()
                 </section>
                 <section className='flex flex-col items-center md:mt-8'>
                     <Image 
-                        src={"/images/packman-ad 2.png"}
+                        src={"/images/packman.png"}
                         width={300}
                         height={300}
                         alt='packman'

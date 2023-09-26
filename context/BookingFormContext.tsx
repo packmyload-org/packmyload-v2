@@ -1,5 +1,4 @@
 'use client'
-import dayjs from 'dayjs';
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 // Define the form state interface
@@ -20,7 +19,8 @@ interface BookingFormState {
     price: number;
     volume: number;
   }>;
-  buildingType: string;
+  buildingTypeStart: string;
+  buildingTypeEnd: string;
   floorsStart: string;
   floorsEnd: string;
   parkingStart: string;
@@ -49,7 +49,8 @@ const initialFormState: BookingFormState = {
   phoneNumber: '',
   moveType: 'Item Pick Up and Furniture Delivery',
   items: [],
-  buildingType: '',
+  buildingTypeStart: '',
+  buildingTypeEnd: '',
   floorsStart: '',
   floorsEnd: '',
   parkingStart: '',

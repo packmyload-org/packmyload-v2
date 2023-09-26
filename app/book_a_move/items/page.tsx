@@ -31,7 +31,7 @@ export default function Page() {
       <input
         type='text'
         placeholder='Search '
-        className='w-[300px] outline-none p-2 h-10 input_shadow border-2 placeholder-blue-800 border-blue-300 rounded-lg bg-blue-200'
+        className='w-[300px] outline-none p-2 h-10 shadow-black shadow-md border-2 placeholder-blue-800 border-blue-300 rounded-lg bg-blue-200'
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
@@ -46,7 +46,7 @@ export default function Page() {
             />
           ))}
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-2 w-full pt-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-2 w-full pt-4'>
           {filteredItems.map((item, index) => (
             <ItemsCounter key={item.item} title={item.item} volume={item.volume} />
           ))}
@@ -64,7 +64,7 @@ export default function Page() {
   )
   
    const leftContent = (
-   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full contact-bg">
+   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full items-bg bg-contain">
     
     </div>
  )
