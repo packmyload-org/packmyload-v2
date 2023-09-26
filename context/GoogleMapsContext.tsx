@@ -27,10 +27,10 @@ export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children 
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
   const [isLoaded, setIsLoaded] = useState(false); // State for loading status
   const [loadError, setLoadError] = useState(false); // State for load error
-
+  console.log(apiKey)
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=${libraries.join(',')}`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=${'places'}`;
     script.async = true;
     script.id = 'google-maps-script'; // Add an id to the script element
 
@@ -39,6 +39,7 @@ export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children 
     };
 
     script.onerror = () => {
+      console.log(script.onerror)
       setLoadError(true); // Error occurred during Google Maps load
     };
 

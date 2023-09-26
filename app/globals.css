@@ -32,9 +32,9 @@
   }
 }
 .contact-bg {
-    background-image: url('/images/hero-img.jpg');
+    background-image: url('/images/contact-info.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: fill;
     background-position: center;
   }
 .box-widget-item .list-single-tags a:hover, .gradient-bg, .list-single-header-cat a, .listing-geodir-category, .nav-holder nav li a::before {
@@ -76,11 +76,6 @@ footer.main-footer {
 .clearfix{
   padding-bottom: 10px;
   border-bottom: 1px dashed #ffffff36;
-}
-.svg_fix{
-  path {
-    fill: #4bcbfe;
-  }
 }
 
 .dark-footer {
