@@ -7,7 +7,7 @@ import Link from 'next/link';
 interface About {
   title: string,
   description: string,
-  icon: any,
+  icon?: any,
 
  }
  const AboutCard = ({ title, description }: About) => (
@@ -99,7 +99,7 @@ export default function Home() {
           <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center p-2 sm:px-2'>
      
             {aboutdata.map((item, index) => (
-              <AboutCard key={index} title={item.title} description={item.description} />
+              <AboutCard key={index} title={item.title} description={item.description}  />
             ))}
           </div>
         </div>
