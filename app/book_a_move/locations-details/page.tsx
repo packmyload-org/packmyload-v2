@@ -16,10 +16,15 @@ export default function Location_Details(){
     )
     const textDescription = "Let's dive into move location specifics!";
 
+      const leftContent = (
+   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full location-bg bg-contain">
+    
+    </div>
+    )
     return(
     <BookingLayout
         rightContent={rightContent}
-        stepDescription='Almost Done.👏' 
+        stepDescription='Almost Done.👏'    leftContent={leftContent}
         textDescription={textDescription}
         prev="/book_a_move/items"
         />

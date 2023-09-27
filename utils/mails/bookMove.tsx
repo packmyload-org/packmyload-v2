@@ -1,4 +1,32 @@
-<!DOCTYPE html
+interface EmailTemplateData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  moveDate: string;
+  pickUp: string;
+  destination: string;
+  moveTime: string;
+  phoneNumber: string;
+  items: Array<{
+    item: string;
+    numberOfItems: string;
+  }>;
+  volume: number;
+  totalPrice: number;
+  service: string;
+  countryCode: string;
+}
+
+export default function BookEmailTemplate(data: EmailTemplateData) {
+ const { firstName, lastName, email, moveDate, pickUp, destination, moveTime, phoneNumber, items, volume, totalPrice, service, countryCode } = data
+ let mapItems = items.map(item => {
+  return <p
+   style={{ fontSize: '14px', lineHeight: 1.2, wordBreak: 'break-word', textAlign: 'center', margin: 0 }}>
+   {item.item}</p>
+ })
+ let name = firstName + ' ' + lastName;
+ 
+ return (`  <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
@@ -582,7 +610,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{name}}</p>
+                    ${name}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -688,7 +716,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{emailaddress}}</p>
+                    ${email}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -794,7 +822,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{phonenumber}}</p>
+                    ${countryCode} ${phoneNumber}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -875,8 +903,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                    How
-                    will you like to be contacted?</p>
+                    Service Needed</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -901,7 +928,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{howcontact}}</p>
+                    ${service}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -982,8 +1009,8 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                    How
-                    may we help you</p>
+                    Date & Time you want to Move
+                  </p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1008,7 +1035,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{move}} {{pack}}</p>
+                    ${moveDate} ${moveTime}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1089,8 +1116,8 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                    Are
-                    this services for a home or business?</p>
+                    What address are you moving to?
+                  </p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1115,7 +1142,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{home}} {{business}}</p>
+                    ${destination}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1221,7 +1248,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{startaddress}}</p>
+                    ${pickUp}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1302,8 +1329,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                    How
-                    big is your space?</p>
+                    What is the approximate Volume we will be moving?</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1328,7 +1354,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{size}} sqm</p>
+                    ${volume}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1409,7 +1435,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                    When will you need us?</p>
+                    Approximated Move Fee</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1434,7 +1460,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{size}} sqm</p>
+                    ₦ ${totalPrice}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1515,8 +1541,7 @@
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
-                    Do
-                    you have any Concerns?</p>
+                    What items do you need us to help move ?</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1539,9 +1564,7 @@
                 style="color:#393d47;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:5px;padding-bottom:10px;padding-left:5px;">
                 <div class="txtTinyMce-wrapper"
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                  <p
-                    style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
-                    {{size}} sqm</p>
+                  ${mapItems}
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1669,9 +1692,9 @@
                   style="line-height: 1.5; font-size: 12px; color: #44464a; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 18px;">
                   <p
                     style="font-size: 14px; line-height: 1.5; word-break: break-word; text-align: center; mso-line-height-alt: 21px; margin: 0;">
-                    Integer eget nibh vel massa gravida ullamcorper. Sed a viverra ante. Nullam posuere pellentesque
-                    lectus, nec
-                    vehicula felis rutrum ac. Maecenas porta facilisis turpis, eget imperdiet purus.</p>
+                    <b>P.S</b> Moving fee can chang due to some reasons or items not covered by us, click <span><a
+                        href="tel:+2347007225776">here</a></span> to call our customer care for more assistance
+                  </p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1781,3 +1804,5 @@
 </body>
 
 </html>
+ `)
+}

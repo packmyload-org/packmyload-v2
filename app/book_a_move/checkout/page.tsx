@@ -1,14 +1,16 @@
 "use client";
 import { useBookingForm } from "@/context/BookingFormContext";
-import { sumVolume } from "@/utils/helpers";
+import { sumItemPrices, sumVolume } from "@/utils/helpers";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
-import { Table, Col } from "antd";
+import { Table, Col, Spin } from "antd";
 import { useEffect, useState } from "react";
-import { useRouter, redirect } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import { BookingLayout } from "../BookingLayout";
+import { alerts } from "@/components/alerts/Alert";
 export default function Checkout() {
-    const {state}=useBookingForm()
+    const {state, dispatch}=useBookingForm()
     const [currentPage, setCurrentPage] = useState(1);
+    const [loading, setLoading]= useState(false)
     const columns = [
   {
     title: 'Items',
@@ -29,6 +31,9 @@ export default function Checkout() {
 
   const handleChangePage = (page: number) => {
     setCurrentPage(page);
+    };
+    const handleFieldChange = (field: string, value: boolean) => {
+    dispatch({ type: 'UPDATE_FIELD', field, value });
   };
 
   const pagination = {
@@ -36,7 +41,8 @@ export default function Checkout() {
     pageSize: 5, 
     total: state.items.length,
     onChange: handleChangePage,
-  };
+};
+    const totalPrice = sumItemPrices(state.items);
     const volume = sumVolume(state.items)
     
     useEffect(() => {
@@ -55,8 +61,55 @@ export default function Checkout() {
             return redirect('/book_a_move/locations-details')
         }
     })
-
+    const handleMailQuote = async() => { 
+        console.log('mail quote', state.acceptedTerms)
+        if (!state.acceptedTerms) {
+            return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
+        } 
+        setLoading
+        const data = {
+            firstName: state.firstName,
+            lastName: state.lastName,
+            email: state.email,
+            phoneNumber: state.phoneNumber,
+            countryCode: state.countryCode,
+            destination: state.destination,
+            pickUp: state.pickUp,
+            contactBy: state.contactBy,
+            service: state.service,
+            moveDate: state.moveDate,
+            moveTime: state.moveTime,
+            items: state.items,
+            buildingTypeStart: state.buildingTypeStart,
+            buildingTypeEnd: state.buildingTypeEnd,
+            distance: state.distance,
+            volume: volume,
+            totalPrice: totalPrice
+        }
+        try {
+            const res = await fetch('/api/booking', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(data)
+            })
+            if (res.ok) {
+                alerts.success('Success', 'Mail was sent successfully.')
+                setLoading(false)
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+    const handlePaymentGateway = () => { 
+        console.log('mail quote', state.acceptedTerms)
+         if (!state.acceptedTerms) {
+            return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
+        }
+    }
 const rightContent=(
+        <Spin spinning={loading} delay={500}>
             <div>
                 {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
@@ -198,7 +251,7 @@ const rightContent=(
                             Total
                         </div> 
                         <div className="mt-1 text-sm flex">                   
-                            <CurrencyNgn size={20} color="#444646" /> 0.00    
+                    <CurrencyNgn size={20} color="#444646" /> {totalPrice}  
                         </div>
                     </div>
 
@@ -206,26 +259,41 @@ const rightContent=(
 
                 <Col span={24} className="space-y-4">
                     <div className="flex w-full pt-3">
-                        <input type="checkbox" name="accepted-terms" className="mr-3 w-4" />
+                    <input
+                        type="checkbox"
+                        name="acceptedTerms"
+                        className="mr-3 w-4"
+                        checked={state.acceptedTerms}
+                        onChange={(e) => {
+                            const { name, checked } = e.target;
+                            handleFieldChange(name, checked);
+                                }}
+                    />
                         <p className="text-sm text-gray-800">
                             Confirm that you read and accept our <span><a href="/terms" className="text-sm text-gray-800 underline">terms and conditions</a></span> policy.
                         </p>
                     </div>
                     <div className="flex flex-row-reverse w-full justify-evenly">
                     <button
-                        className={`text-base font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-md font-semibold text-white  hover:bg-white hover:text-blue-300 px-4 py-2 rounded-md bg-blue-500`}
+                        onClick={handlePaymentGateway}
                     >
                         PROCEED TO CHECKOUT
                     </button>
                     <button
-                        className={`text-base font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-md font-semibold text-white hover:bg-white hover:text-blue-300 px-4 py-2 rounded-md bg-blue-500`}
+                        onClick={handleMailQuote}
                     >
                         MAIL ME MY QUOTE
                     </button>
                     </div>
                 </Col>
                 </div>
-        </div>
+            </div>
+        </Spin>
     )
-    return <BookingLayout stepDescription="Finalize your move 🏁" rightContent={rightContent} />
+    return <BookingLayout
+                stepDescription="Finalize your move"
+                rightContent={rightContent}
+    />
 }

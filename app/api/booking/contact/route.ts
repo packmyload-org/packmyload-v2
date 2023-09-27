@@ -1,7 +1,7 @@
 import { connectToDB } from '@/utils/database';
 import contactMe from '@/models/contactMe';
 import sendEmail from '@/utils/mailer';
-import EmailTemplate from '@/utils/contactMeTemp';
+import EmailTemplate from '@/utils/mails/contactMeTemp';
 export async function POST(request: Request) {
  await connectToDB();
  try {

@@ -53,7 +53,10 @@ const meSchema = new Schema<Move>({
     type: String,
     required: [true, 'Service is required']
   },
-  contactBy: String,
+  contactBy: {
+    type: String,
+    required: [true, 'Country By is required']
+  },
   countryCode: {
     type: String,
     required: [true, 'Country code is required']
