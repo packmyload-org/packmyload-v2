@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import {IoChevronBackCircleOutline, IoChevronForwardCircleOutline} from 'react-icons/io5'
 
 type BookingLayoutProps = {
-    leftContent: React.ReactNode,
+    leftContent?: React.ReactNode,
     rightContent: React.ReactNode,
     stepDescription?: string,
     textDescription?: string,
@@ -41,8 +41,8 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
                         <BookingProgress />
                         </div>
                         <div className="py-4 px-2 space-y-4">
-                        <h1 className="text-3xl font-black text-blue-300">{stepDescription}</h1>
-                        <p className="text-sm text-blue-300">{textDescription}</p>
+                        <h1 className="text-4xl font-black text-blue-300">{stepDescription}</h1>
+                        <p className="text-base text-blue-300">{textDescription}</p>
                         {/* Render left content */}
                         {leftContent}
                         </div>

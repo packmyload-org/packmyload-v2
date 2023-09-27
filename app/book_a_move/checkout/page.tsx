@@ -55,9 +55,10 @@ export default function Checkout() {
             return redirect('/book_a_move/locations-details')
         }
     })
-    const leftContent = (
-        <div>
-               {/* Section 1 */}
+
+const rightContent=(
+            <div>
+                {/* Section 1 */}
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
                     <h1 className="text-2xl font-bold">{state.firstName}{"'s "}Move</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
@@ -73,7 +74,7 @@ export default function Checkout() {
                         <div className="text-base min-w-max mr-5">                   
                             Pickup Location
                         </div>
-                        <div className="mt-1 text-sm">                   
+                        <div className="mt-1 text-sm w-[85%] mx-3">                   
                             {state.pickUp}
                         </div>
                     </div>
@@ -81,7 +82,7 @@ export default function Checkout() {
                         <div className="text-base min-w-max mr-5">                   
                             DropOff Location
                         </div>
-                        <div className="mt-1 text-sm">                   
+                        <div className="mt-1 text-sm w-[85%]">                   
                             {state.destination}
                         </div>
                     </div>
@@ -165,12 +166,9 @@ export default function Checkout() {
                         </div>
                     </div>
                 </div>
-        </div>
-    )
-const rightContent=(
-            <div>
+
                  {/* Section 2 */}
-                <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
+                <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md mt-4">
                     {/* Move Items Table */}
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
@@ -215,12 +213,12 @@ const rightContent=(
                     </div>
                     <div className="flex flex-row-reverse w-full justify-evenly">
                     <button
-                        className={`text-lg font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-base font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
                     >
                         PROCEED TO CHECKOUT
                     </button>
                     <button
-                        className={`text-lg font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-base font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
                     >
                         MAIL ME MY QUOTE
                     </button>
@@ -229,5 +227,5 @@ const rightContent=(
                 </div>
         </div>
     )
-    return <BookingLayout leftContent={leftContent} rightContent={rightContent} />
+    return <BookingLayout stepDescription="Finalize your move 🏁" rightContent={rightContent} />
 }

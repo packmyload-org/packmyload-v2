@@ -36,7 +36,7 @@ export default function Page() {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <div className='py-3 space-y-3 min-h-[50vh]'>
-        <div className='w-[90%] mx-auto md:w-full flex justify-between gap-4 pt-6 overflow-y-scroll scrollbar-hide'>
+        <div className='w-[90%] mx-auto md:w-full flex  justify-between gap-4 pt-6 overflow-y-scroll scrollbar-hide'>
           {data.map((category) => (
             <ItemsTabs
               key={category.categoryName}
@@ -46,7 +46,7 @@ export default function Page() {
             />
           ))}
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-2 w-full pt-4'>
+        <div className='flex flex-wrap gap-2 w-full pt-4'>
           {filteredItems.map((item, index) => (
             <ItemsCounter key={item.item} title={item.item} volume={item.volume} />
           ))}
