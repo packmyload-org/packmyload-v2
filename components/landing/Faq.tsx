@@ -16,7 +16,7 @@ export default function Faq() {
           <p>Check out our frequently asked questions.</p>
         </Col>
         <Col span={24} md={10} className='flex items-center text-start md:text-end justify-center min-h-[100px] '>
-            <Link className="join-wrap-btn bg-blue-700 focus:bg-blue-600" href='/faqs'>FAQs</Link>
+            <a  href='/faqs'className="join-wrap-btn bg-blue-700 focus:bg-blue-600 ">FAQs</a>
         </Col>
       </Row>
     </div>

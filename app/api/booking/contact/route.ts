@@ -1,14 +1,16 @@
 import { connectToDB } from '@/utils/database';
-import Move from '@/models/move';
+import contactMe from '@/models/contactMe';
 import sendEmail from '@/utils/mailer';
+import EmailTemplate from '@/utils/contactMeTemp';
 export async function POST(request: Request) {
  await connectToDB();
  try {
    const body = await request.json();
    
-    const move = new Move({...body});
+    const move = new contactMe({...body});
     await move.save();
-   await sendEmail(move.email, 'Welcome to the family!', `Hi ${move.lastName},\n\nThank you for your interest in becoming a partner. We will get back to you as soon as possible.\n\nBest regards,\n\nThe team at Packmyload.com`, `<p>Hi ${move.lastName},</p><p>Thank you for your interest in becoming a partner. We will get back to you as soon as possible. and contact u by ${move.contactBy}</p><p>Best regards,</p><p>The team at Packmyload.com</p>`)
+   const emailContent = EmailTemplate((move.firstName + " " + move.lastName), move.email, move.contactBy, move.countryCode + move.phoneNumber, move.pickUp, move.destination)
+   await sendEmail(move.email, 'Speak with agent details!', emailContent , emailContent)
     return new Response(JSON.stringify(move),{status:201})
   } catch (error) {
     return new Response("failed",{status:400})
