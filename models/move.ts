@@ -10,7 +10,6 @@ interface Move extends Document {
   destination: string;
   moveTime: string;
   phoneNumber: string;
-  moveType: string;
   items: Array<{
     item: string;
     numberOfItems: string;
@@ -18,8 +17,6 @@ interface Move extends Document {
   volume: number;
   totalPrice: number;
   service: string;
-  distance: string;
-  contactBy: string;
   countryCode: string;
 }
 
@@ -52,24 +49,34 @@ const moveSchema = new Schema<Move>({
     type: String,
     required: [true, 'Move Time is required']
   },
-  phoneNumber:{
+  phoneNumber: {
     type: String,
     required: [true, 'Phone Number is required']
   },
- service: {
+  service: {
     type: String,
     required: [true, 'Service is required']
   },
   items: [
     {
-    item: String,
-    numberOfItems: String,
+      item: {
+        type: String,
+        required: [true, 'Item is required']
+      },
+      numberOfItems: {
+        type: String,
+        required: [true, 'Number of Items is required']
+      }
     }
- ],
-  totalPrice: Number,
-  volume: Number,
-  moveType: String,
-  contactBy: String,
+  ],
+  totalPrice: {
+    type: Number,
+    required: [true, 'Total Price is required']
+  },
+  volume: {
+    type: Number,
+    required: [true, 'Volume is required']
+  },
   countryCode: {
     type: String,
     required: [true, 'Country code is required']

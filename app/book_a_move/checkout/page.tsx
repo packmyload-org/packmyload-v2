@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useRouter, redirect } from 'next/navigation';
 import { BookingLayout } from "../BookingLayout";
 export default function Checkout() {
-    const {state}=useBookingForm()
+    const {state, dispatch}=useBookingForm()
     const [currentPage, setCurrentPage] = useState(1);
     const columns = [
   {
@@ -29,6 +29,9 @@ export default function Checkout() {
 
   const handleChangePage = (page: number) => {
     setCurrentPage(page);
+    };
+    const handleFieldChange = (field: string, value: boolean) => {
+    dispatch({ type: 'UPDATE_FIELD', field, value });
   };
 
   const pagination = {
@@ -55,6 +58,9 @@ export default function Checkout() {
             return redirect('/book_a_move/locations-details')
         }
     })
+
+    const handlePaymentGateway = () => { }
+    const handleMailQuote = () => { }
     const leftContent = (
         <div>
                {/* Section 1 */}
@@ -208,7 +214,16 @@ const rightContent=(
 
                 <Col span={24} className="space-y-4">
                     <div className="flex w-full pt-3">
-                        <input type="checkbox" name="accepted-terms" className="mr-3 w-4" />
+                    <input
+                        type="checkbox"
+                        name="acceptedTerms"
+                        className="mr-3 w-4"
+                        checked={state.acceptedTerms}
+                        onChange={(e) => {
+                            const { name, checked } = e.target;
+                            handleFieldChange(name, checked);
+                                }}
+                    />
                         <p className="text-sm text-gray-800">
                             Confirm that you read and accept our <span><a href="/terms" className="text-sm text-gray-800 underline">terms and conditions</a></span> policy.
                         </p>
@@ -216,11 +231,13 @@ const rightContent=(
                     <div className="flex flex-row-reverse w-full justify-evenly">
                     <button
                         className={`text-lg font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                        onClick={handlePaymentGateway}
                     >
                         PROCEED TO CHECKOUT
                     </button>
                     <button
                         className={`text-lg font-semibold text-white hover:bg-blue-800 px-4 py-2 rounded-md bg-blue-500`}
+                        onClick={handleMailQuote}
                     >
                         MAIL ME MY QUOTE
                     </button>

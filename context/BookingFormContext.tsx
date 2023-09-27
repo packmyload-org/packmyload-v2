@@ -29,11 +29,12 @@ interface BookingFormState {
   distance: string;
   contactBy: string;
   countryCode: string;
+  acceptedTerms: boolean;
 }
 
 // Define action types
 type Action =
-  | { type: 'UPDATE_FIELD'; field: string; value: string }
+  | { type: 'UPDATE_FIELD'; field: string; value: string | boolean}
   | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string; price: number; volume: number }[] }
   | { type: 'RESTORE_STATE'; payload: BookingFormState };
 
@@ -58,7 +59,8 @@ const initialFormState: BookingFormState = {
   service: '',
   distance: '',
   contactBy: '',
-  countryCode:''
+  countryCode: '',
+  acceptedTerms: false
 };
 
 // Define a key for localStorage
