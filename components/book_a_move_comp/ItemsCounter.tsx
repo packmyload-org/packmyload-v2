@@ -84,16 +84,16 @@ const ItemsCounter: React.FC<ItemsProps> = ({ title, volume }) => {
     countItem === 0 ?
     <PlusCircle size={32} color="#444646" weight="fill" onClick={increaseCountItem} className='cursor-pointer' />
     :
-    <div className="bg-blue-500 text-white gap-2 flex justify-between shadow-md p-2 rounded-xl min-h-max">
-      <Minus size={15} className='mt-1 cursor-pointer' color="white" type='button' onClick={decreaseCountItem} />
-      {countItem}
-      <Plus size={15} className='mt-1 cursor-pointer' color="white" type='button' onClick={increaseCountItem} />
+    <div className="bg-blue-300 w-[90px] text-white gap-2 flex justify-between shadow-md p-1 rounded-full min-h-max">
+      <Minus size={12} className='mt-[6px] cursor-pointer' color="white" type='button' onClick={decreaseCountItem} />
+      <p className='text-[14px]'>{countItem}</p>
+      <Plus size={12} className='mt-[6px] cursor-pointer' color="white" type='button' onClick={increaseCountItem} />
     </div>
   );
 
   return (
-    <div className="bg-blue-200 flex justify-center items-center rounded-md shadow-md p-3 w-[80%] sm:w-full mx-auto lg:w-[210px] min-w-[140px]">
-      <p className="text-[16px] w-full" title={title}>{title}</p>
+    <div className="bg-blue-200 flex justify-center gap-1 items-center rounded-md shadow-md p-3 w-[80%] sm:w-full mx-auto lg:w-[210px] min-w-[140px]">
+      <p className="text-[14px] w-full" title={title}>{title}</p>
       {counterButtons}
     </div>
   );
