@@ -26,7 +26,7 @@ export const ProcedureCards: React.FC = () => {
                         title="Finalize Your Move" 
                         step="STEP 3"
                         addon="Edit your move if necessary"
-                        imageUrl="/images/select-address.jpg"
+                        imageUrl="/images/final-move.jpg"
                     />
                 </div>
             </div>
