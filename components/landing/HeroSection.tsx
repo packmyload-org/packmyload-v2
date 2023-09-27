@@ -6,8 +6,8 @@ export default function HeroSection() {
     <section className={`w-full h-auto sm:h-auto pb-4 md:pb-0 lg:h-[90vh] xl:h-[550px] flex flex-col justify-center bg-contain`}>
      {/* <div className='gradient h-full w-full z-0 absolute' /> */}
 
-      <div className='my-auto flex flex-col w-full z-10 items-center'>
-        <main className='flex flex-col w-full items-center text-center '>
+      <div className='flex flex-col w-full items-center'>
+        <main className='flex flex-col w-full items-center text-center mt-8 lg:mt-14 '>
             <h2 className='text-[2rem] p-2 sm:p-2 md:p-0 sm:text-[2rem] md:text-[3rem] lg:text-[4.3rem] w-full font-black text-blue-300'>
               We make moving seamless
             </h2>
