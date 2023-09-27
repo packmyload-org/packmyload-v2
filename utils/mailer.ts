@@ -5,7 +5,6 @@ import Mail from "nodemailer/lib/mailer"
 const transporter = nodemailer.createTransport({
   port: 465,
   host: "smtp.zoho.com",
-  from: "booking@packmyload.com",
   secure: true,
   auth: {
     user: process.env.MAILER_USERNAME,
