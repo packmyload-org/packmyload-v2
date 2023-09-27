@@ -7,7 +7,7 @@ import Link from 'next/link';
 interface About {
   title: string,
   description: string,
-  icon: any,
+
 
  }
  const AboutCard = ({ title, description }: About) => (
