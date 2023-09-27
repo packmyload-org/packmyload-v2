@@ -24,7 +24,7 @@ const originalLinks: progressLinks = [
     },
     {
         id: 3,
-        to: "/book_a_move/location-details",
+        to: "/book_a_move/locations-details",
         disabled: true
     },
     {

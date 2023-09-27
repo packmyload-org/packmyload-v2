@@ -15,8 +15,10 @@ export default function Faq() {
           <h3 className='text-4xl font-bold'>Do You Have Questions ?</h3>
           <p>Check out our frequently asked questions.</p>
         </Col>
-        <Col span={24} md={10} className='flex items-center text-start md:text-end justify-center min-h-[100px] '>
-            <a  href='/faqs'className="join-wrap-btn bg-blue-700 focus:bg-blue-600 ">FAQs</a>
+        <Col span={24} md={10} className='flex items-center text-start md:text-end justify-center min-h-[100px]'>
+            <Link href={'/faqs'} className="join-wrap-btn bg-blue-700 focus:bg-blue-300 ">
+              FAQs
+            </Link>
         </Col>
       </Row>
     </div>

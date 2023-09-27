@@ -55,8 +55,8 @@ export default function Faqs(){
                 <div className="section-title w-full relative  ">
 
                     <div className='gap-6 flex flex-col'>
-                        <h2 className="w-full font-bold text-4xl text-center">FAQ</h2>
-                        <div className="section-subtitle uppercase">popular questions</div>
+                        <h2 className="w-full font-bold text-2xl md:text-3xl lg:text-4xl text-center mt-2">FAQ</h2>
+                        <div className="section-subtitle text-3xl md:text-4xl lg:text-[3.4rem] uppercase font-bold">popular questions</div>
                         <span className="section-separator"></span>
                         <p className='w-full text-center '>Quick and Easy Answers at your Fingertips.</p>
                     </div>

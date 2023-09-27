@@ -26,13 +26,13 @@ const router =useRouter()
                         Get Estimate
                     </button>
                 </section>
-                <section className='flex flex-col items-center md:mt-8'>
+                <section className='flex flex-col items-center md:mt-12'>
                     <Image 
                         src={"/images/packman.png"}
-                        width={300}
-                        height={300}
+                        width={350}
+                        height={350}
                         alt='packman'
-                        className='mb-10'
+                        className='rounded-md'
                     />
                 </section>
             </div>

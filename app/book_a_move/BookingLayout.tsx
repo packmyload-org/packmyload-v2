@@ -5,15 +5,14 @@ import { useRouter } from 'next/navigation'
 import {IoChevronBackCircleOutline, IoChevronForwardCircleOutline} from 'react-icons/io5'
 
 type BookingLayoutProps = {
-    leftContent: React.ReactNode,
+    leftContent?: React.ReactNode,
     rightContent: React.ReactNode,
     stepDescription?: string,
     textDescription?: string,
-    prev?: string,
-    next?: string,
+    prev?: string
 }
 
-export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev, next }) => {
+export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev }) => {
     const router = useRouter()
     return (
         <div className="flex flex-col md:flex-row gap-4">
@@ -41,8 +40,8 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
                         <BookingProgress />
                         </div>
                         <div className="py-4 px-2 space-y-4">
-                        <h1 className="text-3xl font-black text-blue-300">{stepDescription}</h1>
-                        <p className="text-sm text-blue-300">{textDescription}</p>
+                        <h1 className="text-4xl font-black text-blue-300">{stepDescription}</h1>
+                        <p className="text-base text-blue-300">{textDescription}</p>
                         {/* Render left content */}
                         {leftContent}
                         </div>
@@ -54,7 +53,6 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             <main className="md:w-[50%] bg-white p-4 h-auto md:h-[90vh] ">
                     <div className='flex w-full justify-between'>
                     <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2 text-blue-300 " onClick={() => router.push(prev ?? '')} />
-                    {next && <IoChevronForwardCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2 text-blue-300 " onClick={() => router.push(next ?? '')} />}
                     </div>
                 <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-full mt-4 pb-10 ">
                     {/* Render right content */}
