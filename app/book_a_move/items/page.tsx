@@ -53,10 +53,10 @@ export default function Page() {
         </div>
       </div>
       <div className='mb-4 w-[90%] mx-auto grid grid-cols-2'>
-      <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px]  font-black text-md text-white  hover:bg-white p-2 rounded-lg hover:text-blue-300' onClick={()=>router.push('/book_a_move')}>
+      <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white  hover:bg-white p-2 rounded-lg hover:text-blue-300' onClick={()=>router.push('/book_a_move')}>
           GO BACK
         </div>
-          <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px]  font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={()=>router.push('/book_a_move/locations-details')}>Proceed
+          <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={()=>router.push('/book_a_move/locations-details')}>Proceed
             </div>
           </div>
         </div>

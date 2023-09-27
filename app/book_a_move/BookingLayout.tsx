@@ -9,11 +9,10 @@ type BookingLayoutProps = {
     rightContent: React.ReactNode,
     stepDescription?: string,
     textDescription?: string,
-    prev?: string,
-    next?: string,
+    prev?: string
 }
 
-export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev, next }) => {
+export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev }) => {
     const router = useRouter()
     return (
         <div className="flex flex-col md:flex-row gap-4">
@@ -54,7 +53,6 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             <main className="md:w-[50%] bg-white p-4 h-auto md:h-[90vh] ">
                     <div className='flex w-full justify-between'>
                     <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2 text-blue-300 " onClick={() => router.push(prev ?? '')} />
-                    {next && <IoChevronForwardCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2 text-blue-300 " onClick={() => router.push(next ?? '')} />}
                     </div>
                 <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-full mt-4 pb-10 ">
                     {/* Render right content */}
