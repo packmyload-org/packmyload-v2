@@ -273,15 +273,15 @@ const rightContent=(
                             Confirm that you read and accept our <span><a href="/terms" className="text-sm text-gray-800 underline">terms and conditions</a></span> policy.
                         </p>
                     </div>
-                    <div className="flex flex-row-reverse w-full justify-evenly">
+                    <div className="flex flex-row-reverse w-full justify-evenly gap-2">
                     <button
-                        className={`text-md font-semibold text-white  hover:bg-white hover:text-blue-300 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-sm md:text-md font-semibold text-white  hover:bg-white hover:text-blue-300 px-4 py-2 rounded-md bg-blue-500`}
                         onClick={handlePaymentGateway}
                     >
                         PROCEED TO CHECKOUT
                     </button>
                     <button
-                        className={`text-md font-semibold text-white hover:bg-white hover:text-blue-300 px-4 py-2 rounded-md bg-blue-500`}
+                        className={`text-sm md:text-md font-semibold text-white hover:bg-white hover:text-blue-300 px-4 py-2 rounded-md bg-blue-500`}
                         onClick={handleMailQuote}
                     >
                         MAIL ME MY QUOTE
