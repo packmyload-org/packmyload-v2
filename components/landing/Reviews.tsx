@@ -25,7 +25,7 @@ export const Reviews: React.FC = () => {
                 What Our Customers Say <br />
                 </h1>
                 <p className="mx-8 text-base font-meduim mt-4">
-                PackMyLoad has earned its reputation as the nation's most trusted moving company, thanks to our commitment to delivering unparalleled service to our valued customers. Whether it's a small local move or a cross-country relocation, over a million customers have relied on PackMyLoad to safely transport them and their belongings to their new homes. Read some testimonials from a handful of our satisfied customers to get a glimpse of their experiences with PackMyLoad.
+                Packmyload has earned its reputation as the nation's most trusted moving company, thanks to our commitment to delivering unparalleled service to our valued customers. Whether it's a small local move or a cross-country relocation, over a million customers have relied on PackMyLoad to safely transport them and their belongings to their new homes. Read some testimonials from a handful of our satisfied customers to get a glimpse of their experiences with PackMyLoad.
                 </p>
 
                 <Swiper

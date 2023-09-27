@@ -50,7 +50,7 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             </aside>
 
             {/* Right section */}
-            <main className="md:w-[50%] bg-white p-4 h-auto md:h-[90vh] ">
+            <main className="md:w-[50%] lg:max-w-3xl lg:mx-auto bg-white p-4 h-auto md:h-[90vh] ">
                     <div className='flex w-full justify-between'>
                     <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2 text-blue-300 " onClick={() => router.push(prev ?? '')} />
                     </div>

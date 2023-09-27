@@ -233,7 +233,7 @@ const rightContent=(
                     </div>
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <Table className="w-[90%] mx-auto min-h-[45vh]" dataSource={state.items} columns={columns} pagination={pagination}/>
+                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={state.items} columns={columns} pagination={pagination}/>
                     
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />

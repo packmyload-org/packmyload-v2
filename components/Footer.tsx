@@ -247,7 +247,7 @@ export default function Footer() {
       )}
       <div className="bg-slate-800 py-6 ">
         <Row
-          className="w-full mt-6 px-2"
+          className="max-w-6xl mx-auto mt-6 px-2"
           justify={"space-between"}
           align={"middle"}
         >
