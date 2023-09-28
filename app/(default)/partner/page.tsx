@@ -1,173 +1,83 @@
-'use client'
-import { AutoCompleteInput } from '@/components/AutoCompleteInput';
-import Map from '@/components/Map';
-import { useGoogleMaps } from '@/context/GoogleMapsContext';
-import { useInputContext } from '@/context/InputContext';
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import Loading from '../../loading';
-interface PartnerData {
-    emailAddress: string,
-    storeAddress: string,
-    mobileNumber: string,
-    storeName: string,
-    reason: string,
-    fullName: string
-}
-function PartnerPage() {
-   const [data, setData] = useState<PartnerData>({
-    storeName: '',
-    fullName: '',
-    emailAddress: '',
-    mobileNumber: '',
-    storeAddress: '',
-    reason: '',
-   });
-    const { inputValue } = useInputContext();
-    const{isLoaded}=useGoogleMaps()
-     const [showAlert, setShowAlert] = useState(false);
-    const [alertContent, setAlertContent] = useState('');
-    const [loading, setLoading] = useState(false)
-    const [scriptLoaded,setScriptLoaded]=useState(false)
-    const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setData((prevData) => ({ ...prevData, [name]: value }));
-    };
+import { Col, Row, Card } from "antd";
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        let obj = {
-            ...data
-        };
+import React from "react";
 
-        if (!data.storeAddress) {
-            obj['storeAddress'] = inputValue;
-        }
 
-        if (!data.storeName || !data.fullName || !data.emailAddress || !data.mobileNumber || !data.storeAddress) {
-            let content = 'Please fill out all required fields.';
-            setAlertContent(content);
-            setShowAlert(true);
-            return
-        }
-        setShowAlert(!true);
-        console.log('Form data to be submitted:', data);
-        setLoading(true)
-        const res = await fetch('api/partner', {
-            method: 'POST',
-            body: JSON.stringify(obj)
-        });
-
-        if (res.ok) {
-            let content = 'Application successful.';
-            setAlertContent(content);
-            setShowAlert(true);
-        }
-        setLoading(false)
-        setShowAlert(false)
-    };
-
-    useEffect(() => {
-    if (!isLoaded) {
-      setScriptLoaded(!scriptLoaded)
-        }
-      setScriptLoaded(false)
-    }, [])
-    
-    if (scriptLoaded) {
-        return <Loading/>
-    }
-
-    return (
-        <div className="flex justify-left min-h-screen bg-gray-100 mt-20">
-            <div className="w-full md:w-1/2 lg:w-1/2 p-8 max-h-[85vh] overflow-y-scroll scrollbar-hide">
-                <h1 className="text-2xl font-semibold mb-4" style={{ color: '#4DB7FE' }}>
-                    <span className='text-slate-600'>Same day delivery</span> <br />
-                    Enable your store to get anything delivered, same day
-                </h1>
-                <div className="space-y-6 pt-8 border-t-2 border-t-slate-100" />
-                <form className="bg-white rounded-lg" onSubmit={handleSubmit}>
-                    <div className="mb-8">
-                        <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="storename">Store Name *</label>
-                        <input
-                            id="storename"
-                            name="storeName"
-                            type="text"
-                            className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-                            placeholder="Home Again Furniture"
-                        
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="mb-8">
-                        <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="fullname">Full Name *</label>
-                        <input
-                            id="fullname"
-                            name="fullName"
-                            type="text"
-                            className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-                            placeholder="John Doe"
-                        
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="mb-8">
-                        <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="email">Email Address *</label>
-                        <input
-                            id="email"
-                            name="emailAddress"
-                            type="email"
-                            className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-                            placeholder="Johndoe@mail.com"
-                        
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="mb-8">
-                        <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="mobile">Phone Number</label>
-                        <input
-                            id="mobile"
-                            name="mobileNumber"
-                            type="tel"
-                            className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-                            placeholder="(070)-7273-27-26)"
-                        
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="mb-8">
-                        <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="location">Store Address *</label>
-
-                        <AutoCompleteInput
-                            inputName='storeAddress'
-                            type='text'
-                            inputStyle="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-                            placeholder="Destination, Area, Street"
-                        />
-                    </div>
-                    <div className="mb-8">
-                        <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor="others">Anything Else</label>
-                        <textarea
-                            id="others"
-                            name="reason"
-                            placeholder='Tell us about your delivery needs'
-                            className="border border-gray-300 bg-neutral-100 outline outline-offset-2 outline-slate-200 mt-3 rounded-md px-3 h-52 py-4 w-full focus:outline-none focus:ring focus:border-blue-500"
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="bg-blue-400 w-32 h-14 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-700 cursor-pointer"
-                        disabled={loading}
-                    >
-                        {loading ? "loading...": "Sign me up"}
-                    </button>
-                </form>
+export default function Partnerpage() {
+  return (
+    <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
+      <div className="w-full text-black" style={{ marginTop: "24px" }}>
+        <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+          <div className="cirle-bg">
+            <div className="bg object-cover"></div>
+          </div>
+          <div className="container py-12">
+            <div className="join-wrap fl-wrap text-white">
+              <Row
+                className="w-full flex"
+                justify="space-between"
+                align="middle"
+              >+
+                              <Col span={24} md={10} className="flex flex-col space-y-6">
+                  <h3 className="text-4xl font-bold">
+                    Become a Business Partner
+                  </h3>
+                  <p>
+                    Find out how your business can benefit by partnering with Packmyload.
+                  </p>
+                </Col>
+                <Col
+                  span={24}
+                  md={10}
+                  className="flex items-center text-start md:text-end justify-center min-h-[160px]"
+                ></Col>
+              </Row>
             </div>
-            <div className="hidden lg:block absolute top-0 right-0 bottom-0 w-1/2">
-                <Map/>
+          </div>
+        </section>
+
+        <div>
+          <div className="w-full bg-[#012D40] h-[200vh] ">
+            <div className=" absolute top-[250px] left-[250px] p-2" >
+            <Row gutter={[16, 16]}>
+              <Col span={12}>
+                <Card
+                  className="w-96 h-[300px] opacity-80"
+                  style={{ backgroundColor: "#F4FAFA" }}
+                  title="Business & Retail"
+                >
+                  <ul>
+                    <li>Furniture companies</li>
+                    <li>Big Box Stores</li>
+                    <li>Any other business that needs to move large items</li>
+                  </ul>
+                </Card>
+              </Col>
+              <Col span={12}>
+                <Card
+                  className="w-96 h-[300px] opacity-80"
+                  style={{ backgroundColor: "#F4FAFA" }}
+                  title="Integrations & Lead Monetization"
+                >
+                  <ul>
+                    <li>Prop-tech</li>
+                    <li>Property Managers</li>
+                    <li>Storage Companies</li>
+                  </ul>
+                </Card>
+              </Col>
+            </Row>
             </div>
+            <div>
+              <div className="pt-96">
+                <img src="/images/partner/packmyload_1695798527485.jpeg" alt="image-1" className="w-[670px] h-[550px] rounded-sm " />
+              </div>
+            </div>
+
+
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
-
-export default PartnerPage;
