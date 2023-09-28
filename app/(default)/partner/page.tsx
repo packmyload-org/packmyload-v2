@@ -1,7 +1,5 @@
 import { Col, Row, Card } from "antd";
-
 import React from "react";
-
 
 export default function Partnerpage() {
   return (
@@ -17,13 +15,14 @@ export default function Partnerpage() {
                 className="w-full flex"
                 justify="space-between"
                 align="middle"
-              >+
-                              <Col span={24} md={10} className="flex flex-col space-y-6">
+              >
+                <Col span={24} md={10} className="flex flex-col space-y-6">
                   <h3 className="text-4xl font-bold">
                     Become a Business Partner
                   </h3>
                   <p>
-                    Find out how your business can benefit by partnering with Packmyload.
+                    Find out how your business can benefit by partnering with
+                    Packmyload.
                   </p>
                 </Col>
                 <Col
@@ -37,44 +36,97 @@ export default function Partnerpage() {
         </section>
 
         <div>
-          <div className="w-full bg-[#012D40] h-[200vh] ">
-            <div className=" absolute top-[250px] left-[250px] p-2" >
-            <Row gutter={[16, 16]}>
-              <Col span={12}>
-                <Card
-                  className="w-96 h-[300px] opacity-80"
-                  style={{ backgroundColor: "#F4FAFA" }}
-                  title="Business & Retail"
-                >
-                  <ul>
-                    <li>Furniture companies</li>
-                    <li>Big Box Stores</li>
-                    <li>Any other business that needs to move large items</li>
-                  </ul>
-                </Card>
-              </Col>
-              <Col span={12}>
-                <Card
-                  className="w-96 h-[300px] opacity-80"
-                  style={{ backgroundColor: "#F4FAFA" }}
-                  title="Integrations & Lead Monetization"
-                >
-                  <ul>
-                    <li>Prop-tech</li>
-                    <li>Property Managers</li>
-                    <li>Storage Companies</li>
-                  </ul>
-                </Card>
-              </Col>
-            </Row>
+          <div className="w-full bg-[#012D40] h-[300vh] ">
+            <div className="absolute top-[250px] left-[250px] p-2">
+              <Row gutter={[16, 16]}>
+                <Col span={12}>
+                  <Card
+                    className="w-96 h-[300px] opacity-80"
+                    style={{ backgroundColor: "#F4FAFA" }}
+                    title="Business & Retail"
+                  >
+                    <ul>
+                      <li>Furniture companies</li>
+                      <li>Big Box Stores</li>
+                      <li>Any other business that needs to move large items</li>
+                    </ul>
+                  </Card>
+                </Col>
+                <Col span={12}>
+                  <Card
+                    className="w-96 h-[300px] opacity-80"
+                    style={{ backgroundColor: "#F4FAFA" }}
+                    title="Integrations & Lead Monetization"
+                  >
+                    <ul>
+                      <li>Prop-tech</li>
+                      <li>Property Managers</li>
+                      <li>Storage Companies</li>
+                    </ul>
+                  </Card>
+                </Col>
+              </Row>
             </div>
             <div>
-              <div className="pt-96">
-                <img src="/images/partner/packmyload_1695798527485.jpeg" alt="image-1" className="w-[670px] h-[550px] rounded-sm " />
+              <div className="flex   pt-96">
+                <img
+                  src="/images/partner/packmyload_1695798527485.jpeg"
+                  alt="image-1"
+                  className="w-[670px] h-[550px] rounded-sm "
+                />
+                <div className="pl-40 pt-40">
+                  <p className=" text-5xl  mt-4 text-white">
+                    Business & Retail
+                  </p>
+
+                  <li className="text-base  text-white">
+                    Residential moves (apartments, homes, condos)
+                  </li>
+                  <li className="text-base  text-white">
+                    Moving belongings into storage
+                  </li>
+                  <li className="text-base  text-white">
+                    One-off deliveries (piece of furniture)
+                  </li>
+
+                  <p className="text-base  text-white">
+                    Packmyload can manage your business delivery logistics for{" "}
+                    <br /> you. If you deliver large items to you clients but
+                    you don’t <br /> want to waste time managing the moves.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex   pt-48">
+                <div className="pl-40 pt-40">
+                  <p className=" text-5xl  mt-4 text-white">
+                    Integration & Lead Monetization
+                  </p>
+
+                  <li className="text-base  text-white">
+                    Residential moves (apartments, homes, condos)
+                  </li>
+                  <li className="text-base  text-white">
+                    Moving belongings into storage
+                  </li>
+                  <li className="text-base  text-white">
+                    One off deliveries (piece of furniture)
+                  </li>
+
+                  <p className="text-base  text-white">
+                  {" "}You don’t have to be in the space to be a part of the moving{" "}
+                    <br /> and delivery ecosystem. If you have leads and users
+                    that <br /> move often, you can get a commission for each
+                    user you send <br /> us our way.
+                  </p>
+                </div>
+                <img
+                  src="/images/partner/packmyload_1695798593791.jpeg"
+                  alt="image-2"
+                  className="w-[670px] h-[550px] rounded-sm pl-5 "
+                />
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
