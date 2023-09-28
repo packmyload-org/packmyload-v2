@@ -8,7 +8,7 @@ const router =useRouter()
             className="bg-[#2E5F9E] w-[100%]  bg-[url('/images/bg/shapes-big-new.png')] "
         >
             <div 
-                className={`max-w-6xl mx-auto flex flex-col py-3 md:flex-row justify-evenly`}
+                className={`max-w-6xl mx-auto flex flex-col py-4 px-7 md:flex-row justify-between`}
             >
 
                 <section className="w-[100%] md:w-[50%] mt-0 md:mt-11 text-center md:text-left">
@@ -26,11 +26,11 @@ const router =useRouter()
                         Get Estimate
                     </button>
                 </section>
-                <section className='flex flex-col items-center mt-4 md:mt-12'>
+                <section className='flex flex-col items-center mt-5 md:mt-12'>
                     <Image 
                         src={"/images/packman.png"}
-                        width={350}
-                        height={350}
+                        width={345}
+                        height={345}
                         alt='packman'
                         className='rounded-md'
                     />
