@@ -54,7 +54,7 @@ export default function Footer() {
                   <ul className="footer-contacts fl-wrap space-y-2">
                     <li className="w-full flex no-wrap items-center">
                       <a
-                        className="text-gray-100 hover:text-gray-950"
+                        className="text-gray-100 hover:text-gray-950 text-xs"
                         href="/privacy"
                       >
                         PRIVACY POLICY
@@ -62,18 +62,18 @@ export default function Footer() {
                     </li>
                     <li className="w-full flex no-wrap items-center">
                       <a
-                        className="text-gray-100 hover:text-gray-950"
+                        className="text-gray-100 hover:text-gray-950 text-xs"
                         href="/terms"
                       >
                         TERMS & CONDITIONS
                       </a>
                     </li>
-                    <li className="w-full flex no-wrap items-center">
-                      <span className="flex items-center gap-1 mr-2">
-                        <EnvelopeSimple color="#4bcbfe" /> Mail:
+                    <li className="w-full flex no-wrap items-center mt-2">
+                      <span className="flex items-center gap-1 mr-2 text-xs">
+                        <EnvelopeSimple size={13} color="#4bcbfe" /> Mail:
                       </span>
                       <a
-                        className="text-gray-400 hover:text-gray-950"
+                        className="text-gray-400 hover:text-gray-950 text-xs"
                         href="#"
                         target="_blank"
                       >
@@ -81,11 +81,11 @@ export default function Footer() {
                       </a>
                     </li>
 
-                    <li className="w-full flex no-wrap items-center">
-                      <span className="flex items-center gap-1 mr-2">
-                        <Phone size={16} color="#4bcbfe" weight="fill" /> Phone:
+                    <li className="w-full flex no-wrap items-center mt-2">
+                      <span className="flex items-center gap-1 mr-2 text-xs">
+                        <Phone size={13} color="#4bcbfe" weight="fill" /> Phone:
                       </span>
-                      <a className="text-gray-400 hover:text-gray-950 lg:mt-5" href="#">
+                      <a className="text-gray-400 hover:text-gray-950 text-xs " href="#">
                         0700- PACK-PRO (0700-722-5776)
                       </a>
                     </li>
@@ -109,7 +109,7 @@ export default function Footer() {
                     <ul className="space-y-4 h-full">
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/home-moves"
                           title=""
                         >
@@ -118,7 +118,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/office-moves"
                           title=""
                         >
@@ -127,7 +127,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/interstate-Car-Transport"
                           title="Student Moves"
                         >
@@ -136,7 +136,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/cleaning"
                           title="Cleaning"
                         >
@@ -145,7 +145,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/wedding-handling"
                           title=""
                         >
@@ -158,7 +158,7 @@ export default function Footer() {
                     <ul className="space-y-4 h-full md:mt-0 mt-2">
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/international-relocations"
                           title=""
                         >
@@ -167,7 +167,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/junk-moves"
                           title=""
                         >
@@ -177,7 +177,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/storage"
                           title=""
                         >
@@ -186,7 +186,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400"
+                          className="text-gray-400 text-xs"
                           href="/services/store-delivery"
                           title=""
                         >
