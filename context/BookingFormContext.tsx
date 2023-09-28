@@ -1,5 +1,4 @@
 'use client'
-import dayjs from 'dayjs';
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 // Define the form state interface
@@ -20,7 +19,8 @@ interface BookingFormState {
     price: number;
     volume: number;
   }>;
-  buildingType: string;
+  buildingTypeStart: string;
+  buildingTypeEnd: string;
   floorsStart: string;
   floorsEnd: string;
   parkingStart: string;
@@ -29,11 +29,12 @@ interface BookingFormState {
   distance: string;
   contactBy: string;
   countryCode: string;
+  acceptedTerms: boolean;
 }
 
 // Define action types
 type Action =
-  | { type: 'UPDATE_FIELD'; field: string; value: string }
+  | { type: 'UPDATE_FIELD'; field: string; value: string | boolean}
   | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string; price: number; volume: number }[] }
   | { type: 'RESTORE_STATE'; payload: BookingFormState };
 
@@ -49,7 +50,8 @@ const initialFormState: BookingFormState = {
   phoneNumber: '',
   moveType: 'Item Pick Up and Furniture Delivery',
   items: [],
-  buildingType: '',
+  buildingTypeStart: '',
+  buildingTypeEnd: '',
   floorsStart: '',
   floorsEnd: '',
   parkingStart: '',
@@ -57,7 +59,8 @@ const initialFormState: BookingFormState = {
   service: '',
   distance: '',
   contactBy: '',
-  countryCode:''
+  countryCode: '',
+  acceptedTerms: false
 };
 
 // Define a key for localStorage

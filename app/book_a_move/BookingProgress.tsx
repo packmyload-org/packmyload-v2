@@ -1,9 +1,17 @@
 "use client"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter, usePathname } from "next/navigation"
 import { useBookingForm } from "@/context/BookingFormContext"
 
-const progressLinks = [
+type progressLinks = Array<{
+    id: number,
+    to: string,
+    disabled: boolean
+}>
+
+const bookingUrls = ["/book_a_move","/book_a_move/items","/book_a_move/location-details","/book_a_move/checkout"]
+
+const originalLinks: progressLinks = [
     {
         id: 1,
         to: "/book_a_move",
@@ -16,7 +24,7 @@ const progressLinks = [
     },
     {
         id: 3,
-        to: "/book_a_move/location-details",
+        to: "/book_a_move/locations-details",
         disabled: true
     },
     {
@@ -32,27 +40,34 @@ export const BookingProgress: React.FC = () => {
 
     const {state} = useBookingForm()
 
-    useEffect(() => {
-        if([state.firstName, state.lastName, state.email,state.pickUp,state.destination, state.phoneNumber].every(Boolean)){
-            progressLinks.map(item => {
-                if(item.id === 2){
-                    return {...item, disabled: false}
+    const [progressLinks, setProgressLinks] = useState<progressLinks>([...originalLinks])
+
+    const handleProgress = (linkIndex: number) => {
+        setProgressLinks((initialProgress ): progressLinks => {
+            return initialProgress.map((link,index) => {
+                if(index === linkIndex){
+                    return {...link, disabled: false}
                 }
+                return link
             })
+        } )
+    }
+
+    useEffect(() => {
+        if([state.firstName !== '', state.lastName !== '', state.email !== '',state.pickUp !== '',state.destination !== '', state.phoneNumber !== ''].every(Boolean)){
+            handleProgress(1);
         }
         if(state.items.length){
-            progressLinks.map(item => {
-                if(item.id === 3){
-                    return {...item, disabled: false}
-                }
-            })
+            handleProgress(2);
         }
-        if(state.buildingType){
-            progressLinks.map(item => {
-                if(item.id === 4){
-                    return {...item, disabled: false}
-                }
-            })
+        if(state.buildingTypeStart !== '' && state.buildingTypeEnd !== ''){
+            handleProgress(3);
+        }
+
+        if(!bookingUrls.includes(pathName)){
+            return () => {
+                setProgressLinks(() => originalLinks)
+            }
         }
 
     },[pathName])
@@ -63,7 +78,7 @@ export const BookingProgress: React.FC = () => {
                 <button 
                     key={step.id}
                     className={
-                        `w-[40px] h-[8px] rounded-md ${!step.disabled ? 'bg-blue-300' : 'bg-slate-300'}`
+                        `w-[40px] cursor-pointer h-[8px] rounded-md ${!step.disabled ? 'bg-blue-300' : 'bg-slate-300'}`
                     }
                     onClick={() => router.push(step.to)}
                     disabled = {step.disabled}

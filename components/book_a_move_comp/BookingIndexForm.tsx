@@ -85,7 +85,7 @@ export default function BookingIndexForm() {
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
-              inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
+              inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
               placeholder="Destination From"
             />
           </div>
@@ -95,7 +95,7 @@ export default function BookingIndexForm() {
           <AutoCompleteInput
             type="text"
             inputName="destination"
-            inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
+            inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
             placeholder="Destination To"
             />
           </div>
@@ -123,7 +123,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='firstName'
                 placeholder='John'
-                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
+                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
               />
             )}
           />
@@ -141,7 +141,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='lastName'
                 placeholder='Doe'
-                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
+                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
               />
             )}
           />
@@ -166,7 +166,7 @@ export default function BookingIndexForm() {
               {...field}
               type='email'
               id='email'
-              className="w-full h-10 p-4 text-gray-500 rounded-full outline-none place_font"
+              className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
               placeholder='example@mail.com'
             />
           )}
@@ -183,7 +183,7 @@ export default function BookingIndexForm() {
             render={({ field }) => (
               <select
                 {...field}
-                className='w-[23%] rounded-l-md font-bold text-blue-300 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
+                className='w-[23%] rounded-l-full font-bold text-blue-300 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
               >
                 <option value='' className='hidden'>+ 234</option>
                 {myCountryCodesObject.map((item,i) => (
@@ -204,15 +204,17 @@ export default function BookingIndexForm() {
                 type="text"
                 id='phoneNumber'
                 placeholder='66 703 78932'
-                className="w-[80%] h-10 p-4 text-gray-500 outline-none rounded-r-md place_font"
+                className="w-[80%] h-10 p-4 text-gray-500 outline-none rounded-r-full placeholder:text-blue-300 placeholder:font-[500]"
               />
             )}
           />
         </div>
-        {errors.countryCode && <p className="text-red-600">{errors.countryCode.message}</p>} 
-       {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber.message}</p>} 
+        <div className='flex gap-4'>
+          {errors.countryCode && <p className="text-red-600">{errors.countryCode.message}</p>} 
+          {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber.message}</p>} 
+        </div>
       </div>
-      <div className="w-[98%] md:w-[90%] mx-auto pt-3 flex flex-col items-start">
+      <div className="w-[98%] md:w-[90%] mx-auto  flex flex-col items-start">
         <label className="text-md text-gray-800 font-semibold" htmlFor="service">Service <span className='text-red-600'>*</span></label>
         <Controller
           name='service'
@@ -223,7 +225,6 @@ export default function BookingIndexForm() {
               {...field}
               className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full rounded-full bg-white outline-none ring-blue-300 focus:ring-2'
               onChange={(e) => {
-                e.target.value.includes('HOME RELOCATIONS') ? setDisplayType(true) : setDisplayType(false);
                 field.onChange(e);
               }}
             >
@@ -238,7 +239,7 @@ export default function BookingIndexForm() {
         />
         {errors.service && <p className="text-red-600">{errors.service.message}</p>} 
       </div>
-      <div className='w-[95%] flex gap-4 mt-3'>
+      <div className='w-[95%] flex gap-4 mt-3 pt-4'>
         <button
           type='button' // Change the type to "button"
           name='submitButton1'

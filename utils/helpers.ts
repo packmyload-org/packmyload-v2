@@ -28,7 +28,16 @@ export function sumVolume(objects: { volume: number }[]): any {
 
   return totalVolume;
 }
+interface BookingFormItem {
+  item: string;
+  numberOfItems: string;
+  price: number;
+  volume: number;
+}
 
+export function sumItemPrices(items: BookingFormItem[]): number {
+  return items.reduce((total, item) => total + item.price, 0);
+}
 
 export function getAvailableTimes(selectedDate: Date | null): string[] {
   const currentUtcTime = new Date();

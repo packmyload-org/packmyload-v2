@@ -1,25 +1,28 @@
-import { Col, Row } from 'antd'
-import React from 'react'
 
+import { Col, Row } from 'antd'
+import Link from 'next/link'
+import React from 'react'
 export default function Faq() {
   return (
-   <section className="gradient-bg grid items-center py-[20px] min-h-[250px]">
-   <div className="cirle-bg ">
-    <div className="bg object-contain" ></div>   
-   </div>
-   <div className="container py-12">
+  <section className="gradient-bg grid py-[20px] min-h-[250px]">
+  <div className="cirle-bg w-full">
+    <div className="bg object-cover" style={{height:'250px'}}></div>   
+  </div>
+  <div className="w-full lg:w-[1200px] max-w-6xl mx-auto py-12">
     <div className="join-wrap fl-wrap text-white">
-     <Row className='w-full flex' justify={'space-between'} align={'middle'}>
-      <Col span={24} md={10} className='flex flex-col space-y-6'>
-       <h3 className='text-4xl font-bold'>Do You Have Questions ?</h3>
-       <p>Check out our frequently asked questions.</p>
-      </Col>
-      <Col span={24} md={10} className='flex items-center text-start md:text-end justify-center min-h-[100px] '>
-       <a href="/faqs" className="join-wrap-btn bg-blue-700 hover:bg-blue-600">FAQs</a>
-      </Col>
-     </Row>
+      <Row className='w-full flex' justify={'space-between'} align={'middle'}>
+        <Col span={24} md={10} className='flex flex-col space-y-6'>
+          <h3 className='text-4xl font-bold'>Do You Have Questions ?</h3>
+          <p>Check out our frequently asked questions.</p>
+        </Col>
+        <Col span={24} md={10} className='flex items-center text-start md:text-end justify-center min-h-[100px]'>
+            <Link href={'/faqs'} className="join-wrap-btn bg-blue-700 focus:bg-blue-300 ">
+              FAQs
+            </Link>
+        </Col>
+      </Row>
     </div>
-   </div>
+  </div>
   </section>
   )
 }

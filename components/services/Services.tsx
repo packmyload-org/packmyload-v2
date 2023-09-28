@@ -9,13 +9,11 @@ export default function Services(){
 
     const pathname = usePathname()
 
- 
     const servicesItems = 
       pathname === '/' ? servicesArr.map((item,index) => {
 
           if(pathname === '/' && index <= 5)
           return (
-        
             <div 
               className="flex flex-col limitless-card rounded relative cursor-pointer" 
               key={index}

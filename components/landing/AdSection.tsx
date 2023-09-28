@@ -5,13 +5,13 @@ export const AdSection: React.FC = () => {
 const router =useRouter()
     return (
         <section 
-            className="bg-[#2E5F9E] w-[100%]  p-1 bg-[url('/images/bg/shapes-big-new.png')] "
+            className="bg-[#2E5F9E] w-[100%]  bg-[url('/images/bg/shapes-big-new.png')] "
         >
             <div 
-                className={`max-w-6xl mx-auto flex flex-col md:flex-row p-1 md:p-11 justify-evenly`}
+                className={`max-w-6xl mx-auto flex flex-col py-4 px-7 md:flex-row justify-between`}
             >
 
-                <section className="w-[100%] md:w-[50%] p-4 mt-0 md:mt-11 text-center md:text-left">
+                <section className="w-[100%] md:w-[50%] mt-0 md:mt-11 text-center md:text-left">
                     <span className=" w-[fit-content] mx-auto md:mx-0 flex gap-3 text-white text-2xl md:text-3xl font-bold items-center">
                         <h1 className="border-r border-white/[.55] pr-2 h-8 ">Packmyload</h1> Hub
                     </span>
@@ -26,13 +26,13 @@ const router =useRouter()
                         Get Estimate
                     </button>
                 </section>
-                <section className='flex flex-col items-center md:mt-8'>
+                <section className='flex flex-col items-center mt-5 md:mt-12'>
                     <Image 
-                        src={"/images/packman-ad 2.png"}
-                        width={300}
-                        height={300}
+                        src={"/images/packman.png"}
+                        width={345}
+                        height={345}
                         alt='packman'
-                        className='mb-10'
+                        className='rounded-md'
                     />
                 </section>
             </div>

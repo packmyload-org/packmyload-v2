@@ -27,7 +27,6 @@ export const GoogleMapsProvider: React.FC<GoogleMapsContextProps> = ({ children 
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
   const [isLoaded, setIsLoaded] = useState(false); // State for loading status
   const [loadError, setLoadError] = useState(false); // State for load error
-  console.log(apiKey)
   useEffect(() => {
     const script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=${'places'}`;
