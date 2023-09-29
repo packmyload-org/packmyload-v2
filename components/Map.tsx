@@ -32,6 +32,7 @@ function Map() {
         destination: destination,
         travelMode: google.maps.TravelMode.DRIVING,
       });
+      console.log('results', results)
       return {
         direction: results,
         distance: results.routes[0].legs[0].distance?.text,
@@ -43,6 +44,8 @@ function Map() {
       return null;
     }
   };
+
+
    const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
@@ -51,15 +54,13 @@ function Map() {
       const result = await calculateRoute();
       if (result) {
         setRouteData(result);
-        // dispatch(type: "UPDATE_FIELD", 'distance', result.distance)
         handleFieldChange('distance', result?.distance ?? '')
       }
     }
-    // console.log('isTriggered', triggerCalculateRoute)
+    console.log('isTriggered', triggerCalculateRoute)
     if (triggerCalculateRoute) {
       fetchRouteData()
       setTriggerCalculateRoute(!triggerCalculateRoute)
-      
     }
   }, [triggerCalculateRoute]);
 
@@ -69,7 +70,6 @@ function Map() {
     }
   }, [locationValue])
   
-  console.log(localStorage.getItem('storeAddress' + 'Location'))
   useEffect(() => {
      async function fetchRouteData() {
       const result = await calculateRoute();
@@ -80,12 +80,11 @@ function Map() {
     }
     if (path.includes("book_a_move")) {
       fetchRouteData();
-    }
-     if (path.includes('partner') ) {
+    }else if (path.includes('partner') ) {
       setMapCenter({ lat: 6.465422, lng: 3.406448 })
     }
   }, [])
-  
+  console.log(routeData)
   return (
     <div className='w-full h-full mb-4 rounded-md shadow-md'>
       <GoogleMap
@@ -103,7 +102,7 @@ function Map() {
        !path.includes('book_a_move') && <Marker position={mapCenter} />
         }
           
-        {routeData?.direction && path.includes('book_a_move') && <DirectionsRenderer directions={routeData.direction} />}
+        {routeData?.direction  && <DirectionsRenderer directions={routeData.direction} />}
       </GoogleMap>
     </div>
   );

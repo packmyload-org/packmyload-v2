@@ -66,7 +66,7 @@ export default function Checkout() {
         if (!state.acceptedTerms) {
             return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
         } 
-        setLoading
+        setLoading(true)
         const data = {
             firstName: state.firstName,
             lastName: state.lastName,

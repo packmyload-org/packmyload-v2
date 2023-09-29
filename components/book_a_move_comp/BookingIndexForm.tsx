@@ -44,7 +44,7 @@ export default function BookingIndexForm() {
     handleFieldChange('email', data.email);
     handleFieldChange('firstName', data.firstName);
     handleFieldChange('lastName', data.lastName);
-    handleFieldChange('countryCode', "+ " + data.countryCode);
+    handleFieldChange('countryCode', "+ " + data.countryCode || "234");
     handleFieldChange('phoneNumber', data.phoneNumber);
     handleFieldChange('service', data.service);
   }
@@ -179,13 +179,12 @@ export default function BookingIndexForm() {
           <Controller
             name='countryCode'
             control={control}
-            rules={{ required: 'Country Code is required' }}
             render={({ field }) => (
               <select
                 {...field}
                 className='w-[23%] rounded-l-full font-bold text-blue-300 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
               >
-                <option value='' className='hidden'>+ 234</option>
+                <option value='' className='hidden'>Nigeria + 234</option>
                 {myCountryCodesObject.map((item,i) => (
                   <option className='absolute top-0' value={item.countryCallingCode} key={i}>
                     {item.countryNameEn} {'  '}+{item.countryCallingCode}

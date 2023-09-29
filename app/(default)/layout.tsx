@@ -1,6 +1,7 @@
 'use client'
 import { ToastContainer } from 'react-toastify';
-import Loading from '@/app/loading'
+import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 
 export default function DefaultLayout({
   children,
@@ -9,7 +10,9 @@ export default function DefaultLayout({
 }) {
  return(
    <>
-        {children}
+    <Nav/>
+      {children}
+    <Footer/>
           <ToastContainer
             position="top-right"
             autoClose={5000}

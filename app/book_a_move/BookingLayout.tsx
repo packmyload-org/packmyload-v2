@@ -2,7 +2,7 @@ import { BookingProgress } from './BookingProgress'
 import Image from 'next/image'
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
-import {IoChevronBackCircleOutline, IoChevronForwardCircleOutline} from 'react-icons/io5'
+import {IoChevronBackCircleOutline} from 'react-icons/io5'
 
 type BookingLayoutProps = {
     leftContent?: React.ReactNode,
@@ -10,9 +10,10 @@ type BookingLayoutProps = {
     stepDescription?: string,
     textDescription?: string,
     prev?: string
+    next?: string
 }
 
-export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev }) => {
+export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev, next }) => {
     const router = useRouter()
     return (
         <div className="flex flex-col md:flex-row gap-4">
@@ -52,12 +53,16 @@ export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightC
             {/* Right section */}
             <main className="md:w-[50%] lg:max-w-3xl lg:mx-auto bg-white p-4 h-auto md:h-[90vh] ">
                     <div className='flex w-full justify-between'>
-                    <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer mt-2 text-blue-300 " onClick={() => router.push(prev ?? '')} />
+                    <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer text-blue-300 " onClick={() => router.push(prev ?? '')} />
                     </div>
-                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-full mt-4 pb-10 ">
+                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-[95%] mt-4 pb-10 ">
                     {/* Render right content */}
                     {rightContent}
                 </div>
+                {next &&
+                    <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={() => router.push(next ?? '')}>
+                    Proceed
+                </div>}
             </main>
         </div>
     )

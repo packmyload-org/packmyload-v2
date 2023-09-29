@@ -13,7 +13,7 @@ export default function Page() {
   const [data] = useState<Category[]>(smallMove);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filteredItems, setFilteredItems] = useState<{ item: string; volume: number }[]>([]);
-  const [selectedTab, setSelectedTab] = useState<string>('Living_Room/Dining');
+  const [selectedTab, setSelectedTab] = useState<string>('Living Room');
   const router = useRouter()
   useEffect(() => {
     const selectedCategory = data.find((category) => category.categoryName === selectedTab);
@@ -36,7 +36,7 @@ export default function Page() {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <div className='py-3 space-y-3 min-h-[50vh]'>
-        <div className='w-[90%] mx-auto md:w-full flex  justify-between gap-4 pt-6 overflow-y-scroll scrollbar-hide'>
+        <div className='w-[90%] mx-auto md:w-full flex justify-between gap-4 pt-6 overflow-y-scroll scrollbar-hide'>
           {data.map((category) => (
             <ItemsTabs
               key={category.categoryName}
@@ -51,13 +51,6 @@ export default function Page() {
             <ItemsCounter key={item.item} title={item.item} volume={item.volume} />
           ))}
         </div>
-      </div>
-      <div className='mb-4 w-[90%] mx-auto grid grid-cols-2'>
-      <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white  hover:bg-white p-2 rounded-lg hover:text-blue-300' onClick={()=>router.push('/book_a_move')}>
-          GO BACK
-        </div>
-          <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={()=>router.push('/book_a_move/locations-details')}>Proceed
-            </div>
           </div>
         </div>
       </div>
@@ -70,12 +63,13 @@ export default function Page() {
  )
   return (
     <BookingLayout
-      stepDescription='Select Move Items. ⛟'
+      stepDescription="Select Everything You're Moving. ⛟"
       textDescription=
-      "Discover Move Magic: Craft your perfect move by choosing items from various rooms. Mix and match to create a moving symphony tailored just for you!"
+      "Please scroll & select the items you wish to move per room. We use this information to determine the size of the truck, the materials and the number of movers needed for your move."
       leftContent={leftContent}
       rightContent={rightContent}
       prev='/book_a_move'
+      next='/book_a_move/locations-details'
     />
   );
 }
@@ -94,7 +88,7 @@ const ItemsTabs = (props: ItemsTabsProps) => {
       }`}
       onClick={props.onClick}
     >
-      <p className='text-lg font-semibold'>{props.name}</p>
+      <p className='text-sm font-semibold'>{props.name}</p>
     </section>
   );
 };

@@ -1,6 +1,6 @@
 [
   {
-    "categoryName": "Living_Room/Dining",
+    "categoryName": "Living Room",
     "items": [
       {
         "item": "Art Work(medium)",
@@ -172,7 +172,7 @@
     ]
   },
   {
-    "categoryName": "Bedroom / Bathroom",
+    "categoryName": "Bed/Bath Rooms",
     "items": [
       {
         "item": "Dresser (3-drawer)",
