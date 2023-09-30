@@ -1,0 +1,41 @@
+{
+
+   "rooms": [
+        {
+            "room": "Living Room",
+            "price": 2000
+        },
+        {
+            "room": "Dining Room",
+            "price": 2000
+        },
+        {
+            "room": "Master Bedroom",
+            "price": 2000
+        },
+        {
+            "room": "Bedrooms",
+            "price": 2000
+        },
+        {
+            "room": "Bathrooms",
+            "price": 2000
+        },
+        {
+            "room": "Store",
+            "price": 2000
+        },
+        {
+            "room": "BQ / Servant Quarters",
+            "price": 2000
+        },
+        {
+            "room": "Home office / Study",
+            "price": 2000
+        },
+        {
+            "room": "Gym",
+            "price": 2000
+        }
+    ]
+}
