@@ -29,10 +29,9 @@ export function sumVolume(objects: { volume: number }[]): any {
   return totalVolume;
 }
 interface BookingFormItem {
-  item: string;
-  numberOfItems: string;
+  room: string;
   price: number;
-  volume: number;
+  numberOfRooms: string;
 }
 
 export function sumItemPrices(items: BookingFormItem[]): number {

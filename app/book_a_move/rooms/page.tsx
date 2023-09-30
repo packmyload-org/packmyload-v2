@@ -1,7 +1,11 @@
 "use client"
 import { RoomCounter } from '@/components/book_a_move_comp/RoomCounter';
 import roomMove from '@/utils/RoomMoves.json';
-import BookingLayout  from '../BookingLayout';
+import dynamic from 'next/dynamic';
+import Loading from '../loading';
+const BookingLayout = dynamic(() => import('../BookingLayout'), {
+  loading: () => <Loading/>,
+});
 
 type RoomJson = {
     rooms: {
@@ -14,7 +18,7 @@ export default function Rooms(){
     const roomsOb: RoomJson = roomMove
     
     const rightContent = (
-        <div className='flex flex-wrap gap-2 p-1 w-full h-[fit-content] lg:mt-[30px]'>
+        <div className='flex flex-wrap gap-2 p-1 w-full h-[fit-content]'>
             {
                 roomsOb.rooms.map(room => (
                     <RoomCounter roomType={room.room} price={room.price} />
@@ -23,11 +27,17 @@ export default function Rooms(){
         </div>
     )
 
+       const leftContent = (
+   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full items-bg bg-contain">
+    
+    </div>
+ )
     return (
         <BookingLayout 
-            stepDescription='Select Your Rooms Type For Your Move'
-            textDescription=''
-            rightContent={rightContent}  
+            stepDescription='Select  Number Rooms'
+            textDescription=' We use this information to determine the size of the truck, the materials and the number of movers needed for your move.'
+            rightContent={rightContent}
+            leftContent={leftContent}
             prev='/book_a_move'
             next='book_a_move/items'
         />

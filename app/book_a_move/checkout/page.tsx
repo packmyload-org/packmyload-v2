@@ -48,7 +48,7 @@ export default function Checkout() {
     total: state.items.length,
     onChange: handleChangePage,
 };
-    const totalPrice = sumItemPrices(state.items);
+    const totalPrice = sumItemPrices(state.rooms);
     const volume = sumVolume(state.items)
     
     useEffect(() => {
@@ -103,13 +103,13 @@ export default function Checkout() {
             if (res.ok) {
                 alerts.success('Success', 'Mail was sent successfully.')
                 setLoading(false)
+                return;
             }
         } catch (error) {
             console.error(error)
         }
     }
     const handlePaymentGateway = async() => { 
-        console.log('mail quote', state.acceptedTerms)
          if (!state.acceptedTerms) {
              return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
         }
@@ -128,6 +128,7 @@ export default function Checkout() {
                 const data = await res.json()
                 const {authorization_url} = data.data
                 window.location.href = authorization_url;
+                return;
             }
         } catch (error) {
             alerts.error('Error', 'Oops! something went wrong. Please reach out to customer care.')

@@ -5,7 +5,6 @@ import smallMove from '@/utils/SmallMoves.json';
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
-import {useRouter} from "next/navigation"
 import dynamic from 'next/dynamic';
 import Loading from '../loading';
 interface Category {
@@ -18,7 +17,6 @@ export default function Page() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filteredItems, setFilteredItems] = useState<{ item: string; volume: number }[]>([]);
   const [selectedTab, setSelectedTab] = useState<string>('Living Room');
-  const router = useRouter()
   useEffect(() => {
     const selectedCategory = data.find((category) => category.categoryName === selectedTab);
     if (selectedCategory) {
