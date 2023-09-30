@@ -14,7 +14,7 @@ export default function Rooms(){
     const roomsOb: RoomJson = roomMove
     
     const rightContent = (
-        <div className='flex flex-wrap gap-2 p-1 w-full h-[fit-content]'>
+        <div className='flex flex-wrap gap-2 p-1 w-full h-[fit-content] lg:mt-[30px]'>
             {
                 roomsOb.rooms.map(room => (
                     <RoomCounter roomType={room.room} price={room.price} />
