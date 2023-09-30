@@ -9,7 +9,7 @@ type progressLinks = Array<{
     disabled: boolean
 }>
 
-const bookingUrls = ["/book_a_move","/book_a_move/items","/book_a_move/location-details","/book_a_move/checkout"]
+const bookingUrls = ["/book_a_move","/book_a_move/rooms","/book_a_move/items","/book_a_move/location-details","/book_a_move/checkout"]
 
 const originalLinks: progressLinks = [
     {
@@ -19,16 +19,21 @@ const originalLinks: progressLinks = [
     }, 
     {
         id: 2,
-        to: "/book_a_move/items",
+        to: "/book_a_move/rooms",
         disabled: true
     },
     {
         id: 3,
-        to: "/book_a_move/locations-details",
+        to: "/book_a_move/items",
         disabled: true
     },
     {
         id: 4,
+        to: "/book_a_move/locations-details",
+        disabled: true
+    },
+    {
+        id: 5,
         to: "/book_a_move/checkout",
         disabled: true
     }
@@ -57,11 +62,14 @@ export const BookingProgress: React.FC = () => {
         if([state.firstName !== '', state.lastName !== '', state.email !== '',state.pickUp !== '',state.destination !== '', state.phoneNumber !== ''].every(Boolean)){
             handleProgress(1);
         }
-        if(state.items.length){
+        if(state.rooms.length){
             handleProgress(2);
         }
-        if(state.buildingTypeStart !== '' && state.buildingTypeEnd !== ''){
+        if(state.items.length){
             handleProgress(3);
+        }
+        if(state.buildingTypeStart !== '' && state.buildingTypeEnd !== ''){
+            handleProgress(4);
         }
 
         if(!bookingUrls.includes(pathName)){

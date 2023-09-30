@@ -75,7 +75,7 @@ export default function Page() {
       "Discover Move Magic: Craft your perfect move by choosing items from various rooms. Mix and match to create a moving symphony tailored just for you!"
       leftContent={leftContent}
       rightContent={rightContent}
-      prev='/book_a_move'
+      prev='/book_a_move/rooms'
     />
   );
 }

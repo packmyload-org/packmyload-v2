@@ -62,7 +62,7 @@ export default function BookingIndexForm() {
         setLoading1(true);
         await handleSubmit(formData)
         console.log('Button 1 clicked');
-        router.push('/book_a_move/items')
+        router.push('/book_a_move/rooms')
         return;
       } else if (buttonName === 'submitButton2') {
         setLoading(true);
