@@ -24,8 +24,10 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
    style={{ fontSize: '14px', lineHeight: 1.2, wordBreak: 'break-word', textAlign: 'center', margin: 0 }}>
    {item.item}</p>
  })
+
+ console.log(mapItems)
  let name = firstName + ' ' + lastName;
- 
+
  return (`  <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

@@ -269,30 +269,33 @@ export default function Footer() {
           <Col span={24} md={8}>
             <ul className="flex gap-4 w-full justify-start md:justify-end">
               <li>
-                <a href="https://facebook.com/packmyload" target="_blank">
+                <a href="https://facebook.com/packmyload" target="_blank" aria-label="connect on facebook">
                   <FacebookLogo weight="fill" color="#4bcbfe" size={20} />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/packmyload" target="_blank">
+                <a href="https://twitter.com/packmyload" target="_blank" aria-label="connect on twitter">
                   <TwitterLogo weight="fill" color="#4bcbfe" size={20} />
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/packmyload" target="_blank">
+                <a href="https://instagram.com/packmyload" target="_blank" aria-label="connect on instagram">
                   <InstagramLogo weight="fill" color="#4bcbfe" size={20} />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/company/packmyload-com/about/"
+href="https://www.linkedin.com/company/packmyload-com/about/"
                   target="_blank"
+                  aria-label="connect on linkedin"
                 >
                   <LinkedinLogo weight="fill" color="#4bcbfe" size={20} />
                 </a>
               </li>
               <li>
-                <a href="https://www.pinterest.com/Packmyload/" target="_blank">
+                <a href="https://www.pinterest.com/Packmyload/" target="_blank"
+                aria-label="connect on pinterest"
+                >
                   <PinterestLogo weight="fill" color="#4bcbfe" size={20} />
                 </a>
               </li>
@@ -300,6 +303,7 @@ export default function Footer() {
                 <a
                   href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ"
                   target="_blank"
+                  aria-label="connect on youtube"
                 >
                   <YoutubeLogo weight="fill" color="#4bcbfe" size={20} />
                 </a>
@@ -308,6 +312,7 @@ export default function Footer() {
                 <a
                   href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ"
                   target="_blank"
+                  aria-label="connect on threads"
                 >
                   <Image src={Threads} alt="threads" width={20} height={18} />
                 </a>

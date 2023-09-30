@@ -1,6 +1,6 @@
 // next.config.js
 
-const nextConfig = {
+module.exports = {
   images: {
     domains: ["images.unsplash.com", "res.cloudinary.com"],
   },
@@ -10,24 +10,20 @@ const nextConfig = {
   },
   webpack: (config) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
-
     return config;
   },
-  // async headers() {
-  //   let configValue =
-  //     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com https://*.googleapis.com https://*.gstatic.com https://*.google.com https://*.ggpht.com http://*.googleusercontent.com blob https://www.googletagmanager.com https://connect.facebook.net";
-  //   return [
-  //     {
-  //       source: "/(.*)",
-  //       headers: [
-  //         {
-  //           key: "Content-Security-Policy",
-  //           value: configValue,
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
+  async headers() {
+    return [
+      {
+        // Set Cache-Control for static assets to 30 days (1 month)
+        source: "/static/:path*", // Adjust the path pattern as needed
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000", // 30 days in seconds
+          },
+        ],
+      },
+    ];
+  },
 };
-
-module.exports = nextConfig;

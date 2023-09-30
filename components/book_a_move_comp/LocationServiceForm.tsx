@@ -47,7 +47,7 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location }) => {
                             : handleFieldChange('buildingTypeEnd', e.target.value)
                          }}
                 >
-                    <option value="" hidden>Service For</option>
+                    <option value="" hidden>Select Your Building Type</option>
                     {serviceFor.map(item => (
                         <option
                             value={item.label}

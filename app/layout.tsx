@@ -1,24 +1,16 @@
-'use client'
 import './globals.css'
-import dynamic from 'next/dynamic'
-const Provider = dynamic(()=> import ( '@/providers/provider'),{loading:()=><Loading/>, ssr: false})
-import Loading from './loading'
 import Script from 'next/script';
-import { usePathname } from 'next/navigation';
-const Nav = dynamic(() => import('@/components/Nav'), {
-  loading: () => <Loading />,
-  ssr: false
-  })
-const Footer = dynamic(() => import('@/components/Footer'), {
-  loading: () => <Loading />,
-  ssr: false
-  })
+import dynamic from 'next/dynamic';
+import Loading from './loading';
+const Provider = dynamic(() => import('@/providers/provider'), {
+  ssr: false,
+  loading: () => <Loading/>,
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
   }) {
-  const path = usePathname()
   return (
     <html lang="en">
       <head>
@@ -38,7 +30,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <meta property="og:image:type" content="image/png"></meta>
             <meta property="og:image:height" content="342"></meta>
             <meta property="og:title" content="packmyload.com"/>
-          <link rel="icon" href="/favicon.ico"  />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
           <title>Packmyload</title>
       </head>
 
@@ -49,32 +45,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div className='w-full'>
             <main className='w-full overflow-y-hidden relative'>
               <Provider>
-                {!path.includes('book_a_move') && <Nav />}
                   {children}
-                {!path.includes('book_a_move') &&<Footer /> }
               </Provider>
             </main>
-        {/* <Script
-        type="text/javascript"
-        
-        dangerouslySetInnerHTML={{
-          __html: `
-          (function(d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
-              window.voiceflow.chat.load({
-                verify: { projectID: '6501924b5212a400086a2372' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production'
-              });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-            v.type = "text/javascript";
-            s.parentNode.insertBefore(v, s);
-          })(document, 'script');
-          `,
-        }}
-        /> */}
         </div>
       </body>
     </html>
