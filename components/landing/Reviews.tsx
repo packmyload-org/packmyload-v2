@@ -12,6 +12,10 @@ export const Reviews: React.FC = () => {
     const breakpoints = {
         // When window width is >= 768px
         768: {
+          slidesPerView: 2,
+          spaceBetween: 20, 
+        },
+        1024: {
           slidesPerView: 3,
           spaceBetween: 20, 
         },
