@@ -2,7 +2,7 @@
 
 module.exports = {
   images: {
-    domains: ["images.unsplash.com", "res.cloudinary.com"],
+    domains: ["images.unsplash.com", "res.cloudinary.com",  "lh3.googleusercontent.com"],
   },
   experimental: {
     esmExternals: "loose",

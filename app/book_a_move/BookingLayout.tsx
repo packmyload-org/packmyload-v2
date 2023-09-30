@@ -13,7 +13,7 @@ type BookingLayoutProps = {
     next?: string
 }
 
-export const BookingLayout: React.FC<BookingLayoutProps> = ({leftContent, rightContent, stepDescription, textDescription, prev, next }) => {
+export default function BookingLayout ({leftContent, rightContent, stepDescription, textDescription, prev, next }: BookingLayoutProps) {
     const router = useRouter()
     return (
         <div className="flex flex-col md:flex-row gap-4">

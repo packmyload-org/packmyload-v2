@@ -18,6 +18,8 @@ interface Move extends Document {
   totalPrice: number;
   service: string;
   countryCode: string;
+  reference: string;
+  isPaid: boolean;
 }
 
 const moveSchema = new Schema<Move>({
@@ -81,6 +83,13 @@ const moveSchema = new Schema<Move>({
     type: String,
     required: [true, 'Country code is required']
   },
+  reference: {
+    type: String,
+  },
+  isPaid: {
+    type: Boolean,
+    default: false
+  }
 },
 { timestamps: true });
 

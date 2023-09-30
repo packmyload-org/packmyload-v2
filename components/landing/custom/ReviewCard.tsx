@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 interface ReviewProp{
     text: string,
     name: string,
@@ -67,7 +67,7 @@ export const ReviewCard: React.FC<ReviewProp> = ({text, name, profile}) => {
                     <div className="name flex gap-2">
                         {
                             profile ?
-                            <img src={profile} alt="review profile" className="w-[30px] h-[30px]" />
+                            <Image src={profile} alt="review profile" className="w-[30px] h-[30px]" width={30} height={30} loading='lazy' />
                             :
                             <div className="relative inline-flex items-center justify-center w-[30px] h-[30px] overflow-hidden bg-gray-500 rounded-full dark:bg-gray-600">
                                 <span className="font-bold text-white ">{nameInitial}</span>

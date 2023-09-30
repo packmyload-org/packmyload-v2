@@ -53,16 +53,22 @@ function Map() {
     async function fetchRouteData() {
       const result = await calculateRoute();
       if (result) {
-        setRouteData(result);
         handleFieldChange('distance', result?.distance ?? '')
+        return setRouteData(result);
       }
+      return null
     }
     console.log('isTriggered', triggerCalculateRoute)
-    if (triggerCalculateRoute) {
+    if (
+      triggerCalculateRoute
+      && state.pickUp !== ''
+      && state.destination !== ''
+    ) {
       fetchRouteData()
-      setTriggerCalculateRoute(!triggerCalculateRoute)
+      setTriggerCalculateRoute(false)
+      return
     }
-  }, [triggerCalculateRoute]);
+  }, [triggerCalculateRoute, state.pickUp, state.destination]);
 
   useEffect(() => {
     if (path.includes('partner')) {
@@ -83,7 +89,7 @@ function Map() {
     }else if (path.includes('partner') ) {
       setMapCenter({ lat: 6.465422, lng: 3.406448 })
     }
-  }, [])
+  }, [path])
   console.log(routeData)
   return (
     <div className='w-full h-full mb-4 rounded-md shadow-md'>
