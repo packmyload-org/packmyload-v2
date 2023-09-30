@@ -54,6 +54,7 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
       onSelect={handleDateSelect} 
       renderExtraFooter={() =>
         <>
+        <p className='my-4 font-black text-lg px-5'>Select Move Time</p>
         <div className='w-full p-2 px-3 grid grid-cols-3 gap-2'>
           {availableTimes.map((time, index) => (
             <div key={index} className='text-center w-full rounded-full bg-blue-300 text-white hover:bg-inherit hover:text-blue-300 mt-6 cursor-pointer' onClick={()=> handleFieldChange('moveTime', time)}>

@@ -1,5 +1,5 @@
+const paystackSecretKey: string = process.env.PAYSTACK_SECRET_KEY ?? '';
 export async function initiatePaymentToPaystack(email: string, amount: number): Promise<any> {
-  const paystackSecretKey: string = process.env.PAYSTACK_SECRET_KEY ?? '';
   const paystackApiUrl: string = 'https://api.paystack.co/transaction/initialize';
 
   const headers: HeadersInit = {
@@ -10,7 +10,7 @@ export async function initiatePaymentToPaystack(email: string, amount: number): 
   const body: string = JSON.stringify({
    email,
    amount: (amount * 100),
-   callback_url: 'https://packmyload-v3.vercel.app'
+   callback_url: 'https://packmyload-v3.vercel.app/verify-payment'
   });
 
   try {
@@ -33,4 +33,29 @@ export async function initiatePaymentToPaystack(email: string, amount: number): 
   }
 }
 
+
+export async function verifyPayment(transactionReference?: string): Promise<any> {
+  const paystackApiUrl = `https://api.paystack.co/transaction/verify/${transactionReference}`;
+
+  const headers = {
+    Authorization: `Bearer ${paystackSecretKey}`,
+  };
+
+  try {
+    const response = await fetch(paystackApiUrl, { headers });
+
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    } else {
+      const errorData = await response.json();
+      throw new Error(errorData.message);
+    }
+  } catch (error) {
+    return {
+      status: false,
+      message: `Error verifying payment: ${error}`,
+    };
+  }
+}
 

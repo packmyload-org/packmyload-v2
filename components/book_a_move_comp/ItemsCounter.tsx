@@ -19,9 +19,11 @@ const ItemsCounter: React.FC<ItemsProps> = ({title, volume }) => {
     }
     return count;
   }, 0);
+  
   const [countItem, setCountItem] = useState<number>(initialCount);
 
-  console.log(bookingFormState)
+    console.log(countItem)
+
     const increaseCountItem = () => {
     setCountItem((countItem) => countItem + 1);
     const itemIndex = bookingFormState.items.findIndex((item) => item.item === title);
