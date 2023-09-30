@@ -29,6 +29,7 @@ export default function Rooms(){
             textDescription=''
             rightContent={rightContent}  
             prev='/book_a_move'
+            next='book_a_move/items'
         />
     )
 }
