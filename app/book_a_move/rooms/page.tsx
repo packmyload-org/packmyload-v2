@@ -1,7 +1,7 @@
 "use client"
 import { RoomCounter } from '@/components/book_a_move_comp/RoomCounter';
 import roomMove from '@/utils/RoomMoves.json';
-import { BookingLayout } from '../BookingLayout';
+import BookingLayout  from '../BookingLayout';
 
 type RoomJson = {
     rooms: {
