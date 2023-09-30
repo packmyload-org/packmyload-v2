@@ -2,13 +2,14 @@ import React from 'react'
 import { FadeLoader, MoonLoader } from 'react-spinners'
 type Props = {}
 
-export default function page({}: Props) {
+export default function page({ }: Props) {
+  let spin = true;
   return (
    <div className="w-full h-screen flex justify-center items-center">
     <div className='w-full flex flex-col items-center'>
         <MoonLoader
           color='#4bcbfe'
-          loading={true}
+          loading={spin}
           className='w-[100px]'
           aria-label="Loading Spinner"
         />

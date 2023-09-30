@@ -1,3 +1,4 @@
+import { Play } from '@phosphor-icons/react';
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 
@@ -26,7 +27,7 @@ const router =useRouter()
                         Get Estimate
                     </button>
                 </section>
-                <section className='flex flex-col items-center mt-5 lg:mt-0 lg:my-auto'>
+                <section className='flex flex-col items-center mt-5 lg:mt-0 lg:my-auto relative'>
                     <Image 
                         src={"/images/packman.png"}
                         width={345}
@@ -34,6 +35,9 @@ const router =useRouter()
                         alt='packman'
                         className='rounded-[10px]'
                     />
+                     <a className='flex justify-evenly items-center hover:animate-pulse w-[70px] p-[10px] border-gray-100 border-[10px] bg-blue-100 hover:bg-blue-600 absolute top-[40%] left-[40%] text-gray-100 font-bold rounded-full z-10 text-sm' href="https://www.youtube.com/watch?v=WHSjDa1zfyI">
+          <Play size={32} color="#fefbfb" weight="fill" />
+                    </a>
                 </section>
             </div>
         </section>
