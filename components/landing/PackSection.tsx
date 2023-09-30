@@ -6,9 +6,9 @@ const PackSection: React.FC = () => {
     return (
         <section className='bg-[#E7E7E7] w-full'>
 
-            <div className="grid grid-cols-1 p-2 lg:p-8 md:grid-cols-2 max-w-6xl mx-auto gap-[40px] mt-8">
+            <div className="grid grid-cols-1 p-2 lg:p-8 lg:grid-cols-2 max-w-6xl mx-auto gap-[40px] mt-8">
                 {/* First Card */}
-                <div className=" w-full md:w-[350px] lg:w-[550px] bg-[#f3f7ff] border border-gray-200 rounded-xl shadow">
+                <div className=" w-full md:w-[80%] lg:w-[550px] bg-[#f3f7ff] border mx-auto border-gray-200 rounded-xl shadow">
                     <div className={`p-3 w-full`}>
                         <Image 
                         src={calendar}
@@ -37,7 +37,7 @@ const PackSection: React.FC = () => {
                     />
                 </div>
                 {/* Second Card */}
-                <div className="w-full md:w-[350px] lg:w-[550px] bg-[#f3f7ff] border border-gray-200 rounded-xl shadow">
+                <div className="w-full md:w-[80%] lg:w-[550px] bg-[#f3f7ff] border mx-auto border-gray-200 rounded-xl shadow">
                     <div className={`p-3 w-full`}>
                         <Image 
                             src={secure} 
