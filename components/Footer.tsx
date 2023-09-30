@@ -68,12 +68,12 @@ export default function Footer() {
                         TERMS & CONDITIONS
                       </a>
                     </li>
-                    <li className="w-full flex no-wrap items-center mt-2">
+                    <li className="w-full flex no-wrap items-center mt-4">
                       <span className="flex items-center gap-1 mr-2 text-xs">
                         <EnvelopeSimple size={13} color="#4bcbfe" /> Mail:
                       </span>
                       <a
-                        className="text-gray-400 hover:text-gray-950 text-xs"
+                        className="text-white hover:text-gray-950 text-xs"
                         href="#"
                         target="_blank"
                       >
@@ -85,7 +85,7 @@ export default function Footer() {
                       <span className="flex items-center gap-1 mr-2 text-xs">
                         <Phone size={13} color="#4bcbfe" weight="fill" /> Phone:
                       </span>
-                      <a className="text-gray-400 hover:text-gray-950 text-xs " href="#">
+                      <a className="text-white hover:text-gray-950 text-xs " href="#">
                         0700- PACK-PRO (0700-722-5776)
                       </a>
                     </li>
@@ -109,7 +109,7 @@ export default function Footer() {
                     <ul className="space-y-4 h-full">
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/home-moves"
                           title=""
                         >
@@ -118,7 +118,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/office-moves"
                           title=""
                         >
@@ -127,7 +127,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/interstate-Car-Transport"
                           title="Student Moves"
                         >
@@ -136,7 +136,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/cleaning"
                           title="Cleaning"
                         >
@@ -145,7 +145,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/wedding-handling"
                           title=""
                         >
@@ -158,7 +158,7 @@ export default function Footer() {
                     <ul className="space-y-4 h-full md:mt-0 mt-2">
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/international-relocations"
                           title=""
                         >
@@ -167,7 +167,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/junk-moves"
                           title=""
                         >
@@ -177,7 +177,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/storage"
                           title=""
                         >
@@ -186,7 +186,7 @@ export default function Footer() {
                       </li>
                       <li className="clearfix">
                         <a
-                          className="text-gray-400 text-xs"
+                          className="text-white text-xs font-bold"
                           href="/services/store-delivery"
                           title=""
                         >
@@ -202,7 +202,7 @@ export default function Footer() {
               <div className="space-y-8 text-gray-400" text-gray-500>
                 <h3 className="text-xl font-[600]">Subscribe</h3>
                 <div className="space-y-8 pt-8 border-t-2 border-t-gray-950">
-                  <p>
+                  <p className="text-white">
                     Want to be notified when we have Moving tip or offers. Just
                     sign up and we'll send you a notification by email.
                   </p>
