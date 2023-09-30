@@ -1,11 +1,16 @@
 'use client'
-import { Envelope, PhoneCall, WhatsappLogo } from "@phosphor-icons/react";
-import { BookingLayout } from "../BookingLayout";
+import { WhatsappLogo } from "@phosphor-icons/react";
+
+const BookingLayout = dynamic(() => import('../BookingLayout'), {
+  loading: () => <Loading/>,
+});
 import Image from "next/image";
 import { useBookingForm } from "@/context/BookingFormContext";
 import { useState } from "react";
 import { Spin } from "antd";
 import { alerts } from "@/components/alerts/Alert";
+import dynamic from "next/dynamic";
+import Loading from "../loading";
 export default function Next_Page() {
    const { state, dispatch } = useBookingForm()
    const [loading,setLoading]= useState(false)

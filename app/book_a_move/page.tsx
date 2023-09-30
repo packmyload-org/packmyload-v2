@@ -2,10 +2,14 @@
 
 import Map from "@/components/Map"
 import BookingIndexForm from "@/components/book_a_move_comp/BookingIndexForm"
-import { BookingLayout } from "./BookingLayout"
+const BookingLayout = dynamic(() => import('./BookingLayout'), {
+  loading: () => <Loading/>,
+});
 import { DisplayUpperFormDetails } from "@/components/book_a_move_comp/DisplayUpperFormDetails"
 import { useBookingForm } from "@/context/BookingFormContext"
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react"
+import Loading from "../loading";
 
 export default function Booking() {
   const { state } = useBookingForm()

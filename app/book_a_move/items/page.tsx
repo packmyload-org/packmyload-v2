@@ -2,8 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import ItemsCounter from '@/components/book_a_move_comp/ItemsCounter';
 import smallMove from '@/utils/SmallMoves.json';
-import { BookingLayout } from '../BookingLayout';
+const BookingLayout = dynamic(() => import('../BookingLayout'), {
+  loading: () => <Loading/>,
+});
 import {useRouter} from "next/navigation"
+import dynamic from 'next/dynamic';
+import Loading from '../loading';
 interface Category {
   categoryName: string;
   items: { item: string; volume: number }[];

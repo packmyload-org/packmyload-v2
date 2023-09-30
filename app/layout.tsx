@@ -3,7 +3,6 @@ import Script from 'next/script';
 import dynamic from 'next/dynamic';
 import Loading from './loading';
 const Provider = dynamic(() => import('@/providers/provider'), {
-  ssr: false,
   loading: () => <Loading/>,
 });
 export default function RootLayout({

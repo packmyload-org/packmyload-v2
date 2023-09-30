@@ -2,7 +2,11 @@
 import LocationServiceForm from "@/components/book_a_move_comp/LocationServiceForm"
 import { useBookingForm } from "@/context/BookingFormContext"
 import {useRouter} from 'next/navigation'
-import { BookingLayout } from "../BookingLayout"
+import dynamic from 'next/dynamic';
+import Loading from '../loading';
+const BookingLayout = dynamic(() => import('../BookingLayout'), {
+  loading: () => <Loading/>,
+});
 export default function Location_Details(){
     const { state } = useBookingForm()
     const router = useRouter()

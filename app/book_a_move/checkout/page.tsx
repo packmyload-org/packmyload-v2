@@ -5,8 +5,14 @@ import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react
 import { Table, Col, Spin } from "antd";
 import { useEffect, useState } from "react";
 import { redirect } from 'next/navigation';
-import { BookingLayout } from "../BookingLayout";
+
+const BookingLayout = dynamic(() => import('../BookingLayout'), {
+  loading: () => <Loading/>,
+});
 import { alerts } from "@/components/alerts/Alert";
+import dynamic from "next/dynamic";
+import Loading from "../loading";
+import { json } from "node:stream/consumers";
 export default function Checkout() {
     const {state, dispatch}=useBookingForm()
     const [currentPage, setCurrentPage] = useState(1);
@@ -61,31 +67,31 @@ export default function Checkout() {
             return redirect('/book_a_move/locations-details')
         }
     })
+    const data = {
+        firstName: state.firstName,
+        lastName: state.lastName,
+        email: state.email,
+        phoneNumber: state.phoneNumber,
+        countryCode: state.countryCode,
+        destination: state.destination,
+        pickUp: state.pickUp,
+        contactBy: state.contactBy,
+        service: state.service,
+        moveDate: state.moveDate,
+        moveTime: state.moveTime,
+        items: state.items,
+        buildingTypeStart: state.buildingTypeStart,
+        buildingTypeEnd: state.buildingTypeEnd,
+        distance: state.distance,
+        volume: volume,
+        totalPrice: totalPrice
+    }
     const handleMailQuote = async() => { 
         console.log('mail quote', state.acceptedTerms)
         if (!state.acceptedTerms) {
             return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
         } 
         setLoading(true)
-        const data = {
-            firstName: state.firstName,
-            lastName: state.lastName,
-            email: state.email,
-            phoneNumber: state.phoneNumber,
-            countryCode: state.countryCode,
-            destination: state.destination,
-            pickUp: state.pickUp,
-            contactBy: state.contactBy,
-            service: state.service,
-            moveDate: state.moveDate,
-            moveTime: state.moveTime,
-            items: state.items,
-            buildingTypeStart: state.buildingTypeStart,
-            buildingTypeEnd: state.buildingTypeEnd,
-            distance: state.distance,
-            volume: volume,
-            totalPrice: totalPrice
-        }
         try {
             const res = await fetch('/api/booking', {
                 method: 'POST',
@@ -102,16 +108,36 @@ export default function Checkout() {
             console.error(error)
         }
     }
-    const handlePaymentGateway = () => { 
+    const handlePaymentGateway = async() => { 
         console.log('mail quote', state.acceptedTerms)
          if (!state.acceptedTerms) {
-            return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
+             return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
+        }
+        setLoading(true)
+        try {
+            const res = await fetch('/api/booking/payment', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(data)
+            })
+            if (res.ok) {
+                alerts.success('Success', 'Mail was sent successfully.')
+                setLoading(false)
+                const data = await res.json()
+                const {authorization_url} = data.data
+                window.location.href = authorization_url;
+            }
+        } catch (error) {
+            alerts.error('Error', 'Oops! something went wrong. Please reach out to customer care.')
+            console.error(error)
         }
     }
 const rightContent=(
-        <Spin spinning={loading} delay={500}>
-            <div>
+    <div>
                 {/* Section 1 */}
+                <Spin spinning={loading} delay={500} size="large">
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
                     <h1 className="text-2xl font-bold">{state.firstName}{"'s "}Move</h1>
                     <div className="flex mt-8" style={{width: 'fit-content'}}>
@@ -219,8 +245,9 @@ const rightContent=(
                         </div>
                     </div>
                 </div>
-
-                 {/* Section 2 */}
+ </Spin>
+        {/* Section 2 */}
+        <Spin spinning={loading} delay={500} size="large">   
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md mt-4">
                     {/* Move Items Table */}
 
@@ -289,8 +316,9 @@ const rightContent=(
                     </div>
                 </Col>
                 </div>
+         </Spin>
             </div>
-        </Spin>
+       
     )
     return <BookingLayout
                 stepDescription="Finalize your move"
