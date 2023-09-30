@@ -7,9 +7,12 @@ interface ItemsProps {
   volume: number;
 }
 
-const ItemsCounter: React.FC<ItemsProps> = ({ title, volume }) => {
+const ItemsCounter: React.FC<ItemsProps> = ({title, volume }) => {
+
   const { state: bookingFormState, dispatch: bookingFormDispatch } = useBookingForm();
     // Initialize local count from global state
+
+  
   const initialCount = bookingFormState.items.reduce((count, item) => {
     if (item.item === title) {
       return parseInt(item.numberOfItems, 10);

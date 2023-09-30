@@ -19,6 +19,11 @@ interface BookingFormState {
     price: number;
     volume: number;
   }>;
+  rooms: Array<{
+    room: string;
+    numberOfRooms: string;
+    price: number;
+  }>;
   buildingTypeStart: string;
   buildingTypeEnd: string;
   floorsStart: string;
@@ -36,6 +41,7 @@ interface BookingFormState {
 type Action =
   | { type: 'UPDATE_FIELD'; field: string; value: string | boolean}
   | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string; price: number; volume: number }[] }
+  | { type: 'UPDATE_ROOMS'; rooms: { room: string; numberOfRooms: string; price: number}[] }
   | { type: 'RESTORE_STATE'; payload: BookingFormState };
 
 // Define initial form state
@@ -50,6 +56,7 @@ const initialFormState: BookingFormState = {
   phoneNumber: '',
   moveType: 'Item Pick Up and Furniture Delivery',
   items: [],
+  rooms: [],
   buildingTypeStart: '',
   buildingTypeEnd: '',
   floorsStart: '',
@@ -79,6 +86,8 @@ const formReducer = (state: BookingFormState, action: Action): BookingFormState 
       return { ...state, [action.field]: action.value };
     case 'UPDATE_ITEMS':
       return { ...state, items: [...action.items] };
+    case 'UPDATE_ROOMS':
+      return { ...state, rooms: [...action.rooms] };
     case 'RESTORE_STATE':
       return action.payload;
     default:
