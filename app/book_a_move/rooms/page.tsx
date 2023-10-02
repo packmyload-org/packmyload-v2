@@ -18,7 +18,7 @@ export default function Rooms(){
     const roomsOb: RoomJson = roomMove
     
     const rightContent = (
-        <div className='flex flex-wrap gap-2 p-1 w-full h-[fit-content]'>
+        <div className='flex flex-wrap gap-2 p-1 w-full h-[fit-content] lg:mt-[80px]'>
             {
                 roomsOb.rooms.map(room => (
                     <RoomCounter roomType={room.room} price={room.price} />
@@ -34,7 +34,7 @@ export default function Rooms(){
  )
     return (
         <BookingLayout 
-            stepDescription='Select  Number Rooms'
+            stepDescription='Select The Number Of Rooms'
             textDescription=' We use this information to determine the size of the truck, the materials and the number of movers needed for your move.'
             rightContent={rightContent}
             leftContent={leftContent}
