@@ -128,7 +128,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='firstName'
                 placeholder='John'
-                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
+                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />
@@ -146,7 +146,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='lastName'
                 placeholder='Doe'
-                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
+                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />
@@ -171,7 +171,7 @@ export default function BookingIndexForm() {
               {...field}
               type='email'
               id='email'
-              className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
+              className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               placeholder='example@mail.com'
             />
           )}
@@ -208,7 +208,7 @@ export default function BookingIndexForm() {
                 type="text"
                 id='phoneNumber'
                 placeholder='66 703 78932'
-                className="w-[80%] h-10 p-4 text-gray-500 outline-none rounded-r-full placeholder:text-blue-300 placeholder:font-[500]"
+                className="w-[80%] h-10 p-4 text-gray-500 outline-none rounded-r-full placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />
