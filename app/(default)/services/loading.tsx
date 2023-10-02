@@ -1,15 +1,9 @@
 'use client'
-import {MapPin} from '@phosphor-icons/react'
-
+import Image from 'next/image'
 export default function Loading() {
   return (
     <div className="w-full absolute top-0 min-h-full z-[9999] bg-slate-600 text-center flex justify-center items-center">
-      <MapPin
-        color="#4bcbfe"
-        size={38}
-        weight='fill'
-        className='animate-bounce'
-      />
+     <Image src='/images/marker.png' alt='loader' width={100} height={100} className='animate-bounce' priority />
     </div>
   );
 }

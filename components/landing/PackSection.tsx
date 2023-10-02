@@ -29,10 +29,12 @@ const PackSection: React.FC = () => {
                             <p><i>*Only applicable for long-distance moves.</i></p>
                         </div>
                     </div>
-                    <img 
+                    <Image 
                     src={'/images/Packmyload.com-home-office-relocations.png'}
                     alt="people image" 
                     loading='lazy'
+                    width={550}
+                    height={400}
                     className='float-right w-full object-cover rounded-b-xl'
                     />
                 </div>
@@ -57,11 +59,13 @@ const PackSection: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <img 
+                    <Image 
                     src={'/images/packmyload-box.jpg'}
                     alt="people image" 
                     loading='lazy'
-                    className='float-right w-full object-cover] rounded-b-xl'
+                    width={550}
+                    height={400}
+                    className='float-right w-full object-cover rounded-b-xl'
                     />
                 </div>
             </div>

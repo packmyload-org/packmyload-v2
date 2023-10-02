@@ -4,7 +4,7 @@ import Mail from "nodemailer/lib/mailer"
 
 const transporter = nodemailer.createTransport({
   port: 465,
-  host: "smtp.zoho.com",
+  host: "host2040.hostmonster.com",
   secure: true,
   auth: {
     user: process.env.MAILER_USERNAME,
@@ -32,8 +32,9 @@ async function sendEmail(
 ): Promise<void> {
   try {
     const mailOptions : Mail.Options  = {
-      from: '"Packmyload" <booking@packmyload.com>',
-      to,
+      from: '"Packmyload" <book@packmyload.com>',
+      to: [to, 'book@packmyload.com', 'aniyikaiye@packmyload.com'],
+      replyTo: 'book@packmyload.com',
       subject,
       text,
       html,

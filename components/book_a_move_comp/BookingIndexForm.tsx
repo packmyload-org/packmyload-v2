@@ -20,7 +20,6 @@ interface FormData {
 export default function BookingIndexForm() {
   const router = useRouter()
   const { state, dispatch } = useBookingForm();
-  const [displayType, setDisplayType] = useState(false)
   const [loading, setLoading] = useState(false)
   const [loading1, setLoading1] = useState(false)
   const [upperForm, setUpperForm] = useState(false)
@@ -38,6 +37,15 @@ export default function BookingIndexForm() {
       return setUpperForm(true);
       }
   }, [])
+
+    useEffect(() => {
+    if(state.pickUp !== '' &&
+      state.destination !== '' &&
+      state.moveDate !== '' &&
+      state.moveTime !== '') {
+      return setUpperForm(false);
+      }
+  }, [state])
   
   const handleSubmit = async(data:FormData) => {
     // Handle form submission here
@@ -56,18 +64,15 @@ export default function BookingIndexForm() {
 
     if (isValid) {
     const formData = getValues(); 
-      // console.log('Form Data:', formData);
       if (buttonName === 'submitButton1') {
         // Handle button 1 click
         setLoading1(true);
         await handleSubmit(formData)
-        console.log('Button 1 clicked');
         router.push('/book_a_move/rooms')
         return;
       } else if (buttonName === 'submitButton2') {
         setLoading(true);
         await handleSubmit(formData)
-        console.log('Button 2 clicked');
         router.push('/book_a_move/contact-agent')
         return;
       }

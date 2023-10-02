@@ -10,7 +10,8 @@ import { useState } from "react";
 import { Spin } from "antd";
 import { alerts } from "@/components/alerts/Alert";
 import dynamic from "next/dynamic";
-import Loading from "../loading";
+import Loading from '@/app/loading';
+
 export default function Next_Page() {
    const { state, dispatch } = useBookingForm()
    const [loading,setLoading]= useState(false)

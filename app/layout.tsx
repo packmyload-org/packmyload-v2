@@ -1,21 +1,21 @@
 import './globals.css'
 import Script from 'next/script';
-import dynamic from 'next/dynamic';
-import Loading from './loading';
-const Provider = dynamic(() => import('@/providers/provider'), {
-  loading: () => <Loading/>,
-});
+import Provider from '@/providers/provider';
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-  }) {
+  }) { 
   return (
     <html lang="en">
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://maps.googleapis.com" />
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
       <head>
         {/* <!-- Google Tag Manager --> */}
         <Script
           strategy="lazyOnload"
+          async={true}
           dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -30,10 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <meta property="og:image:height" content="342"></meta>
             <meta property="og:title" content="packmyload.com"/>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preconnect" href="https://maps.googleapis.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
           <title>Packmyload</title>
       </head>
 
@@ -42,13 +38,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           height="0" width="0"
         ></iframe>
           <div className='w-full'>
-            <main className='w-full overflow-y-hidden relative'>
-              <Provider>
-                  {children}
-              </Provider>
+            <main className='w-full min-h-full overflow-y-hidden'>
+            <Provider>
+              {children}
+            </Provider>
             </main>
         </div>
       </body>
+        
     </html>
   )
 }

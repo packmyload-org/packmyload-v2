@@ -3,7 +3,7 @@ import LocationServiceForm from "@/components/book_a_move_comp/LocationServiceFo
 import { useBookingForm } from "@/context/BookingFormContext"
 import {useRouter} from 'next/navigation'
 import dynamic from 'next/dynamic';
-import Loading from '../loading';
+import Loading from '@/app/loading';
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });

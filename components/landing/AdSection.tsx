@@ -34,6 +34,7 @@ const router =useRouter()
                         height={345}
                         alt='packman'
                         className='rounded-[10px]'
+                        loading='lazy'
                     />
                      <a className='flex justify-evenly items-center hover:animate-pulse w-[70px] p-[10px] border-gray-100 border-[10px] bg-blue-100 hover:bg-blue-600 absolute top-[40%] left-[40%] text-gray-100 font-bold rounded-full z-10 text-sm' href="https://www.youtube.com/watch?v=WHSjDa1zfyI">
           <Play size={32} color="#fefbfb" weight="fill" />

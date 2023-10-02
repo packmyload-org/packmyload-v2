@@ -5,14 +5,13 @@ import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react
 import { Table, Col, Spin } from "antd";
 import { useEffect, useState } from "react";
 import { redirect } from 'next/navigation';
-
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
 import { alerts } from "@/components/alerts/Alert";
 import dynamic from "next/dynamic";
-import Loading from "../loading";
-import { json } from "node:stream/consumers";
+import Loading from '@/app/loading';
+
 export default function Checkout() {
     const {state, dispatch}=useBookingForm()
     const [currentPage, setCurrentPage] = useState(1);

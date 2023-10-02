@@ -6,7 +6,8 @@ const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
 import dynamic from 'next/dynamic';
-import Loading from '../loading';
+import Loading from '@/app/loading';
+
 interface Category {
   categoryName: string;
   items: { item: string; volume: number }[];
