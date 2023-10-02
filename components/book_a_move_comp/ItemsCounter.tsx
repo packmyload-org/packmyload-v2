@@ -97,8 +97,8 @@ const ItemsCounter: React.FC<ItemsProps> = ({title, volume }) => {
   );
 
   return (
-    <div className="bg-blue-200 flex justify-center gap-1 items-center rounded-md shadow-md p-3 w-[80%] sm:w-full mx-auto lg:w-[210px] min-w-[140px]">
-      <p className="text-[14px] w-full" title={title}>{title}</p>
+    <div className="bg-blue-200 flex justify-center gap-1 items-center rounded-md shadow-md p-3 w-[80%] h-[80px] sm:w-full mx-auto lg:w-[180px] min-w-[140px]">
+      <p className="text-[12px] w-full" title={title}>{title}</p>
       {counterButtons}
     </div>
   );
