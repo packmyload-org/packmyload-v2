@@ -20,7 +20,7 @@ export default function Location_Details(){
     const textDescription = "Tell us more about your pick up and drop off location.";
 
       const leftContent = (
-   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full location-bg bg-contain">
+   <div className="hidden md:block p-1 lg:px-4 my-auto h-[45vh] w-full location-bg bg-contain">
     
     </div>
     )
