@@ -1,36 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
-*{
-  font-family: 'Quicksand', sans-serif;
-}
-.gradient-bg{
-  position: relative;
-}
-@keyframes change {
-  0% {
-    background-image: url('/images/packmyload-request-move.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
-  50% {
-    background-image: url('/images/packmyload-covers-move.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
-  100% {
-    background-image: url('/images/packmyload-rate-and-review.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 .contact-bg {
     background-image: url('/images/contact-info.png');
     background-repeat: no-repeat;
