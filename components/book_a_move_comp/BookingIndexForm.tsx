@@ -52,7 +52,7 @@ export default function BookingIndexForm() {
     handleFieldChange('email', data.email);
     handleFieldChange('firstName', data.firstName);
     handleFieldChange('lastName', data.lastName);
-    handleFieldChange('countryCode', "+ " + data.countryCode || "234");
+    data.countryCode !== undefined && handleFieldChange('countryCode', `+ ${data.countryCode}`);
     handleFieldChange('phoneNumber', data.phoneNumber);
     handleFieldChange('service', data.service);
   }
@@ -68,12 +68,12 @@ export default function BookingIndexForm() {
         // Handle button 1 click
         setLoading1(true);
         await handleSubmit(formData)
-        router.push('/book_a_move/rooms')
+        router.push('/move/rooms')
         return;
       } else if (buttonName === 'submitButton2') {
         setLoading(true);
         await handleSubmit(formData)
-        router.push('/book_a_move/contact-agent')
+        router.push('/move/contact-agent')
         return;
       }
     }

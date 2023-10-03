@@ -28,7 +28,7 @@ export default function Page() {
   }, [data, selectedTab]);
   let rightContent = (
     <div>
-       <div className='grid grid-cols-1 w-full mx-auto gap-6 lg:mt-10'>
+       <div className='grid grid-cols-1 w-full mx-auto gap-6'>
       
       <div className='py-3 lg:space-y-3 min-h-[50vh]'>
         <div className='w-[90%] mx-auto md:w-full flex justify-between gap-4 pt-6 overflow-y-scroll scrollbar-hide'>
@@ -63,8 +63,8 @@ export default function Page() {
       "Please scroll & select the items you wish to move per room. We use this information to determine the size of the truck, the materials and the number of movers needed for your move."
       leftContent={leftContent}
       rightContent={rightContent}
-      prev='/book_a_move/rooms'
-      next='/book_a_move/locations-details'
+      prev='/move/rooms'
+      next='/move/locations-details'
     />
   );
 }

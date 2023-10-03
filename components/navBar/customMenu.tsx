@@ -58,9 +58,9 @@ export default function CustomMenu({ displayMenu, setDisplayMenu }: Props) {
                setDisplayMenu(!displayMenu)}}>
                   About Us
               </p>
-          {!pathname.includes("book_a_move") &&
+          {!pathname.includes("move") &&
               <p className='w-[80%] mx-auto text-base font-extrabold hover:text-gray-900 text-white mt-2 p-[3px] sm:hidden bg-blue-100 text-center rounded-md'
-                 onClick={() => { setDisplayMenu(!displayMenu); router.push('/book_a_move');  }}>
+                 onClick={() => { setDisplayMenu(!displayMenu); router.push('/move');  }}>
                 Book Now
               </p>
              }

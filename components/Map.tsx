@@ -84,7 +84,7 @@ function Map() {
         handleFieldChange('distance', result?.distance ?? '')
       }
     }
-    if (path.includes("book_a_move")) {
+    if (path.includes("move")) {
       fetchRouteData();
     }else if (path.includes('partner') ) {
       setMapCenter({ lat: 6.465422, lng: 3.406448 })
@@ -105,7 +105,7 @@ function Map() {
         }}
       >
         {
-       !path.includes('book_a_move') && <Marker position={mapCenter} />
+       !path.includes('move') && <Marker position={mapCenter} />
         }
           
         {routeData?.direction  && <DirectionsRenderer directions={routeData.direction} />}

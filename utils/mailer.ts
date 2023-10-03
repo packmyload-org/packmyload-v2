@@ -32,16 +32,15 @@ async function sendEmail(
 ): Promise<void> {
   try {
     const mailOptions : Mail.Options  = {
-      from: '"Packmyload" <book@packmyload.com>',
-      to: [to, 'book@packmyload.com', 'aniyikaiye@packmyload.com'],
-      replyTo: 'book@packmyload.com',
+      from: '"Packmyload" <no-reply@packmyload.com>',
+      to,
       subject,
       text,
       html,
     };
 
-    await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully!");
+    const data = await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully!", data);
   } catch (error) {
     console.error("Error sending email:", error);
   }

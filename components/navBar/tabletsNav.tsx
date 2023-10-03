@@ -21,8 +21,8 @@ function tabletsNav() {
                   call us
                 </a> 
         <div id='show-horizontal-line' className='h-[30px] w-[1px] bg-gray-100/20'></div>
-        {!pathname.includes("book_a_move") &&
-              <Link href='/book_a_move'  className='flex justify-evenly items-center w-[130px] p-[8px] book-move bg-blue-100 hover:bg-white hover:text-blue-300 text-white font-black rounded-full text-xs'>
+        {!pathname.includes("move") &&
+              <Link href='/move'  className='flex justify-evenly items-center w-[130px] p-[8px] book-move bg-blue-100 hover:bg-white hover:text-blue-300 text-white font-black rounded-full text-xs'>
                 BOOK NOW 
               </Link> 
               }

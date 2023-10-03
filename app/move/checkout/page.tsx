@@ -63,7 +63,7 @@ export default function Checkout() {
             state.moveTime === '' ||
             state.pickUp === ''
         ){
-            return redirect('/book_a_move/locations-details')
+            return redirect('/move/locations-details')
         }
     })
     const data = {
@@ -135,7 +135,7 @@ export default function Checkout() {
         }
     }
 const rightContent=(
-    <div>
+    <div className="w-[90%] mx-auto">
                 {/* Section 1 */}
                 <Spin spinning={loading} delay={500} size="large">
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">

@@ -66,7 +66,7 @@ const initialFormState: BookingFormState = {
   service: '',
   distance: '',
   contactBy: '',
-  countryCode: '',
+  countryCode: '+ 234',
   acceptedTerms: false
 };
 

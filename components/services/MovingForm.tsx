@@ -22,7 +22,7 @@ export const MovingForm: React.FC = () => {
         alerts.error('Invalid Form Submission', 'All fields required', 1500)
         return;
         }
-        router.push('book_a_move')
+        router.push('move')
   }
 
 

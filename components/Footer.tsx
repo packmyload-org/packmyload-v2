@@ -20,20 +20,20 @@ export default function Footer() {
     <footer
       className={` main-footer w-full ${
         [
-          "/book_a_move",
-          "/book_a_move/items",
-          "/book_a_move/locations-details",
-          "/book_a_move/checkout",
+          "/move",
+          "/move/items",
+          "/move/locations-details",
+          "/move/checkout",
         ].some((url) => url === path)
           ? "bg-inherit"
           : "dark-footer"
       }`}
     >
       {[
-        "/book_a_move",
-        "/book_a_move/items",
-        "/book_a_move/locations-details",
-        "/book_a_move/checkout",
+        "/move",
+        "/move/items",
+        "/move/locations-details",
+        "/move/checkout",
       ].some((url) => url === path) ? null : (
         <div className="px-2 sm:pb-20 xl:pb-0 max-w-6xl mx-auto">
           <Row

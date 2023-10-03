@@ -9,32 +9,32 @@ type progressLinks = Array<{
     disabled: boolean
 }>
 
-const bookingUrls = ["/book_a_move","/book_a_move/rooms","/book_a_move/items","/book_a_move/location-details","/book_a_move/checkout"]
+const bookingUrls = ["/move","/move/rooms","/move/items","/move/location-details","/move/checkout"]
 
 const originalLinks: progressLinks = [
     {
         id: 1,
-        to: "/book_a_move",
+        to: "/move",
         disabled: false
     }, 
     {
         id: 2,
-        to: "/book_a_move/rooms",
+        to: "/move/rooms",
         disabled: true
     },
     {
         id: 3,
-        to: "/book_a_move/items",
+        to: "/move/items",
         disabled: true
     },
     {
         id: 4,
-        to: "/book_a_move/locations-details",
+        to: "/move/locations-details",
         disabled: true
     },
     {
         id: 5,
-        to: "/book_a_move/checkout",
+        to: "/move/checkout",
         disabled: true
     }
 ]
