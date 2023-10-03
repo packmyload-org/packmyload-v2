@@ -320,8 +320,13 @@ const rightContent=(
             </div>
        
     )
+    const leftContent = (
+        <div className="hidden md:block p-1 lg:px-4 my-auto h-[45vh] w-full checkout-bg">
+        
+        </div>
+    )
     return <BookingLayout
                 stepDescription="Finalize your move"
-                rightContent={rightContent}
-    />
+                leftContent={leftContent}
+                rightContent={rightContent}/>
 }

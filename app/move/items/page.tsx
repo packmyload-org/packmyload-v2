@@ -52,7 +52,7 @@ export default function Page() {
   )
   
    const leftContent = (
-   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full items-bg bg-contain">
+   <div className="hidden md:block p-1 lg:px-4 my-auto h-[45vh] w-full items-bg bg-contain">
     
     </div>
  )

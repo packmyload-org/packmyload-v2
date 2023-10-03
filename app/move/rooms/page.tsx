@@ -18,24 +18,35 @@ export default function Rooms(){
     const roomsOb: RoomJson = roomMove
     
     const rightContent = (
-        <div className='grid grid-cols-2 gap-2 p-1 w-full h-[fit-content] lg:mt-[80px]'>
-            {
-                roomsOb.rooms.map(room => (
-                    <RoomCounter roomType={room.room} price={room.price} />
-                ))
-            }
-        </div>
+        <main className=''>
+            <h1 className='text-xl md:text-3xl font-black text-center'>Select The Number Of Rooms</h1>
+            <p className='text-sm text-center md:w-[80%] mt-1 mx-auto'>We use this information to determine the size of the truck, the materials and the number of movers needed for your move.</p>
+            <form className=' md:w-[70%] lg:w-[85%] md:ml-10 mt-4'>
+                <label className="text-sm text-gray-800 font-semibold" htmlFor="size-feet">Enter Size in Square Feet</label>
+                <input 
+                    className='w-full mt-2 h-12 p-4 text-gray-500 rounded-md outline-none border border-2 placeholder:text-slate-400 placeholder:font-[500] bg-slate-50'
+                    id='size-feet' 
+                    type="number" 
+                    placeholder='80'
+                />
+            </form>
+            <div className='grid grid-cols-2 gap-2 p-1 w-full h-[fit-content] mt-2'>
+                {
+                    roomsOb.rooms.map(room => (
+                        <RoomCounter roomType={room.room} price={room.price} />
+                    ))
+                }
+            </div>
+        </main>
     )
 
        const leftContent = (
-   <div className="p-1 lg:px-4 my-auto h-[45vh] w-full items-bg bg-contain">
+   <div className="hidden md:block p-1 lg:px-4 my-auto h-[54vh] w-full rooms-bg bg-contain">
     
     </div>
  )
     return (
         <BookingLayout 
-            stepDescription='Select The Number Of Rooms'
-            textDescription=' We use this information to determine the size of the truck, the materials and the number of movers needed for your move.'
             rightContent={rightContent}
             leftContent={leftContent}
             prev='/move'

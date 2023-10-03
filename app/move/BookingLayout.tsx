@@ -16,9 +16,9 @@ type BookingLayoutProps = {
 export default function BookingLayout ({leftContent, rightContent, stepDescription, textDescription, prev, next }: BookingLayoutProps) {
     const router = useRouter()
     return (
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
             {/* Left section */}
-            <aside className="md:w-[50%] bg-[#f7f6f6] p-4 h-auto sm:h-auto lg:h-[100vh] overflow-y-scroll scrollbar-hide">
+            <aside className="lg:w-[50%] bg-[#f7f6f6] p-4 h-auto sm:h-auto lg:h-[100vh] overflow-y-scroll scrollbar-hide">
                 <main className="lg:max-w-3xl lg:mx-auto">
 
                     <Link href={'/'}>
@@ -51,11 +51,11 @@ export default function BookingLayout ({leftContent, rightContent, stepDescripti
             </aside>
 
             {/* Right section */}
-            <main className="md:w-[50%] lg:max-w-3xl lg:mx-auto bg-white p-4 h-auto md:h-[90vh] ">
+            <main className="lg:w-[50%] lg:max-w-3xl lg:mx-auto bg-white p-4 h-auto md:h-[90vh] ">
                     <div className='flex w-full justify-between'>
                     <IoChevronBackCircleOutline size={40} className="hidden lg:block cursor-pointer text-blue-300 " onClick={() => router.push(prev ?? '')} />
                     </div>
-                <div className="flex flex-col lg:flex-row lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-[95%] mt-4 pb-10 ">
+                <div className="flex flex-col lg:gap-4 lg:max-w-3xl overflow-scroll scrollbar-hide h-[95%] mt-4 pb-10 ">
                     {/* Render right content */}
                     {rightContent}
                 </div>
