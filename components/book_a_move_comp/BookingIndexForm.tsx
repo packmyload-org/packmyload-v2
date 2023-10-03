@@ -187,9 +187,9 @@ export default function BookingIndexForm() {
             render={({ field }) => (
               <select
                 {...field}
-                className='w-[23%] rounded-l-full font-bold text-blue-300 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
+                className='w-[23%] rounded-l-full font-bold text-gray-500 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
               >
-                <option value='' className='hidden'>Nigeria + 234</option>
+                <option value='' className='hidden text-slate-400'>Nigeria + 234</option>
                 {myCountryCodesObject.map((item,i) => (
                   <option className='absolute top-0' value={item.countryCallingCode} key={i}>
                     {item.countryNameEn} {'  '}+{item.countryCallingCode}

@@ -7,11 +7,11 @@ import { Calendar } from '@phosphor-icons/react'
 
 type Props = {
  calendarVisible: boolean;
- 
+ style?: string;
  setCalendarVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function CustomDatePicker({ calendarVisible, setCalendarVisible }: Props) {
+export default function CustomDatePicker({ calendarVisible, setCalendarVisible , style}: Props) {
  const time = getAvailableTimes(null)
    const [availableTimes, setAvailableTimes] = useState<string[]>(time);
     const {state, dispatch}=useBookingForm()
@@ -38,7 +38,7 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
  };
   return (
     <DatePicker
-      className='w-full outline-none cursor-pointer custom_placeholder bg-white text-gray-900 placeholder-blue-300 '
+      className={`w-full outline-none cursor-pointer custom_placeholder bg-white text-gray-900 ${style} `} 
       suffixIcon={<Calendar color='#2E5F9E' size={30} weight='duotone'/>}
       bordered={false}
       picker='date'

@@ -3,6 +3,7 @@ import Mail from "nodemailer/lib/mailer"
 // console.log(process.env.MAILER_PASSWORD);
 
 const transporter = nodemailer.createTransport({
+  name: "www.packmyload.com",
   port: 465,
   host: "host2040.hostmonster.com",
   secure: true,
