@@ -1,5 +1,5 @@
 export default function Chat(){
  return (
-  <h1 className='absolute bottom-[10%] right-[10%]'>Chat</h1>
+  <h1 className="fixed bottom-4 right-4">Chat</h1>
  )
 }

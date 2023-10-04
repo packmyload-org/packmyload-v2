@@ -46,9 +46,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <main className={`w-full min-h-full overflow-y-hidden relative`}>
             <Provider>
               {children}
-              <Chat />
             </Provider>
             </main>
+            <Chat />
         </div>
       </body>
         
