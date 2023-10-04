@@ -1,9 +1,6 @@
 import dynamic from 'next/dynamic';
 import './globals.css'
-import localFont from 'next/font/local'
-const QuickSand = localFont({
-  src: '../public/fonts/BrownPro-Regular.otf',
-})
+
 
 import Script from 'next/script';
 import Loading from './loading';
@@ -45,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           height="0" width="0"
         ></iframe>
           <div className='w-full'>
-            <main className={`w-full min-h-full overflow-y-hidden ${QuickSand.className} `}>
+            <main className={`w-full min-h-full overflow-y-hidden`}>
             <Provider>
               {children}
             </Provider>
