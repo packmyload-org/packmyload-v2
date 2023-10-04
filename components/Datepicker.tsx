@@ -35,10 +35,10 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
     const times = getAvailableTimes(date.toDate());
     setAvailableTimes(times);
    }
- };
+  };
   return (
     <DatePicker
-      className={`w-full outline-none cursor-pointer custom_placeholder bg-white text-gray-900 ${style} `} 
+      className={`w-full outline-none cursor-pointer custom_placeholder bg-white text-gray-500`} 
       suffixIcon={<Calendar color='#2E5F9E' size={30} weight='duotone'/>}
       bordered={false}
       picker='date'

@@ -90,17 +90,17 @@ export default function BookingIndexForm() {
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
-              inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
+              inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               placeholder="Destination From"
             />
           </div>
           <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md ext-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
+            <label className="text-md text-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
           
           <AutoCompleteInput
             type="text"
             inputName="destination"
-            inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-blue-300 placeholder:font-[500]"
+            inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
             placeholder="Destination To"
             />
           </div>

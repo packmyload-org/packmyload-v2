@@ -32,7 +32,7 @@ export const MovingForm: React.FC = () => {
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-[30%] justify-between border-r-2 items-center'>
                   <AutoCompleteInput
                     inputName='pickUp'
-                    inputStyle='p-2 h-10 focus:outline-0 text-gray-900 placeholder-blue-300 placeholder:text-[14px] w-full place_font'
+                    inputStyle='p-2 h-10 focus:outline-0 text-gray-900 placeholder:text-slate-400 placeholder:font-[500] w-full place_font '
                     placeholder='Moving From'
                     type='text'
             />
@@ -44,7 +44,7 @@ export const MovingForm: React.FC = () => {
                 <div className='flex bg-gray-100 flex-nowrap py-1 px-3 w-full lg:w-[30%] justify-between items-center border-r-2'>
                   <AutoCompleteInput
                     inputName='destination'
-                    inputStyle='p-2 h-10 focus:outline-0 text-gray-900 placeholder-blue-300 placeholder:text-[14px] w-full place_font'
+                    inputStyle='p-2 h-10 focus:outline-0 text-gray-900 placeholder:text-slate-400 placeholder:font-[500] w-full place_font'
                     placeholder='Moving To'
                     type='text' 
             />
