@@ -187,7 +187,7 @@ export default function BookingIndexForm() {
             render={({ field }) => (
               <select
                 {...field}
-                className='w-[23%] rounded-l-full font-bold text-gray-500 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
+                className='w-[32%] rounded-l-full font-bold text-gray-500 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
               >
                 <option value='' className='hidden text-slate-400'>Nigeria + 234</option>
                 {myCountryCodesObject.map((item,i) => (
@@ -201,14 +201,14 @@ export default function BookingIndexForm() {
           <Controller
             name='phoneNumber'
             control={control}
-            rules={{ required: 'Phone Number is required', min: 11 }}
+            rules={{ required: 'Phone Number is required', min: 10 }}
             render={({ field }) => (
               <input
                 {...field}
                 type="text"
                 id='phoneNumber'
-                placeholder='66 703 78932'
-                className="w-[80%] h-10 p-4 text-gray-500 outline-none rounded-r-full placeholder:text-slate-400 placeholder:font-[500]"
+                placeholder='903 222 9225'
+                className="w-[68%] h-10 p-4 text-gray-500 outline-none rounded-r-full placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />

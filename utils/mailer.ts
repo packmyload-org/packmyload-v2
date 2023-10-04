@@ -2,7 +2,7 @@ import  nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer"
 
 const transporter = nodemailer.createTransport({
-  name: "packmyload.com",
+  name: "www.packmyload.com",
   port: 465,
   host: "host2040.hostmonster.com",
   secure: true,
@@ -33,19 +33,13 @@ async function sendEmail(
   try {
     const mailOptions : Mail.Options  = {
       from: '"Packmyload" <no-reply@packmyload.com>',
-      to,
+      to:[to, "book@packmyload.com"],
       subject,
       text,
       html,
     };
 
     const data = await transporter.sendMail(mailOptions);
-    if (data.response.includes("250 OK")) { 
-      delete mailOptions.to
-      mailOptions["to"] = "book@packmyload.com";
-      await transporter.sendMail(mailOptions);
-      console.log("Email sent successfully to booking!");
-    }
     console.log("Email sent successfully!", data);
   } catch (error) {
     console.error("Error sending email:", error);
