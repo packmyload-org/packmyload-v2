@@ -1,6 +1,5 @@
 import  nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer"
-// console.log(process.env.MAILER_PASSWORD);
 
 const transporter = nodemailer.createTransport({
   name: "packmyload.com",
