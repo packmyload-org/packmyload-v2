@@ -1,5 +1,4 @@
 "use client"
-import { useState } from 'react';
 import Image from 'next/image';
 import servicesArr from './services.json'
 import Link from 'next/link';
@@ -15,12 +14,13 @@ export default function Services(){
           if(pathname === '/' && index <= 5)
           return (
             <div 
-              className="flex flex-col limitless-card rounded relative cursor-pointer" 
+              className="flex flex-col rounded relative cursor-pointer" 
               key={index}
             >
               <Link href={item.to}>
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image 
+                  <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+                  <img 
                     src={item.img} 
                     alt="Read more" 
                     width={100} 
@@ -28,10 +28,11 @@ export default function Services(){
                     loading='lazy'
                     className="object-cover w-full h-auto rounded transition-transform duration-300 transform-gpu hover:scale-110" 
                   />
-                  <div className="absolute bottom-4 left-0 p-2 text-white text-xl font-bold">
+                  <div className="absolute bottom-4 z-20 left-0 p-2 text-white text-xl font-extrabold">
                     {item.title}
                   </div>
                 </div>
+
               </Link>
             </div>
             )
@@ -39,12 +40,13 @@ export default function Services(){
         : servicesArr.map((item,index) => (
 
             <div 
-              className="flex flex-col limitless-card rounded relative cursor-pointer" 
+              className="flex flex-col rounded relative cursor-pointer" 
               key={index}
             >
               <Link href={item.to}>
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image 
+                  <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+                  <img 
                     src={item.img} 
                     alt="Read more" 
                     width={100} 
@@ -52,7 +54,7 @@ export default function Services(){
                     loading='lazy'
                     className="object-cover w-full h-auto rounded transition-transform duration-300 transform-gpu hover:scale-110" 
                   />
-                  <div className="absolute bottom-4 left-0 p-2 text-white text-xl font-bold">
+                  <div className="absolute bottom-4 z-20 left-0 p-2 text-white text-xl font-extrabold">
                     {item.title}
                   </div>
                 </div>
