@@ -9,7 +9,7 @@ const router =useRouter()
             className="bg-[#2E5F9E] w-[100%]  bg-[url('/images/bg/shapes-big-new.png')] "
         >
             <div 
-                className={`max-w-6xl mx-auto flex flex-col py-4 px-7 lg:flex-row justify-center lg:justify-between `}
+                className={`max-w-6xl mx-auto flex flex-col py-4 px-7 lg:py-10 lg:flex-row justify-center lg:justify-between `}
             >
 
                 <section className="w-[100%] lg:w-[60%] mt-0 text-center lg:text-left lg:my-auto">
