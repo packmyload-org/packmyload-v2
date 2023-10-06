@@ -66,7 +66,19 @@ select:focus {
   border-color: #2E5F9E;
 
 }
+.custom_placeholder{
+.ant-picker-input input::placeholder {
+    color: rgb(148 163 184 / 1);
+    font-weight: 500;
+  }
+}
 
+.move_custom_placeholder{
+  .ant-picker-input input::placeholder {
+      color: rgb(148 163 184 / 1);
+      font-weight: 500;
+    }
+}
 /* Style the dropdown arrow (Safari) */
 select::-webkit-outer-spin-button,
 select::-webkit-inner-spin-button {

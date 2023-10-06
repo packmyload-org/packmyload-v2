@@ -57,6 +57,7 @@ export const MovingForm: React.FC = () => {
             <CustomDatePicker
               calendarVisible={calendarVisible}
               setCalendarVisible={setCalendarVisible}
+              style='custom_placeholder '
             />
               </div>
               <button type="submit" 

@@ -38,7 +38,7 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
   };
   return (
     <DatePicker
-      className={`w-full outline-none cursor-pointer custom_placeholder bg-white text-gray-500`} 
+      className={`w-full outline-none cursor-pointer  bg-white text-gray-500 ${style} `} 
       suffixIcon={<Calendar color='#2E5F9E' size={30} weight='duotone'/>}
       bordered={false}
       picker='date'

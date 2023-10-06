@@ -86,7 +86,7 @@ export default function BookingIndexForm() {
           &&
           <div className='space-y-6 w-full'>
                  <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
+            <label className="ml-3 text-md text-gray-900 font-semibold" htmlFor="MovingFrom">Moving From <span className='text-red-600'>*</span></label>
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
@@ -95,7 +95,7 @@ export default function BookingIndexForm() {
             />
           </div>
           <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start">
-            <label className="text-md text-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
+            <label className="ml-3 text-md text-gray-900 font-semibold" htmlFor="MovingTo">Moving To <span className='text-red-600'>*</span></label>
           
           <AutoCompleteInput
             type="text"
@@ -104,20 +104,23 @@ export default function BookingIndexForm() {
             placeholder="Destination To"
             />
           </div>
-            <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start bg-white rounded-full mt-2"
+            <div className='w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start'>
+              <label className="ml-3 text-md text-gray-900 font-semibold" htmlFor="MovingTo">Date <span className='text-red-600'>*</span></label>
+              <div className="w-full bg-white rounded-full"
               onClick={() => setCalendarVisible(!calendarVisible)}
             >
-              
               <CustomDatePicker 
                 calendarVisible={calendarVisible}
                 setCalendarVisible={setCalendarVisible}
+                style='move_custom_placeholder h-12'
               />
              </div>
+            </div>
           </div> 
           }
          <div className="w-[98%] md:w-[90%] mx-auto grid grid-cols-2 gap-4 items-center">
         <div className='flex flex-col'>
-          <label className="text-md text-gray-800 font-semibold" htmlFor="firstName">First Name <span className='text-red-600'>*</span></label>
+          <label className="ml-3 text-md text-gray-800 font-semibold" htmlFor="firstName">First Name <span className='text-red-600'>*</span></label>
           <Controller
             name='firstName'
             control={control}
@@ -135,7 +138,7 @@ export default function BookingIndexForm() {
            {errors.firstName && <p className="text-red-600">{errors.firstName.message}</p>} 
         </div>
         <div className='flex flex-col'>
-          <label className="text-md text-gray-800 font-semibold" htmlFor="lastName">Last Name <span className='text-red-600'>*</span></label>
+          <label className="ml-3 text-md text-gray-800 font-semibold" htmlFor="lastName">Last Name <span className='text-red-600'>*</span></label>
           <Controller
             name='lastName'
             control={control}
@@ -155,7 +158,7 @@ export default function BookingIndexForm() {
 
        </div>
       <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start">
-        <label className="text-md text-gray-800 font-semibold" htmlFor="email">Email <span className='text-red-600'>*</span></label>
+        <label className="ml-3 text-md text-gray-800 font-semibold" htmlFor="email">Email <span className='text-red-600'>*</span></label>
         <Controller
           name='email'
           control={control}
@@ -179,7 +182,7 @@ export default function BookingIndexForm() {
          {errors.email && <p className="text-red-600">{errors.email.message}</p>} 
       </div>
       <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start">
-        <label className="text-md text-gray-800 font-semibold" htmlFor="phoneNumber">Phone <span className='text-red-600'>*</span></label>
+        <label className="ml-3 text-md text-gray-800 font-semibold" htmlFor="phoneNumber">Phone <span className='text-red-600'>*</span></label>
         <div className='w-full flex h-auto'>
           <Controller
             name='countryCode'
@@ -219,7 +222,7 @@ export default function BookingIndexForm() {
         </div>
       </div>
       <div className="w-[98%] md:w-[90%] mx-auto  flex flex-col items-start">
-        <label className="text-md text-gray-800 font-semibold" htmlFor="service">Service <span className='text-red-600'>*</span></label>
+        <label className="text-md text-gray-800 font-semibold ml-3 " htmlFor="service">Service <span className='text-red-600'>*</span></label>
         <Controller
           name='service'
           control={control}
