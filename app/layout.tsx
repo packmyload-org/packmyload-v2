@@ -46,8 +46,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {children}
               </Provider>
             </main>
-            {/* <Chat /> */}
-            <Script
+            <Chat />
+            {/* <Script
             type="text/javascript"
             strategy="lazyOnload"
             dangerouslySetInnerHTML={{
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 })(document, 'script');
               `,
             }}
-          />
+          /> */}
         </div>
       </body>
         
