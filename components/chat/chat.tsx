@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { useState } from 'react'
 import ChatComponent from './chatComponent'
 export default function Chat() {
-  const [launch,setLaunch]=useState(true)
-  const [start,setStart]=useState(false)
+  const [launch,setLaunch]= useState(true)
+  const [start,setStart]= useState(false)
   return (
     <>
         {start ? <ChatComponent /> : (
@@ -18,7 +18,7 @@ export default function Chat() {
           className="object-contain"
         />
       {launch &&
-        <div className='absolute bg-white/20 w-[280px] right-full top-[-30%] mr-4'>
+        <div className='absolute bg-white/20 w-[280px] right-full top-[-20%] mr-4'>
             <div className='w-full flex justify-end'>
               <p className='font-black text-blue-300 w-max text-lg cursor-pointer' onClick={()=>setLaunch(false)}>x</p>
             </div>
