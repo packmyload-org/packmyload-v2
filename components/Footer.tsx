@@ -222,7 +222,7 @@ export default function Footer() {
                     </button>
                     <div className="clearfix"></div>
                   </form>
-                  <ul className="text-white uppercase flex flex-wrap gap-5 hover:text-gray-950 w-[90%] mx-auto">
+                  <ul className="text-white uppercase flex flex-wrap gap-5 hover:text-gray-950 w-[100%] md:w-[90%] mx-auto">
                     <li className="flex gap-3 items-center text-xs">
                         <a href="/faqs">FAQs </a>
                         <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>

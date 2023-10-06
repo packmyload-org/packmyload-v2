@@ -5,7 +5,7 @@ import NotFoundImage from "@/public/images/clouds.png"
 export default function NotFound() {
   return (
     <>
-      {/*  Page illustration */}
+      { /*  Page illustration */}
       <div className="relative max-w-6xl mx-auto h-0 pointer-events-none" aria-hidden="true">
       </div>
 

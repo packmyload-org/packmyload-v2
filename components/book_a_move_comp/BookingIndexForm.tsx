@@ -227,7 +227,7 @@ export default function BookingIndexForm() {
           render={({ field }) => (
             <select
               {...field}
-              className='border bg-inherit text-gray-500 border-gray-400 p-3 w-full rounded-full bg-white outline-none ring-blue-300 focus:ring-2'
+              className='border bg-inherit text-gray-500 border-gray-400 w-full rounded-full bg-white outline-none ring-blue-300 focus:ring-2'
               onChange={(e) => {
                 field.onChange(e);
               }}

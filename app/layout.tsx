@@ -4,6 +4,7 @@ import './globals.css'
 
 import Script from 'next/script';
 import Loading from './loading';
+import Chat from '@/components/chat/chat';
 const Provider = dynamic(() => import("@/providers/provider"), { ssr: false , loading: () => <Loading />})
 export default function RootLayout({
   children,
@@ -42,11 +43,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           height="0" width="0"
         ></iframe>
           <div className='w-full'>
-            <main className={`w-full min-h-full overflow-y-hidden`}>
-            <Provider>
-              {children}
-            </Provider>
+            <main className={`w-full min-h-full overflow-y-hidden `}>
+              <Provider>
+                {children}
+              </Provider>
             </main>
+            <Chat />
         </div>
       </body>
         

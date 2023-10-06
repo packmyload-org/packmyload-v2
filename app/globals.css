@@ -49,43 +49,11 @@
   font-weight: 600;
   font-size: 14px;
 }
-
-/* Apply some basic styling to the select element */
-select {
-  background-color: white;
-  /* Set the background color */
-  appearance: none;
-  padding: 8px;
-  /* Remove default styles (Safari) */
-}
-
-/* Style the select element on focus */
-select:focus {
-  outline: none;
-  /* Remove the default focus outline */
-  border-color: #2E5F9E;
-
-}
-
-/* Style the dropdown arrow (Safari) */
-select::-webkit-outer-spin-button,
-select::-webkit-inner-spin-button {
-  appearance: none;
-  /* Remove default arrow (Safari) */
-  display: none;
-  /* Hide the arrow (Safari) */
-}
-
-/* Style the dropdown arrow (Firefox) */
-select::-moz-focus-inner {
-  border: 0;
-  /* Remove the inner border (Firefox) */
-}
-
-/* Style the dropdown arrow (IE/Edge) */
-select::-ms-expand {
-  display: none;
-  /* Hide the arrow (IE/Edge) */
+.custom_placeholder 
+.ant-picker-input 
+input::placeholder{
+    color: rgb(148 163 184 / 1);
+    font-weight: 500;
 }
 
 .main {
@@ -232,28 +200,7 @@ a {
   filter: invert(1);
 }
 
-.gradient {
-  height: fit-content;
-  z-index: 3;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsl(246, 94%, 53%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsl(215, 98%, 61%,1) 0px, transparent 50%);
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.15;
-}
+
 body {
   scrollbar-width: thin; /* thin, auto, or none */
 }
@@ -425,12 +372,7 @@ span{
   padding: 0 5px 0 5px;
 }
 }
-.hero{
-  /* background-image: url('/images/moving-company-lagos-nigeria-packmyload_website_banner_image.png'); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 
 .custom-dropdown-overlay{
   .ant-dropdown-menu-title-content:hover{
