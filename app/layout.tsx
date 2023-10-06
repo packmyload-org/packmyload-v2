@@ -1,7 +1,5 @@
 import dynamic from 'next/dynamic';
 import './globals.css'
-
-
 import Script from 'next/script';
 import Loading from './loading';
 import Chat from '@/components/chat/chat';
