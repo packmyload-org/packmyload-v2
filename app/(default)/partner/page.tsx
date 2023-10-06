@@ -20,7 +20,7 @@ export default function Partnerpage() {
                   <h3 className="text-4xl font-bold">
                     Become a Business Partner
                   </h3>
-                  <p>
+                  <p >
                     Find out how your business can benefit by partnering with
                     Packmyload.
                   </p>
@@ -36,7 +36,7 @@ export default function Partnerpage() {
         </section>
 
         <div>
-          <div className="w-full bg-[#012D40] h-[300vh] ">
+          <div className="w-full bg-[#012D40] h-[275vh] ">
             <div className="absolute top-[250px] left-[250px] p-2">
               <Row gutter={[16, 16]}>
                 <Col span={12}>
@@ -128,6 +128,33 @@ export default function Partnerpage() {
               </div>
             </div>
           </div>
+
+          <div className="w-full bg-[#fff] h-[80vh] pt-36 pl-52 ">
+  <div className="bg-[#76DAE2] w-[80%] h-[40vh]  flex justify-end items-center relative rounded-xl ">
+    <button
+      className="w-full h-full text-xl font-bold rounded-xl flex justify-between items-center hover:bg-opacity-100 focus:outline-none hover: transition duration-300"
+      // style={{ backgroundColor: '#76DAE2', borderRadius: '50px' }} 
+    >
+      <div className="flex items-center">
+        <div className="w-6 h-6  flex justify-center items-center transform transition-transform duration-300">
+          &nbsp;
+        </div>
+        
+        <span className=" text-[#2E5F9E] text-5xl   mt-4 ">{"Talk To A"}<br/> {"Representative"}</span>
+        
+      </div>
+      <div
+        className="w-16 h-16 mt-40 mr-14 bg-white rounded-full flex justify-center text-[#2E5F9E] items-center transform transition-transform duration-300 hover:translate-x-2"
+      >
+        &rarr;
+      </div>
+    </button>
+  </div>
+</div>
+
+
+
+
         </div>
       </div>
     </div>
