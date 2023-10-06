@@ -19,7 +19,7 @@ export default function Services(){
             >
               <Link href={item.to}>
                 <div className="relative w-full h-full overflow-hidden">
-                  <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
+                  <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
                   <img 
                     src={item.img} 
                     alt="Read more" 
@@ -45,7 +45,7 @@ export default function Services(){
             >
               <Link href={item.to}>
                 <div className="relative w-full h-full overflow-hidden">
-                  <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
+                  <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
                   <img 
                     src={item.img} 
                     alt="Read more" 
