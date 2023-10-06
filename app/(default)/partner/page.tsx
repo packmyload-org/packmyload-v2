@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Partnerpage() {
   return (
-    <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
-      <div className="w-full text-black" style={{ marginTop: "24px" }}>
+    <div className="flex justify-left min-h-screen bg-gray-100 mt-1 relative">
+      <div className="w-full text-black" style={{ marginTop: "70px" }}>
         <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
@@ -17,7 +17,7 @@ export default function Partnerpage() {
                 align="middle"
               >
                 <Col span={24} md={10} className="flex flex-col space-y-6">
-                  <h3 className="text-4xl font-bold">
+                  <h3 className="text-2xl lg:text-4xl font-bold">
                     Become a Business Partner
                   </h3>
                   <p >
@@ -36,12 +36,12 @@ export default function Partnerpage() {
         </section>
 
         <div>
-          <div className="w-full bg-[#012D40] h-[275vh] ">
-            <div className="absolute top-[250px] left-[250px] p-2">
-              <Row gutter={[16, 16]}>
-                <Col span={12}>
+          <div className="w-full bg-[#012D40] h-auto ">
+            <div className="absolute w-full top-[200px] md:top-[285px] lg:top-[300px] p-2">
+              <section className=" max-w-5xl xl:max-w-8xl mx-auto flex flex-col lg:flex-row items-center justify-evenly gap-3 flex-wrap">
+                <div>
                   <Card
-                    className="w-96 h-[300px] opacity-80"
+                    className="w-[265px] md:w-96 lg:h-[300px] opacity-80"
                     style={{ backgroundColor: "#F4FAFA" }}
                     title="Business & Retail"
                   >
@@ -51,10 +51,10 @@ export default function Partnerpage() {
                       <li>Any other business that needs to move large items</li>
                     </ul>
                   </Card>
-                </Col>
-                <Col span={12}>
+                </div>
+                <div>
                   <Card
-                    className="w-96 h-[300px] opacity-80"
+                    className="w-[265px] md:w-96 lg:h-[300px] opacity-80"
                     style={{ backgroundColor: "#F4FAFA" }}
                     title="Integrations & Lead Monetization"
                   >
@@ -64,18 +64,19 @@ export default function Partnerpage() {
                       <li>Storage Companies</li>
                     </ul>
                   </Card>
-                </Col>
-              </Row>
+                </div>
+              </section>
             </div>
             <div>
-              <div className="flex   pt-96">
+              <div className="flex flex-col gap-5 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
                 <img
                   src="/images/partner/packmyload_1695798527485.jpeg"
                   alt="image-1"
-                  className="w-[670px] h-[550px] rounded-sm "
+                  loading="lazy"
+                  className="w-[90%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
                 />
-                <div className="pl-40 pt-40">
-                  <p className=" text-5xl  mt-4 text-white">
+                <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+                  <p className="text-2xl lg:text-4xl mt-4 text-white">
                     Business & Retail
                   </p>
 
@@ -97,9 +98,9 @@ export default function Partnerpage() {
                 </div>
               </div>
 
-              <div className="flex   pt-48">
-                <div className="pl-40 pt-40">
-                  <p className=" text-5xl  mt-4 text-white">
+              <div className="flex flex-col lg:flex-row mt-4 justify-between gap-5 max-w-6xl mx-auto">
+                <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+                  <p className="text-2xl lg:text-4xl  mt-4 text-white">
                     Integration & Lead Monetization
                   </p>
 
@@ -123,34 +124,35 @@ export default function Partnerpage() {
                 <img
                   src="/images/partner/packmyload_1695798593791.jpeg"
                   alt="image-2"
-                  className="w-[670px] h-[550px] rounded-sm pl-5 "
+                  loading="lazy"
+                  className="w-[95%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover pl-5"
                 />
               </div>
             </div>
           </div>
 
-          <div className="w-full bg-[#fff] h-[80vh] pt-36 pl-52 ">
-  <div className="bg-[#76DAE2] w-[80%] h-[40vh]  flex justify-end items-center relative rounded-xl ">
-    <button
-      className="w-full h-full text-xl font-bold rounded-xl flex justify-between items-center hover:bg-opacity-100 focus:outline-none hover: transition duration-300"
-      // style={{ backgroundColor: '#76DAE2', borderRadius: '50px' }} 
-    >
-      <div className="flex items-center">
-        <div className="w-6 h-6  flex justify-center items-center transform transition-transform duration-300">
-          &nbsp;
-        </div>
-        
-        <span className=" text-[#2E5F9E] text-5xl   mt-4 ">{"Talk To A"}<br/> {"Representative"}</span>
-        
-      </div>
-      <div
-        className="w-16 h-16 mt-40 mr-14 bg-white rounded-full flex justify-center text-[#2E5F9E] items-center transform transition-transform duration-300 hover:translate-x-2"
-      >
-        &rarr;
-      </div>
-    </button>
-  </div>
-</div>
+          <div className="w-[90%] md:w-[75%] lg:w-full mx-auto bg-[#fff] mt-6 mb-6 6xl:mb-0">
+            <div className="bg-[#76DAE2] max-w-6xl mx-auto flex justify-end items-center relative rounded-xl py-6">
+              <button
+                className="w-full h-full p-6 text-xl font-bold rounded-xl flex flex-col md:flex-row justify-between items-center hover:bg-opacity-100 focus:outline-none hover: transition duration-300"
+                // style={{ backgroundColor: '#76DAE2', borderRadius: '50px' }} 
+              >
+                <div className="flex items-center">
+                  <div className="w-6 h-6  flex justify-center items-center transform transition-transform duration-300">
+                    &nbsp;
+                  </div>
+                  
+                  <span className=" text-[#2E5F9E] text-2xl lg:text-4xl   mt-4 ">{"Talk To A"}<br/> {"Representative"}</span>
+                  
+                </div>
+                <div
+                  className="w-10 h-10 mx-auto md:mx-0 md:w-16 md:h-16 md:mt-6 bg-white rounded-full flex justify-center text-[#2E5F9E] items-center transform transition-transform duration-300 hover:translate-x-2"
+                >
+                  &rarr;
+                </div>
+              </button>
+            </div>
+          </div>
 
 
 
