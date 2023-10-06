@@ -90,7 +90,7 @@ export default function BookingIndexForm() {
             <AutoCompleteInput
               type="text"
               inputName="pickUp"
-              inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
+              inputStyle="w-full h-12 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               placeholder="Destination From"
             />
           </div>
@@ -100,7 +100,7 @@ export default function BookingIndexForm() {
           <AutoCompleteInput
             type="text"
             inputName="destination"
-            inputStyle="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
+            inputStyle="w-full h-12 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
             placeholder="Destination To"
             />
           </div>
@@ -128,7 +128,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='firstName'
                 placeholder='John'
-                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
+                className="w-full h-12 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />
@@ -146,7 +146,7 @@ export default function BookingIndexForm() {
                 type='text'
                 id='lastName'
                 placeholder='Doe'
-                className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
+                className="w-full h-12 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />
@@ -171,7 +171,7 @@ export default function BookingIndexForm() {
               {...field}
               type='email'
               id='email'
-              className="w-full h-10 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
+              className="w-full h-12 p-4 text-gray-500 rounded-full outline-none placeholder:text-slate-400 placeholder:font-[500]"
               placeholder='example@mail.com'
             />
           )}
@@ -180,14 +180,14 @@ export default function BookingIndexForm() {
       </div>
       <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-1 items-start">
         <label className="text-md text-gray-800 font-semibold" htmlFor="phoneNumber">Phone <span className='text-red-600'>*</span></label>
-        <div className='w-full flex'>
+        <div className='w-full flex h-auto'>
           <Controller
             name='countryCode'
             control={control}
             render={({ field }) => (
               <select
                 {...field}
-                className='w-[32%] rounded-l-full font-bold text-gray-500 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative'
+                className='w-[32%] rounded-l-full font-bold text-gray-500 text-start pl-2 outline-none ring-blue-300 focus:ring-2 relative text-base'
               >
                 <option value='' className='hidden text-slate-400'>Nigeria + 234</option>
                 {myCountryCodesObject.map((item,i) => (
@@ -208,7 +208,7 @@ export default function BookingIndexForm() {
                 type="text"
                 id='phoneNumber'
                 placeholder='903 222 9225'
-                className="w-[68%] h-10 p-4 text-gray-500 outline-none rounded-r-full placeholder:text-slate-400 placeholder:font-[500]"
+                className="w-[68%] h-full p-4 text-gray-500 outline-none rounded-r-full placeholder:text-slate-400 placeholder:font-[500]"
               />
             )}
           />
