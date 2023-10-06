@@ -1,10 +1,13 @@
-import React from 'react';
+"use client"
+import React,{useState} from 'react';
 import { PaperPlaneRight } from '@phosphor-icons/react';
 
 interface Props {
 }
 
 const ChatComponent: React.FC<Props> = () => {
+
+    const [chatText,setChatText] = useState<string>()
  return (
     <div className='fixed h-[90vh] lg:h-[83vh] lg:right-10 bottom-3 lg:bottom-10 w-[90dvw] sm:w-[80dvw] m-auto lg:w-[34dvw] bg-white z-40 shadow rounded-md '>
     <header className='bg-blue-300 w-full p-4 flex justify-between'>
@@ -33,12 +36,19 @@ const ChatComponent: React.FC<Props> = () => {
       </section>
     </main>
   
-    <footer className='absolute w-full flex flex-col justify-center bottom-2 fixed left-0 right-0'>
+    <footer className='w-[90%] mx-auto absolute border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0'>
       <input
         type="text"
         placeholder='Message...'
-        className='w-[90%] mx-auto border border-slate-300 outline-none rounded-md placeholder:text-base p-2'
+        className='w-[90%] outline-none placeholder:text-base p-2'
+        onChange={(e) => {setChatText(e.target.value)}}
       />
+      {
+        chatText &&
+        <button className='px-2'>
+            <PaperPlaneRight size={18} color="#2e5f9e" weight="fill" />
+        </button>
+      }
     </footer>
   </div>
   
