@@ -63,7 +63,7 @@ export default function Home() {
             <div className="join-wrap fl-wrap text-white">
               <Row className="w-full flex" justify="space-between" align="middle">
                 <Col span={24} md={10} className="flex flex-col space-y-6 ">
-                  <h3 className="text-4xl font-bold">About PackmyLoad</h3>
+                  <h3 className="text-4xl font-bold">Learn more about PackMyLoad below</h3>
                   <p>
                     Check out our history, newsroom, and claims information, as well as opportunities
                     to become an agent, driver, or employee
@@ -90,11 +90,11 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='pl-12'>
+        <div className='pl-12 h-[100vh]'>
           <div className='pt-14'>
-            <h1 className="text-3xl font-bold">Learn more about PackMyLoad below</h1>
+           
           </div>
-          <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center p-2 sm:px-2'>
+          <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center  p-2 sm:px-2'>
      
             {aboutdata.map((item, index) => (
               <AboutCard key={index} title={item.title} description={item.description}  />

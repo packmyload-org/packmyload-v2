@@ -68,7 +68,7 @@ export default function Partnerpage() {
               </section>
             </div>
             <div>
-              <div className="flex flex-col gap-5 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
+              <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
                 <img
                   src="/images/partner/packmyload_1695798527485.jpeg"
                   alt="image-1"
@@ -98,7 +98,7 @@ export default function Partnerpage() {
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row mt-4 justify-between gap-5 max-w-6xl mx-auto">
+              <div className="flex flex-col mr-6 lg:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
                 <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
                   <p className="text-2xl lg:text-4xl  mt-4 text-white">
                     Integration & Lead Monetization
@@ -131,8 +131,8 @@ export default function Partnerpage() {
             </div>
           </div>
 
-          <div className="w-[90%] md:w-[75%] lg:w-full mx-auto bg-[#fff] mt-6 mb-6 6xl:mb-0">
-            <div className="bg-[#76DAE2] max-w-6xl mx-auto flex justify-end items-center relative rounded-xl py-6">
+          <div className="w-[90%] h-auto md:w-[75%]  lg:w-full mx-auto bg-[#fff] mt-6 mb-6 6xl:mb-0">
+            <div className="bg-[#76DAE2] max-w-3xl mx-auto flex justify-end items-center relative rounded-xl py-6">
               <button
                 className="w-full h-full p-6 text-xl font-bold rounded-xl flex flex-col md:flex-row justify-between items-center hover:bg-opacity-100 focus:outline-none hover: transition duration-300"
                 // style={{ backgroundColor: '#76DAE2', borderRadius: '50px' }} 
@@ -142,7 +142,7 @@ export default function Partnerpage() {
                     &nbsp;
                   </div>
                   
-                  <span className=" text-[#2E5F9E] text-2xl lg:text-4xl   mt-4 ">{"Talk To A"}<br/> {"Representative"}</span>
+                  <span className=" text-[#2E5F9E] text-2xl lg:text-4xl   mt-4 ">{" "}Talk To A<br/> Representative{" "}</span>
                   
                 </div>
                 <div
