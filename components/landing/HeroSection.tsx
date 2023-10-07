@@ -16,10 +16,10 @@ export default function HeroSection() {
           <MovingForm />
           <div className="flex flex-wrap w-full justify-center gap-2 lg:gap-6 mt-2 mx-auto">
             <img src="/images/team/hero-img1.jpg" alt="Image 1" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-2' />
-            <img src="/images/team/hero-img2.jpg" alt="Image 2" className='w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] object-contain mt-4 lg:mt-8' />
-            <img src="/images/team/hero-img3.jpg" alt="Image 3" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-5' />
-            <img src="/images/team/hero-img4.jpg" alt="Image 4" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-3' />
-            <img src="/images/team/hero-img5.jpg" alt="Image 5" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-6' />
+            <img src="/images/team/hero-img2.png" alt="Image 2" className='w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] object-contain mt-5 lg:mt-10' />
+            <img src="/images/team/hero-img3.jpg" alt="Image 3" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-6' />
+            <img src="/images/team/hero-img4.jpg" alt="Image 4" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-4' />
+            <img src="/images/team/hero-img5.jpg" alt="Image 5" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-3 lg:mt-8' />
         </div>
       </div>
     </section>
