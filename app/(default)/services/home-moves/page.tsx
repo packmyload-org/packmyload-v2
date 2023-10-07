@@ -7,7 +7,7 @@ export default function HomeMoves(){
         <main className='bg-[#F9F9F9]'>
 
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-home_moves-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-home_moves-banner_image.webp)'
                 firstText='Home Relocation within Nigeria'
                 secondText='Home Relocation within Nigeria'
             />

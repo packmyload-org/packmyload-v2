@@ -6,7 +6,7 @@ export default function HomeMoves(){
     return (
         <main className='bg-[#F9F9F9]'>
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-wedding_gift-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-wedding_gift-banner_image.webp)'
                 firstText='WEDDING GIFT HANDLING SERVICES WITHIN NIGERIA'
                 secondText='Wedding Gift Handing'
             />

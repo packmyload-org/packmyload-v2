@@ -7,7 +7,7 @@ export default function Cleaning(){
         <main className='bg-[#F9F9F9]'>
 
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-cleaning-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-cleaning-banner_image.webp)'
                 firstText='CLEANING SERVICES WITHIN NIGERIA'
                 secondText='Cleaning Services'
             />

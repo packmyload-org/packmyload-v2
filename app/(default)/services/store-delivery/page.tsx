@@ -6,7 +6,7 @@ export default function StoreDelivery(){
     return (
         <main className='bg-[#F9F9F9]'>
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-store_moves-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-store_moves-banner_image.webp)'
                 firstText='STORE DELIVERY SERVICES WITHIN NIGERIA'
                 secondText='Store Delivery Services'
             />

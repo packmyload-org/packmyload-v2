@@ -7,7 +7,7 @@ export default function JunkMoves(){
         <main className='bg-[#F9F9F9]'>
                         
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-junk_removal-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-junk_removal-banner_image.webp)'
                 firstText='JUNK REMOVAL SERVICES WITHIN NIGERIA'
                 secondText='Junk Removal'
             />

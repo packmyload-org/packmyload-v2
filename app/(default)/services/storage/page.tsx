@@ -7,7 +7,7 @@ export default function Storage(){
     return (
         <main className='bg-[#F9F9F9]'>
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-storage_moves-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-storage_moves-banner_image.webp)'
                 firstText='STORAGE SERVICES WITHIN NIGERIA'
                 secondText='Storage'
             />

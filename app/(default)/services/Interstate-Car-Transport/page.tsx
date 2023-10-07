@@ -6,7 +6,7 @@ export default function StudentMoves(){
     return (
         <main className='bg-[#F9F9F9]'>
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-students_move-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-students_move-banner_image.webp)'
                 firstText='Interstate Car Transport'
                 secondText='Interstate Car Transport'
             />

@@ -6,7 +6,7 @@ export default function OfficeMoves(){
     return (
         <main className='bg-[#F9F9F9]'>
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-office_moves-banner_image.png)'
+                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-office_moves-banner_image.webp)'
                 firstText='OFFICE RELOCATION SERVICES WITHIN NIGERIA'
                 secondText='Office Relocation within Nigeria'
             />
