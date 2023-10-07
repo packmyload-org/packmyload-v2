@@ -70,7 +70,7 @@ export default function Partnerpage() {
             <div>
               <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
                 <img
-                  src="/images/partner/packmyload_1695798527485.jpeg"
+                  src="/images/partner/packmyload_1695798527485.webp"
                   alt="image-1"
                   loading="lazy"
                   className="w-[90%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
@@ -122,7 +122,7 @@ export default function Partnerpage() {
                   </p>
                 </div>
                 <img
-                  src="/images/partner/packmyload_1695798593791.jpeg"
+                  src="/images/partner/packmyload_1695798593791.webp"
                   alt="image-2"
                   loading="lazy"
                   className="w-[95%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover pl-5"
