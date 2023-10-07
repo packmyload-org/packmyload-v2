@@ -30,7 +30,7 @@ const PackSection: React.FC = () => {
                         </div>
                     </div>
                     <Image 
-                    src={'/images/Packmyload.com-home-office-relocations.png'}
+                    src={'/images/Packmyload.com-home-office-relocations.webp'}
                     alt="people image" 
                     loading='lazy'
                     width={550}
@@ -60,7 +60,7 @@ const PackSection: React.FC = () => {
                         </div>
                     </div>
                     <Image 
-                    src={'/images/packmyload-box.jpg'}
+                    src={'/images/packmyload-box.webp'}
                     alt="people image" 
                     loading='lazy'
                     width={550}
