@@ -254,11 +254,12 @@ export default function Footer() {
           <div className="mb-2 md:mb-0 w-[60%] ">
             <div className="flex md:flex-row flex-col justify-between gap-4 items-start md:items-center  ">
               <Image
-                src="/images/iconpackmyload1.png"
+                src="/images/iconpackmyload.webp"
                 style={{ width: "30px" }}
                 alt="image"
                 width={30}
                 height={30}
+                loading="lazy"
               />
               <div className="copyright text-gray-400">
                 © Total Moves &amp; Company LTD {new Date().getFullYear()}. All
