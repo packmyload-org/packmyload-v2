@@ -14,25 +14,25 @@
     background-position: center;
   }
     .items-bg {
-      background-image: url('/images/truck_large.png');
+      background-image: url('/images/truck_large.webp');
       background-repeat: no-repeat;
       background-size: fill;
       background-position: center;
     }
     .rooms-bg {
-      background-image: url('/images/house.png');
+      background-image: url('/images/house.webp');
       background-repeat: no-repeat;
       background-size: fill;
       background-position: center;
     }
     .checkout-bg {
-      background-image: url('/images/customer-info.png');
+      background-image: url('/images/customer-info.webp');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
     }
      .location-bg {
-      background-image: url('/images/address-info.png');
+      background-image: url('/images/address-info.webp');
       background-repeat: no-repeat;
       background-size: fill;
       background-position: center;
