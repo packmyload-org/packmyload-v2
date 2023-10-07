@@ -27,16 +27,16 @@ export default function SeemlessExperience() {
           <span className="section-separator"></span>
           <p className=''>Each Move is backed by a Goods-in-transit insurance policy from the moment your items are in our hands.</p>
         </Col>
-        <Col span={20} lg={6} className='min-w-[350px]   text-center mx-auto section-title gap-4'>
-          <div className='flex flex-col justify-center gap-4 items-center'>
+        <Col span={20} lg={6} className='min-w-[350px] text-center mx-auto section-title gap-4 gap-4 flex flex-col items-center'>
+          <div className='flex flex-col justify-center gap-5 items-center'>
             <Image src="/images/ratetip.svg"alt="moving company lagos nigeria secure feature " width={100} height={80} loading='lazy'/>
             <h3 className="banner-text">Pay, rate & tip</h3>
          </div>
           <span className="section-separator"></span>
           <p className=''>When your Packing is complete you’ll be asked to rate your Packer with the option to tip them in the app for a job well done.</p>
         </Col>
-        <Col span={20} lg={6} className='min-w-[350px] mx-auto text-center section-title gap-4'>
-        <div className='flex flex-col justify-center gap-4 w-full items-center'>
+        <Col span={20} lg={6} className='min-w-[350px] mx-auto text-center section-title gap-4 gap-4 flex flex-col items-center'>
+        <div className='flex flex-col justify-center gap-5 w-full items-center'>
           <Image src="/images/calender.svg" alt="moving company lagos nigeria secure feature " width={100} height={80} loading='lazy'/>
           <h3 className="banner-text">30 mins or 30 days</h3>
          </div>
