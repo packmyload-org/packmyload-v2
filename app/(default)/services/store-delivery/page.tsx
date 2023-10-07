@@ -54,7 +54,7 @@ export default function StoreDelivery(){
                 <div className='md:w-[30%] sm:w-[90%]'> 
                     <section className='flex items-start gap-2 mt-4'>
                         <Image 
-                            src="/images/icons/truck-icon.png"
+                            src="/images/icons/truck-icon.webp"
                             alt='aid-support'
                             width={100}
                             height={100}
@@ -67,7 +67,7 @@ export default function StoreDelivery(){
                     </section>
                     <section className='flex items-start gap-2 mt-4'>
                         <Image 
-                            src="/images/icons/calendar-icon.png"
+                            src="/images/icons/calendar-icon.webp"
                             alt='aid-support'
                             width={100}
                             height={100}
@@ -80,7 +80,7 @@ export default function StoreDelivery(){
                     </section>
                     <section className='flex items-start gap-2 mt-4'>
                         <Image 
-                            src="/images/icons/secure-icon.png"
+                            src="/images/icons/secure-icon.webp"
                             alt='aid-support'
                             width={100}
                             height={100}
@@ -93,7 +93,7 @@ export default function StoreDelivery(){
                     </section>
                     <section className='flex items-start gap-2 mt-12'>
                         <Image 
-                            src="/images/icons/guarantee-icon.png"
+                            src="/images/icons/guarantee-icon.webp"
                             alt='gurantee-icon'
                             width={100}
                             height={100}

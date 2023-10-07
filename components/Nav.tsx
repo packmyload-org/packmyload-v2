@@ -1,18 +1,14 @@
-'use client'
-// import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {Phone} from '@phosphor-icons/react'
 import MobileNav from './navBar/mobileNav';
 import TabletsNav from './navBar/tabletsNav';
 import Services from './navBar/Service';
-import { usePathname } from 'next/navigation'
 import Partners from './navBar/Parnters';
 
 const Logo = "/images/icons/Logo.svg"
 
 function Nav() {  
-  const pathname = usePathname()
   return (
     <>
     <nav className="flex justify-between w-full px-10 py-3 bg-[#2E5F9E] fixed top-0 z-30">
@@ -48,12 +44,10 @@ function Nav() {
                   call us
                 </a> 
                 <div id='show-horizontal-line' className='h-[30px] w-[1px] bg-gray-100/20'></div>
-            {
-              !pathname.includes("move") &&
+              
               <Link href='/move'  className='flex justify-evenly items-center w-[130px] p-[8px] book-move bg-blue-100 hover:bg-white hover:text-blue-300 text-white font-black rounded-full text-xs'>
                 BOOK NOW 
               </Link> 
-            }
             </div>
       </div>
     </div>

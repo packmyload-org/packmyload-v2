@@ -63,7 +63,7 @@ export default function Storage(){
                 <div className='md:w-[30%] sm:w-[90%]'> 
                     <section className='flex items-start gap-2 mt-4'>
                         <Image 
-                            src="/images/icons/box-icon.png"
+                            src="/images/icons/box-icon.webp"
                             alt='aid-support'
                             width={100}
                             height={100}
@@ -76,7 +76,7 @@ export default function Storage(){
                     </section>
                     <section className='flex gap-2 items-start mt-12'>
                         <Image 
-                            src="/images/icons/check-icon.png"
+                            src="/images/icons/check-icon.webp"
                             alt='check-icon'
                             width={100}
                             height={100}
@@ -89,7 +89,7 @@ export default function Storage(){
                     </section>
                     <section className='flex gap-2 items-start mt-12'>
                         <Image 
-                            src="/images/icons/aid-support.png"
+                            src="/images/icons/aid-support.webp"
                             alt='aid-support'
                             width={100}
                             height={100}
@@ -102,7 +102,7 @@ export default function Storage(){
                     </section>
                     <section className='flex gap-2 items-start mt-12'>
                         <Image 
-                            src="/images/icons/guarantee-icon.png"
+                            src="/images/icons/guarantee-icon.webp"
                             alt='gurantee-icon'
                             width={100}
                             height={100}
