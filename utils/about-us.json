@@ -2,22 +2,22 @@
   {
     "title": "Our Story.",
     "description": "Learn about our company's history and journey.",
-    "to": "/"
+    "to": "/app/(default)/about-us/ourstory/page.tsx"
   },
   {
     "title": "Executive Leadership.",
     "description": "Meet our dedicated executive team leading our organization.",
-    "to": "/"
+    "to": "/app/(default)/about-us/leaders/page.tsx"
   },
   {
     "title": "Newsroom/Blog.",
     "description": "Stay updated with the latest news and press releases from our company.",
-    "to": "/"
+    "to": "/app/(default)/about-us/newsroom/page.tsx"
   },
   {
     "title": "Careers.",
     "description": "Explore exciting career opportunities and join our team.",
-    "to": "/"
+    "to": "/app/(default)/about-us/careers/page.tsx"
   },
   {
     "title": "Track my orders.",
@@ -42,6 +42,6 @@
   {
     "title": "Gallery.",
     "description": "Explore a collection of photos and images showcasing our work and achievements.",
-    "to": "/"
+    "to": "/app/(default)/gallery/page.tsx"
   }
 ]

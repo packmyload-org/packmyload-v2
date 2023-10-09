@@ -1,8 +1,8 @@
 import { Col, Row, Card } from "antd";
 import React from "react";
-import Link from 'next/link';
 
-export default function Partnerpage() {
+
+export default function OurStory() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
       <div className="w-full text-black" style={{ marginTop: "24px" }}>
