@@ -19,10 +19,10 @@ export default function Leaders() {
               >
                 <Col span={24} md={10} className="flex flex-col space-y-6">
                   <h3 className="text-4xl font-bold">
-                    About Packmyload
+                    Meet our Leadership Team
                   </h3>
                   <p >
-                  Read more about our story and history to learn why we're Africa's Most Trusted Moving Company
+                  Read  about our executive leaders
                   </p>
                 </Col>
                 <Col
