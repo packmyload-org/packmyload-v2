@@ -1,3 +1,5 @@
+'use client'
+import { AnimatedWrapper } from "@/components/AnimatedWrapper";
 import { Col, Row, Card } from "antd";
 import React from "react";
 
@@ -5,77 +7,85 @@ export default function Partnerpage() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100 mt-1 relative">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
-          <div className="cirle-bg">
-            <div className="bg object-cover"></div>
-          </div>
-          <div className="container py-12">
-            <div className="join-wrap fl-wrap text-white">
-              <Row
-                className="w-full flex"
-                justify="space-between"
-                align="middle"
-              >
-                <Col span={24} md={10} className="flex flex-col space-y-6">
-                  <h3 className="text-2xl lg:text-4xl font-bold">
-                    Become a Business Partner
-                  </h3>
-                  <p >
-                    Find out how your business can benefit by partnering with
-                    Packmyload.
-                  </p>
-                </Col>
-                <Col
-                  span={24}
-                  md={10}
-                  className="flex items-center text-start md:text-end justify-center min-h-[160px]"
-                ></Col>
-              </Row>
-            </div>
-          </div>
-        </section>
+        <AnimatedWrapper>
 
+          <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+            <div className="cirle-bg">
+              <div className="bg object-cover"></div>
+            </div>
+            <div className="container py-12">
+              <div className="join-wrap fl-wrap text-white">
+                <Row
+                  className="w-full flex"
+                  justify="space-between"
+                  align="middle"
+                >
+                  <Col span={24} md={10} className="flex flex-col space-y-6">
+                    <h3 className="text-2xl lg:text-4xl font-bold">
+                      Become a Business Partner
+                    </h3>
+                    <p >
+                      Find out how your business can benefit by partnering with
+                      Packmyload.
+                    </p>
+                  </Col>
+                  <Col
+                    span={24}
+                    md={10}
+                    className="flex items-center text-start md:text-end justify-center min-h-[160px]"
+                  ></Col>
+                </Row>
+              </div>
+            </div>
+          </section>
+        </AnimatedWrapper>
+  
         <div>
           <div className="w-full bg-[#012D40] h-auto ">
-            <div className="absolute w-full top-[200px] md:top-[285px] lg:top-[300px] p-2">
-              <section className=" max-w-5xl xl:max-w-8xl mx-auto flex flex-col lg:flex-row items-center justify-evenly gap-3 flex-wrap">
-                <div>
-                  <Card
-                    className="w-[265px] md:w-96 lg:h-[300px] opacity-80"
-                    style={{ backgroundColor: "#F4FAFA" }}
-                    title="Business & Retail"
-                  >
-                    <ul>
-                      <li>Furniture companies</li>
-                      <li>Big Box Stores</li>
-                      <li>Any other business that needs to move large items</li>
-                    </ul>
-                  </Card>
-                </div>
-                <div>
-                  <Card
-                    className="w-[265px] md:w-96 lg:h-[300px] opacity-80"
-                    style={{ backgroundColor: "#F4FAFA" }}
-                    title="Integrations & Lead Monetization"
-                  >
-                    <ul>
-                      <li>Prop-tech</li>
-                      <li>Property Managers</li>
-                      <li>Storage Companies</li>
-                    </ul>
-                  </Card>
-                </div>
-              </section>
-            </div>
+            <AnimatedWrapper>
+            
+              <div className="absolute w-full top-[200px] md:top-[285px] lg:top-[300px] p-2">
+                <section className=" max-w-5xl xl:max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-3 flex-wrap">
+                  <div className="w-[90%] md:w-auto">
+                    <Card
+                      className="w-[100%] md:w-80 lg:w-96 lg:h-[300px] opacity-80"
+                      style={{ backgroundColor: "#F4FAFA" }}
+                      title="Business & Retail"
+                    >
+                      <ul>
+                        <li>Furniture companies</li>
+                        <li>Big Box Stores</li>
+                        <li>Any other business that needs to move large items</li>
+                      </ul>
+                    </Card>
+                  </div>
+                  <div className="w-[90%] md:w-auto">
+                    <Card
+                      className="w-[100%] md:w-80 lg:w-96 lg:h-[300px] opacity-80"
+                      style={{ backgroundColor: "#F4FAFA" }}
+                      title="Integrations & Lead Monetization"
+                    >
+                      <ul>
+                        <li>Prop-tech</li>
+                        <li>Property Managers</li>
+                        <li>Storage Companies</li>
+                      </ul>
+                    </Card>
+                  </div>
+                </section>
+              </div>
+            </AnimatedWrapper>
             <div>
-              <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
+            <AnimatedWrapper>
+          
+              <div className="w-full flex flex-col gap-5 md:flex-row justify-between pt-64 md:pt-56 md:max-w-6xl lg:pt-96">
                 <img
                   src="/images/partner/packmyload_1695798527485.webp"
                   alt="image-1"
                   loading="lazy"
-                  className="w-[90%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
+                  className="w-[100%] h-auto md:w-[50%] md:h-auto lg:w-[670px] lg:h-[550px] md:mx-auto lg:mx-0 lg:rounded-md object-cover "
                 />
-                <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+                <div className="flex flex-col md:justify-center w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:p-1 lg:p-0">
                   <p className="text-2xl lg:text-4xl mt-4 text-white">
                     Business & Retail
                   </p>
@@ -97,10 +107,13 @@ export default function Partnerpage() {
                   </p>
                 </div>
               </div>
+            </AnimatedWrapper>
 
-              <div className="flex flex-col mr-6 lg:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-                <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
-                  <p className="text-2xl lg:text-4xl  mt-4 text-white">
+            <AnimatedWrapper>
+          
+              <div className="flex flex-col md:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+                <div className="flex flex-col md:justify-center w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:p-1 lg:p-0">
+                  <p className="text-2xl lg:text-4xl mt-4 text-white">
                     Integration & Lead Monetization
                   </p>
 
@@ -125,9 +138,10 @@ export default function Partnerpage() {
                   src="/images/partner/packmyload_1695798593791.webp"
                   alt="image-2"
                   loading="lazy"
-                  className="w-[95%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover pl-5"
+                  className="w-[100%] h-auto md:w-[50%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 md:rounded-md object-cover"
                 />
               </div>
+          </AnimatedWrapper>
             </div>
           </div>
 
