@@ -1,15 +1,17 @@
 import { Col, Row, Card, Button, Rate } from 'antd';
 import React from 'react';
-import aboutdata from './about-us.json';
+import aboutdata from '../../../utils/about-us.json';
 import Link from 'next/link';
 
 
 interface About {
   title: string,
-  description: string
+  description: string,
+  to: string
  }
- const AboutCard = ({ title, description }: About) => (
+ const AboutCard = ({ title, description, to }: About) => (
   
+  <Link href={to}>
     <div className='flex flex-col sm:space-y-4 items-center lg:items-start w-full min-w-[230px] py-4 border-b-[0.3px]'>
      <div className='w-full flex gap-2 items-center justify-center lg:justify-start'>
         <figure className='p-2 md:p-3 bg-[#f9f9f9] rounded-lg'>
@@ -20,6 +22,7 @@ interface About {
      <div className='bg-blue-100 rounded py-[1px] w-[60px] mt-2' />
       <p className='text-[#777674] text-center lg:text-left text-sm w-4/5 mt-2'>{description}</p>
      </div>
+     </Link>
    
  )
 
@@ -96,8 +99,8 @@ export default function Home() {
           </div>
           <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center  p-2 sm:px-2'>
      
-            {aboutdata.map((item, index) => (
-              <AboutCard key={index} title={item.title} description={item.description}  />
+            {aboutdata.map((item, index ,to) => (
+              <AboutCard key={index} title={item.title} description={item.description}  to={item.to}  />
             ))}
           </div>
         </div>

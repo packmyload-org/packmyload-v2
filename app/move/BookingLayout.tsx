@@ -1,3 +1,4 @@
+import { NeedHelp } from '@/components/book_a_move_comp/NeedHelp'
 import { BookingProgress } from './BookingProgress'
 import Image from 'next/image'
 import Link from "next/link"
@@ -15,23 +16,29 @@ type BookingLayoutProps = {
 
 export default function BookingLayout ({leftContent, rightContent, stepDescription, textDescription, prev, next }: BookingLayoutProps) {
     const router = useRouter()
+
+      
     return (
         <div className="flex flex-col lg:flex-row gap-4">
             {/* Left section */}
             <aside className="lg:w-[50%] bg-[#f7f6f6] p-4 h-auto sm:h-auto lg:h-[100vh] overflow-y-scroll scrollbar-hide">
                 <main className="lg:max-w-3xl lg:mx-auto">
 
-                    <Link href={'/'}>
-                    
-                        <Image 
-                            src="/images/icons/packmyload-blue-logo.svg"
-                            alt='Logo'
-                            width={100}
-                            height={40}
-                            className='object-contain w-[150px] cursor-pointer'
-                            priority
-                        />
-                    </Link>
+                    <nav className='flex flex-wrap justify-between items-center relative'>
+
+                        <Link href={'/'}>
+                        
+                            <Image 
+                                src="/images/icons/packmyload-blue-logo.svg"
+                                alt='Logo'
+                                width={100}
+                                height={40}
+                                className='object-contain w-[150px] cursor-pointer'
+                                priority
+                            />
+                        </Link>
+                        <NeedHelp />
+                    </nav>
 
                     <div className="mt-10 space-y-6">
                         <div className="p-2">
