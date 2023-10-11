@@ -1,5 +1,5 @@
 import { MovingForm } from '../services/MovingForm';
-
+import Image from 'next/image';
 export default function HeroSection() {
   
     return (
@@ -15,11 +15,11 @@ export default function HeroSection() {
         </main>
           <MovingForm />
           <div className="flex flex-wrap w-full justify-center gap-2 lg:gap-6 mt-2 mx-auto">
-            <img src="/images/team/hero-img1.webp" alt="Image 1" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-2' />
-            <img src="/images/team/hero-img2.webp" alt="Image 2" className='w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] object-contain mt-5 lg:mt-10' />
-            <img src="/images/team/hero-img3.webp" alt="Image 3" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-6' />
-            <img src="/images/team/hero-img4.webp" alt="Image 4" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-4' />
-            <img src="/images/team/hero-img5.webp" alt="Image 5" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-3 lg:mt-8' />
+            <Image src="/images/team/hero-img1.webp" alt="Image 1" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-2'  loading='lazy' width={160} height={160}/>
+            <Image src="/images/team/hero-img2.webp" alt="Image 2" className='w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] object-contain mt-5 lg:mt-10' loading='lazy' width={120} height={120} />
+            <Image src="/images/team/hero-img3.webp" alt="Image 3" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-6' loading='lazy' width={160} height={160} />
+            <Image src="/images/team/hero-img4.webp" alt="Image 4" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-4' loading='lazy' width={160} height={160} />
+            <Image src="/images/team/hero-img5.webp" alt="Image 5" className='w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-3 lg:mt-8' loading='lazy' width={160} height={160} />
         </div>
       </div>
     </section>

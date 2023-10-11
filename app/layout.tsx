@@ -14,6 +14,7 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href="https://maps.googleapis.com" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="preload" href='/images/bg/shapes-big-new.webp'/>
       <head>
         {/* <!-- Google Tag Manager --> */}
         <Script
