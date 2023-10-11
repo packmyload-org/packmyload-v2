@@ -2,7 +2,7 @@ import { NeedHelp } from '@/components/book_a_move_comp/NeedHelp'
 import { BookingProgress } from './BookingProgress'
 import Image from 'next/image'
 import Link from "next/link"
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import {IoChevronBackCircleOutline} from 'react-icons/io5'
 
 type BookingLayoutProps = {
@@ -16,8 +16,7 @@ type BookingLayoutProps = {
 
 export default function BookingLayout ({leftContent, rightContent, stepDescription, textDescription, prev, next }: BookingLayoutProps) {
     const router = useRouter()
-
-      
+    const pathname = usePathname()
     return (
         <div className="flex flex-col lg:flex-row gap-4">
             {/* Left section */}
@@ -37,7 +36,7 @@ export default function BookingLayout ({leftContent, rightContent, stepDescripti
                                 priority
                             />
                         </Link>
-                        <NeedHelp />
+                        {pathname !== '/move' && <NeedHelp />}
                     </nav>
 
                     <div className="mt-10 space-y-6">

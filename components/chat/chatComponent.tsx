@@ -3,9 +3,13 @@ import React,{useState} from 'react';
 import { PaperPlaneRight } from '@phosphor-icons/react';
 import Image from 'next/image'
 interface Props {
+  setStart: React.Dispatch<React.SetStateAction<boolean>>;
+  setLaunch: React.Dispatch<React.SetStateAction<boolean>>;
+  launch: boolean;
+  start: boolean;
 }
 
-const ChatComponent: React.FC<Props> = () => {
+const ChatComponent: React.FC<Props> = ({setStart,setLaunch,launch,start}) => {
 
     const [chatText,setChatText] = useState<string>()
  return (
@@ -22,7 +26,7 @@ const ChatComponent: React.FC<Props> = () => {
         />
         <h1 className='font-black text-lg text-white'>Mr. Packer</h1>
       </div>
-      <button className='text-white'>&#10006;</button>
+      <button className='text-white' onClick={()=>setStart(!start)}>&#10006;</button>
     </header>
   
     <main className='overflow-y-scroll p-4 h-[calc(87vh-2rem-3rem)] lg:h-[calc(80vh-2rem-3rem)]'>

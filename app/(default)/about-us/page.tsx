@@ -1,58 +1,8 @@
 import { Col, Row, Card, Button, Rate } from 'antd';
 import React from 'react';
-import aboutdata from '../../../utils/about-us.json';
+import aboutdata from '@/utils/about-us.json';
 import Link from 'next/link';
-
-
-interface About {
-  title: string,
-  description: string,
-  to: string
- }
- const AboutCard = ({ title, description, to }: About) => (
-  
-  <Link href={to}>
-    <div className='flex flex-col sm:space-y-4 items-center lg:items-start w-full min-w-[230px] py-4 border-b-[0.3px]'>
-     <div className='w-full flex gap-2 items-center justify-center lg:justify-start'>
-        <figure className='p-2 md:p-3 bg-[#f9f9f9] rounded-lg'>
-         
-        </figure>
-        <h2 className='font-bold text-base md:text-xl text-[#2E5F9E]'>{title}</h2>
-     </div>
-     <div className='bg-blue-100 rounded py-[1px] w-[60px] mt-2' />
-      <p className='text-[#777674] text-center lg:text-left text-sm w-4/5 mt-2'>{description}</p>
-     </div>
-     </Link>
-   
- )
-
-
-// interface About{
-//   title: string;
-//   description: string;
-// }
-// const AboutCard = ({ title, description }: About) => (
-//   <Col xs={24} sm={12} md={8} lg={6} className="mb-7">
-//     <Card
-//       title={title}
-//       className="w-full md:w-[300px] lg:w-[300px] sm:w-[90%] bg-[#F4F3F0]"
-//       style={topBorderStyle}
-//     >
-//       <p>{description}</p>
-//       <div className="learn-more-link">
-//         <Link href="/learn_more" passHref>
-//           <h1>Learn more {'<'}</h1>
-//         </Link>
-//       </div>
-//     </Card>
-//   </Col>
-// );
-
-// const topBorderStyle = {
-//   borderTop: '8px solid #43BCFE',
-//   borderBottomRightRadius: '70px',
-// };
-
+import {AboutCard} from '@/components/AboutCard';
 
 export default function Home() {
   return (
