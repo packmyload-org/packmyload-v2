@@ -7,6 +7,7 @@ const BookingLayout = dynamic(() => import('../BookingLayout'), {
 });
 import dynamic from 'next/dynamic';
 import Loading from '@/app/loading';
+import { AddItems } from './AddItems';
 
 interface Category {
   categoryName: string;
@@ -27,7 +28,8 @@ export default function Page() {
     
   }, [data, selectedTab]);
   let rightContent = (
-    <div>
+    <div className='relative'>
+        <AddItems />
        <div className='grid grid-cols-1 w-full mx-auto gap-6'>
       
       <div className='py-3 lg:space-y-3 min-h-[50vh]'>

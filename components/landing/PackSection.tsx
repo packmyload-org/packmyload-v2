@@ -35,7 +35,7 @@ const PackSection: React.FC = () => {
                     loading='lazy'
                     width={550}
                     height={400}
-                    className='float-right w-full object-cover rounded-b-xl'
+                    className='float-right w-full h-[330px] object-cover rounded-b-xl'
                     />
                 </div>
                 {/* Second Card */}
@@ -59,13 +59,11 @@ const PackSection: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <Image 
-                    src={'/images/packmyload-box.webp'}
+                    <img
+                    src={'/images/coverge-pack.webp'}
                     alt="people image" 
                     loading='lazy'
-                    width={550}
-                    height={400}
-                    className='float-right w-full object-cover rounded-b-xl'
+                    className='float-right w-full h-[330px] object-cover rounded-b-xl'
                     />
                 </div>
             </div>

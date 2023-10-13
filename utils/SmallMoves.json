@@ -248,6 +248,10 @@
         "volume": 200
       },
       {
+        "item": "Air Conditioner",
+        "volume": 600
+      },
+      {
         "item": "Washing machine",
         "volume": 1000
       }
@@ -303,6 +307,10 @@
       {
         "item": "Bike",
         "volume": 100
+      },
+      {
+        "item": "Sewing Machine",
+        "volume": 600
       },
       {
         "item": "Tire(s)",
