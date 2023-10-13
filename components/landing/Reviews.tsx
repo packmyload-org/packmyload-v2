@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination, Autoplay } from 'swiper/modules';
+import {  Autoplay } from 'swiper/modules';
 
 export const Reviews: React.FC = () => {
     
