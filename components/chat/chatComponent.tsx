@@ -66,7 +66,7 @@ const ChatComponent: React.FC<Props> = ({setStart,setLaunch,launch,start}) => {
       </section>
     </main>
   
-    <footer className='w-[90%] mx-auto border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0'>
+    <footer className='w-[90%] absolute mx-auto border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0'>
       <input
         type="text"
         placeholder='Message...'
