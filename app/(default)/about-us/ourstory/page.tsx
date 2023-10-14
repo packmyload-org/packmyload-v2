@@ -34,23 +34,26 @@ export default function OurStory() {
             </div>
           </div>
         </section>
-        <div className="w-full bg-[#012D40] h-auto ">
-          <div className="absolute w-full top-[200px] md:top-[285px] lg:top-[300px] p-2"></div>
-          <div>
-            <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
-              <Image
-                src="/images/about/packmyload_1696572786359.webp"
-                alt="image-1"
-                loading="lazy"
-                className="w-[90%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
-              />
+        <div className="w-full bg-[#012D40] h-auto py-20">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between  max-w-6xl mx-auto">
+              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
+                <Image
+                  src="/images/about/packmyload_1696572786359.webp"
+                  alt="image-1"
+                  loading="lazy"
+                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pr-5 flex-grow"
+                  width={600}
+                  height={600}
+                  />
+              </div>
 
-              <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
-                <p className="text-2xl lg:text-4xl mt-4 text-white">
+              <div className=" w-[90%] flex flex-col justify-center ">
+                <p className="text-2xl w-full md:w-8/12 lg:text-4xl mt-4 text-white mx-auto">
                   Who we are
                 </p>
 
-                <p className="text-base  text-white">
+                <p className="text-base w-full md:w-8/12 mx-auto text-white">
                   Packmyload is a Nigerian based start up that matches supply
                   <br /> and demand in the moving and delivery industry through
                   an asset-light, proprietary tech solution. <br /> As
@@ -66,8 +69,8 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="flex flex-col mr-6 lg:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-40 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+            <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+              <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
                 <p className="text-2xl lg:text-4xl  mt-4 text-white">
                   How it works
                 </p>
@@ -83,12 +86,16 @@ export default function OurStory() {
                   solutions through our integrated ecosystem.
                 </p>
               </div>
+              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
               <Image
                 src="/images/about/packmyload_1696572786359.webp"
                 alt="image-2"
                 loading="lazy"
-                className="w-[95%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover pl-5"
+                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pl-5 flex-grow"
+                  width={600}
+                  height={600}
               />
+              </div >
             </div>
           </div>
         </div>
