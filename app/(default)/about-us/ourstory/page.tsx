@@ -1,6 +1,7 @@
 import { Col, Row, Card } from "antd";
 
 import React from "react";
+import Image from 'next/image'
 
 export default function OurStory() {
   return (
@@ -37,8 +38,8 @@ export default function OurStory() {
           <div className="absolute w-full top-[200px] md:top-[285px] lg:top-[300px] p-2"></div>
           <div>
             <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between pt-64 max-w-6xl mx-auto md:pt-[330px] lg:pt-96">
-              <img
-                src="/public/images/about/packmyload_1696572786359.webp"
+              <Image
+                src="/images/about/packmyload_1696572786359.webp"
                 alt="image-1"
                 loading="lazy"
                 className="w-[90%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
@@ -82,8 +83,8 @@ export default function OurStory() {
                   solutions through our integrated ecosystem.
                 </p>
               </div>
-              <img
-                src="/public/images/about/packmyload_1696572786359.webp"
+              <Image
+                src="/images/about/packmyload_1696572786359.webp"
                 alt="image-2"
                 loading="lazy"
                 className="w-[95%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover pl-5"

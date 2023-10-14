@@ -11,10 +11,12 @@ import { Spin } from "antd";
 import { alerts } from "@/components/alerts/Alert";
 import dynamic from "next/dynamic";
 import Loading from '@/app/loading';
+import { useRouter } from 'next/navigation';
 
 export default function Next_Page() {
    const { state, dispatch } = useBookingForm()
-   const [loading,setLoading]= useState(false)
+   const [loading, setLoading] = useState(false)
+   const router = useRouter()
     const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
   };
@@ -34,7 +36,12 @@ export default function Next_Page() {
          moveDate: state.moveDate,
          moveTime: state.moveTime,
       }
-     try {
+      try {
+            if (!data.email) {
+               alerts.error('Error', 'Please enter your email address')
+               router.push('/move')
+               return
+            }
             const res = await fetch('/api/booking/contact', {
                   method: 'POST',
                   headers: {
@@ -42,16 +49,19 @@ export default function Next_Page() {
                   },
                   body: JSON.stringify(data)
                });
-        if (res.ok) {
-           alerts.success('Successfully Requested','A copy of your request has been sent to your mail')
-           setLoading(false);
-           return
+            if (res.ok) {
+               alerts.success('Successfully Requested','A copy of your request has been sent to your mail')
+               setLoading(false);
+               localStorage.clear()
+               return
             }
-            alerts.error('Error Requesting', 'Oops! something went wrong. Please reach out to customer care.')
+            alerts.error('Error','Something went wrong, please try again with a different email')
             setLoading(false)
-        return
+            dispatch({ type: 'UPDATE_FIELD', field: 'email', value: '' });
+            localStorage.clear()
+            return
       } catch (error) {
-      console.error(error)
+      console.error("err ====>",error)
       setLoading(false)
      }
    }

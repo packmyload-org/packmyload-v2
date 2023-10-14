@@ -2,6 +2,7 @@ import { connectToDB } from '@/utils/database';
 import sendEmail from '@/utils/mailer';
 import Move from '@/models/move';
 import BookEmailTemplate from '@/utils/mails/bookMove';
+import { message } from 'antd';
 export async function POST(request: Request) {
  await connectToDB();
  try {
@@ -12,7 +13,7 @@ export async function POST(request: Request) {
    console.log(emailContent)
    await sendEmail(move.email, 'Your Move Quote', emailContent , emailContent)
     return new Response(JSON.stringify(move),{status:201})
-  } catch (error) {
-    return new Response("failed",{status:400})
+  } catch (error: any) {
+    return new Response(error.message,{status:400})
   }
 }

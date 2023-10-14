@@ -1,15 +1,16 @@
 "use client"
+import { useBookingForm } from "@/context/BookingFormContext";
 import { useState } from "react"
 
 interface Item {
-    itemName: string;
-    itemQuantity: string;
+    item: string;
+    numberOfItems: string;
 }
 
 export const AddItems: React.FC = () => {
-
+     const { state, dispatch } = useBookingForm();
     const [info, setInfo] = useState(false)
-    const [items, setItems] = useState<Item[]>([{ itemName: '', itemQuantity: ''}]);
+    const [items, setItems] = useState<Item[]>([{ item: '', numberOfItems: ''}]);
     const [showForm, setShowForm] = useState(false)
 
     const onMouseEnter = () => {
@@ -25,7 +26,7 @@ export const AddItems: React.FC = () => {
     
 
     const addRow = () => {
-        setItems([...items, { itemName: '', itemQuantity: '' }]);
+        setItems([...items, { item: '', numberOfItems: '', }]);
     };
     const removeRow = () => {
         if (items.length > 1) {
@@ -39,8 +40,10 @@ export const AddItems: React.FC = () => {
         const { name, value } = event.target;
         const updatedItems = [...items];
         updatedItems[index][name as keyof Item] = value;
+        dispatch({ type: 'UPDATE_ITEMS', items: updatedItems });
         setItems(updatedItems);
     };
+    console.log(state.items)
 
     return (
         <section className="w-full">
@@ -90,16 +93,16 @@ export const AddItems: React.FC = () => {
                             <div key={index} className="flex space-x-2">
                                 <input
                                 type="text"
-                                name="itemName"
-                                value={item.itemName}
+                                name="item"
+                                value={item.item}
                                 onChange={(e) => handleInputChange(index, e)}
                                 placeholder="Item Name"
                                 className="border border-gray-300 p-2"
                                 />
                                 <input
                                 type="number"
-                                name="itemQuantity"
-                                value={item.itemQuantity}
+                                name="numberOfItems"
+                                value={item.numberOfItems}
                                 onChange={(e) => handleInputChange(index, e)}
                                 placeholder="Item Quantity"
                                 className="border border-gray-300 p-2"

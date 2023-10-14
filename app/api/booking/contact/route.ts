@@ -2,6 +2,7 @@ import { connectToDB } from '@/utils/database';
 import contactMe from '@/models/contactMe';
 import sendEmail from '@/utils/mailer';
 import EmailTemplate from '@/utils/mails/contactMeTemp';
+import { message } from 'antd';
 export async function POST(request: Request) {
  await connectToDB();
  try {
@@ -12,7 +13,7 @@ export async function POST(request: Request) {
    const emailContent = EmailTemplate((move.firstName + " " + move.lastName), move.email, move.contactBy, move.countryCode + move.phoneNumber, move.pickUp, move.destination)
    await sendEmail(move.email, 'Speak with agent details!', emailContent , emailContent)
     return new Response(JSON.stringify(move),{status:201})
-  } catch (error) {
-    return new Response("failed",{status:400})
+  } catch (error: any) {
+    return new Response(error.message,{status:400})
   }
 }

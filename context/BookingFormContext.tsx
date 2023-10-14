@@ -16,8 +16,7 @@ interface BookingFormState {
   items: Array<{
     item: string;
     numberOfItems: string;
-    price: number;
-    volume: number;
+    volume?: number;
   }>;
   rooms: Array<{
     room: string;
@@ -35,12 +34,13 @@ interface BookingFormState {
   contactBy: string;
   countryCode: string;
   acceptedTerms: boolean;
+  size: string;
 }
 
 // Define action types
 type Action =
   | { type: 'UPDATE_FIELD'; field: string; value: string | boolean}
-  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string; price: number; volume: number }[] }
+  | { type: 'UPDATE_ITEMS'; items: { item: string; numberOfItems: string; volume?: number }[] }
   | { type: 'UPDATE_ROOMS'; rooms: { room: string; numberOfRooms: string; price: number}[] }
   | { type: 'RESTORE_STATE'; payload: BookingFormState };
 
@@ -67,7 +67,8 @@ const initialFormState: BookingFormState = {
   distance: '',
   contactBy: '',
   countryCode: '+ 234',
-  acceptedTerms: false
+  acceptedTerms: false,
+  size: '',
 };
 
 // Define a key for localStorage

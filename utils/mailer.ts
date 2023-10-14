@@ -46,8 +46,9 @@ async function sendEmail(
       console.log("Email sent successfully to booking!");
     }
     console.log("Email sent successfully!");
-  } catch (error) {
-    console.error("Error sending email:", error);
+  } catch (error: any) {
+    // console.error("Error sending email:", error);
+    throw new Error(error);
   }
 }
 

@@ -1,6 +1,8 @@
 import { connectToDB } from '@/utils/database';
 import Move from '@/models/move';
 import { initiatePaymentToPaystack, verifyPayment } from '@/utils/paystack_api';
+import BookEmailTemplate from '@/utils/mails/bookMove';
+import sendEmail from '@/utils/mailer';
 export async function POST(request: Request) {
  await connectToDB();
  try {
@@ -11,11 +13,12 @@ export async function POST(request: Request) {
   const initiatePayment = await initiatePaymentToPaystack(body.email, amount);
   console.log(initiatePayment)
   const move = new Move({ ...body, reference: initiatePayment.data.reference });
-    await move.save();
+   await move.save();
+   const emailContent = BookEmailTemplate(move)
+   await sendEmail(move.email, 'Your Move Quote', emailContent , emailContent)
   return new Response(JSON.stringify({ data: { authorization_url: initiatePayment.data.authorization_url} }), { status: 200 })
-  
-  } catch (error) {
-    return new Response("failed",{status:400})
+  } catch (error: any) {
+    return new Response(error.message,{status:400})
   }
 }
 

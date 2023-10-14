@@ -3,6 +3,7 @@ import { RoomCounter } from '@/components/book_a_move_comp/RoomCounter';
 import roomMove from '@/utils/RoomMoves.json';
 import dynamic from 'next/dynamic';
 import Loading from '@/app/loading';
+import { useBookingForm } from '@/context/BookingFormContext';
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
@@ -15,6 +16,10 @@ type RoomJson = {
 }
 
 export default function Rooms(){
+const handleFieldChange = (field: string, value: string) => {
+    dispatch({ type: 'UPDATE_FIELD', field, value });
+};
+    const { state, dispatch } = useBookingForm();
     const roomsOb: RoomJson = roomMove
     
     const rightContent = (
@@ -28,6 +33,7 @@ export default function Rooms(){
                     id='size-feet' 
                     type="number" 
                     placeholder='80'
+                    onChange={(e)=>handleFieldChange('size', e.target.value)}
                 />
             </form>
             <div className='grid grid-cols-2 gap-2 p-1 w-full h-[fit-content] mt-2'>
@@ -50,7 +56,7 @@ export default function Rooms(){
             rightContent={rightContent}
             leftContent={leftContent}
             prev='/move'
-            next='move/items'
+            next='/move/items'
         />
     )
 }

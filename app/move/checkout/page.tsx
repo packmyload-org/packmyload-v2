@@ -4,7 +4,7 @@ import { sumItemPrices, sumVolume } from "@/utils/helpers";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
 import { Table, Col, Spin } from "antd";
 import { useEffect, useState } from "react";
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
@@ -39,7 +39,8 @@ export default function Checkout() {
     };
     const handleFieldChange = (field: string, value: boolean) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
-  };
+    };
+    const router= useRouter()
 
   const pagination = {
     current: currentPage,
@@ -48,7 +49,7 @@ export default function Checkout() {
     onChange: handleChangePage,
 };
     const totalPrice = sumItemPrices(state.rooms);
-    const volume = sumVolume(state.items)
+    const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
     useEffect(() => {
         if (
@@ -86,7 +87,6 @@ export default function Checkout() {
         totalPrice: totalPrice
     }
     const handleMailQuote = async() => { 
-        console.log('mail quote', state.acceptedTerms)
         if (!state.acceptedTerms) {
             return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
         } 
@@ -102,10 +102,18 @@ export default function Checkout() {
             if (res.ok) {
                 alerts.success('Success', 'Mail was sent successfully.')
                 setLoading(false)
+                localStorage.clear()
+                router.push('/move')
                 return;
             }
-        } catch (error) {
+            alerts.error('Error', 'Oops! something went wrong. Unable to mail this email.')
+            router.push('/move')
+            return;
+            
+        } catch (error: any) {
             console.error(error)
+            alerts.error('Error', error.message)
+            router.push('/move')
         }
     }
     const handlePaymentGateway = async() => { 
@@ -122,14 +130,14 @@ export default function Checkout() {
                   body: JSON.stringify(data)
             })
             if (res.ok) {
-                alerts.success('Success', 'Mail was sent successfully.')
                 setLoading(false)
                 const data = await res.json()
-                const {authorization_url} = data.data
+                const { authorization_url } = data.data
                 window.location.href = authorization_url;
+                localStorage.clear()
                 return;
             }
-        } catch (error) {
+        } catch (error: any) {
             alerts.error('Error', 'Oops! something went wrong. Please reach out to customer care.')
             console.error(error)
         }
@@ -238,10 +246,10 @@ const rightContent=(
                     </div>
                     <div className="flex mt-3 justify-between">
                         <div className="text-base min-w-max mr-5">                   
-                            Your Team
+                            size
                         </div>
                         <div className="mt-1 text-sm">                   
-                            1 packer (s)   
+                          {state.size}
                         </div>
                     </div>
                 </div>

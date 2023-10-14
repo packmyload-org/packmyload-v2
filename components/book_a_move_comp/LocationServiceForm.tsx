@@ -16,7 +16,6 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location }) => {
     const handleFieldChange = (field: string, value: string) => {
         dispatch({ type: 'UPDATE_FIELD', field, value });
     };
-    console.log(state)
     useEffect(() => {
         if (state.buildingTypeStart === "Bungalow" && title.includes('Start')) {
             setShowFloors(false);
@@ -90,7 +89,7 @@ const LocationServiceForm: React.FC<DetailsProps> = ({ title, location }) => {
                         <Car size={32} color="#5bc7dc" />
                     </div>
                     <div className="ml-2 text-lg">                   
-                        Parking
+                        Parking ?
                     </div>
                 </div>
                 <div className="w-[55%] flex justify-between gap-1 items-start mt-2">
