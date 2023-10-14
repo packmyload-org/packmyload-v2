@@ -49,11 +49,11 @@ export default function OurStory() {
               </div>
 
               <div className=" w-[90%] flex flex-col justify-center ">
-                <p className="text-2xl w-full md:w-8/12 lg:text-4xl mt-4 text-white mx-auto">
+                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4 text-white mx-auto">
                   Who we are
                 </p>
 
-                <p className="text-base w-full md:w-8/12 mx-auto text-white">
+                <p className="text-sm mt-2 w-full md:w-8/12 mx-auto text-white">
                   Packmyload is a Nigerian based start up that matches supply
                   <br /> and demand in the moving and delivery industry through
                   an asset-light, proprietary tech solution. <br /> As
@@ -71,11 +71,11 @@ export default function OurStory() {
 
             <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
               <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
-                <p className="text-2xl lg:text-4xl  mt-4 text-white">
+                <p className="text-2xl font-semibold lg:text-4xl  mt-4 text-white">
                   How it works
                 </p>
 
-                <p className="text-base  text-white">
+                <p className="text-sm mt-2  text-white">
                   We offer a comprehensive, connected, and tech-driven solution
                   <br /> developed specifically for this industry. We look at a
                   customer holistically, <br />

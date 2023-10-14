@@ -1,7 +1,8 @@
 "use client"
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import { PaperPlaneRight } from '@phosphor-icons/react';
 import Image from 'next/image'
+import axios from 'axios'
 interface Props {
   setStart: React.Dispatch<React.SetStateAction<boolean>>;
   setLaunch: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,10 +11,33 @@ interface Props {
 }
 
 const ChatComponent: React.FC<Props> = ({setStart,setLaunch,launch,start}) => {
-
+   const options = {
+    url: `https://general-runtime.voiceflow.com/state/user/pizza-${Math.random()}/interact?logs=off`,
+    headers: {
+      accept: 'application/json',
+      versionID: 'production',
+      'content-type': 'application/json',
+      Authorization: `${process.env.NEXT_PUBLIC_VOICE_FLOW_API_KEY}`
+    },
+    data: {
+      action: {type: 'launch'},
+      config: {
+        tts: false,
+        stripSSML: true,
+        stopAll: true,
+        excludeTypes: ['block', 'debug', 'flow']
+      }
+    }
+  };
+  const launchChat = async() => {
+    const res = await axios.post(options.url, options.data, { headers: options.headers })
+    console.log(res)
+ }
+ launchChat()
+ 
     const [chatText,setChatText] = useState<string>()
  return (
-    <div className='fixed h-[90vh] lg:h-[83vh] lg:right-10 bottom-3 lg:bottom-10 w-[90dvw] sm:w-[80dvw] m-auto lg:w-[34dvw] bg-white z-40 shadow rounded-md '>
+    <div className='fixed flex flex-col h-[90vh] lg:h-[83vh] lg:right-10 bottom-3 lg:bottom-10 w-[90dvw] sm:w-[80dvw] m-auto lg:w-[34dvw] bg-white z-40 shadow rounded-md '>
     <header className='bg-blue-300 w-full p-4 flex justify-between'>
       <div className='flex gap-4'>
         <Image
@@ -42,7 +66,7 @@ const ChatComponent: React.FC<Props> = ({setStart,setLaunch,launch,start}) => {
       </section>
     </main>
   
-    <footer className='w-[90%] mx-auto absolute border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0'>
+    <footer className='w-[90%] mx-auto border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0'>
       <input
         type="text"
         placeholder='Message...'
