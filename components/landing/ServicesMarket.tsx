@@ -10,7 +10,10 @@ import {
     Bed,
     Suitcase,
     Armchair,
-    PawPrint
+    PawPrint,
+    IdentificationCard,
+    Buildings,
+    Student
  } from "@phosphor-icons/react"
 import { AdServicesCard } from "./custom/AdServicesCard"
 
@@ -40,39 +43,39 @@ export const ServicesMarket: React.FC = () => {
                 />
                 <AdServicesCard 
                     Icon = {<SuitcaseRolling size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Travel"
+                    text= "Travel & Protocol"
                 />
                 <AdServicesCard 
                     Icon = {<Toolbox size={28} color="#2e5f9e" weight="fill" />}
                     text= "Handy-Men"
                 />
                 <AdServicesCard 
-                    Icon = {<HandHeart size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Care-Givers"
+                    Icon = {<Student size={28} color="#2e5f9e" weight="fill" />}
+                    text= "School-search"
                 />
                 <AdServicesCard 
                     Icon = {<HouseLine size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Real-Estate"
+                    text= "Home-search"
                 />
                 <AdServicesCard 
                     Icon = {<CoatHanger size={28} color="#2e5f9e" weight="fill" />}
                     text= "Laundry"
                 />
                 <AdServicesCard 
-                    Icon = {<Bed size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Mattresses"
+                    Icon = {<Buildings size={28} color="#2e5f9e" weight="fill" />}
+                    text= "Employee-relocation"
                 />
                 <AdServicesCard 
                     Icon = {<Suitcase size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Packing Supplies"
+                    text= "Area Orientation"
                 />
                 <AdServicesCard 
                     Icon = {<Armchair size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Furniture"
+                    text= "Declutter"
                 />
                 <AdServicesCard 
-                    Icon = {<PawPrint size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Pet-Care"
+                    Icon = {<IdentificationCard size={28} color="#2e5f9e" weight="fill" />}
+                    text= "Visa/Immigration Support"
                 />
             </section>
 
