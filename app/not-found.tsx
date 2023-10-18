@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Link from "next/link"
 import Head from 'next/head'
+import { Row, Col } from "antd";
 export default function NotFound() {
 
   const crossOrigin = true
@@ -47,6 +48,27 @@ export default function NotFound() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="gradient-bg grid py-[20px] min-h-[250px] relative">
+      <div className="cirle-bg w-full">
+        <div className="bg object-cover" style={{height:'250px'}}></div>   
+      </div>
+      <div className="w-full lg:w-[1200px] max-w-6xl mx-auto py-12">
+        <div className="join-wrap fl-wrap text-white">
+          <Row className='w-full flex' justify={'space-between'} align={'middle'}>
+            <Col span={24} md={10} className='flex flex-col space-y-6'>
+              <h3 className='text-4xl font-bold'>Keep getting this error?</h3>
+              <p>Reach out to us, we would be get it resolved.</p>
+            </Col>
+            <Col span={24} md={10} className='flex items-center text-start md:text-end md:justify-center min-h-[100px]'>
+                <Link href={'/faqs'} className="join-wrap-btn bg-blue-700 focus:bg-blue-300 ">
+                  CONTACT US &#x2709;
+                </Link>
+            </Col>
+          </Row>
+        </div>
+      </div>
       </section>
 
       <Footer />
