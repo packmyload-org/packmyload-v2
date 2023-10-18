@@ -22,7 +22,7 @@ export default function NotFound() {
       <div className="relative max-w-6xl mx-auto h-0 pointer-events-none" aria-hidden="true">
       </div>
 
-      <section className="relative bg-slate-500 h-auto sm:h-auto lg:h-[95vh] xl:h-[550px]">
+      <section className="relative bg-slate-500 h-auto sm:h-auto lg:h-[100vh] xl:h-[550px]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             <div className="max-w-3xl mx-auto text-center">
