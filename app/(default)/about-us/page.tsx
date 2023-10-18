@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
       <div className="w-full text-black" style={{ marginTop: '24px' }}>
-        <section className="gradient-bg grid items-center py-[20px] min-h-[250px]  ">
+        <section className="gradient-bg grid items-center py-[20px] h-[299px]  ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -16,7 +16,7 @@ export default function Home() {
             <div className="join-wrap fl-wrap text-white">
               <Row className="w-full flex" justify="space-between" align="middle">
                 <Col span={24} md={10} className="flex flex-col space-y-6 ">
-                  <h3 className="text-4xl font-bold">Learn more about PackMyLoad below</h3>
+                  <h3 className="text-4xl font-bold">Learn more about Packmyload </h3>
                   <p>
                     Check out our history, newsroom, and claims information, as well as opportunities
                     to become an agent, driver, or employee
@@ -31,9 +31,9 @@ export default function Home() {
             </span> */}
           </Link> 
         <div className='mt-5'>
-                    <div className="star-ratings">
+                    {/* <div className="star-ratings">
                       <Rate allowHalf defaultValue={5} />
-                    </div>
+                    </div> */}
                     </div>
                   </div>
                 </Col>
