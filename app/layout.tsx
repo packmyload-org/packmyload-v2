@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import './globals.css'
 import Script from 'next/script';
 import Loading from './loading';
-import Chat from '@/components/chat/chat';
 const Provider = dynamic(() => import("@/providers/provider"), { ssr: false , loading: () => <Loading />})
 export default function RootLayout({
   children,
@@ -47,28 +46,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {children}
               </Provider>
             </main>
-            <Chat />
-            {/* <Script
-            type="text/javascript"
-            strategy="lazyOnload"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(d, t) {
-                    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                    v.onload = function() {
-                      window.voiceflow.chat.load({
-                        verify: { projectID: '6501924b5212a400086a2372' },
-                        url: 'https://general-runtime.voiceflow.com',
-                        versionID: 'production'
-                      });
-                    }
-                    v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-                    v.type = "text/javascript";
-                    s.parentNode.insertBefore(v, s);
-                })(document, 'script');
-              `,
-            }}
-          /> */}
         </div>
       </body>
         
