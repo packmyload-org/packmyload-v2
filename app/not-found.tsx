@@ -62,7 +62,7 @@ export default function NotFound() {
               <p>Reach out to us, we would be get it resolved.</p>
             </Col>
             <Col span={24} md={10} className='flex items-center text-start md:text-end md:justify-center min-h-[100px]'>
-                <Link href={'/faqs'} className="join-wrap-btn bg-blue-700 focus:bg-blue-300 ">
+                <Link href={'/contact'} className="join-wrap-btn bg-blue-700 focus:bg-blue-300 ">
                   CONTACT US &#x2709;
                 </Link>
             </Col>
