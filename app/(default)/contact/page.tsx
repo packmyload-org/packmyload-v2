@@ -5,7 +5,7 @@ import {IoCall} from 'react-icons/io5'
 export default function Contact () {
 
     return (
-        <section className="mt-[90px] max-w-6xl mx-auto py-2 flex flex-col lg:flex-row">
+        <section className="w-[95%] mx-auto lg:w-full mt-[90px] max-w-6xl mx-auto py-2 flex flex-col lg:flex-row">
             <div className="lg:w-[50%]">
                 <h1 className="font-bold text-xl">Get in Touch</h1>
 
