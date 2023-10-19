@@ -1,7 +1,10 @@
+"use client";
 import { Col, Row, Card } from "antd";
+import { Coin, CreditCard, SneakerMove } from "@phosphor-icons/react";
 
 import React from "react";
 import Image from "next/image";
+import { AdServicesCard } from "@/components/landing/custom/AdServicesCard";
 
 export default function Movers() {
   return (
@@ -38,7 +41,7 @@ export default function Movers() {
           </div>
         </section>
         <div className="w-full  h-auto py-20">
-          <div className="flex flex-row  ">
+          <div className="flex flex-row md:grid-cols-3 lg:grid-cols-4   ">
             <img
               src="/images/partner/packmyload_1697583737398.webp"
               alt="image-1"
@@ -70,21 +73,8 @@ export default function Movers() {
 
               <div className=" w-[90%] flex flex-col justify-center ">
                 <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4  mx-auto">
-                Enjoy the flexibility of working independently, on your own schedule.
-                </p>
-
-                <p className="text-sm mt-2 w-full md:w-8/12 mx-auto text-white">
-                  Packmyload is a Nigerian based start up that matches supply
-                  <br /> and demand in the moving and delivery industry through
-                  an asset-light, proprietary tech solution. <br /> As
-                  technology continues to bring us closer together, there is
-                  still no modern solution
-                  <br /> in Canada to deliver our most precious items to use in
-                  an easy, trustworthy,
-                  <br /> and seamless manner. There simply has to be a better
-                  way… which is why MoveMate is <br /> building the most
-                  advanced moving and
-                  <br /> delivery ecosystem to answer this need. ‍
+                  Enjoy the flexibility of working independently, on your own
+                  schedule.
                 </p>
               </div>
             </div>
@@ -116,6 +106,35 @@ export default function Movers() {
                   height={600}
                 />
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-auto">
+          <div className="grid grid-col justify-center">
+            <h2 className="text-5xl font-bold pl-[400px] ">
+              Earn a stable income
+            </h2>
+            <h3 className="text-2xl font-semibold px-80 pt-5 ">
+              Receive work remotely, through our platfrom <br /> Choose your own
+              working hours and become an entrepreneur
+            </h3>
+            <div className="pl-24" >
+            <div className="grid grid-rows  md:grid-cols-3 lg:grid-cols-4 gap-8 p-5 md:p-9  ">
+              <AdServicesCard
+                Icon={<Coin size={28} color="#2E5F9E" weight="fill" />}
+                text="Earn a fixed salary "
+              />
+
+              <AdServicesCard
+                Icon={<CreditCard size={28} color="#2E5F9E" weight="fill" />}
+                text="Get paid after every job "
+              />
+
+<AdServicesCard 
+                Icon = {<SneakerMove size={28} color="#2E5F9E" weight="fill" />}
+                text= "Choose when to stop working "
+                />
+            </div>
             </div>
           </div>
         </div>
