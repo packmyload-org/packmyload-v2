@@ -11,7 +11,7 @@ const Logo = "/images/icons/Logo.svg"
 function Nav() {  
   return (
     <>
-    <nav className="flex justify-between w-full px-10 py-3 bg-[#2E5F9E] fixed top-0 z-30">
+    <nav className="flex justify-between w-full px-2 lg:px-10 py-3 bg-[#2E5F9E] fixed top-0 z-30">
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     <Image 
       src={ Logo }
