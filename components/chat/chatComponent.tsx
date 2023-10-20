@@ -43,7 +43,8 @@ const launchChat = async () => {
   setChatData([data]);
 }
 
-const sendChat = async () => {
+const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HTMLButtonElement>) => {
+  e.preventDefault()
   let user = { type: 'user', message: chatText }
   setChatData(prevChatData => [...prevChatData, user]);
   const text = {
@@ -96,7 +97,7 @@ const sendChat = async () => {
       <button className='text-white' onClick={()=>setStart(!start)}>&#10006;</button>
     </header>
   
-    <main className='overflow-y-scroll p-4 h-[calc(87vh-2rem-3rem)] lg:h-[calc(80vh-2rem-3rem)]'>
+    <main className='overflow-y-scroll scrollbar-hide p-4 h-[calc(87vh-2rem-3rem)] lg:h-[calc(80vh-2rem-3rem)]'>
       <section className='flex w-full items-center flex-col justify-center'>
         <img
             src="/images/iconpackmyload.webp"
@@ -115,10 +116,10 @@ const sendChat = async () => {
             data.type === 'system'
               ? data.message.includes('/n') ? data.message.split('/n').map((message: string, messageIndex: number) => (
                 <div key={messageIndex}>
-                  <p>{message}</p>
+                  <p className='mt-1 bg-slate-300 rounded-md p-3 w-[fit-content]'>{message}</p>
                 </div>
-              )) : <p>{data.message}</p>
-              : <p>{data.message}</p>
+              )) : <p className='mt-1 clear-both bg-slate-300 rounded-md p-3 w-[fit-content]'>{data.message}</p>
+              : <p className='mt-1 float-right bg-slate-200 rounded-md p-3 w-[fit-content]'>{data.message}</p>
           }
         </div>
       ))
@@ -126,10 +127,14 @@ const sendChat = async () => {
       </section>
     </main>
   
-    <footer className='w-[90%] absolute mx-auto border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0'>
+    <form 
+      className='w-[90%] absolute mx-auto border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0 z-50'
+      onSubmit={sendChat}
+    >
       <input
         type="text"
         placeholder='Message...'
+        value={chatText}
         className='w-[90%] outline-none placeholder:text-base p-2'
         onChange={(e) => {setChatText(e.target.value)}}
       />
@@ -137,12 +142,12 @@ const sendChat = async () => {
         chatText &&
          <button
             className='px-2'
-            onClick={() => sendChat()}
+            onClick={sendChat}
           >
             <PaperPlaneRight size={18} color="#2e5f9e" weight="fill" />
         </button>
       }
-    </footer>
+    </form>
   </div>
   
  );
