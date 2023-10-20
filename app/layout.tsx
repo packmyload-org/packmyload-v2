@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import './globals.css'
 import Script from 'next/script';
 import Loading from './loading';
+import Chat from '@/components/chat/chat';
 const Provider = dynamic(() => import("@/providers/provider"), { ssr: false , loading: () => <Loading />})
 export default function RootLayout({
   children,
@@ -46,6 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 {children}
               </Provider>
             </main>
+            <Chat />
         </div>
       </body>
         
