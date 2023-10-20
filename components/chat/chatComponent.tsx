@@ -121,7 +121,7 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
               )) : <p className='mt-1 bg-slate-300 rounded-md p-3 w-[fit-content]'>{data.message}</p>
               : 
               <div>
-                <p className='mt-1 float-right bg-slate-200 rounded-md p-3 w-[fit-content]'>{!data.message ? "loading" : data.message }</p> 
+                <p className='mt-1 float-right bg-slate-200 rounded-md p-3 w-[fit-content]'>{data.message}</p> 
                 <div className='clear-both' />
               </div>
           }
