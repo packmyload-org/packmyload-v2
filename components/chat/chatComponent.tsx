@@ -97,7 +97,7 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
       <button className='text-white' onClick={()=>setStart(!start)}>&#10006;</button>
     </header>
   
-    <main className='overflow-y-scroll scrollbar-hide p-4 h-[calc(87vh-2rem-3rem)] lg:h-[calc(80vh-2rem-3rem)]'>
+    <main className='overflow-y-scroll scrollbar-hide p-4 h-[calc(87vh-2rem-3rem)] lg:h-[calc(75vh-2rem-3rem)]'>
       <section className='flex w-full items-center flex-col justify-center'>
         <img
             src="/images/iconpackmyload.webp"
@@ -118,8 +118,12 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
                 <div key={messageIndex}>
                   <p className='mt-1 bg-slate-300 rounded-md p-3 w-[fit-content]'>{message}</p>
                 </div>
-              )) : <p className='mt-1 clear-both bg-slate-300 rounded-md p-3 w-[fit-content]'>{data.message}</p>
-              : <p className='mt-1 float-right bg-slate-200 rounded-md p-3 w-[fit-content]'>{data.message}</p>
+              )) : <p className='mt-1 bg-slate-300 rounded-md p-3 w-[fit-content]'>{data.message}</p>
+              : 
+              <div>
+                <p className='mt-1 float-right bg-slate-200 rounded-md p-3 w-[fit-content]'>{!data.message ? "loading" : data.message }</p> 
+                <div className='clear-both' />
+              </div>
           }
         </div>
       ))
