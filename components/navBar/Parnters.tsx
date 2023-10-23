@@ -6,7 +6,7 @@ const items: MenuProps['items'] = [
   {
     key: '1',
      label: (
-      <Link href='/app/(default)/partner/page.tsx'>
+      <Link href='/partner'>
        Partner
      </Link>
    ),
@@ -23,7 +23,7 @@ const items: MenuProps['items'] = [
   {
   key: '3',
     label: (
-      <Link href='/app/(default)/partner/movers/page.tsx' >
+      <Link href='/partner/movers' >
         Move for us
       </Link>
     ),

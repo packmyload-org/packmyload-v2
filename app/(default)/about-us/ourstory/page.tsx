@@ -59,7 +59,7 @@ export default function OurStory() {
                   an asset-light, proprietary tech solution. <br /> As
                   technology continues to bring us closer together, there is
                   still no modern solution
-                  <br /> in Canada to deliver our most precious items to use in
+                  <br /> in Nigeria to deliver our most precious items to use in
                   an easy, trustworthy,
                   <br /> and seamless manner. There simply has to be a better
                   way… which is why MoveMate is <br /> building the most
