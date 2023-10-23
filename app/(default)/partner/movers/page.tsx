@@ -58,7 +58,7 @@ export default function Movers() {
               className="w-[50%] max-h-96   relative bottom-20"
             />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="relative bottom-10 flex flex-col gap-4 ">
             <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between  max-w-6xl mx-auto">
               <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
                 <Image
@@ -79,61 +79,7 @@ export default function Movers() {
               </div>
             </div>
 
-            {/* <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
-                <p className="text-2xl font-semibold lg:text-4xl  mt-4 text-white">
-                  How it works
-                </p>
-
-                <p className="text-sm mt-2  text-white">
-                  We offer a comprehensive, connected, and tech-driven solution
-                  <br /> developed specifically for this industry. We look at a
-                  customer holistically, <br />
-                  seeking to understand their needs from end-to-end and
-                  providing solutions for delivery, storage, and moving.
-                  <br /> At the same time, we bring value to the entire customer
-                  experience by providing our partners with modern and reliable
-                  solutions through our integrated ecosystem.
-                </p>
-              </div> <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
-                <p className="text-2xl font-semibold lg:text-4xl  mt-4 text-white">
-                  How it works
-                </p>
-
-                <p className="text-sm mt-2  text-white">
-                  We offer a comprehensive, connected, and tech-driven solution
-                  <br /> developed specifically for this industry. We look at a
-                  customer holistically, <br />
-                  seeking to understand their needs from end-to-end and
-                  providing solutions for delivery, storage, and moving.
-                  <br /> At the same time, we bring value to the entire customer
-                  experience by providing our partners with modern and reliable
-                  solutions through our integrated ecosystem.
-                </p>
-              </div>
-              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
-                <Image
-                  src="/images/about/packmyload_1696572694895.webp"
-                  alt="image-2"
-                  loading="lazy"
-                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pl-5 flex-grow"
-                  width={600}
-                  height={600}
-                />
-              </div>
-            </div>
-              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
-                <Image
-                  src="/images/about/packmyload_1696572694895.webp"
-                  alt="image-2"
-                  loading="lazy"
-                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pl-5 flex-grow"
-                  width={600}
-                  height={600}
-                />
-              </div>
-            </div> */}
+           
           </div>
         </div>
         <div className="w-full h-auto">
@@ -184,15 +130,15 @@ export default function Movers() {
 
               <div className="flex flex-row gap-8 text-2xl mt-6 text-[#777674] pl-[100px] ">
                 <div>
-                  <h2>STEP ONE</h2>
+                  <h2 className="text-[#6D9ED2]">STEP ONE</h2>
                   <p className="text-lg">Complete the questionnare below to get <br/>started</p>
                 </div>
                 <div>
-                  <h2>STEP TWO</h2>
+                  <h2 className="text-[#6D9ED2]">STEP TWO</h2>
                   <p  className="text-lg">Schedule a call with the Packmyload team<br/> and tell us about yourself!</p>
                 </div>
                 <div>
-                  <h2>STEP THREE</h2>
+                  <h2 className="text-[#6D9ED2]">STEP THREE</h2>
                   <p  className="text-lg">Complete training material and start<br/> getting paid for your work</p>
                 </div>
               </div>
