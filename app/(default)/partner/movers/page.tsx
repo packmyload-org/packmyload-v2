@@ -1,6 +1,6 @@
 "use client";
 import { Col, Row, Card } from "antd";
-import { Coin, CreditCard, SneakerMove } from "@phosphor-icons/react";
+import { Coin, CreditCard, LightningSlash, SneakerMove } from "@phosphor-icons/react";
 
 import React from "react";
 import Image from "next/image";
@@ -48,7 +48,7 @@ export default function Movers() {
               className="w-[50%] max-h-96   relative bottom-20"
             />
             <img
-              src="/images/partner/packmyload_1695798612527.webp"
+              src="/images/about/packmyload_1696572694895.webp"
               alt="image-2"
               className="w-[50%] max-h-96   relative bottom-20"
             />
@@ -72,14 +72,30 @@ export default function Movers() {
               </div>
 
               <div className=" w-[90%] flex flex-col justify-center ">
-                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4  mx-auto">
+                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4  mx-auto text-[#777674]">
                   Enjoy the flexibility of working independently, on your own
                   schedule.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+            {/* <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+              <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
+                <p className="text-2xl font-semibold lg:text-4xl  mt-4 text-white">
+                  How it works
+                </p>
+
+                <p className="text-sm mt-2  text-white">
+                  We offer a comprehensive, connected, and tech-driven solution
+                  <br /> developed specifically for this industry. We look at a
+                  customer holistically, <br />
+                  seeking to understand their needs from end-to-end and
+                  providing solutions for delivery, storage, and moving.
+                  <br /> At the same time, we bring value to the entire customer
+                  experience by providing our partners with modern and reliable
+                  solutions through our integrated ecosystem.
+                </p>
+              </div> <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
               <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
                 <p className="text-2xl font-semibold lg:text-4xl  mt-4 text-white">
                   How it works
@@ -107,37 +123,85 @@ export default function Movers() {
                 />
               </div>
             </div>
+              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
+                <Image
+                  src="/images/about/packmyload_1696572694895.webp"
+                  alt="image-2"
+                  loading="lazy"
+                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pl-5 flex-grow"
+                  width={600}
+                  height={600}
+                />
+              </div>
+            </div> */}
           </div>
         </div>
         <div className="w-full h-auto">
           <div className="grid grid-col justify-center">
-            <h2 className="text-5xl font-bold pl-[400px] ">
+            <h2 className="text-5xl font-bold pl-[400px] text-[#6D9ED2]">
               Earn a stable income
             </h2>
-            <h3 className="text-2xl font-semibold px-80 pt-5 ">
+            <h3 className="text-2xl font-semibold px-80 pt-5 text-[#777674]  ">
               Receive work remotely, through our platfrom <br /> Choose your own
               working hours and become an entrepreneur
             </h3>
-            <div className="pl-24" >
-            <div className="grid grid-rows  md:grid-cols-3 lg:grid-cols-4 gap-8 p-5 md:p-9  ">
-              <AdServicesCard
-                Icon={<Coin size={28} color="#2E5F9E" weight="fill" />}
-                text="Earn a fixed salary "
-              />
-
-              <AdServicesCard
-                Icon={<CreditCard size={28} color="#2E5F9E" weight="fill" />}
-                text="Get paid after every job "
-              />
-
-<AdServicesCard 
-                Icon = {<SneakerMove size={28} color="#2E5F9E" weight="fill" />}
-                text= "Choose when to stop working "
+            <div className="pl-52">
+              <div className="grid grid-rows  md:grid-cols-3 lg:grid-cols-4 gap-8 p-5 md:p-9  ">
+                <AdServicesCard
+                  Icon={<Coin size={24} color="#2E5F9E" weight="fill" />}
+                  text="Earn a fixed salary "
                 />
+
+                <AdServicesCard
+                  Icon={<CreditCard size={24} color="#2E5F9E" weight="fill" />}
+                  text="Get paid after every job "
+                />
+
+                <AdServicesCard
+                  Icon={<SneakerMove size={24} color="#2E5F9E" weight="fill" />}
+                  text="Choose when to stop working "
+                />
+              </div>
             </div>
+          </div>
+          <div>
+          <div className="grid grid-col justify-center">
+            <h2 className="text-5xl font-semibold pl-16 text-[#6D9ED2] ">
+            Who You Are
+            </h2>
+            <div className=" text-3xl mt-12 text-[#777674] ">
+              <li>Ability to transport heavy items and furniture</li>
+              <li>Customer service oriented</li>
+              <li>Owns/ rents vans or trucks</li>
+              <li>Located in one of our operating cities</li>
+            </div>
+
+            </div>
+
+            <div className="mt-24 pl-9 " >
+
+              <h2 className="text-3xl font-semibold text-[#6D9ED2] pl-[500px] ">How To Apply</h2>
+
+              <div className="flex flex-row gap-8 text-2xl mt-6 text-[#777674] pl-[100px] ">
+                <div>
+                  <h2>STEP ONE</h2>
+                  <p className="text-lg">Complete the questionnare below to get <br/>started</p>
+                </div>
+                <div>
+                  <h2>STEP TWO</h2>
+                  <p  className="text-lg">Schedule a call with the Packmyload team<br/> and tell us about yourself!</p>
+                </div>
+                <div>
+                  <h2>STEP THREE</h2>
+                  <p  className="text-lg">Complete training material and start<br/> getting paid for your work</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
+
+      
       </div>
     </div>
   );

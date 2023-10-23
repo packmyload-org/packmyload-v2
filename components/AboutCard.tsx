@@ -18,7 +18,7 @@ interface About {
         </figure>
         <h2 className='font-bold text-base md:text-xl text-[#2E5F9E]'>{title}</h2>
      </div>
-     <div className='bg-blue-100 rounded py-[1px] w-[60px] mt-2' />
+     <div className='bg-blue-100 rounded py-[1px] w-[200px] mt-2' />
       <p className='text-[#777674] text-center lg:text-left text-sm w-4/5 mt-2'>{description}</p>
      </div>
  )

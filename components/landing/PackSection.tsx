@@ -26,6 +26,7 @@ const PackSection: React.FC = () => {
                             <p>
                             Gone are the days of paying in full for your move! With Packmyload, you can now Pack Now, Pay Later through our partnership with Affirm. Simply choose to Pack Now, Pay Later when you pick your moving quote - it really is that easy.*
                             </p>
+                            <br/>
                             <p><i>*Only applicable for long-distance moves.</i></p>
                         </div>
                     </div>
