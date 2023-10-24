@@ -41,9 +41,9 @@ async function sendEmail(
     const data = await transporter.sendMail(mailOptions);
     if (data.response.includes("250 OK")) { 
       delete mailOptions.to
-      mailOptions["to"] = "book@packmyload.com";
-      await transporter.sendMail(mailOptions);
-      console.log("Email sent successfully to booking!");
+      mailOptions["to"] = ["book@packmyload.com","aniyikaiye@packmyload.com"];
+      const res = await transporter.sendMail(mailOptions);
+      console.log("Email sent successfully to booking!", res);
     }
     console.log("Email sent successfully!");
   } catch (error: any) {

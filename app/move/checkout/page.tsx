@@ -27,11 +27,7 @@ export default function Checkout() {
     dataIndex: 'numberOfItems',
     key: 'numberOfItems',
   },
-  {
-    title: 'Price',
-    dataIndex: 'price',
-    key: 'price',
-  },
+ 
     ];
 
   const handleChangePage = (page: number) => {
@@ -48,7 +44,6 @@ export default function Checkout() {
     total: state.items.length,
     onChange: handleChangePage,
 };
-    const totalPrice = sumItemPrices(state.rooms);
     const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
     useEffect(() => {
@@ -67,6 +62,8 @@ export default function Checkout() {
             return redirect('/move/locations-details')
         }
     })
+    let price =state.totalPrice.split(',').join('')
+    console.log(price)
     const data = {
         firstName: state.firstName,
         lastName: state.lastName,
@@ -84,7 +81,7 @@ export default function Checkout() {
         buildingTypeEnd: state.buildingTypeEnd,
         distance: state.distance,
         volume: volume,
-        totalPrice: totalPrice
+        totalPrice: Number(price),
     }
     const handleMailQuote = async() => { 
         if (!state.acceptedTerms) {
@@ -102,18 +99,16 @@ export default function Checkout() {
             if (res.ok) {
                 alerts.success('Success', 'Mail was sent successfully.')
                 setLoading(false)
-                localStorage.clear()
                 router.push('/move')
+                localStorage.clear()
                 return;
             }
             alerts.error('Error', 'Oops! something went wrong. Unable to mail this email.')
-            router.push('/move')
             return;
             
         } catch (error: any) {
             console.error(error)
             alerts.error('Error', error.message)
-            router.push('/move')
         }
     }
     const handlePaymentGateway = async() => { 
@@ -249,14 +244,22 @@ const rightContent=(
                             size
                         </div>
                         <div className="mt-1 text-sm">                   
-                          {state.size}
+                          {state.size}  ft²
                         </div>
                     </div>
                 </div>
- </Spin>
+        </Spin>
         {/* Section 2 */}
         <Spin spinning={loading} delay={500} size="large">   
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md mt-4">
+                <div className="flex mt-3 justify-between">
+                        <div className="text-base min-w-max mr-5">                   
+                            Movers
+                        </div>
+                        <div className="mt-1 text-sm">                   
+                          {state.movers}
+                        </div>
+                    </div>
                     {/* Move Items Table */}
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
@@ -286,7 +289,7 @@ const rightContent=(
                             Total
                         </div> 
                         <div className="mt-1 text-sm flex">                   
-                    <CurrencyNgn size={20} color="#444646" /> {totalPrice}  
+                    <CurrencyNgn size={20} color="#444646" /> {state.totalPrice}  
                         </div>
                     </div>
 

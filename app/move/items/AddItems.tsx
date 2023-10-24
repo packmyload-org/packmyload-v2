@@ -1,6 +1,6 @@
 "use client"
 import { useBookingForm } from "@/context/BookingFormContext";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface Item {
     item: string;
@@ -31,7 +31,7 @@ export const AddItems: React.FC = () => {
     const removeRow = () => {
         if (items.length > 1) {
           const updatedItems = [...items];
-          updatedItems.pop(); // Remove the last item
+          updatedItems.pop(); 
           setItems(updatedItems);
         }
       };
@@ -44,6 +44,9 @@ export const AddItems: React.FC = () => {
         setItems(updatedItems);
     };
     console.log(state.items)
+    useEffect(() => {
+        setItems(state.items);
+      }, [state.items]);
 
     return (
         <section className="w-full">
