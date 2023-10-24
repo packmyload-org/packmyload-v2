@@ -110,7 +110,7 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
       </section>
       <section>
       {
-      chatData.length && chatData.map((data: any, index: number) => (
+      chatData.length ? chatData.map((data: any, index: number) => (
         <div key={index}>
           {
             data.type === 'system'
@@ -126,7 +126,7 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
               </div>
           }
         </div>
-      ))
+      )): null
       }
       </section>
     </main>

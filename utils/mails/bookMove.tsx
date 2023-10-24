@@ -1,3 +1,5 @@
+import { arrayToCommaSeparatedString } from "../helpers";
+
 interface EmailTemplateData {
   firstName: string;
   lastName: string;
@@ -19,13 +21,8 @@ interface EmailTemplateData {
 
 export default function BookEmailTemplate(data: EmailTemplateData) {
  const { firstName, lastName, email, moveDate, pickUp, destination, moveTime, phoneNumber, items, volume, totalPrice, service, countryCode } = data
- let mapItems = items.map(item => {
-  return <p
-   style={{ fontSize: '14px', lineHeight: 1.2, wordBreak: 'break-word', textAlign: 'center', margin: 0 }}>
-   {item.item}</p>
- })
+ let mapItems = arrayToCommaSeparatedString(items)
 
- console.log(mapItems)
  let name = firstName + ' ' + lastName;
 
  return (`  <!DOCTYPE html
@@ -50,6 +47,7 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
     body {
       margin: 0;
       padding: 0;
+      background-color: #2e5f9e;
     }
 
     table,
@@ -197,7 +195,7 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       }
 
       #menuzqpvij:checked~.menu-links {
-        background-color: #2e5f9e !important;
+        background-color: #4bcbfe !important;
       }
 
       #menuzqpvij:checked~.menu-links a {
@@ -222,7 +220,7 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
   </style>
 </head>
 
-<body class="clean-body" style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #ffffff;">
+      <body class="clean-body" style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #2e5f9e;">
   <!--[if IE]><div class="ie-browser"><![endif]-->
   <table bgcolor="#ffffff" cellpadding="0" cellspacing="0" class="nl-container" role="presentation"
     style="table-layout: fixed; vertical-align: top; min-width: 320px; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; width: 100%;"
@@ -231,11 +229,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       <tr style="vertical-align: top;" valign="top">
         <td style="word-break: break-word; vertical-align: top;" valign="top">
           <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color:#ffffff"><![endif]-->
-          <div style="background-color:#2e5f9e;">
+          <div style="background-color:#4bcbfe;">
             <div class="block-grid"
               style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
               <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#2e5f9e;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#4bcbfe;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
                 <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
                 <div class="col num12"
                   style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -278,11 +276,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
               </div>
             </div>
           </div>
-          <div style="background-color:transparent;">
+          <div style="background-color:inherit;">
             <div class="block-grid"
               style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
               <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
                 <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
                 <div class="col num12"
                   style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -325,11 +323,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
               </div>
             </div>
           </div>
-          <div style="background-color:transparent;">
+          <div style="background-color:inherit;">
             <div class="block-grid mixed-two-up no-stack"
               style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
               <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
                 <!--[if (mso)|(IE)]><td align="center" width="170" style="background-color:transparent;width:170px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 15px; padding-top:5px; padding-bottom:5px;"><![endif]-->
                 <div class="col num3"
                   style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 168px; width: 170px;">
@@ -371,28 +369,28 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
                             <!--[if !mso><!--> <input class="menu-checkbox" id="menuzqpvij"
                               style="display:none !important;max-height:0;visibility:hidden;" type="checkbox" />
                             <!--<![endif]-->
-                            <!--<div class="menu-trigger" style="display:none;max-height:0px;max-width:0px;font-size:0px;overflow:hidden;"> <label class="menu-label" for="menuzqpvij" style="height:36px;width:36px;display:inline-block;cursor:pointer;mso-hide:all;user-select:none;align:center;text-align:center;color:#ffffff;text-decoration:none;background-color:#2e5f9e;"><span class="menu-open" style="mso-hide:all;font-size:26px;line-height:36px;">☰</span><span class="menu-close" style="display:none;mso-hide:all;font-size:26px;line-height:36px;">✕</span></label></div>-->
+                            <!--<div class="menu-trigger" style="display:none;max-height:0px;max-width:0px;font-size:0px;overflow:hidden;"> <label class="menu-label" for="menuzqpvij" style="height:36px;width:36px;display:inline-block;cursor:pointer;mso-hide:all;user-select:none;align:center;text-align:center;color:#ffffff;text-decoration:none;background-color:#4bcbfe;"><span class="menu-open" style="mso-hide:all;font-size:26px;line-height:36px;">☰</span><span class="menu-close" style="display:none;mso-hide:all;font-size:26px;line-height:36px;">✕</span></label></div>-->
                             <!--<div class="menu-links">-->
                             <!--[if mso]>
 <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
 <tr>
 <td style="padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:10px">
 <![endif]--><a href="https://www.packmyload.com/"
-                              style="padding-top:0px;padding-bottom:0px;padding-left:10px;padding-right:10px;display:inline;color:#2e5f9e;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;font-size:14px;text-decoration:none;letter-spacing:undefined;">BOOK
+                              style="padding-top:0px;padding-bottom:0px;padding-left:10px;padding-right:10px;display:inline;color:#4bcbfe;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;font-size:14px;text-decoration:none;letter-spacing:undefined;">BOOK
                               A MOVE</a>
                             <!--[if mso]></td><td><![endif]--><span class="sep"
-                              style="font-size:14px;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;color:#2e5f9e;">|</span>
+                              style="font-size:14px;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;color:#4bcbfe;">|</span>
                             <!--[if mso]></td><![endif]-->
                             <!--[if mso]></td><td style="padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:10px"><![endif]--><a
                               href="https://store.packmyload.com/"
-                              style="padding-top:0px;padding-bottom:0px;padding-left:10px;padding-right:10px;display:inline;color:#2e5f9e;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;font-size:14px;text-decoration:none;letter-spacing:undefined;">OUR
+                              style="padding-top:0px;padding-bottom:0px;padding-left:10px;padding-right:10px;display:inline;color:#4bcbfe;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;font-size:14px;text-decoration:none;letter-spacing:undefined;">OUR
                               STORE</a>
                             <!--[if mso]></td><td><![endif]--><span class="sep"
-                              style="font-size:14px;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;color:#2e5f9e;">|</span>
+                              style="font-size:14px;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;color:#4bcbfe;">|</span>
                             <!--[if mso]></td><![endif]-->
                             <!--[if mso]></td><td style="padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:10px"><![endif]--><a
                               href="https://blog.packmyload.com/"
-                              style="padding-top:0px;padding-bottom:0px;padding-left:10px;padding-right:10px;display:inline;color:#2e5f9e;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;font-size:14px;text-decoration:none;letter-spacing:undefined;">OUR
+                              style="padding-top:0px;padding-bottom:0px;padding-left:10px;padding-right:10px;display:inline;color:#4bcbfe;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;font-size:14px;text-decoration:none;letter-spacing:undefined;">OUR
                               BLOG</a>
                             <!--[if mso]></td></tr></table><![endif]-->
                     </div>
@@ -409,11 +407,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
   </div>
   </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -463,11 +461,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -510,11 +508,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 15px; padding-left: 15px; padding-top:5px; padding-bottom:5px;background-color:#f9feff;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; background-color: #f9feff; width: 226px;">
@@ -525,9 +523,9 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
               <!--<![endif]-->
               <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
               <div
-                style="color:#2e5f9e;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:5px;padding-bottom:10px;padding-left:10px;">
+                style="color:#4bcbfe;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:5px;padding-bottom:10px;padding-left:10px;">
                 <div class="txtTinyMce-wrapper"
-                  style="line-height: 1.2; font-size: 12px; color: #2e5f9e; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
+                  style="line-height: 1.2; font-size: 12px; color: #4bcbfe; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p style="font-size: 14px; line-height: 1.2; mso-line-height-alt: 17px; margin: 0;">Question</p>
                 </div>
               </div>
@@ -548,9 +546,9 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
               <!--<![endif]-->
               <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
               <div
-                style="color:#2e5f9e;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
+                style="color:#4bcbfe;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
                 <div class="txtTinyMce-wrapper"
-                  style="line-height: 1.2; font-size: 12px; color: #2e5f9e; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
+                  style="line-height: 1.2; font-size: 12px; color: #4bcbfe; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                   <p
                     style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">
                     Answer</p>
@@ -567,11 +565,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -626,11 +624,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -673,11 +671,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -732,11 +730,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -779,11 +777,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -838,11 +836,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -885,11 +883,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -944,11 +942,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -991,11 +989,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -1051,11 +1049,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1098,11 +1096,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -1158,11 +1156,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1205,11 +1203,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -1264,11 +1262,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1311,11 +1309,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -1370,11 +1368,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1417,11 +1415,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -1476,11 +1474,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1523,11 +1521,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid mixed-two-up no-stack"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="226" style="background-color:transparent;width:226px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px; padding-left: 5px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num4"
           style="display: table-cell; vertical-align: top; max-width: 320px; min-width: 224px; width: 226px;">
@@ -1566,7 +1564,10 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
                 style="color:#393d47;font-family:Nunito, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:5px;padding-bottom:10px;padding-left:5px;">
                 <div class="txtTinyMce-wrapper"
                   style="line-height: 1.2; font-size: 12px; color: #393d47; font-family: Nunito, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                  ${mapItems}
+                  
+                  <p
+                  style={{ fontSize: '14px', lineHeight: 1.2, wordBreak: 'break-word', textAlign: 'center', margin: 0 }}>
+                  ${mapItems}</p>
                 </div>
               </div>
               <!--[if mso]></td></tr></table><![endif]-->
@@ -1580,11 +1581,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1627,11 +1628,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1674,11 +1675,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: #ffffff;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:#ffffff;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:#ffffff"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:#ffffff"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:#ffffff;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:15px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1710,11 +1711,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">
@@ -1757,11 +1758,11 @@ export default function BookEmailTemplate(data: EmailTemplateData) {
       </div>
     </div>
   </div>
-  <div style="background-color:transparent;">
+  <div style="background-color:inherit;">
     <div class="block-grid"
       style="min-width: 320px; max-width: 680px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
       <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
-        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
+        <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:680px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
         <!--[if (mso)|(IE)]><td align="center" width="680" style="background-color:transparent;width:680px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]-->
         <div class="col num12"
           style="min-width: 320px; max-width: 680px; display: table-cell; vertical-align: top; width: 680px;">

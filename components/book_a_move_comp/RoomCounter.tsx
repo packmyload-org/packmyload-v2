@@ -1,8 +1,8 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PlusCircle, Plus, Minus } from '@phosphor-icons/react';
 import { useBookingForm } from '@/context/BookingFormContext';
-
+import priceDataJson from '@/utils/prices.json';
 interface RoomProps{
     roomType: string,
     price: number
@@ -21,27 +21,22 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
 
 
     const [countItem, setCountItem] = useState<number>(initialCount);
-    console.log(bookingFormState)
+    console.log()
 
     const increaseCountItem = () => {
         setCountItem((countItem) => countItem + 1);
         const roomIndex = bookingFormState.rooms.findIndex((room) => room.room === roomType);
     
-          let multipliedByQty: number = 0;
 
         if (roomIndex !== -1) {
 
-            if (price) multipliedByQty = price * (countItem + 1)
             const updatedItems = [...bookingFormState.rooms];
             updatedItems[roomIndex].numberOfRooms = (countItem + 1).toString();
-            updatedItems[roomIndex].price = multipliedByQty;
             bookingFormDispatch({ type: 'UPDATE_ROOMS', rooms: updatedItems });
 
         } else {
     
-            if (price)
-             multipliedByQty = (price * (countItem + 1)) 
-            const newItem = { room: roomType, numberOfRooms: (countItem + 1).toString(), price: multipliedByQty };
+            const newItem = { room: roomType, numberOfRooms: (countItem + 1).toString()};
             bookingFormDispatch({ type: 'UPDATE_ROOMS', rooms: [...bookingFormState.rooms, newItem] });
         }
     };
@@ -51,14 +46,10 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
             setCountItem((countItem) => countItem - 1);
           const roomIndex = bookingFormState.rooms.findIndex((room) => room.room === roomType);
 
-          let multipliedByQty: number = 0;
           if (roomIndex !== -1) {
 
-            if (price)
-             multipliedByQty = price * (countItem - 1)
             const updatedItems = [...bookingFormState.rooms];
             updatedItems[roomIndex].numberOfRooms = (countItem - 1).toString();
-            updatedItems[roomIndex].price = multipliedByQty;
             bookingFormDispatch({ type: 'UPDATE_ROOMS', rooms: updatedItems });
             }
         }
@@ -73,6 +64,59 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
           <Plus size={12} className='mt-[6px] cursor-pointer' color="white" type='button' onClick={increaseCountItem} />
         </div>
     );
+    const handleFieldChange = (field: string, value: string | number) => {
+      bookingFormDispatch({ type: 'UPDATE_FIELD', field, value });
+    };
+    useEffect(() => {
+      if (bookingFormState.rooms.length === 0) {
+        return;
+      }
+    
+      const specificRoom = bookingFormState.rooms.find((room: any) => room.room === "Bedrooms");
+    
+      if (!specificRoom) {
+        console.warn("Specific room not found.");
+        return;
+      }
+    
+      let moveType: "intraState" | "interState" | null = null;
+    
+      if (
+        (bookingFormState.pickUp === "Lagos" && bookingFormState.destination === "Lagos") ||
+        (bookingFormState.pickUp === "Abuja" && bookingFormState.destination === "Abuja")
+      ) {
+        moveType = "intraState";
+      } else {
+        moveType = "interState";
+      }
+    
+      if (!moveType) {
+        console.warn("Invalid move type.");
+        return;
+      }
+    
+      const priceDataArray = priceDataJson[moveType];
+    
+      if (!priceDataArray || priceDataArray.length === 0) {
+        console.warn("Price data array is empty or undefined.");
+        return;
+      }
+    
+      const priceData = priceDataArray.find((data: any) => data.Bedrooms === Number(specificRoom.numberOfRooms));
+    
+      if (priceData) {
+        console.log(priceData);
+        handleFieldChange("totalPrice", priceData.price);
+        handleFieldChange("movers", priceData.Movers)
+      } else {
+       if(specificRoom.numberOfRooms > '5'){
+        handleFieldChange("totalPrice", "Call for price");
+        handleFieldChange("movers", 5)
+      }
+    }
+    }, [bookingFormState.rooms, bookingFormState.pickUp, bookingFormState.destination]);
+    
+    
     
       return (
         <div className="bg-blue-200 flex justify-center gap-1 items-center rounded-md shadow-md p-3 sm:w-[78%] h-[80px] w-full mx-auto min-w-[140px]">

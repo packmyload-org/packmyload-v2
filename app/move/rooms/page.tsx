@@ -25,7 +25,6 @@ const handleFieldChange = (field: string, value: string) => {
     const rightContent = (
         <main className='space-y-2'>
             <h1 className='text-xl md:text-4xl font-black text-blue-300 text-center'>Select The Number Of Rooms</h1>
-            {/* <p className='text-sm text-center md:w-[80%] mt-1 mx-auto'>We use this information to determine the size of the truck, the materials and the number of movers needed for your move.</p> */}
             <form className=' md:w-[70%] lg:w-[85%] md:ml-10 py-4'>
                 <label className="text-sm text-blue-300 font-semibold" htmlFor="size-feet">Enter Size in Square Feet</label>
                 <input 

@@ -38,6 +38,15 @@ export function sumItemPrices(items: BookingFormItem[]): number {
   return items.reduce((total, item) => total + item.price, 0);
 }
 
+export function arrayToCommaSeparatedString(array:any[]) {
+  if (!Array.isArray(array)) {
+    return "";
+  }
+
+  const result = array.map((item) => item.item).join(', ');
+  return result;
+}
+
 export function getAvailableTimes(selectedDate: Date | null): string[] {
   const currentUtcTime = new Date();
   if (selectedDate) {

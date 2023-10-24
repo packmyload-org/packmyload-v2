@@ -1,0 +1,56 @@
+{
+ "intraState":[
+  {
+   "Bedrooms": 1,
+   "price": "150,000",
+   "Movers": 2
+  },
+  {
+   "Bedrooms": 2,
+   "price": "250,000",
+    "Movers": 3
+  },
+  {
+   "Bedrooms": 3,
+   "price": "315,000",
+    "Movers": 4
+  },
+  {
+   "Bedrooms": 4,
+   "price": "450,000",
+    "Movers": 5
+  },
+  {
+   "Bedrooms": 5,
+   "price": "550,000",
+    "Movers": 4
+  }
+ ],
+ "interState":[
+  {
+   "Bedrooms": 1,
+   "price": "550,000",
+    "Movers": 2
+  },
+  {
+   "Bedrooms": 2,
+   "price": "700,000",
+    "Movers": 3
+  },
+  {
+   "Bedrooms": 3,
+   "price": "1,200,000",
+    "Movers": 4
+  },
+  {
+   "Bedrooms": 4,
+   "price": "1,450,000",
+    "Movers": 5
+  },
+  {
+   "Bedrooms": 5,
+   "price": "1,700,000",
+    "Movers": 4
+  }
+ ]
+}

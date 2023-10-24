@@ -10,7 +10,6 @@ export async function POST(request: Request) {
     const move = new Move({...body});
     await move.save();
   const emailContent = BookEmailTemplate(move)
-   console.log(emailContent)
    await sendEmail(move.email, 'Your Move Quote', emailContent , emailContent)
     return new Response(JSON.stringify(move),{status:201})
   } catch (error: any) {
