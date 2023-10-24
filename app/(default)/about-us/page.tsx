@@ -6,7 +6,7 @@ import {AboutCard} from '@/components/AboutCard';
 
 export default function Home() {
   return (
-    <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
+    <div className="flex justify-left bg-gray-100 mt-1">
       <div className="w-full text-black" style={{ marginTop: '24px' }}>
         <section className="gradient-bg grid items-center py-[20px] h-[299px]  ">
           <div className="cirle-bg">
@@ -23,17 +23,17 @@ export default function Home() {
                   </p>
 
                   <div>
-            
-          <Link href='/move'  className='flex justify-evenly items-center hover:animate-pulse w-[130px] p-[8px] border-inherit/20 border-[6px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-white font-bold rounded-full text-xs '>
-            BOOK NOW 
-            {/* <span className='font-extrabold text-lg max-h-5 text-center flex justify-center items-center'>
-              + 
-            </span> */}
-          </Link> 
-        <div className='mt-5'>
-                    {/* <div className="star-ratings">
-                      <Rate allowHalf defaultValue={5} />
-                    </div> */}
+                  
+                    <Link href='/move'  className='flex justify-evenly items-center hover:animate-pulse w-[130px] p-[8px] border-inherit/20 border-[6px] bg-blue-100 hover:bg-blue-600 hover:text-gray-100 text-white font-bold rounded-full text-xs '>
+                      BOOK NOW 
+                      {/* <span className='font-extrabold text-lg max-h-5 text-center flex justify-center items-center'>
+                        + 
+                      </span> */}
+                    </Link> 
+                    <div className='mt-5'>
+                      {/* <div className="star-ratings">
+                        <Rate allowHalf defaultValue={5} />
+                      </div> */}
                     </div>
                   </div>
                 </Col>
@@ -43,12 +43,8 @@ export default function Home() {
           </div>
         </section>
 
-        <div className='pl-12 h-[100vh]'>
-          <div className='pt-14'>
-           
-          </div>
-          <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center  p-2 sm:px-2'>
-     
+        <div className=''>
+          <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center p-2 sm:px-2'>
             {aboutdata.map((item, index ,to) => (
               <AboutCard key={index} title={item.title} description={item.description}  to={item.to}  />
             ))}
