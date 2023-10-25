@@ -1,6 +1,5 @@
 import { Col, Row, Card } from "antd";
 import React from "react";
-import Link from 'next/link';
 
 export default function Careers() {
   return (

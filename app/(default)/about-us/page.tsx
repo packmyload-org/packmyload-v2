@@ -1,4 +1,4 @@
-import { Col, Row, Card, Button, Rate } from 'antd';
+import { Col, Row } from 'antd';
 import React from 'react';
 import aboutdata from '@/utils/about-us.json';
 import Link from 'next/link';
