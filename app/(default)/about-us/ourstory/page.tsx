@@ -1,7 +1,5 @@
-import { Col, Row, Card } from "antd";
-
+import { Col, Row } from "antd";
 import React from "react";
-import Image from 'next/image'
 
 export default function OurStory() {
   return (
