@@ -75,7 +75,7 @@ export const ServicesMarket: React.FC = () => {
                 />
                 <AdServicesCard 
                     Icon = {<IdentificationCard size={28} color="#2e5f9e" weight="fill" />}
-                    text= "Visa/Immigration Support"
+                    text= "Visa/Travel Support"
                 />
             </section>
 

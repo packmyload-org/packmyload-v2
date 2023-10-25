@@ -2,18 +2,19 @@
 import { AnimatedWrapper } from "@/components/AnimatedWrapper";
 import { Col, Row, Card } from "antd";
 import React from "react";
+import Link from 'next/link'
 
 export default function Partnerpage() {
   return (
-    <div className="flex justify-left min-h-screen bg-gray-100 mt-1 relative">
+    <div className="flex justify-left min-h-screen bg-gray-100 relative">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
         <AnimatedWrapper>
 
-          <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+          <section className="gradient-bg grid items-center py-[20px] h-[fit-content] ">
             <div className="cirle-bg">
               <div className="bg object-cover"></div>
             </div>
-            <div className="container py-12">
+            <div className="container py-12 max-w-6xl">
               <div className="join-wrap fl-wrap text-white">
                 <Row
                   className="w-full flex"
@@ -78,7 +79,7 @@ export default function Partnerpage() {
             <div>
             <AnimatedWrapper>
           
-              <div className="w-full flex flex-col gap-5 md:flex-row justify-between pt-64 md:pt-56 md:max-w-6xl lg:pt-96">
+              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-64 md:pt-56 md:max-w-6xl lg:pt-96">
                 <img
                   src="/images/partner/packmyload_1695798527485.webp"
                   alt="image-1"
@@ -111,7 +112,7 @@ export default function Partnerpage() {
 
             <AnimatedWrapper>
           
-              <div className="flex flex-col md:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+              <div className="flex flex-col md:flex-row mt-4 justify-between mx-auto gap-5 md:shrink-0 max-w-6xl mx-auto">
                 <div className="flex flex-col md:justify-center w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:p-1 lg:p-0">
                   <p className="text-2xl lg:text-4xl mt-4 text-white">
                     Integration & Lead Monetization
@@ -159,11 +160,13 @@ export default function Partnerpage() {
                   <span className=" text-[#2E5F9E] text-2xl lg:text-4xl   mt-4 ">{" "}Talk To A<br/> Representative{" "}</span>
                   
                 </div>
-                <div
-                  className="w-10 h-10 mx-auto md:mx-0 md:w-16 md:h-16 md:mt-6 bg-white rounded-full flex justify-center text-[#2E5F9E] items-center transform transition-transform duration-300 hover:translate-x-2"
-                >
-                  &rarr;
-                </div>
+                <Link href ="/contact">
+                  <div
+                    className="w-10 h-10 mx-auto md:mx-0 md:w-16 md:h-16 md:mt-6 bg-white rounded-full flex justify-center text-[#2E5F9E] items-center transform transition-transform duration-300 hover:translate-x-2"
+                  >
+                    &rarr;
+                  </div>
+                </Link>
               </button>
             </div>
           </div>

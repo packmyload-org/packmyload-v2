@@ -5,55 +5,46 @@ import Image from 'next/image'
 
 export default function OurStory() {
   return (
-    <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
-      <div className="w-full text-black" style={{ marginTop: "24px" }}>
-        <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+    <div className="flex justify-left min-h-screen bg-gray-100">
+      <div className="w-full text-black" style={{ marginTop: "70px" }}>
+        <section className="gradient-bg flex flex-col items-center py-[20px] h-[fit-content]">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
-          <div className="container py-12">
+          <div className="container py-12 max-w-6xl">
             <div className="join-wrap fl-wrap text-white">
               <Row
-                className="w-full flex"
-                justify="space-between"
-                align="middle"
+                className="w-full flex items-center"
               >
                 <Col span={24} md={10} className="flex flex-col space-y-6">
-                  <h3 className="text-4xl font-bold">About Packmyload</h3>
+                  <h3 className="text-2xl md:text-4xl font-bold">About Packmyload</h3>
                   <p>
                     Read more about our story and history to learn why we're
                     Africa's Most Trusted Moving Company
                   </p>
                 </Col>
-                <Col
-                  span={24}
-                  md={10}
-                  className="flex items-center text-start md:text-end justify-center min-h-[160px]"
-                ></Col>
               </Row>
             </div>
           </div>
         </section>
         <div className="w-full bg-[#012D40] h-auto py-20">
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between  max-w-6xl mx-auto">
-              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
-                <Image
+            <div className="flex flex-col gap-5 md:flex-row justify-between max-w-6xl mx-auto">
+              <div className=" mx-auto w-full h-full">
+                <img
                   src="/images/about/packmyload_1696572786359.webp"
                   alt="image-1"
                   loading="lazy"
-                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pr-5 flex-grow"
-                  width={600}
-                  height={600}
+                  className="w-full h-auto mx-auto lg:mx-0 rounded-md object-cover flex-grow"
                   />
               </div>
 
-              <div className=" w-[90%] flex flex-col justify-center ">
-                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4 text-white mx-auto">
+              <div className=" w-[100%] md:w-[90%] flex flex-col justify-center px-2 ">
+                <p className="text-2xl w-full font-semibold lg:text-4xl mt-4 text-white mx-auto">
                   Who we are
                 </p>
 
-                <p className="text-sm mt-2 w-full md:w-8/12 mx-auto text-white">
+                <p className="text-sm mt-2 w-full mx-auto text-white">
                   Packmyload is a Nigerian based start up that matches supply
                   <br /> and demand in the moving and delivery industry through
                   an asset-light, proprietary tech solution. <br /> As
@@ -69,8 +60,8 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="flex flex-col mr-6 lg:flex-row mt-4 pb-8 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-40 w-[90%] md:w-[70%] mx-auto lg:mx-0">
+            <div className="flex flex-col md:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+              <div className="flex flex-col md:justify-center w-[100%] md:w-[90%] px-2 mx-auto lg:mx-0">
                 <p className="text-2xl font-semibold lg:text-4xl  mt-4 text-white">
                   How it works
                 </p>
@@ -86,14 +77,12 @@ export default function OurStory() {
                   solutions through our integrated ecosystem.
                 </p>
               </div>
-              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
-              <Image
+              <div className="mx-auto w-full h-full flex items-center">
+              <img
                 src="/images/about/packmyload_1696572694895.webp"
                 alt="image-2"
                 loading="lazy"
-                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pl-5 flex-grow"
-                  width={600}
-                  height={600}
+                  className="w-auto w-full h-auto mx-auto lg:mx-0 rounded-md object-cover flex-grow"
               />
               </div >
             </div>

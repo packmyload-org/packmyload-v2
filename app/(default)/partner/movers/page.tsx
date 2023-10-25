@@ -8,13 +8,13 @@ import { AdServicesCard } from "@/components/landing/custom/AdServicesCard";
 
 export default function Movers() {
   return (
-    <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
-      <div className="w-full text-black" style={{ marginTop: "24px" }}>
-        <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+    <div className="flex justify-left min-h-screen bg-gray-100">
+      <div className="w-full text-black" style={{ marginTop: "70px" }}>
+        <section className="gradient-bg grid items-center py-[20px] h-[fit-content] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
-          <div className="container py-12">
+          <div className="container py-12 max-w-6xl">
             <div className="join-wrap fl-wrap text-white">
               <Row
                 className="w-full flex"
@@ -22,7 +22,7 @@ export default function Movers() {
                 align="middle"
               >
                 <Col span={24} md={10} className="flex flex-col space-y-6">
-                  <h3 className="text-4xl font-bold">
+                  <h3 className="text-2xl md:text-4xl font-bold">
                     Join Our Community of Expert Movers
                   </h3>
                   <h2 className=" text-lg mt-2">
@@ -30,36 +30,30 @@ export default function Movers() {
                     space.
                   </h2>
                 </Col>
-
-                <Col
-                  span={24}
-                  md={10}
-                  className="flex items-center text-start md:text-end justify-center min-h-[160px]"
-                ></Col>
               </Row>
             </div>
           </div>
         </section>
-        <div className="w-full  h-auto py-20">
-          <div className="flex flex-row md:grid-cols-3 lg:grid-cols-4   ">
+        <div className="w-full h-auto py-20 mt-2">
+          <div className="flex flex-row flex-wrap gap-2 justify-center max-w-6xl mx-auto ">
             <img
               src="/images/partner/packmyload_1697583737398.webp"
               alt="image-1"
-              className="w-[50%] max-h-96   relative bottom-20"
+              className="w-[355px] h-[350px] relative bottom-20 object-cover"
             />
             <img
               src="/images/about/packmyload_1696572694895.webp"
               alt="image-2"
-              className="w-[50%] max-h-96   relative bottom-20"
+              className="w-[355px] h-[350px] relative bottom-20 object-cover"
             />
             <img
               src="/images/partner/packmyload_1697583683638.webp"
               alt="image-3"
-              className="w-[50%] max-h-96   relative bottom-20"
+              className="w-[355px] h-[350px] relative bottom-20 object-cover"
             />
           </div>
-          <div className="relative bottom-10 flex flex-col gap-4 ">
-            <div className="flex flex-col gap-5 ml-6 lg:flex-row justify-between  max-w-6xl mx-auto">
+          <div className="relative bottom-10 flex flex-col gap-4 bg-[#EDF2F8] py-2">
+            <div className="flex flex-col gap-5 md:flex-row justify-between max-w-6xl mx-auto">
               <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
                 <Image
                   src="/images/partner/packmyload_1695798593791.webp"
@@ -83,16 +77,16 @@ export default function Movers() {
           </div>
         </div>
         <div className="w-full h-auto">
-          <div className="grid grid-col justify-center">
-            <h2 className="text-5xl font-bold pl-[400px] text-[#6D9ED2]">
+          <div className="flex flex-col max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-[#6D9ED2]">
               Earn a stable income
             </h2>
-            <h3 className="text-2xl font-semibold px-80 pt-5 text-[#777674]  ">
+            <h3 className="text-2xl font-semibold pt-5 text-[#777674]  ">
               Receive work remotely, through our platfrom <br /> Choose your own
               working hours and become an entrepreneur
             </h3>
-            <div className="pl-52">
-              <div className="grid grid-rows  md:grid-cols-3 lg:grid-cols-4 gap-8 p-5 md:p-9  ">
+            <div className="">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 py-6 ">
                 <AdServicesCard
                   Icon={<Coin size={24} color="#2E5F9E" weight="fill" />}
                   text="Earn a fixed salary "
@@ -111,8 +105,8 @@ export default function Movers() {
             </div>
           </div>
           <div>
-          <div className="grid grid-col justify-center">
-            <h2 className="text-5xl font-semibold pl-16 text-[#6D9ED2] ">
+          <div className="grid grid-col max-w-6xl mx-auto">
+            <h2 className="text-4xl font-semibold text-[#6D9ED2] ">
             Who You Are
             </h2>
             <div className=" text-3xl mt-12 text-[#777674] ">
@@ -124,11 +118,11 @@ export default function Movers() {
 
             </div>
 
-            <div className="mt-24 pl-9 " >
+            <div className="mt-24 max-w-6xl mx-auto" >
 
-              <h2 className="text-3xl font-semibold text-[#6D9ED2] pl-[500px] ">How To Apply</h2>
+              <h2 className="text-4xl font-semibold text-[#6D9ED2] ">How To Apply</h2>
 
-              <div className="flex flex-row gap-8 text-2xl mt-6 text-[#777674] pl-[100px] ">
+              <div className="flex flex-col md:flex-row flex-wrap gap-6 text-2xl mt-6 text-[#777674] ">
                 <div>
                   <h2 className="text-[#6D9ED2]">STEP ONE</h2>
                   <p className="text-lg">Complete the questionnare below to get <br/>started</p>

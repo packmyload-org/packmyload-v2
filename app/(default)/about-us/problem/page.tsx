@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Problem() {
   return (
-    <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
-      <div className="w-full text-black" style={{ marginTop: "24px" }}>
-        <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+    <div className="flex justify-left min-h-screen bg-gray-100">
+      <div className="w-full text-black" style={{ marginTop: "70px" }}>
+        <section className="gradient-bg items-center py-[20px] h-[fit-content] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
-          <div className="container py-12">
+          <div className="container py-12 max-w-6xl">
             <div className="join-wrap fl-wrap text-white">
               <Row
                 className="w-full flex"
@@ -17,17 +17,12 @@ export default function Problem() {
                 align="middle"
               >
                 <Col span={24} md={10} className="flex flex-col space-y-6">
-                  <h3 className="text-4xl font-bold">About Packmyload</h3>
+                  <h3 className="text-2xl md:text-4xl font-bold">About Packmyload</h3>
                   <p>
                     Read more about our story and history to learn why we're
                     Africa's Most Trusted Moving Company
                   </p>
                 </Col>
-                <Col
-                  span={24}
-                  md={10}
-                  className="flex items-center text-start md:text-end justify-center min-h-[160px]"
-                ></Col>
               </Row>
             </div>
           </div>
@@ -35,15 +30,15 @@ export default function Problem() {
 
         <div className=" w-full bg-[#FFFFFF]  ">
           <div>
-            <div className="flex flex-col gap-12 ml-6 lg:flex-row justify-between pt-16 max-w-6xl mx-auto md:pt-[330px] lg:pt-9">
+            <div className="flex flex-col gap-5 md:flex-row justify-between pt-3 max-w-6xl mx-auto lg:pt-9">
               <img
                 src="/images/partner/packmyload_1695798593791.webp"
                 alt="image-1"
                 loading="lazy"
-                className="w-[90%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
+                className="w-[100%] h-auto md:w-[50%] md:h-auto lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
               />
 
-              <div className="lg:pt-30 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2 lg:shadow lg:h-[550px] overflow-y-scroll scrollbar-hide">
                 <p className="text-2xl lg:text-4xl mt-4 text-[#6D9ED2]">
                   The Stress of Moving
                 </p>
@@ -77,8 +72,8 @@ export default function Problem() {
               </div>
             </div>
 
-            <div className="flex flex-col  lg:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-30 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+            <div className="flex flex-col md:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2 lg:shadow lg:h-[550px] overflow-y-scroll scrollbar-hide">
                 <p className="text-2xl lg:text-4xl  mt-4 text-[#6D9ED2]">
                   Hiring A Moving Company
                 </p>
@@ -127,7 +122,7 @@ export default function Problem() {
                 src="/images/about/packmyload_1696572756874.webp"
                 alt="image-2"
                 loading="lazy"
-                className="w-[95%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover pl-5"
+                className="w-[100%] h-auto md:w-[50%] md:h-auto lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover mb-4"
               />
             </div>
           </div>
