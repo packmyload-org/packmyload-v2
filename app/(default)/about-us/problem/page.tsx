@@ -30,15 +30,15 @@ export default function Problem() {
 
         <div className=" w-full bg-[#FFFFFF]  ">
           <div>
-            <div className="flex flex-col gap-12 md:flex-row justify-between pt-3 max-w-6xl mx-auto md:pt-[330px] lg:pt-9">
+            <div className="flex flex-col gap-5 md:flex-row justify-between pt-3 max-w-6xl mx-auto lg:pt-9">
               <img
                 src="/images/partner/packmyload_1695798593791.webp"
                 alt="image-1"
                 loading="lazy"
-                className="w-[100%] h-auto md:w-[70%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
+                className="w-[100%] h-auto md:w-[50%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
               />
 
-              <div className="lg:pt-30 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2">
                 <p className="text-2xl lg:text-4xl mt-4 text-[#6D9ED2]">
                   The Stress of Moving
                 </p>
@@ -72,8 +72,8 @@ export default function Problem() {
               </div>
             </div>
 
-            <div className="flex flex-col  lg:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-30 w-[90%] md:w-[70%] lg:w-auto mx-auto lg:mx-0">
+            <div className="flex flex-col md:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
+              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2">
                 <p className="text-2xl lg:text-4xl  mt-4 text-[#6D9ED2]">
                   Hiring A Moving Company
                 </p>
@@ -122,7 +122,7 @@ export default function Problem() {
                 src="/images/about/packmyload_1696572756874.webp"
                 alt="image-2"
                 loading="lazy"
-                className="w-[100%] h-auto md:w-[75%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover mb-4"
+                className="w-[100%] h-auto md:w-[50%] md:h-auto lg:w-[670px] lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover mb-4"
               />
             </div>
           </div>
