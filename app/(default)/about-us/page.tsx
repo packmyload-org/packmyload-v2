@@ -7,8 +7,8 @@ import {AboutCard} from '@/components/AboutCard';
 export default function Home() {
   return (
     <div className="flex justify-left bg-gray-100 mt-1">
-      <div className="w-full text-black" style={{ marginTop: '24px' }}>
-        <section className="gradient-bg grid items-center py-[20px] h-[299px]  ">
+      <div className="w-full text-black" style={{ marginTop: '70px' }}>
+        <section className="gradient-bg grid items-center py-[20px] h-[fit-content]  ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -43,12 +43,10 @@ export default function Home() {
           </div>
         </section>
 
-        <div className=''>
-          <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 lg:grid-cols-3 items-center p-2 sm:px-2'>
-            {aboutdata.map((item, index ,to) => (
-              <AboutCard key={index} title={item.title} description={item.description}  to={item.to}  />
-            ))}
-          </div>
+        <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-4 md:grid-cols-2 lg:grid-cols-3 items-center px-2 md:p-10'>
+          {aboutdata.map((item, index ,to) => (
+            <AboutCard key={index} title={item.title} description={item.description}  to={item.to}  />
+          ))}
         </div>
         <div>
           <div>
