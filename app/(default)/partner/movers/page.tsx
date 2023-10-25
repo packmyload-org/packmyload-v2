@@ -45,12 +45,12 @@ export default function Movers() {
             <img
               src="/images/partner/packmyload_1697583737398.webp"
               alt="image-1"
-              className="w-[50%] max-h-96   relative bottom-20"
+              className="w-[50%] max-h-96 relative bottom-20"
             />
             <img
               src="/images/about/packmyload_1696572694895.webp"
               alt="image-2"
-              className="w-[50%] max-h-96   relative bottom-20"
+              className="w-[50%] max-h-96 relative bottom-20"
             />
             <img
               src="/images/partner/packmyload_1697583683638.webp"
