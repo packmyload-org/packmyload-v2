@@ -54,19 +54,17 @@ export default function Movers() {
           </div>
           <div className="relative bottom-10 flex flex-col gap-4 bg-[#EDF2F8] py-2">
             <div className="flex flex-col gap-5 md:flex-row justify-between max-w-6xl mx-auto">
-              <div className="w-10/12 mx-auto lg:w-full h-full flex items-center">
-                <Image
+              <div className="mx-auto w-full h-full flex items-center">
+                <img
                   src="/images/partner/packmyload_1695798593791.webp"
                   alt="image-1"
                   loading="lazy"
-                  className="w-auto h-auto mx-auto lg:mx-0 rounded-md object-cover pr-5 flex-grow"
-                  width={600}
-                  height={600}
+                  className="w-full h-auto lg:h-[400px] mx-auto lg:mx-0 rounded-md object-cover flex-grow"
                 />
               </div>
 
               <div className=" w-[90%] flex flex-col justify-center ">
-                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4  mx-auto text-[#777674]">
+                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4 px-2 lg:px-0 mx-auto text-[#777674]">
                   Enjoy the flexibility of working independently, on your own
                   schedule.
                 </p>
@@ -77,11 +75,11 @@ export default function Movers() {
           </div>
         </div>
         <div className="w-full h-auto">
-          <div className="flex flex-col max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-[#6D9ED2]">
+          <div className="flex flex-col max-w-6xl mx-auto px-2 lg:px-0">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#6D9ED2]">
               Earn a stable income
             </h2>
-            <h3 className="text-2xl font-semibold pt-5 text-[#777674]  ">
+            <h3 className="text-xl md:text-2xl font-semibold pt-5 text-[#777674]  ">
               Receive work remotely, through our platfrom <br /> Choose your own
               working hours and become an entrepreneur
             </h3>
@@ -105,11 +103,11 @@ export default function Movers() {
             </div>
           </div>
           <div>
-          <div className="grid grid-col max-w-6xl mx-auto">
-            <h2 className="text-4xl font-semibold text-[#6D9ED2] ">
+          <div className="grid grid-col max-w-6xl mx-auto px-2 lg:px-0">
+            <h2 className="text-2xl md:text-4xl font-semibold text-[#6D9ED2] ">
             Who You Are
             </h2>
-            <div className=" text-3xl mt-12 text-[#777674] ">
+            <div className=" text-xl md:text-2xl mt-12 text-[#777674] ">
               <li>Ability to transport heavy items and furniture</li>
               <li>Customer service oriented</li>
               <li>Owns/ rents vans or trucks</li>
@@ -118,11 +116,11 @@ export default function Movers() {
 
             </div>
 
-            <div className="mt-24 max-w-6xl mx-auto" >
+            <div className="mt-6 max-w-6xl mx-auto px-2 lg:px-0" >
 
-              <h2 className="text-4xl font-semibold text-[#6D9ED2] ">How To Apply</h2>
+              <h2 className="text-2xl md:text-4xl font-semibold text-[#6D9ED2] ">How To Apply</h2>
 
-              <div className="flex flex-col md:flex-row flex-wrap gap-6 text-2xl mt-6 text-[#777674] ">
+              <div className="flex flex-col md:flex-row flex-wrap gap-6 text-xl md:text-2xl mt-6 text-[#777674] ">
                 <div>
                   <h2 className="text-[#6D9ED2]">STEP ONE</h2>
                   <p className="text-lg">Complete the questionnare below to get <br/>started</p>
