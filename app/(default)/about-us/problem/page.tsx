@@ -38,13 +38,13 @@ export default function Problem() {
                 className="w-[100%] h-auto md:w-[50%] md:h-auto lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
               />
 
-              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2 lg:shadow lg:h-[550px] overflow-y-scroll scrollbar-hide">
-                <p className="text-2xl lg:text-4xl mt-4 text-[#6D9ED2]">
+              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2">
+                <p className="text-xl lg:text-2xl mt-1 text-[#6D9ED2]">
                   The Stress of Moving
                 </p>
                 <br />
 
-                <p className="text-base  text-[#777674] ">
+                <p className="text-sm leading-loose text-[#777674] ">
                   Why is moving so stressful? <br />
                   Moving can be a whirlwind of change, bringing both excitement
                   and <br />
@@ -73,13 +73,13 @@ export default function Problem() {
             </div>
 
             <div className="flex flex-col md:flex-row mt-4 justify-between gap-5 md:shrink-0 max-w-6xl mx-auto">
-              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2 lg:shadow lg:h-[550px] overflow-y-scroll scrollbar-hide">
-                <p className="text-2xl lg:text-4xl  mt-4 text-[#6D9ED2]">
+              <div className="lg:pt-30 w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-2">
+                <p className="text-xl lg:text-2xl  mt-1 text-[#6D9ED2]">
                   Hiring A Moving Company
                 </p>
                 <br />
 
-                <p className="text-base text-[#777674] ">
+                <p className="text-sm leading-loose text-[#777674] ">
                   Choosing a professional moving company over a do-it-yourself
                   approach not
                   <br /> only alleviates the physical strain of relocating, but

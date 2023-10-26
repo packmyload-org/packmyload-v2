@@ -16,7 +16,7 @@ export default function Home() {
             <div className="join-wrap fl-wrap text-white">
               <Row className="w-full flex justify-start">
                 <Col span={24} md={10} className="flex flex-col space-y-6 ">
-                  <h3 className="text-2xl md:text-4xl font-bold">Learn more about Packmyload </h3>
+                  <h3 className="text-2xl md:text-4xl font-bold">About Packmyload </h3>
                   <p>
                     Check out our history, newsroom, and claims information, as well as opportunities
                     to become an agent, driver, or employee
