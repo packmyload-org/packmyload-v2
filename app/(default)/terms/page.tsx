@@ -33,7 +33,7 @@ const TermComponent: React.FC<Props> = ({ }) => {
         </div>
       </div>
     </section>
-    <div className='max-w-6xl py-14 text-gray-500 space-y-6 mx-auto px-3 lg:px-0'>
+    <div className='max-w-6xl py-14 text-gray-500 space-y-6 mx-auto px-6 lg:px-0'>
         <h3 className='text-2xl font-bold text-blue-300 py-6'>PLEASE REVIEW OUR TERMS AND CONDITIONS</h3>
         <p className='text-base leading-8'>These conditions explain the rights, obligations, and responsibilities of all parties to this Agreement. Where we use the
 word ‘You’ or ‘Your’ it means the Customer: ‘We’, ‘Us’ or ‘Our’ means the Packmyload.com. These terms and conditions can
@@ -176,14 +176,32 @@ delivery by Us. We may agree to extend this time limit upon receipt of Your writ
 received within two (2) days of delivery. Consent to such a request will not be unreasonably withheld.</p>  
           <li className='font-bold underline underline-offset-4 mt-4'>Delays in transit</li>
             <p className='mt-3 text-[15px]'>11.1 Other than by reason of Our negligence or breach of contract, We will not be liable for delays in transit.</p> 
+            <p className='mt-3 text-[15px]'>11.2 If through no fault of ours We are unable to deliver Your goods, We will take them into store. The Agreement will
+then be fulfilled and any additional service(s), including storage and delivery, will be at Your expense.</p> 
+            <p className='mt-3 text-[15px]'>11.3 Any transit times quoted by Us are estimated and based upon information known to Us at the time. Transit times
+may vary due to a number of factors outside our control including but not limited to check points. We will advise you of
+any material changes to the transit times as soon as we become aware. We will not be liable for any loss or damage
+incurred by You as a result of delays in transit time unless directly attributable to our negligence or breach of
+contract.</p> 
+          <li className='font-bold underline underline-offset-4 mt-4'>Our Right to Hold the Goods (lien): “Lien” is the legal right of packmyload to hold goods until the customer has
+paid all outstanding charges.</li>
+            <p className='mt-3 text-[15px]'>We shall have a right to withhold and ultimately dispose of some or all of the goods if You fail to pay the charges and
+any other payments due under this or any other Agreement. (See also Clause 22). These include any charges that We have
+paid out on Your behalf. While We hold the goods You will be liable to pay all storage charges and other costs (including
+legal costs) reasonably incurred by Us in recovering Our charges and applying Our right of lien. These terms and
+conditions shall continue to apply.</p>   
+          <li className='font-bold underline underline-offset-4 mt-4'>Disputes</li>
+            <p className='mt-3 text-[15px]'>If there is a dispute arising from this Agreement, which cannot be resolved, either party may refer it
+to the low cost independent Alternative Dispute Resolution within the jurisdiction of the Federal republic of Nigeria.</p>   
+          <li className='font-bold underline underline-offset-4 mt-4'>Our right to sub-contract the work</li>
+            <p className='mt-3 text-[15px]'>14.1 We reserve the right to sub-contract some or all of the work.</p>
+            <p className='mt-3 text-[15px]'>14.2 If We sub-contract, then these conditions will still apply.</p>
+          <li className='font-bold underline underline-offset-4 mt-4'>Route and method</li>
+            <p className='mt-3 text-[15px]'>15.1 We have the right to choose the method and route by which to carry out the work and the location in respect of
+your move or storage.</p>
+            <p className='mt-3 text-[15px]'>15.2 Unless it has been specifically agreed otherwise in writing in our Quotation, other space/volume/capacity on Our
+vehicles and/or the container may be utilised for consignments of other customers.</p>
         </ol>
-        <ul className='font-bold list-decimal ml-6 space-y-2'>
-            <li>Dismantle and assemble furniture of any kind , with the exception of certain beds, baby cribs or kitchen tables.</li>    
-            <li>Disconnect, re-connect, dismantle or re-assemble appliances, fixtures, things or equipment.</li>   
-            <li>Take off or lay fitted floor covering.</li>
-            <li>Move or store any items excluded under Clause Excluded items.</li>
-        </ul>
-        <p className='text-base '>There will be additional charges for services listed above..</p>
     </div>
    </div>
   </div>
