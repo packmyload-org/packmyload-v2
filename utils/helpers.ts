@@ -46,7 +46,10 @@ export function arrayToCommaSeparatedString(array:any[]) {
   const result = array.map((item) => item.item).join(', ');
   return result;
 }
-
+export function calculateTax(value: number): number {
+  const percentage = (value * 7.5) / 100;
+  return percentage;
+}
 export function getAvailableTimes(selectedDate: Date | null): string[] {
   const currentUtcTime = new Date();
   if (selectedDate) {

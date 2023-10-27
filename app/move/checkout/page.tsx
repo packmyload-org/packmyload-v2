@@ -1,6 +1,6 @@
 "use client";
 import { useBookingForm } from "@/context/BookingFormContext";
-import { sumItemPrices, sumVolume } from "@/utils/helpers";
+import { calculateTax, sumItemPrices, sumVolume } from "@/utils/helpers";
 import { MapPin, CalendarCheck, Truck, CurrencyNgn } from "@phosphor-icons/react";
 import { Table, Col, Spin } from "antd";
 import { useEffect, useState } from "react";
@@ -45,24 +45,27 @@ export default function Checkout() {
 // };
     const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
-    // useEffect(() => {
-    //     if (
-    //         state.buildingTypeEnd === '' ||
-    //         state.buildingTypeStart === '' ||
-    //         state.firstName === '' ||
-    //         state.lastName === '' ||
-    //         state.destination === '' ||
-    //         state.email === '' ||
-    //         state.service === '' ||
-    //         state.moveDate === '' ||
-    //         state.moveTime === '' ||
-    //         state.pickUp === ''
-    //     ){
-    //         return redirect('/move/locations-details')
-    //     }
-    // })
-    let price =state.totalPrice.split(',').join('')
-    console.log(price)
+    useEffect(() => {
+        if (
+            state.buildingTypeEnd === '' ||
+            state.buildingTypeStart === '' ||
+            state.firstName === '' ||
+            state.lastName === '' ||
+            state.destination === '' ||
+            state.email === '' ||
+            state.service === '' ||
+            state.moveDate === '' ||
+            state.moveTime === '' ||
+            state.pickUp === ''
+        ){
+            return redirect('/move/locations-details')
+        }
+    })
+    
+    const priceString = state.totalPrice
+    let price = Number(priceString.split(',').join(''));
+    const tax = calculateTax(price)
+    const total = (price + tax)
     const data = {
         firstName: state.firstName,
         lastName: state.lastName,
@@ -80,7 +83,7 @@ export default function Checkout() {
         buildingTypeEnd: state.buildingTypeEnd,
         distance: state.distance,
         volume: volume,
-        totalPrice: Number(price),
+        totalPrice: total,
     }
     const handleMailQuote = async() => { 
         if (!state.acceptedTerms) {
@@ -280,15 +283,15 @@ const rightContent=(
                             Taxes
                         </div>
                         <div className="mt-1 text-sm flex">                   
-                            <CurrencyNgn size={20} color="#444646" /> 0.00    
+                            <CurrencyNgn size={20} color="#444646" /> {tax}   
                         </div>
                     </div>
                     <div className="flex mt-2 justify-between">
                         <div className="text-base">                   
-                            Total
+                            Sum Total
                         </div> 
                         <div className="mt-1 text-sm flex">                   
-                    <CurrencyNgn size={20} color="#444646" /> {state.totalPrice}  
+                    <CurrencyNgn size={20} color="#444646" /> {total}  
                         </div>
                     </div>
 
