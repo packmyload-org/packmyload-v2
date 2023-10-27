@@ -72,6 +72,110 @@ greenhouses, garden shelters, outdoor play equipment, and satellite dishes, or m
             <p className='mt-3 text-[15px]'>2.2 Our moving staff are not authorised to carry out such work. Should you require such we can provide the same at
 an additional cost.</p>   
           <li className='font-bold underline underline-offset-4 mt-4'>Your responsibility</li>
+            <p className='mt-3 text-[15px]'>3.1 It will be your responsibility to:</p>
+            <p className='mt-3 text-[15px]'>3.1.1 Have your goods and the property in which we work clean & organised ready for packing.</p>
+            <p className='mt-3 text-[15px]'>3.1.2 Declare to us the value of the goods being removed and/or stored.</p>
+            <p className='mt-3 text-[15px]'>3.1.3 Arrange adequate insurance cover for the goods submitted for moving and/or storage, against all insurable risks
+as Our liability is limited under clauses 7.1 and 7.2.</p>
+            <p className='mt-3 text-[15px]'>3.1.4 Be present or represented throughout the collection and delivery of the moving.</p>
+            <p className='mt-3 text-[15px]'>3.1.5 Where We provide You with inventories, receipts, waybills, job sheets or other relevant documents You will ensure
+that they are signed by You or Your authorized representative as confirmation of collection or delivery of the Goods.</p>
+            <p className='mt-3 text-[15px]'>3.1.6 Take all reasonable steps to ensure that nothing that should be removed is left behind and nothing is taken away
+in error.</p>
+            <p className='mt-3 text-[15px]'>3.1.7 Arrange proper protection for goods left in unoccupied or unattended premises, or where other people such as (but
+not limited to) tenants or workmen are or will be present.</p>
+            <p className='mt-3 text-[15px]'>3.1.8 Prepare adequately and stabilize all appliances or electronic equipment prior to their moving.</p>
+            <p className='mt-3 text-[15px]'>3.1.9 Empty, properly defrost and clean refrigerators and deep freezers. We are not responsible for the contents.</p>
+            <p className='mt-3 text-[15px]'>3.1.10 Ensure that all domestic and garden appliances, including but not limited to washing machines, dish washers, hose
+pipes, petrol lawn mowers are clean and dry and have no residual fluid left in them.</p>
+            <p className='mt-3 text-[15px]'>3.1.11 Provide us with a current email address, and telephone number before transit and/or storage of the goods.</p>
+            <p className='mt-3 text-[15px]'>3.2 Other than by reason of Our negligence or breach of contract, we will not be liable for any loss or damage,
+costs or additional charges that may arise from failure to discharge these responsibilities.</p>
+          <li className='font-bold underline underline-offset-4 mt-4'>Ownership of the goods</li>
+            <p className='mt-3 text-[15px]'>4.1 By entering into this Agreement, you guarantee that:</p>
+            <p className='mt-3 text-[15px]'>4.1.1 The goods to be moved and/or stored are Your own property, or the goods are Your property free of any legal
+charge; or</p>
+            <p className='mt-3 text-[15px]'>4.1.2 You have the full authority of the owner or anyone having a legal interest in them to enter into this Agreement
+and You have made the owner fully aware of these terms and conditions prior to entering into this Agreement and that they
+have agreed to them.</p>
+            <p className='mt-3 text-[15px]'>4.1.3 If at any time following the implementation of this agreement to its termination another person has or obtains an
+interest in the goods You will advise Us of their name and address in writing immediately.</p>
+            <p className='mt-3 text-[15px]'>4.1.4 You will provide a full indemnity and pay Us in respect of any claim for damages and/or costs brought against Us
+if either statement made in 4.1.1 or 4.1.2 is untrue.</p>
+            <p className='mt-3 text-[15px]'>4.1.5 If You wish to transfer responsibility of this Agreement to a third party You will advise Us in writing giving Us
+their full name and address. We will issue a new agreement to them. Our Agreement with You will remain in force until We
+have received a signed agreement from the third party.</p>
+          <li className='font-bold underline underline-offset-4 mt-4'>Charges if You postpone or cancel the moving</li>
+            <p className='mt-3 text-[15px]'>5.1 If You postpone or cancel this Agreement, We reserve the right to charge you a reasonable postponement or
+cancellation fee according to how much notice is given as set out below at:</p>
+            <p className='mt-3 text-[15px]'>5.1.1 - 5.1.4 “Working days” refer to the normal working week of Monday to Friday and excludes weekends and Public
+Holidays.</p>
+            <p className='mt-3 text-[15px]'>5.1.1 More than 10 working days before the moving was due to start: No charge.</p>
+            <p className='mt-3 text-[15px]'>5.1.2 Between 5 and 10 working days inclusive before the moving was due to start: not more than 30% of the moving
+charge.</p>
+            <p className='mt-3 text-[15px]'>5.1.3 BLess than 5 working days before the moving was due to start: not more than 60% of the moving charge.</p>
+            <p className='mt-3 text-[15px]'>5.1.4 Within 24 hours of the move taking place; not more than 75% of the moving charge.</p>
+            <p className='mt-3 text-[15px]'>5.1.5 On the day the work starts or at any time after the work commences up to 100% of Our charges.</p>
+            <p className='mt-3 text-[15px]'>5.2 Cancellation/Postponement Waiver If offered and paid for in advance of the commencement of the services, we
+agree to waive the charges in Clauses 5.1.1, 5.1.2 & 5.1.3. Our agreement to waive the charges is conditional upon Us
+receiving written notice of Your intention to Cancel/Postpone no later than 17:00 hours on the preceding Working Day
+before Services commence. The Cancellation/Postponement charge will entitle You to only one Cancellation/Postponement.</p>
+          <li className='font-bold underline underline-offset-4 mt-4'>Payment</li>
+            <p className='mt-3 text-[15px]'>6.1 Unless otherwise agreed by Us in writing, payment is required in full by cleared funds at the time of booking
+the move or storage period. In default of such payment We reserve the right to refuse to commence moving or storage until
+such payment is received.</p>
+          <li className='font-bold underline underline-offset-4 mt-4'>Our liability for loss or damage</li>
+            <p className='mt-3 text-[15px]'>7.1 We do not know the value of Your goods therefore We limit Our liability to a fixed limit per item. The amount of
+  liability we accept under this agreement is reflected in Our charges for the work. If You wish Us to increase Our limit
+  of liability per item, You agree to pay a higher price for the work as stated in Condition 1.2.11 (Our Quotation).</p>    
+            <p className='mt-3 text-[15px]'>7.2 Unless otherwise agreed in writing if we are negligent or in breach of contract We will pay You up to N20,000
+  for each item which is lost or damaged as a direct result of any negligence or breach of contract on Our part.</p>  
+          <li className='font-bold underline underline-offset-4 mt-4'>Damage to premises or property other than goods</li>  
+            <p className='mt-3 text-[15px]'>8.1 Because third party contractors or others are frequently present at the time of collection or delivery it is not
+always possible to establish who was responsible for loss or damage. therefore, Our liability is limited as follows:</p>  
+            <p className='mt-3 text-[15px]'>8.1.1 If we cause loss or damage to premises or property other than goods for moving as a result of our negligence or
+breach of contract, our liability shall be limited to making good the damaged area only.</p>  
+            <p className='mt-3 text-[15px]'>8.1.2 If We cause damage as a result of moving goods under Your express instruction, against our advice, and where
+moving the goods in the manner instructed is likely to cause damage, We shall not be liable.</p>  
+            <p className='mt-3 text-[15px]'>8.1.3 If We are responsible for causing damage to Your premises or to property other than goods submitted for moving
+and/or storage, You must note this on the worksheet or delivery receipt as soon as practically possible after the damage
+occurs or is discovered or in any event within a reasonable time of 12 hours. This is fundamental to the Agreement.</p>  
+          <li className='font-bold underline underline-offset-4 mt-4'>Exclusions of liability</li> 
+            <p className='mt-3 text-[15px]'>9.1 We shall not be liable for loss or damage caused by fire or explosion, unless we have been negligent or in breach
+of contract. It is Your responsibility to insure Your Goods. If You ask Us in writing to arrange insurance cover for You
+We will, provided You declare the full replacement value of Your Goods and pay the premium in advance.</p>  
+            <p className='mt-3 text-[15px]'>9.2 We shall not be liable for delays or failures to provide the services under this Agreement as a Act of God,
+adverse weather, or other such events outside our reasonable control.</p>  
+            <p className='mt-3 text-[15px]'>9.3 Other than as a result of Our negligence or breach of contract We will not be liable for any loss, damage or
+failure to produce the goods as a result of:</p>  
+            <p className='mt-3 text-[15px]'>9.3.1 Normal wear and tear, natural or gradual deterioration, leakage or evaporation or from perishable or unstable
+goods. This includes goods left within furniture or appliances.</p>  
+            <p className='mt-3 text-[15px]'>9.3.2 Moth or vermin or similar infestation.</p>  
+            <p className='mt-3 text-[15px]'>9.3.3 Cleaning, repairing or restoring unless We arranged for the work to be carried out.</p>  
+            <p className='mt-3 text-[15px]'>9.3.4 Changes caused by atmospheric conditions such as dampness, mould, mildew, rusting, tarnishing, corrosion, or
+gradual deterioration unless directly linked to ingress of water.</p>  
+            <p className='mt-3 text-[15px] font-bold'>OR</p> 
+            <p className='mt-3 text-[15px]'>9.3.5 For any goods in wardrobes, drawers or appliances, or in a package, bundle, carton, case or other container not
+both packed and unpacked by Us.</p>  
+            <p className='mt-3 text-[15px]'>9.3.6 For any goods which have a pre-existing defect or are inherently defective.</p>  
+            <p className='mt-3 text-[15px]'>9.3.7 For perishable items and/or those requiring a controlled environment.</p>  
+            <p className='mt-3 text-[15px]'>9.3.8 Loss of structural integrity of furniture constructed of particle board resulting from crumbling of the board.</p>  
+            <p className='mt-3 text-[15px]'>9.3.9 For items referred to in Clause 2.</p>  
+            <p className='mt-3 text-[15px]'>9.4 No employee of Ours shall be separately liable to you for any loss, damage, mis-delivery, errors or omissions
+under the terms of this Agreement.</p>  
+            <p className='mt-3 text-[15px]'>9.5 Where goods are handed out from store Our liability will cease upon handing over the goods to You or Your
+authorised representative (see Clause 10.1 below).</p>  
+            <p className='mt-3 text-[15px]'>9.6 We will not be liable for any loss or damage caused by Us or Our employees or agents in circumstances where:</p>  
+            <p className='mt-3 text-[15px]'>(a) there is no breach of this Agreement by Us or by any of Our employees or agents.</p>  
+            <p className='mt-3 text-[15px]'>(b) such loss or damage is not a reasonably foreseeable result of any such breach.</p>  
+          <li className='font-bold underline underline-offset-4 mt-4'>Time-limit for claims</li> 
+            <p className='mt-3 text-[15px]'>10.1 If You or Your authorised representative collect the goods, We must be notified in writing of any loss or damage
+at the time the goods are handed to You or a maximum of 12 hours.</p>  
+            <p className='mt-3 text-[15px]'>10.2 For goods which We deliver, You must give Us detailed notice in writing of any loss and damage within 48 hours of
+delivery by Us. We may agree to extend this time limit upon receipt of Your written request provided such request is
+received within two (2) days of delivery. Consent to such a request will not be unreasonably withheld.</p>  
+          <li className='font-bold underline underline-offset-4 mt-4'>Delays in transit</li>
+            <p className='mt-3 text-[15px]'>11.1 Other than by reason of Our negligence or breach of contract, We will not be liable for delays in transit.</p> 
         </ol>
         <ul className='font-bold list-decimal ml-6 space-y-2'>
             <li>Dismantle and assemble furniture of any kind , with the exception of certain beds, baby cribs or kitchen tables.</li>    
