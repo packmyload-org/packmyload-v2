@@ -28,6 +28,7 @@ function Home() {
     if (document.getElementById('google-maps-api')) {
       setIsLoaded(true);
     }
+
       setTimeout(() => {
         setShowChat(true); // Show the Chat component after 40 seconds
       }, 10000); // 40 seconds in milliseconds

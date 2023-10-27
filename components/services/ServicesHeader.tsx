@@ -1,5 +1,6 @@
+'use client'
 import Link from "next/link"
-
+import {usePathname} from 'next/navigation'
 interface Props {
     bgImage: string,
     firstText: string,
@@ -8,7 +9,7 @@ interface Props {
 
 export const ServicesHeader: React.FC<Props> = ({bgImage, firstText, secondText}) => {
 
-
+    const path = usePathname()
     const divStyle = {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -23,7 +24,7 @@ export const ServicesHeader: React.FC<Props> = ({bgImage, firstText, secondText}
                 style={divStyle}
             >        
                 <div className="flex flex-col items-center justify-end h-full">
-                    <Link href={'move'}>
+                    <Link href={`${path.includes('store-delivery')? '/partner' : '/move'}`}>
                     
                         <button
                             className="text-white shadow-lg border-2 text-xl font-bold p-2 w-[200px] bg-[#4BCBFE] outline-none transition-colors duration-600 hover:animate-pulse hover:bg-white hover:text-black"
