@@ -24,15 +24,15 @@ const items: MenuProps['items'] = [
     key: '3',
     label: (
       <Link href='/services/international-relocations' >
-        InterNational Relocation
+        International Relocation
       </Link>
     ),
   },
   {
     key: '4',
     label: (
-      <Link href='/services/junk-moves' >
-        Junk Moves
+      <Link href='/services/junk-removal' >
+        Junk Removal
       </Link>
     ),
   },

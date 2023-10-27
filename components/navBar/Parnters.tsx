@@ -18,7 +18,6 @@ const items: MenuProps['items'] = [
         Explore partnerships
       </Link>
     ),
-    disabled: true
   },
   {
   key: '3',
@@ -27,7 +26,6 @@ const items: MenuProps['items'] = [
         Move for us
       </Link>
     ),
-    disabled: true
   },
   {
     key: '4',

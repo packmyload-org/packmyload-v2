@@ -120,7 +120,7 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
     
       return (
         <div className="bg-blue-200 flex justify-center gap-1 items-center rounded-md shadow-md p-3 sm:w-[78%] h-[80px] w-full mx-auto min-w-[140px]">
-          <p className="text-base w-full" title={roomType}>{roomType}</p>
+          <p className="text-sm sm:text-base w-full" title={roomType}>{roomType}</p>
           {counterButtons}
         </div>
       );

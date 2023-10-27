@@ -23,10 +23,17 @@ const handleFieldChange = (field: string, value: string) => {
     const roomsOb: RoomJson = roomMove
     
     const rightContent = (
-        <main className='space-y-2'>
+        <main className='space-y-3'>
             <h1 className='text-xl md:text-4xl font-black text-blue-300 text-center'>Select The Number Of Rooms</h1>
-            <form className=' md:w-[70%] lg:w-[85%] md:ml-10 py-4'>
-                <label className="text-sm text-blue-300 font-semibold" htmlFor="size-feet">Enter Size in Square Feet</label>
+            <div className='grid grid-cols-2 gap-2 p-1 pt-4 md:w-[70%] lg:w-[80%] w-full  h-[fit-content] mx-auto mt-2'>
+                {
+                    roomsOb.rooms.map(room => (
+                        <RoomCounter roomType={room.room} price={room.price} />
+                    ))
+                }
+            </div>
+            <form className=' md:w-[70%] mx-auto py-4'>
+                <label className="text-sm text-blue-300 font-semibold" htmlFor="size-feet">Enter Home Size in Square Feet</label>
                 <input 
                     className='w-full mt-2 h-12 p-4 text-gray-500 rounded-md outline-none border-2 placeholder:text-slate-400 placeholder:font-[500] bg-slate-50'
                     id='size-feet' 
@@ -35,13 +42,6 @@ const handleFieldChange = (field: string, value: string) => {
                     onChange={(e)=>handleFieldChange('size', e.target.value)}
                 />
             </form>
-            <div className='grid grid-cols-2 gap-2 p-1 w-full h-[fit-content] mt-2'>
-                {
-                    roomsOb.rooms.map(room => (
-                        <RoomCounter roomType={room.room} price={room.price} />
-                    ))
-                }
-            </div>
         </main>
     )
 
