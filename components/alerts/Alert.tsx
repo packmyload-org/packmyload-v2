@@ -13,7 +13,7 @@ export const alerts = {
   },
   error: (heading: React.ReactNode, body: React.ReactNode, duration?: number) => {
     return toast(<AppToast heading={heading} body={body} />, {
-      icon: <Image src={error} alt='success toast' width={18} height={18} />,
+      icon: <Image src={error} alt='error toast' width={18} height={18} />,
       autoClose: duration
     });
   },
