@@ -18,50 +18,49 @@ export default function Checkout() {
     const [loading, setLoading]= useState(false)
     const columns = [
   {
-    title: 'Items',
-    dataIndex: 'item',
-    key: 'item',
+    title: 'Description ',
+    dataIndex: 'desc',
+    key: 'desc',
   },
   {
-    title: 'Qty',
-    dataIndex: 'numberOfItems',
-    key: 'numberOfItems',
+    title: 'Rate',
+    dataIndex: 'rate',
+    key: 'rate',
   },
- 
-    ];
+ ];
 
-  const handleChangePage = (page: number) => {
-    setCurrentPage(page);
-    };
+//   const handleChangePage = (page: number) => {
+//     setCurrentPage(page);
+//     };
     const handleFieldChange = (field: string, value: boolean) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
     };
     const router= useRouter()
 
-  const pagination = {
-    current: currentPage,
-    pageSize: 5, 
-    total: state.items.length,
-    onChange: handleChangePage,
-};
+//   const pagination = {
+//     current: currentPage,
+//     pageSize: 5, 
+//     total: state.items.length,
+//     onChange: handleChangePage,
+// };
     const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
-    useEffect(() => {
-        if (
-            state.buildingTypeEnd === '' ||
-            state.buildingTypeStart === '' ||
-            state.firstName === '' ||
-            state.lastName === '' ||
-            state.destination === '' ||
-            state.email === '' ||
-            state.service === '' ||
-            state.moveDate === '' ||
-            state.moveTime === '' ||
-            state.pickUp === ''
-        ){
-            return redirect('/move/locations-details')
-        }
-    })
+    // useEffect(() => {
+    //     if (
+    //         state.buildingTypeEnd === '' ||
+    //         state.buildingTypeStart === '' ||
+    //         state.firstName === '' ||
+    //         state.lastName === '' ||
+    //         state.destination === '' ||
+    //         state.email === '' ||
+    //         state.service === '' ||
+    //         state.moveDate === '' ||
+    //         state.moveTime === '' ||
+    //         state.pickUp === ''
+    //     ){
+    //         return redirect('/move/locations-details')
+    //     }
+    // })
     let price =state.totalPrice.split(',').join('')
     console.log(price)
     const data = {
@@ -271,7 +270,7 @@ const rightContent=(
                     </div>
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={state.items} columns={columns} pagination={pagination}/>
+                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={[{desc:'Truck Rental', rate:''},{desc:'Moving Materials', rate:'boxes, wrapping materials e.t.c'},{desc:'Service Charge', rate:''}]} columns={columns} pagination={false} />
                     
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
