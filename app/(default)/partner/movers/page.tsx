@@ -34,25 +34,25 @@ export default function Movers() {
             </div>
           </div>
         </section>
-        <div className="w-full h-auto py-20 mt-2">
+        <div className="w-full h-auto mt-8">
           <div className="flex flex-row flex-wrap gap-2 justify-center max-w-6xl mx-auto ">
             <img
               src="/images/partner/packmyload_1697583737398.webp"
               alt="image-1"
-              className="w-[355px] h-[350px] relative bottom-20 object-cover"
+              className="w-[355px] h-[350px] relative object-cover"
             />
             <img
               src="/images/about/packmyload_1696572694895.webp"
               alt="image-2"
-              className="w-[355px] h-[350px] relative bottom-20 object-cover"
+              className="w-[355px] h-[350px] relative object-cover"
             />
             <img
               src="/images/partner/packmyload_1697583683638.webp"
               alt="image-3"
-              className="w-[355px] h-[350px] relative bottom-20 object-cover"
+              className="w-[355px] h-[350px] relative object-cover"
             />
           </div>
-          <div className="relative bottom-10 flex flex-col gap-4 bg-[#EDF2F8] py-2">
+          <div className="flex flex-col gap-4 bg-[#EDF2F8] py-2 mt-6">
             <div className="flex flex-col gap-5 md:flex-row justify-between max-w-6xl mx-auto">
               <div className="mx-auto w-full h-full flex items-center">
                 <img
@@ -74,12 +74,12 @@ export default function Movers() {
            
           </div>
         </div>
-        <div className="w-full h-auto">
+        <div className="w-full h-auto bg-[#F9F9F9] py-6">
           <div className="flex flex-col max-w-6xl mx-auto px-2 lg:px-0">
             <h2 className="text-2xl md:text-4xl font-bold text-[#6D9ED2]">
               Earn a stable income
             </h2>
-            <h3 className="text-xl md:text-2xl font-semibold pt-5 text-[#777674]  ">
+            <h3 className="text-xl md:text-2xl font-semibold pt-5 text-[#777674]">
               Receive work remotely, through our platfrom <br /> Choose your own
               working hours and become an entrepreneur
             </h3>
