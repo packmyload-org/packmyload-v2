@@ -11,7 +11,7 @@ interface About {
  export const AboutCard = ({ title, description, to }: About) => {
  const router = useRouter()
   return (
-    <div className='flex flex-col space-y-6 items-start w-full min-w-[230px] py-6 md:py-4 border-b-[0.3px] cursor-pointer' onClick={()=>router.push(to)}>
+    <div className='flex flex-col space-y-4 items-start w-full min-w-[230px] py-6 md:py-4 border-b-[0.3px] cursor-pointer' onClick={()=>router.push(to)}>
      <div className='w-full flex gap-2 items-center justify-start'>
         <h2 className='font-bold text-base md:text-xl text-[#2E5F9E]'>{title}</h2>
      </div>
