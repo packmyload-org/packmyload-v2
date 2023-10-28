@@ -23,7 +23,7 @@
     "title": "Careers.",
    
     "description": "Explore exciting career opportunities and join our team.",
-    "to": "/partner/movers"
+    "to": "/partner/movers "
   },
   {
     "title": "Track my orders.",
@@ -41,7 +41,7 @@
     "title": "File a Claim.",
    
     "description": "File a claim for any issues or concerns related to our services.",
-    "to": "/"
+    "to": "/about-us/fileclaim"
   },
   {
     "title": "The Problem.",
