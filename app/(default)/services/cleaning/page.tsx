@@ -16,7 +16,7 @@ export default function Cleaning(){
             <br />
 
             <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block">
-                <div className='bg-white md:w-[70%] sm:w-[90%] p-6 rounded-md border-2 border-[#eee]'>
+                <div className='bg-white md:w-[50%] lg:w-[70%] sm:w-[90%] p-6 rounded-md border-2 border-[#eee]'>
                     <section>
                         <h1 className='text-xl font-bold text-[#566985]'>Cleaning Services</h1>
                         <p className='mt-2 text-[#878C9F]'>
@@ -72,7 +72,7 @@ export default function Cleaning(){
                         </p>
                     </section>
                 </div>
-                <div className='md:w-[30%] sm:w-[90%]'> 
+                <div className='md:w-[50%] lg:w-[30%] sm:w-[90%]'> 
                     <section className='flex gap-2 items-start mt-4'>
                         <Image 
                             src="/images/icons/aid-support.webp"
