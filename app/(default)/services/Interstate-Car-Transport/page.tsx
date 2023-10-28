@@ -248,7 +248,7 @@ export default function StudentMoves(){
                 </div>
             </section>
             <section  className='mt-6'>
-                <div className='flex flex-wrap mx-auto items-center justify-center h-full bg-[#4DB7FE] gap-4 py-10 px-1' >
+                <div className='flex flex-wrap mx-auto items-center justify-center h-full bg-[#4DB7FE] gap-4 py-12 px-1' >
                   <h1 className='text-xl md:text-2xl font-bold text-[#ffff] '>Request A Interstate Moving Quote</h1>
                   
                   <Link href='/move'>  
