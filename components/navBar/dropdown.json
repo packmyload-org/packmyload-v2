@@ -1,8 +1,8 @@
 {
   "partners": [
     { "name": "Partner", "to": "/partner" },
-    { "name": " Explore partnerships", "to": "Destination 2" },
-    { "name": "Move For Us", "to": "Destination 3" },
+    { "name": " Explore partnerships", "to": "/become_a_packer" },
+    { "name": "Move For Us", "to": "/partner/movers" },
     { "name": "Become A PacMan", "to": "/become_a_packer" }
   ],
   "services": [
@@ -19,8 +19,8 @@
       "to": "/services/international-relocations"
     },
     {
-      "name": "Junk Moves",
-      "to": "/services/junk-moves"
+      "name": "Junk Removal",
+      "to": "/services/junk-removal"
     },
     {
       "name": "Storage",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Interstate Car Transport",
-      "to": "/services/interstate-Car-Transport"
+      "to": "/services/Interstate-Car-Transport"
     },
     {
       "name": "Wedding Handling",
