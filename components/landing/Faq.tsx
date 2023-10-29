@@ -6,9 +6,9 @@ export default function Faq() {
   return (
   <section className="relative gradient-bg grid py-[20px] min-h-[250px]">
   <div className="cirle-bg w-full">
-    <div className="bg object-cover" style={{height:'250px'}}></div>   
+    <div className="bg object-cover" style={{height:'250px'}} />   
   </div>
-  <div className="w-full lg:w-[1200px] max-w-6xl mx-auto py-12">
+  <div className="w-full max-w-6xl mx-auto py-12">
     <div className="join-wrap fl-wrap text-white">
       <Row className='w-full flex' justify={'space-between'} align={'middle'}>
         <Col span={24} md={10} className='flex flex-col space-y-6'>
