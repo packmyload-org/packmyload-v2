@@ -5,6 +5,7 @@ import { Coin, CreditCard, LightningSlash, SneakerMove } from "@phosphor-icons/r
 import React from "react";
 import Image from "next/image";
 import { AdServicesCard } from "@/components/landing/custom/AdServicesCard";
+import Link from "next/link";
 
 export default function Movers() {
   return (
@@ -123,7 +124,9 @@ export default function Movers() {
               <div className="flex flex-col md:flex-row flex-wrap gap-6 text-xl md:text-2xl mt-6 text-[#777674] ">
                 <div>
                   <h2 className="text-[#6D9ED2]">STEP ONE</h2>
-                  <p className="text-lg">Complete the questionnare below to get <br/>started</p>
+                  <p className="text-lg">Complete the questionnare <span  > <Link href="/contact" className="text-[#6D9ED2]">
+                 here
+              </Link></span> to get <br/>started</p>
                 </div>
                 <div>
                   <h2 className="text-[#6D9ED2]">STEP TWO</h2>
