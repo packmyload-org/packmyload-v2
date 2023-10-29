@@ -9,7 +9,7 @@ export default function SeemlessExperience() {
      <h1 className='text-2xl md:text-4xl font-bold text-[#2E5F9E]'>One seamless experience</h1>
      <p className='text-base lg:w-[75%] mx-auto md:text-lg text-[#777674]'>Our teams will treat your possessions like they would their own. ensuring that the greatest care and diligence is taken.</p>
     </div>
-    <div className='max-w-6xl mx-auto md:grid gap-4 md:gap-10 mt-10 lg:grid-cols-2 xl:grid-cols-3 items-center p-2 sm:px-2 space-y-10'>
+    <div className='max-w-6xl mx-auto flex flex col md:flex-row flex-wrap gap-4 md:gap-10 mt-10 items-center p-2 sm:px-2 space-y-10'>
 
         <Col span={20} lg={6} className='min-w-[350px] text-center mx-auto section-title gap-4 flex flex-col items-center'>
          <div className='flex flex-col justify-center gap-5 items-center'>

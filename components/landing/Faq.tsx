@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 export default function Faq() {
   return (
-  <section className="gradient-bg grid py-[20px] min-h-[250px]">
+  <section className="relative gradient-bg grid py-[20px] min-h-[250px]">
   <div className="cirle-bg w-full">
     <div className="bg object-cover" style={{height:'250px'}}></div>   
   </div>
