@@ -67,7 +67,7 @@ export default function Services(){
             <div className="py-2">
 
               {/* Section header */}
-              <div className="section-title w-full relative  ">
+              <div className="section-title w-full relative">
 
                   <div className='gap-6 flex flex-col'>
                       <h2 className="w-full font-bold text-xl sm:text-xl md:text-4xl text-center mt-2 md:mt-0">Services</h2>

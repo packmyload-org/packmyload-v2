@@ -8,7 +8,7 @@ const PackSection: React.FC = () => {
 
             <div className="grid grid-cols-1 p-2 lg:p-8 lg:grid-cols-2 max-w-6xl mx-auto gap-[40px] mt-8">
                 {/* First Card */}
-                <div className=" w-full md:w-[80%] lg:w-[550px] bg-[#f3f7ff] border mx-auto border-gray-200 rounded-xl shadow">
+                <div className=" w-full md:w-[80%] lg:w-full xl:w-[550px] bg-[#f3f7ff] border mx-auto border-gray-200 rounded-xl shadow">
                     <div className={`p-3 w-full`}>
                         <Image 
                         src={calendar}
@@ -26,8 +26,7 @@ const PackSection: React.FC = () => {
                             <p>
                             Gone are the days of paying in full for your move! With Packmyload, you can now Pack Now, Pay Later through our partnership with Alt Bank. Simply choose to Pack Now, Pay Later when you pick your moving quote - it really is that easy.*
                             </p>
-                            <br/>
-                            <p><i>*Only applicable for long-distance moves.</i></p>
+                            <p className='mt-1'><i>*Only applicable for long-distance moves.</i></p>
                         </div>
                     </div>
                     <Image 
@@ -40,7 +39,7 @@ const PackSection: React.FC = () => {
                     />
                 </div>
                 {/* Second Card */}
-                <div className="w-full md:w-[80%] lg:w-[550px] bg-[#f3f7ff] border mx-auto border-gray-200 rounded-xl shadow">
+                <div className="w-full md:w-[80%] lg:w-full xl:w-[550px] bg-[#f3f7ff] border mx-auto border-gray-200 rounded-xl shadow">
                     <div className={`p-3 w-full`}>
                         <Image 
                             src={secure} 
