@@ -79,7 +79,7 @@ export default function Partnerpage() {
             <div>
             <AnimatedWrapper>
           
-              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-64 md:pt-56 md:max-w-6xl lg:pt-96">
+              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-64 md:pt-56 md:max-w-6xl lg:pt-96 md:px-1">
                 <img
                   src="/images/partner/packmyload_1695798527485.webp"
                   alt="image-1"
@@ -112,8 +112,8 @@ export default function Partnerpage() {
 
             <AnimatedWrapper>
           
-              <div className="flex flex-col md:flex-row mt-4 justify-between mx-auto gap-5 md:shrink-0 max-w-6xl mx-auto">
-                <div className="flex flex-col md:justify-center w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:p-1 lg:p-0">
+              <div className="flex flex-col md:flex-row mt-4 justify-between mx-auto gap-5 md:shrink-0 max-w-6xl mx-auto ">
+                <div className="flex flex-col md:justify-center w-[90%] md:w-[50%] lg:w-auto mx-auto lg:mx-0 md:px-1">
                   <p className="text-2xl lg:text-4xl mt-4 text-white">
                     Integration & Lead Monetization
                   </p>
