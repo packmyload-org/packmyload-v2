@@ -124,7 +124,7 @@ export default function Movers() {
               <div className="flex flex-col md:flex-row flex-wrap gap-6 text-xl md:text-2xl mt-6 text-[#777674] ">
                 <div>
                   <h2 className="text-[#6D9ED2]">STEP ONE</h2>
-                  <p className="text-lg">Complete the questionnare <span  > <Link href="/contact" className="text-[#6D9ED2]">
+                  <p className="text-lg">Complete the questionnare <span  > <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf4QpJHzgXC3fojoCgsKR2-VHrRgs6YM0GBankwRneAlP9Juw/viewform?vc=0&c=0&w=1&flr=0" className="text-[#6D9ED2]">
                  here
               </Link></span> to get <br/>started</p>
                 </div>
