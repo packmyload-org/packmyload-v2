@@ -22,7 +22,7 @@ export default function HeroSection() {
           <Image
             src="/images/team/hero-img1.webp"
             alt="Image 1"
-            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain lg:mt-2"
+            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain xl:mt-2"
             loading="lazy"
             width={160}
             height={160}
@@ -30,7 +30,7 @@ export default function HeroSection() {
           <Image
             src="/images/team/hero-img2.webp"
             alt="Image 2"
-            className="w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] object-contain mt-5 lg:mt-10"
+            className="w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] xl:w-[160px] xl:h-[160px] object-contain mt-5 xl:mt-10"
             loading="lazy"
             width={120}
             height={120}
@@ -38,7 +38,7 @@ export default function HeroSection() {
           <Image
             src="/images/team/hero-img3.webp"
             alt="Image 3"
-            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-6"
+            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain mt-2 lg:mt-4 xl:mt-6"
             loading="lazy"
             width={160}
             height={160}
@@ -46,7 +46,7 @@ export default function HeroSection() {
           <Image
             src="/images/team/hero-img4.webp"
             alt="Image 4"
-            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-2 lg:mt-4"
+            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain mt-2 lg:mt-3 xl:mt-4"
             loading="lazy"
             width={160}
             height={160}
@@ -54,7 +54,7 @@ export default function HeroSection() {
           <Image
             src="/images/team/hero-img5.webp"
             alt="Image 5"
-            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[220px] lg:h-[220px] object-contain mt-3 lg:mt-8"
+            className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain mt-3 lg:mt-6 xl:mt-8"
             loading="lazy"
             width={160}
             height={160}

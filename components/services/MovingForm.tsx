@@ -1,5 +1,4 @@
 "use client"
-// import Image from 'next/image';
 import { AutoCompleteInput } from '../AutoCompleteInput';
 import { useRouter } from 'next/navigation';
 import { FormEvent } from 'react';
@@ -28,7 +27,7 @@ export const MovingForm: React.FC = () => {
 
     return (
         <div className="w-5/6 pt-3 sm:mt-6">
-            <form onSubmit={handleSubmit} className='backdrop-blur-lg bg-gray-100/20 border-gray-400/20 border-[8px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[950px] flex space-y-2 sm:space-y-0 flex-col md:flex-row input_shadow'>
+            <form onSubmit={handleSubmit} className='backdrop-blur-lg bg-gray-100/20 border-gray-400/20 border-[8px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[90%] xl:w-[950px] flex space-y-2 sm:space-y-0 flex-col md:flex-row input_shadow'>
               <div className='flex bg-gray-100 flex-nowrap py-1 px-3 lg:rounded-l-full w-full lg:w-[30%] justify-between border-r-2 items-center'>
                   <AutoCompleteInput
                     inputName='pickUp'
