@@ -150,7 +150,7 @@ export default function StudentMoves(){
         </div>
 
         <div className="w-full h-auto mt-6">
-          <div className="flex flex-col max-w-6xl mx-auto px-2 lg:px-0">
+          <div className="flex flex-col max-w-6xl mx-auto px-2 md:px-1">
             <h2 className="text-lg md:text-4xl font-bold text-[#566985]">
               What is a Long Distance Move?
             </h2>
@@ -172,7 +172,7 @@ export default function StudentMoves(){
             </h3>
           </div>
           <div>
-            <div className="grid grid-col max-w-6xl mx-auto px-2 lg:px-0">
+            <div className="grid grid-col max-w-6xl mx-auto px-2 md:px-1">
               <h2 className="text-lg py-4 md:text-4xl font-semibold text-[#566985] ">
                 Types of Long Distance Moves
               </h2>
@@ -185,7 +185,7 @@ export default function StudentMoves(){
 
 
 
-            <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block">
+            <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block md:px-1">
                 <div className='bg-white md:w-[50%] lg:w-[70%] sm:w-[90%] p-6 rounded-md border-2 border-[#eee]'>
                     <section>
                         <h1 className='text-xl font-bold text-[#566985]'>Small Moves</h1>

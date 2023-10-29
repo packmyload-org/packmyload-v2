@@ -52,7 +52,7 @@ export default function Movers() {
               className="w-[355px] h-[350px] relative object-cover"
             />
           </div>
-          <div className="flex flex-col gap-4 bg-[#EDF2F8] py-2 mt-6">
+          <div className="flex flex-col gap-4 bg-[#EDF2F8] py-2 mt-6 md:px-1">
             <div className="flex flex-col gap-5 md:flex-row justify-between max-w-6xl mx-auto">
               <div className="mx-auto w-full h-full flex items-center">
                 <img
@@ -64,7 +64,7 @@ export default function Movers() {
               </div>
 
               <div className=" w-[90%] flex flex-col justify-center ">
-                <p className="text-2xl w-full font-semibold md:w-8/12 lg:text-4xl mt-4 px-2 lg:px-0 mx-auto text-[#777674]">
+                <p className="text-2xl w-full font-semibold lg:text-4xl mt-4 px-2 lg:px-0 mx-auto text-[#777674]">
                   Enjoy the flexibility of working independently, on your own
                   schedule.
                 </p>
@@ -74,7 +74,7 @@ export default function Movers() {
            
           </div>
         </div>
-        <div className="w-full h-auto bg-[#F9F9F9] py-6">
+        <div className="w-full h-auto bg-[#F9F9F9] py-6 md:px-1">
           <div className="flex flex-col max-w-6xl mx-auto px-2 lg:px-0">
             <h2 className="text-2xl md:text-4xl font-bold text-[#6D9ED2]">
               Earn a stable income
