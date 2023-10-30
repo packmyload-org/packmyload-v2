@@ -6,7 +6,7 @@ export default function Newsroom() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg items-center py-[20px] h-[fit-content] ">
+        <section className="gradient-bg items-center py-[5px] min-h-[150px]  ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
