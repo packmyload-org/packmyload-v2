@@ -73,7 +73,8 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
     type: 'system',
     message:''
   };
-  data.message = res.data[2].payload.message;
+  console.log(res)
+  data.message = res?.data[2]?.payload?.message;
    setChatData(prevChatData => [...prevChatData, data]);
 }
 

@@ -64,6 +64,10 @@ export default function Checkout() {
     
     const priceString = state.totalPrice
     let price = Number(priceString.split(',').join(''));
+    const truckPercentage = 0.4; // 40%
+    const servicePercentage = 0.6; // 60%
+    const truck = price * truckPercentage;
+    const service = price * servicePercentage;
     const tax = calculateTax(price)
     const total = (price + tax)
     const data = {
@@ -273,7 +277,7 @@ const rightContent=(
                     </div>
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={[{desc:'Truck Rental', rate:''},{desc:'Moving Materials', rate:'boxes, wrapping materials e.t.c'},{desc:'Service Charge', rate:''}]} columns={columns} pagination={false} />
+                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={[{desc:'Truck Rental', rate:`${truck}`},{desc:'Moving Materials', rate:'boxes, wrapping materials e.t.c'},{desc:'Service Charge', rate:`${service}`}]} columns={columns} pagination={false} />
                     
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
