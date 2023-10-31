@@ -7,7 +7,7 @@ export default function InternationRelocation(){
         <main className='bg-[#F9F9F9]'>
             
             <ServicesHeader 
-                bgImage='url(/images/moving-company-lagos-nigeria-packmyload.com-international_moves-banner_image.webp)'
+                bgImage='url(/images/extra/Ai-1.webp)'
                 firstText='INTERNATIONAL RELOCATION SERVICES WITHIN NIGERIA'
                 secondText='International Relocation'
             />
