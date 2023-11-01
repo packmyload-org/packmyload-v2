@@ -311,7 +311,7 @@ href="https://www.linkedin.com/company/packmyload-com/about/"
               </li>
               <li>
                 <a
-                  href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ"
+                  href="https://www.threads.net/@packmyload"
                   target="_blank"
                   aria-label="connect on threads"
                 >
