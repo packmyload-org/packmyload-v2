@@ -273,7 +273,7 @@ export default function StudentMoves() {
             Request A Interstate Moving Quote
           </h1>
 
-          <Link href="/move">
+          <Link href="/book">
             <button className="text-white shadow-lg border-2 text-xl font-bold p-2 w-[200px] bg-[#4BCBFE] outline-none transition-colors duration-600 hover:animate-pulse hover:bg-white hover:text-black">
               Get Quote
             </button>

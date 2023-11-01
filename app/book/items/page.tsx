@@ -65,8 +65,8 @@ export default function Page() {
       "Please scroll & select the items you wish to move per room. We use this information to determine the size of the truck, the materials and the number of movers needed for your move."
       leftContent={leftContent}
       rightContent={rightContent}
-      prev='/move/rooms'
-      next='/move/locations-details'
+      prev='/book/rooms'
+      next='/book/locations-details'
     />
   );
 }

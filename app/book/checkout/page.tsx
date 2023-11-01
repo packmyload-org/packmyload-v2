@@ -58,7 +58,7 @@ export default function Checkout() {
             state.moveTime === '' ||
             state.pickUp === ''
         ){
-            return redirect('/move/locations-details')
+            return redirect('/book/locations-details')
         }
     })
     
@@ -108,8 +108,6 @@ export default function Checkout() {
             if (res.ok) {
                 alerts.success('Success', 'Mail was sent successfully.')
                 setLoading(false)
-                router.push('/move')
-                localStorage.clear()
                 return;
             }
             alerts.error('Error', 'Oops! something went wrong. Unable to mail this email.')

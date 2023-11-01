@@ -54,8 +54,8 @@ const handleFieldChange = (field: string, value: string) => {
         <BookingLayout 
             rightContent={rightContent}
             leftContent={leftContent}
-            prev='/move'
-            next='/move/items'
+            prev='/book'
+            next='/book/items'
         />
     )
 }

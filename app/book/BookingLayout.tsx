@@ -36,7 +36,7 @@ export default function BookingLayout ({leftContent, rightContent, stepDescripti
                                 priority
                             />
                         </Link>
-                        {pathname !== '/move' && <NeedHelp />}
+                        {pathname !== '/book' && <NeedHelp />}
                     </nav>
 
                     <div className="mt-10 space-y-6">

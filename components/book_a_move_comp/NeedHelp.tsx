@@ -23,7 +23,7 @@ export const NeedHelp: React.FC = () => {
         return (
             
             <span className="font-sm text-blue-300 font-black">
-                <Link href='/move/contact-agent' className="text-blue-300 font-black">
+                <Link href='/book/contact-agent' className="text-blue-300 font-black">
                     Need help{" "}
                 </Link>
                 <button
