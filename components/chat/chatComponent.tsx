@@ -73,13 +73,14 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
     type: 'system',
     message:''
   };
-  data.message = res.data[2].payload.message;
+  console.log(res)
+  data.message = res?.data[2]?.payload?.message;
    setChatData(prevChatData => [...prevChatData, data]);
 }
 
-  useEffect(() => {
-    launchChat()
-  },[])
+  // useEffect(() => {
+  //   launchChat()
+  // },[])
  return (
     <div className='fixed flex flex-col h-[90vh] lg:h-[83vh] lg:right-10 bottom-3 lg:bottom-10 w-[90dvw] sm:w-[80dvw] m-auto lg:w-[34dvw] bg-white z-40 shadow rounded-md '>
     <header className='bg-blue-300 w-full p-4 flex justify-between'>
@@ -133,7 +134,7 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
   
     <form 
       className='w-[90%] absolute mx-auto border border-slate-300 rounded-sm flex bottom-2 justify-between fixed left-0 right-0 z-50'
-      onSubmit={sendChat}
+      // onSubmit={sendChat}
     >
       <input
         type="text"
@@ -146,7 +147,7 @@ const sendChat = async (e: React.FormEvent<HTMLFormElement> | React.FormEvent<HT
         chatText &&
          <button
             className='px-2'
-            onClick={sendChat}
+            // onClick={sendChat}
           >
             <PaperPlaneRight size={18} color="#2e5f9e" weight="fill" />
         </button>
