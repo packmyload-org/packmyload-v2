@@ -10,7 +10,7 @@ export default function Partnerpage() {
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
         <AnimatedWrapper>
 
-          <section className="gradient-bg grid items-center py-[20px] h-[fit-content] ">
+          <section className="gradient-bg grid items-center py-[10px] h-[fit-content] ">
             <div className="cirle-bg">
               <div className="bg object-cover"></div>
             </div>
