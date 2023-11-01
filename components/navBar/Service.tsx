@@ -7,7 +7,7 @@ const items: MenuProps['items'] = [
   {
     key: '1',
      label: (
-      <Link href='/services/home-moves' >
+      <Link href='/home-moves' >
        Home Relocation
      </Link>
    ),
@@ -15,7 +15,7 @@ const items: MenuProps['items'] = [
   {
     key: '2',
     label: (
-      <Link href='/services/office-moves' >
+      <Link href='/office-moves' >
         Office Relocation
       </Link>
     ),
@@ -23,7 +23,7 @@ const items: MenuProps['items'] = [
   {
     key: '3',
     label: (
-      <Link href='/services/international-relocations' >
+      <Link href='/international-relocations' >
         International Relocation
       </Link>
     ),
@@ -31,7 +31,7 @@ const items: MenuProps['items'] = [
   {
     key: '4',
     label: (
-      <Link href='/services/junk-removal' >
+      <Link href='/Junk-moves' >
         Junk Removal
       </Link>
     ),
@@ -39,7 +39,7 @@ const items: MenuProps['items'] = [
   {
     key: '5',
     label: (
-      <Link href='/services/storage' >
+      <Link href='/storage' >
         Storage
       </Link>
     ),
@@ -47,7 +47,7 @@ const items: MenuProps['items'] = [
   {
     key: '6',
     label: (
-      <Link href='/services/Interstate-Car-Transport'>
+      <Link href='/Interstate-Car-Transport'>
         Interstate Car Transport
       </Link>
     ),
@@ -55,7 +55,7 @@ const items: MenuProps['items'] = [
   {
     key: '7',
     label: (
-      <Link href='/services/wedding-handling' >
+      <Link href='/wedding-handling' >
         Wedding Handling
       </Link>
     ),
@@ -63,7 +63,7 @@ const items: MenuProps['items'] = [
   {
     key: '8',
     label: (
-      <Link href='/services/store-delivery' >
+      <Link href='/store-delivery' >
         Store Delivery
       </Link>
     ),
@@ -71,7 +71,7 @@ const items: MenuProps['items'] = [
   {
     key: '9',
     label: (
-      <Link href='/services/cleaning' >
+      <Link href='/cleaning' >
         Cleaning Services
       </Link>
     ),
@@ -83,7 +83,7 @@ function Services() {
   return (
     <div >
         <Dropdown menu={{ items }} className='flex w-16' overlayClassName='custom-dropdown-overlay'>
-          <a href='/services' className='text-white hover:text-blue-100 cursor-pointer'>
+          <a href='' className='text-white hover:text-blue-100 cursor-pointer'>
             <Space className='flex items-center font-bold'>
               Services
               <CaretDown size={16} weight="fill" className='text-inherit' />
