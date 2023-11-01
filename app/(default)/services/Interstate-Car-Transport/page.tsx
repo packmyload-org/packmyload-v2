@@ -166,7 +166,7 @@ export default function StudentMoves() {
           </h3>
 
           <h3>
-            
+
           </h3>
         </div>
         <div>
@@ -178,7 +178,7 @@ export default function StudentMoves() {
         </div>
       </div>
 
-      <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block md:px-1">
+      {/* <section className="md:flex justify-center gap-4 max-w-6xl mx-auto mt-3 sm:block md:px-1">
         <div className="bg-white md:w-[50%] lg:w-[70%] sm:w-[90%] p-6 rounded-md border-2 border-[#eee]">
           <section>
             <h1 className="text-xl font-bold text-[#566985]">Small Moves</h1>
@@ -266,7 +266,7 @@ export default function StudentMoves() {
             </div>
           </section>
         </div>
-      </section>
+      </section> */}
       <section className="mt-6">
         <div className="flex flex-wrap mx-auto items-center justify-center h-full bg-[#4DB7FE] gap-4 py-12 px-1">
           <h1 className="text-xl md:text-2xl font-bold text-[#ffff] ">
