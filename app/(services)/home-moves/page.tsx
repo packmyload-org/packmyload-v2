@@ -24,7 +24,7 @@ export default function HomeMoves() {
           <div className="flex flex-col gap-5 md:flex-row justify-between max-w-6xl mx-auto md:px-1">
             <div className="mx-auto w-full h-full flex items-center">
               <img
-                src="/images/partner/packmyload_1695798593791.webp"
+                src="/images/about/packmyload_1696572786359.webp"
                 alt="image-1"
                 loading="lazy"
                 className="w-full h-auto lg:h-[400px] mx-auto lg:mx-0 rounded-md object-cover flex-grow"
@@ -52,22 +52,7 @@ export default function HomeMoves() {
                 trust in Lagos.
               </p>
 
-              <div>
-                <h2 className="text-xl lg:text-2xl font-semibold w-full py-2 mt-4 md:mt-0 px-2 lg:px-0 mx-auto text-[#566985]">
-                  {" "}
-                  CLEANING SERVICES
-                </h2>
-
-                <p className=" w-full text-sm mt-4 px-2 lg:px-0 mx-auto text-[#878C9F]">
-                  It’s not always possible to find enough time to do a deep
-                  house clean. We lead busy lives, often balancing family and
-                  one or two jobs. That’s where Packmyload Comes in. We’ve worked
-                  with several customers to give their homes a professional
-                  level of service. Whether it’s one room or an entire house,
-                  we’re happy to take on any cleaning job. We deliver the
-                  highest standard.
-                </p>
-              </div>
+             
             </div>
           </div>
 
