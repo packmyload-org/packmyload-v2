@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+    <!-- Main URL -->
+    <url>
+        <loc>https://www.packmyload.com/</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
 
-<url>
-  <loc>https://www.packmyload.com/</loc>
-  <lastmod>2023-11-03T12:30:25+00:00</lastmod>
-</url>
+    <!-- Additional URLs -->
+    <url>
+        <loc>https://www.packmyload.com/book</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
 
+    <url>
+        <loc>https://www.packmyload.com/services</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.packmyload.com/home-moves</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.packmyload.com/junk-removal</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.packmyload.com/faqs</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.packmyload.com/partners</loc>
+        <lastmod>2023-11-03T12:30:25+00:00</lastmod>
+    </url>
 
 </urlset>
