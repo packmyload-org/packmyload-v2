@@ -34,12 +34,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <meta property="og:image:height" content="342"></meta>
             <meta property="og:title" content="packmyload.com"/>
             <meta property="og:image:width" content="342" />
+            <meta property="og:description" content="Nigeria's # 1 packing and moving company in Lagos and Abuja." />
+            <meta property="og:url" content="https://www.packmyload.com" />
         {/* Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.packmyload.com" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.packmyload.com" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@packmyload" />
+        <meta property="twitter:image" content="https://www.packmyload.com/images/iconpackmyload.webp"></meta>
         {/* WhatsApp */}
         <meta property="og:site_name" content="packmyload.com" />
         <meta property="og:locale" content="en_US" />

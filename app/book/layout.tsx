@@ -9,7 +9,8 @@ export default function BookAMoveLayout({
 }) {
 
  return(
-  <>
+   <>
+            <meta property="og:url" content="https://www.packmyload.com/book" />
         {children}
       <ToastContainer
         position="top-right"
