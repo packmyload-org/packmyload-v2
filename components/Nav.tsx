@@ -15,7 +15,7 @@ function Nav() {
     <Link href='/' className='flex gap-2 text-center cursor-pointer'>
     <Image 
       src={ Logo }
-      alt='Logo'
+      alt='Moving Company in lagos & abuja Nigeria: Packmyload Logo'
       width={100}
       height={37}
       className='object-contain w-[150px]'

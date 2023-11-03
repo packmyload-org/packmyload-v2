@@ -18,7 +18,7 @@ const StepCard: React.FC<StepCardProps> = ({title, step, addon, imageUrl}) => {
                 </h2>
                 <img 
                     src={imageUrl} 
-                    alt="step-image" 
+                    alt={`Moving Company in lagos & abuja Nigeria: step to ${addon.toLowerCase()}`} 
                     className="w-[450px] h-[350px] mx-auto mt-2 object-cover"
                 />
             </div>

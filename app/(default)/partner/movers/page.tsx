@@ -39,17 +39,17 @@ export default function Movers() {
           <div className="flex flex-row flex-wrap gap-2 justify-center max-w-6xl mx-auto ">
             <img
               src="/images/partner/packmyload_1697583737398.webp"
-              alt="image-1"
+              alt="Moving Company in lagos & abuja: Packing Items by Packmen"
               className="w-[355px] h-[350px] relative object-cover"
             />
             <img
               src="/images/about/packmyload_1696572694895.webp"
-              alt="image-2"
+              alt="Moving Company in lagos & abuja: Packing Items by Packmen"
               className="w-[355px] h-[350px] relative object-cover"
             />
             <img
               src="/images/partner/packmyload_1697583683638.webp"
-              alt="image-3"
+              alt="Moving Company in lagos & abuja: Packing Items by Packmen"
               className="w-[355px] h-[350px] relative object-cover"
             />
           </div>
@@ -58,7 +58,7 @@ export default function Movers() {
               <div className="mx-auto w-full h-full flex items-center">
                 <img
                   src="/images/partner/packmyload_1695798593791.webp"
-                  alt="image-1"
+                  alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                   loading="lazy"
                   className="w-full h-auto lg:h-[400px] mx-auto lg:mx-0 rounded-md object-cover flex-grow"
                 />

@@ -14,7 +14,7 @@ const PackSection: React.FC = () => {
                         src={calendar}
                         width={40}
                         height={40}
-                        alt="icon" 
+                        alt="Moving Company in lagos & abuja Nigeria: calendar icon" 
                         className='float-right'
                         />
                         <div className='clear-both' />
@@ -31,7 +31,7 @@ const PackSection: React.FC = () => {
                     </div>
                     <Image 
                     src={'/images/Packmyload.com-home-office-relocations.webp'}
-                    alt="people image" 
+                    alt="Moving Company in lagos & abuja Nigeria: Happy Customers" 
                     loading='lazy'
                     width={550}
                     height={400}
@@ -45,7 +45,7 @@ const PackSection: React.FC = () => {
                             src={secure} 
                             width={40}
                             height={40}
-                            alt="icon" 
+                            alt="Moving Company in lagos & abuja Nigeria: secure icon" 
                             className='float-right'
                         />
                         <div className='clear-both' />
@@ -61,7 +61,7 @@ const PackSection: React.FC = () => {
                     </div>
                     <img
                     src={'/images/coverge-pack.webp'}
-                    alt="people image" 
+                    alt="Moving Company in lagos & abuja Nigeria: people moving" 
                     loading='lazy'
                     className='float-right w-full h-[330px] object-cover rounded-b-xl'
                     />

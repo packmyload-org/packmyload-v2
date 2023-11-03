@@ -22,7 +22,7 @@ export default function Services(){
                   <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
                   <img 
                     src={item.img} 
-                    alt="Read more" 
+                    alt={item.alt} 
                     width={100} 
                     height={100} 
                     loading='lazy'
@@ -48,7 +48,7 @@ export default function Services(){
                   <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
                   <img 
                     src={item.img} 
-                    alt="Read more" 
+                    alt={item.alt} 
                     width={100} 
                     height={100} 
                     loading='lazy'
