@@ -252,7 +252,7 @@ export default function StudentMoves(){
                   <h1 className='text-xl md:text-2xl font-bold text-[#ffff] '>Request A Interstate Moving Quote</h1>
                   
                   <Link href='/move'>  
-                    <button  className="text-white shadow-lg border-2 text-xl font-bold p-2 w-[200px] bg-[#4BCBFE] outline-none transition-colors duration-600 hover:animate-pulse hover:bg-white hover:text-black">Get Quote</button>
+                    <button  className="text-white shadow-lg border-2 text-xl font-bold p-3 w-[200px] bg-[#4BCBFE] outline-none transition-colors duration-600 hover:animate-pulse hover:bg-white hover:text-black rounded-full">Get Quote</button>
                   </Link>
 
                 </div>
