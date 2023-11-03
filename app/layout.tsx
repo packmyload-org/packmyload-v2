@@ -30,15 +30,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <meta charSet="UTF-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <meta name="description" content="packmyload.com is the preferred and rated number one packing and moving company in Lagos and Abuja, Nigeria. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move."></meta>
-            <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.png"/>
+        <meta name="description" content="packmyload is the preferred and rated Nigeria's #1 packing and moving company in Lagos and Abuja. We offer international and interstate packing and moving to Lagos. Our staff help you with a swift, fast &amp; efficient move."></meta>
+        <meta name="keywords" content="moving company, Nigeria, Lagos, Abuja, international relocation, interstate moving, professional movers" />
+            <meta property="og:image" content="https://www.packmyload.com/images/iconpackmyload.webp"/>
             <meta property="og:image:type" content="image/png"></meta>
             <meta property="og:image:height" content="342"></meta>
             <meta property="og:title" content="packmyload.com"/>
-            <link rel="canonical" href="https://www.packmyload.com/" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>Packmyload - Premier Packing and Moving Company in Lagos & Abuja, Nigeria</title>
-
+            <meta property="og:image:width" content="342" />
+            <meta property="og:description" content="Nigeria's # 1 packing and moving company in Lagos and Abuja." />
+            <meta property="og:url" content="https://www.packmyload.com" />
+        {/* Facebook */}
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.packmyload.com" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@packmyload" />
+        <meta property="twitter:image" content="https://www.packmyload.com/images/iconpackmyload.webp"></meta>
+        {/* WhatsApp */}
+        <meta property="og:site_name" content="packmyload.com" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:see_also" content="https://www.packmyload.com" />
+            <link rel="icon" type='image/png' href="/favicon.ico" />
+            <title>Packmyload - Premier Packing and Moving Company in Lagos & Abuja, Nigeria</title>
       </head>
 
       <body>
