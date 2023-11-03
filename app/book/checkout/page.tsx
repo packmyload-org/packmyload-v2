@@ -45,32 +45,31 @@ export default function Checkout() {
 // };
     const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
-    useEffect(() => {
-        if (
-            state.buildingTypeEnd === '' ||
-            state.buildingTypeStart === '' ||
-            state.firstName === '' ||
-            state.lastName === '' ||
-            state.destination === '' ||
-            state.email === '' ||
-            state.service === '' ||
-            state.moveDate === '' ||
-            state.moveTime === '' ||
-            state.pickUp === ''
-        ){
-            return redirect('/book/locations-details')
-        }
-    })
+    // useEffect(() => {
+    //     if (
+    //         state.buildingTypeEnd === '' ||
+    //         state.buildingTypeStart === '' ||
+    //         state.firstName === '' ||
+    //         state.lastName === '' ||
+    //         state.destination === '' ||
+    //         state.email === '' ||
+    //         state.service === '' ||
+    //         state.moveDate === '' ||
+    //         state.moveTime === '' ||
+    //         state.pickUp === ''
+    //     ){
+    //         return redirect('/book/locations-details')
+    //     }
+    // })
     
     const priceString = state.totalPrice
     let price = Number(priceString.split(',').join(''));
-    const truckPercentage = 0.55; // 55%
-    const servicePercentage = 0.35; // 35%
-    const materialsPercentage = 1 - truckPercentage - servicePercentage; // Remaining percentage
-
-    const truck = price * truckPercentage;
-    const service = price * servicePercentage;
-    const materials = price * materialsPercentage;
+    const truckPercentage = 50; // 50%
+    const servicePercentage = 30; // 30%
+    const truck = Math.round((price * truckPercentage) / 100);
+    const service = Math.round((price * servicePercentage) / 100);
+    const materialsPercentage = 100 - truckPercentage - servicePercentage; // Remaining percentage
+    const materials = Math.round(price * (materialsPercentage / 100)); 
     const tax = calculateTax(price)
     const total = (price + tax)
     const data = {
