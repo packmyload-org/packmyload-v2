@@ -17,12 +17,12 @@ export default function Partnerpage() {
             <div className="container py-12 max-w-6xl">
               <div className="join-wrap fl-wrap text-white">
                 <Row
-                  className="w-full flex"
+                  className="w-full flex items-center"
                   justify="space-between"
                   align="middle"
                 >
-                  <Col span={24} md={10} className="flex flex-col space-y-6">
-                    <h3 className="text-2xl lg:text-4xl font-bold">
+                  <Col span={24} md={15} className="flex flex-col space-y-6">
+                    <h3 className="text-2xl lg:text-4xl font-bold mt-4 md:mt-0">
                       Become a Business Partner
                     </h3>
                     <p >
@@ -45,11 +45,11 @@ export default function Partnerpage() {
           <div className="w-full bg-[#012D40] h-auto ">
             <AnimatedWrapper>
             
-              <div className="absolute w-full top-[200px] md:top-[285px] lg:top-[300px] p-2">
-                <section className=" max-w-5xl xl:max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-3 flex-wrap">
+              <div className="absolute w-full top-[200px] md:top-[225px] lg:top-[300px] p-2 mt-6 md:mt-0">
+                <section className=" max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-2 flex-wrap">
                   <div className="w-[90%] md:w-auto">
                     <Card
-                      className="w-[100%] md:w-80 lg:w-96 lg:h-[300px] opacity-80"
+                      className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80"
                       style={{ backgroundColor: "#F4FAFA" }}
                       title="Business & Retail"
                     >
@@ -62,7 +62,7 @@ export default function Partnerpage() {
                   </div>
                   <div className="w-[90%] md:w-auto">
                     <Card
-                      className="w-[100%] md:w-80 lg:w-96 lg:h-[300px] opacity-80"
+                      className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80 lg:py-3"
                       style={{ backgroundColor: "#F4FAFA" }}
                       title="Integrations & Lead Monetization"
                     >
@@ -73,13 +73,27 @@ export default function Partnerpage() {
                       </ul>
                     </Card>
                   </div>
+                  <div className="w-[90%] md:w-auto">
+                  <Card
+                    className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80 lg:py-3"
+                    style={{ backgroundColor: "#F4FAFA" }}
+                    title="Transportation & Logistics"
+                  >
+                    <ul>
+                      <li>Logistics Companies</li>
+                      <li>Courier Services</li>
+                      <li>Transportation Providers</li>
+                    </ul>
+                  </Card>
+
+                  </div>
                 </section>
               </div>
             </AnimatedWrapper>
             <div>
             <AnimatedWrapper>
           
-              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-64 md:pt-56 md:max-w-6xl lg:pt-96 md:px-1">
+              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-[28rem] md:pt-[18rem] lg:pt-28 md:max-w-6xl md:px-1">
                 <img
                   src="/images/partner/packmyload_1695798527485.webp"
                   alt="image-1"
@@ -101,7 +115,7 @@ export default function Partnerpage() {
                     One-off deliveries (piece of furniture)
                   </li>
 
-                  <p className="text-base  text-white">
+                  <p className="text-base text-white">
                     Packmyload can manage your business delivery logistics for{" "}
                     <br /> you. If you deliver large items to you clients but
                     you don’t <br /> want to waste time managing the moves.
