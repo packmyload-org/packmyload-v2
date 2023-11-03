@@ -31,7 +31,7 @@ export default function OurStory() {
               <div className=" mx-auto w-full h-full">
                 <img
                   src="/images/about/packmyload_1696572786359.webp"
-                  alt="image-1"
+                  alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                   loading="lazy"
                   className="w-full h-auto mx-auto lg:mx-0 rounded-md object-cover flex-grow"
                   />
@@ -78,7 +78,7 @@ export default function OurStory() {
               <div className="mx-auto w-full h-full flex items-center">
               <img
                 src="/images/about/packmyload_1696572694895.webp"
-                alt="image-2"
+                alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                 loading="lazy"
                   className="w-auto w-full h-auto mx-auto lg:mx-0 rounded-md object-cover flex-grow"
               />

@@ -2,46 +2,55 @@
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-home_moves-banner_image.webp",
     "title": "Home Relocations.",
-    "to": "/home-moves"
+    "to": "/home-moves",
+    "alt": "Moving Company in lagos & Abuja Home Relocations Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-office_moves-banner_image.webp",
     "title": "Office Relocations.",
-    "to": "/office-moves"
+    "to": "/office-moves",
+    "alt": "Moving Company in lagos & Abuja Office Relocations Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-store_moves-banner_image.webp",
     "title": "Store Delivery.",
-    "to": "/store-delivery"
+    "to": "/store-delivery",
+    "alt": "Moving Company in lagos & Abuja Store Delivery Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-students_move-banner_image.webp",
     "title": "Interstate Car Transport.",
-    "to": "/Interstate-Car-Transport"
+    "to": "/Interstate-Car-Transport",
+    "alt": "Moving Company in lagos & Abuja Interstate Car Transport Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-junk_removal-banner_image.webp",
     "title": "Junk Removal.",
-    "to": "/Junk-moves"
+    "to": "/Junk-moves",
+    "alt": "Moving Company in lagos & Abuja Junk Removal Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-wedding_gift-banner_image.webp",
     "title": "Wedding Gifts Handling.",
-    "to": "/wedding-handling"
+    "to": "/wedding-handling",
+    "alt": "Moving Company in lagos & Abuja Wedding Gifts Handling Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-international_moves-banner_image.webp",
     "title": "International Relocations.",
-    "to": "/international-relocations"
+    "to": "/international-relocations",
+    "alt": "Moving Company in lagos & Abuja Wedding Gifts Handling Service"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-cleaning-banner_image.webp",
     "title": "Cleaning Services.",
-    "to": "/cleaning"
+    "to": "/cleaning",
+    "alt": "Moving Company in lagos & Abuja Cleaning Services"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-storage_moves-banner_image.webp",
     "title": "Storage.",
-    "to": "/storage"
+    "to": "/storage",
+    "alt": "Moving Company in lagos & Abuja Storage Service"
   }
 ]

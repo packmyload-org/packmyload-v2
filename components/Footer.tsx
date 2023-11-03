@@ -256,7 +256,7 @@ export default function Footer() {
               <Image
                 src="/images/iconpackmyload.webp"
                 style={{ width: "30px" }}
-                alt="image"
+                alt="Moving Company in lagos & abuja Nigeria: packmyload icon"
                 width={30}
                 height={30}
                 loading="lazy"
@@ -315,7 +315,7 @@ href="https://www.linkedin.com/company/packmyload-com/about/"
                   target="_blank"
                   aria-label="connect on threads"
                 >
-                  <Image src={Threads} alt="threads" width={20} height={18} />
+                  <Image src={Threads} alt="threads icon" width={20} height={18} />
                 </a>
               </li>
             </ul>
