@@ -30,8 +30,8 @@ export default function Location_Details(){
         stepDescription='Almost Done.👏'
         leftContent={leftContent}
         textDescription={textDescription}
-        prev="/move/items"
-        next="/move/checkout"
+        prev="/book/items"
+        next="/book/checkout"
         />
     )
 }

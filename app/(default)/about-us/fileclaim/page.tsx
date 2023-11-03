@@ -6,7 +6,7 @@ export default function Leaders() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100 mt-1">
       <div className="w-full text-black" style={{ marginTop: "24px" }}>
-        <section className="gradient-bg grid items-center py-[20px] min-h-[250px] ">
+        <section className="gradient-bg grid items-center py-[5px] min-h-[150px] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -36,40 +36,77 @@ export default function Leaders() {
         <div className="w-full h-auto ">
           <div className="grid grid-col px-10 py-7 ">
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-[#6D9ED2]">For a recently completed household move with Packmyload:</h1>
+              <h1 className="text-2xl font-bold text-blue-300 py-6">
+                For a recently completed household move with Packmyload:
+              </h1>
               <Link href="/contact">
-                <p className="text-[#6D9ED2]">Click here to submit a claim</p>
+                <p  className=" text-base leading-8 text-[#777674]  ">Click here to submit a claim</p>
               </Link>
-              <p className=" md:text-xl  pt-5 text-[#777674]  ">
-                If you need assistance, please call 800-325-9970 <br />
-                Note: If your claim is for a move within the state of Lagos,
-                please contact your Packmyload agent to request the appropriate
+              <p className="text-base leading-8 text-[#777674]  ">
+                If you need assistance, please call +234-700-722-5776 
+                <Link href="/terms">
+                <p  className=" text-base leading-8 text-[#777674]  "> Note: Before you file a claim please go through the Terms and Conditions</p>
+              </Link> . Afterwards,please contact your Packmyload agent to request the appropriate
                 form.
               </p>
             </div>
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-[#6D9ED2]">
-              For claims for other types of moves, click one of the below:
+              <h1 className="text-2xl font-bold text-blue-300 py-6">
+                For claims for other types of moves, click one of the below:
               </h1>
-              <p>
-              <li>International Moves</li>
-              <li>Logistics Shipment</li>
-              <li>Government Move</li>
-              <li>Military Move</li>
+
+              <p className="mt-3" >
+                <Link
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLScAyYSpObaVywgkcBo_zKZ6II5XYB59CyVL55uylkcTd6_PJA/viewform?embedded=true"
+                  }
+                  className=" text-base leading-8 text-[#777674] "
+                >
+                  <li>Interstate Move</li>
+                </Link>
+                 <Link
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLScAyYSpObaVywgkcBo_zKZ6II5XYB59CyVL55uylkcTd6_PJA/viewform?embedded=true"
+                  }
+                  className=" text-base leading-8 text-[#777674]  "
+                >
+                  <li>Logistics</li>
+                </Link>
+                <Link
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLScAyYSpObaVywgkcBo_zKZ6II5XYB59CyVL55uylkcTd6_PJA/viewform?embedded=true"
+                  }
+                  className="text-base leading-8 text-[#777674]  "
+                >
+                  <li>Home Moves</li>
+                </Link>
+                <Link
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLScAyYSpObaVywgkcBo_zKZ6II5XYB59CyVL55uylkcTd6_PJA/viewform?embedded=true"
+                  }
+                  className="text-base leading-8 text-[#777674]  "
+                >
+                  <li>Office Moves</li>
+                </Link>
               </p>
 
-
-              <p className=" md:text-xl pt-5 text-[#777674]  ">Note: The military requires that documentation for items lost and/or damaged in shipments moving through the Defense Personal Property System (DPS) be reported through DPS. Information on how to file your claim can be found on the official DPS portal. To log in and begin the process of submitting your claim, you must have the Government Bill of Lading (GBL) number for your shipment, as well as your Electronic Transportation Acquisition (ETA) login.</p>
+              
             </div>
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-[#6D9ED2]">
+              <h1 className="text-2xl font-bold text-blue-300 py-6">
                 Avoiding Claims:
               </h1>
 
-              <p className=" md:text-xl  pt-5 text-[#777674]  ">
-              We have several measures in place designed to protect your belongings in case of accidental loss or damage. Please ensure that you have a full understanding of how our basic Full-Value Protection plan and High Value Inventory Form work in order to protect yourself and your belongings in the event of the unexpected. We also provide additional protection options above and beyond our basic Full-Value Protection plan and High Value Inventory Form.
+              <p className="mt-3 text-base leading-8 text-[#777674] ">
+                We have several measures in place designed to protect your
+                belongings in case of accidental loss or damage. Please ensure
+                that you have a full understanding of how our basic Full-Value
+                Protection plan and High Value Inventory Form work in order to
+                protect yourself and your belongings in the event of the
+                unexpected. We also provide additional protection options above
+                and beyond our basic Full-Value Protection plan and High Value
+                Inventory Form.
               </p>
-
             </div>
           </div>
         </div>

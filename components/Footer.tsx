@@ -20,20 +20,20 @@ export default function Footer() {
     <footer
       className={` main-footer w-full ${
         [
-          "/move",
-          "/move/items",
-          "/move/locations-details",
-          "/move/checkout",
+          "/book",
+          "/book/items",
+          "/book/locations-details",
+          "/book/checkout",
         ].some((url) => url === path)
           ? "bg-inherit"
           : "dark-footer"
       }`}
     >
       {[
-        "/move",
-        "/move/items",
-        "/move/locations-details",
-        "/move/checkout",
+        "/book",
+        "/book/items",
+        "/book/locations-details",
+        "/book/checkout",
       ].some((url) => url === path) ? null : (
         <div className="px-2 sm:pb-20 xl:pb-0 max-w-6xl mx-auto">
           <Row
@@ -44,7 +44,7 @@ export default function Footer() {
           >
             <Col span={20} lg={6} className="md:h-[350px] mb-0 lg:mb-6">
               <div className="space-y-8 text-gray-400">
-                <h3 className="text-xl font-[600]">About Us</h3>
+                <a href="/about-us" className="text-xl font-[600]">About Us</a>
                 <div className="space-y-6 pt-8 border-t-2 border-t-gray-950">
                   <p className="text-white">
                     We are a professional moving company, powered by technology
@@ -55,7 +55,7 @@ export default function Footer() {
                     <li className="w-full flex no-wrap items-center">
                       <a
                         className="text-gray-100 hover:text-gray-950 text-xs"
-                        href="/privacy"
+                        href="/policy"
                       >
                         PRIVACY POLICY
                       </a>
@@ -99,7 +99,7 @@ export default function Footer() {
               className="lg:h-[350px] min-h-max md:min-h-0 mb-6"
             >
               <div className="flex text-gray-400 space-y-8 flex-col h-full w-full">
-                <h3 className="text-xl font-[600]">Our Services</h3>
+                <a href='/services' className="text-xl font-[600]">Our Services</a>
                 <Row
                   className="w-full pt-8 mb-2 border-t-2 h-full border-t-gray-950"
                   justify={"space-evenly"}
@@ -110,8 +110,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/home-moves"
-                          title=""
+                          href="/home-moves"
+                          title="Home Moves"
                         >
                           Home Moves
                         </a>
@@ -119,8 +119,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/office-moves"
-                          title=""
+                          href="/office-moves"
+                          title="Office Relocation"
                         >
                           Office Relocation
                         </a>
@@ -128,8 +128,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/interstate-Car-Transport"
-                          title="Student Moves"
+                          href="/Interstate-Car-Transport"
+                          title="Interstate Car Transport"
                         >
                           Interstate Car Transport
                         </a>
@@ -137,7 +137,7 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/cleaning"
+                          href="/cleaning"
                           title="Cleaning"
                         >
                           Cleaning Services
@@ -146,8 +146,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/wedding-handling"
-                          title=""
+                          href="/wedding-handling"
+                          title="Wedding Gift Handling"
                         >
                           Wedding Gift Handling
                         </a>
@@ -159,8 +159,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/international-relocations"
-                          title=""
+                          href="/international-relocations"
+                          title="International Relocation"
                         >
                           International Relocation
                         </a>
@@ -168,8 +168,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/junk-moves"
-                          title=""
+                          href="/Junk-moves"
+                          title="Junk Removal"
                         >
                           {" "}
                           Junk Removal
@@ -178,8 +178,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/storage"
-                          title=""
+                          href="/storage"
+                          title="Storage"
                         >
                           Storage
                         </a>
@@ -187,8 +187,8 @@ export default function Footer() {
                       <li className="clearfix">
                         <a
                           className="text-white text-xs font-bold"
-                          href="/services/store-delivery"
-                          title=""
+                          href="/store-delivery"
+                          title="Store Delivery"
                         >
                           Store Delivery
                         </a>
@@ -224,7 +224,7 @@ export default function Footer() {
                   </form>
                   <ul className="text-white uppercase flex flex-wrap gap-5 hover:text-gray-950 w-[100%] md:w-[90%] mx-auto">
                     <li className="flex gap-3 items-center text-xs">
-                        <a href="/faqs">FAQs </a>
+                        <a href="/Faqs">FAQs </a>
                         <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
                     <li className="flex gap-3 items-center text-xs">
@@ -236,7 +236,7 @@ export default function Footer() {
                       <div className="bg-[#4db7fe] w-[4px] rounded-full h-1">{''}</div>
                     </li>
                     <li className='text-xs whitespace-nowrap'>
-                      <a href="/become_a_packer">Become a Packer</a>
+                      <a href="/partner/movers">Move For Us</a>
                     </li>
                   </ul>
                 </div>
@@ -311,7 +311,7 @@ href="https://www.linkedin.com/company/packmyload-com/about/"
               </li>
               <li>
                 <a
-                  href="https://www.youtube.com/channel/UC7QlhSoPlX3oJN8hZes2abQ"
+                  href="https://www.threads.net/@packmyload"
                   target="_blank"
                   aria-label="connect on threads"
                 >

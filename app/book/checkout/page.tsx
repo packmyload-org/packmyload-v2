@@ -45,25 +45,31 @@ export default function Checkout() {
 // };
     const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
-    useEffect(() => {
-        if (
-            state.buildingTypeEnd === '' ||
-            state.buildingTypeStart === '' ||
-            state.firstName === '' ||
-            state.lastName === '' ||
-            state.destination === '' ||
-            state.email === '' ||
-            state.service === '' ||
-            state.moveDate === '' ||
-            state.moveTime === '' ||
-            state.pickUp === ''
-        ){
-            return redirect('/move/locations-details')
-        }
-    })
+    // useEffect(() => {
+    //     if (
+    //         state.buildingTypeEnd === '' ||
+    //         state.buildingTypeStart === '' ||
+    //         state.firstName === '' ||
+    //         state.lastName === '' ||
+    //         state.destination === '' ||
+    //         state.email === '' ||
+    //         state.service === '' ||
+    //         state.moveDate === '' ||
+    //         state.moveTime === '' ||
+    //         state.pickUp === ''
+    //     ){
+    //         return redirect('/book/locations-details')
+    //     }
+    // })
     
     const priceString = state.totalPrice
     let price = Number(priceString.split(',').join(''));
+    const truckPercentage = 50; // 50%
+    const servicePercentage = 30; // 30%
+    const truck = Math.round((price * truckPercentage) / 100);
+    const service = Math.round((price * servicePercentage) / 100);
+    const materialsPercentage = 100 - truckPercentage - servicePercentage; // Remaining percentage
+    const materials = Math.round(price * (materialsPercentage / 100)); 
     const tax = calculateTax(price)
     const total = (price + tax)
     const data = {
@@ -101,8 +107,6 @@ export default function Checkout() {
             if (res.ok) {
                 alerts.success('Success', 'Mail was sent successfully.')
                 setLoading(false)
-                router.push('/move')
-                localStorage.clear()
                 return;
             }
             alerts.error('Error', 'Oops! something went wrong. Unable to mail this email.')
@@ -273,7 +277,7 @@ const rightContent=(
                     </div>
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />
-                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={[{desc:'Truck Rental', rate:''},{desc:'Moving Materials', rate:'boxes, wrapping materials e.t.c'},{desc:'Service Charge', rate:''}]} columns={columns} pagination={false} />
+                    <Table className="w-[90%] mx-auto min-h-auto" dataSource={[{desc:'Truck Rental', rate:`${truck}`},{desc:'Moving Materials', rate:`${materials} (boxes, wrapping materials e.t.c)`},{desc:'Service Charge', rate:`${service}`}]} columns={columns} pagination={false} />
                     
 
                     <div className="space-y-6 mt-3 pt-3 border-t-2 border-t-sky-50" />

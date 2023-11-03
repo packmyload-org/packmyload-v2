@@ -2,46 +2,46 @@
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-home_moves-banner_image.webp",
     "title": "Home Relocations.",
-    "to": "/services/home-moves"
+    "to": "/home-moves"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-office_moves-banner_image.webp",
     "title": "Office Relocations.",
-    "to": "/services/office-moves"
+    "to": "/office-moves"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-store_moves-banner_image.webp",
     "title": "Store Delivery.",
-    "to": "/services/store-delivery"
+    "to": "/store-delivery"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-students_move-banner_image.webp",
     "title": "Interstate Car Transport.",
-    "to": "/services/Interstate-Car-Transport"
+    "to": "/Interstate-Car-Transport"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-junk_removal-banner_image.webp",
     "title": "Junk Removal.",
-    "to": "/services/junk-moves"
+    "to": "/Junk-moves"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-wedding_gift-banner_image.webp",
     "title": "Wedding Gifts Handling.",
-    "to": "/services/wedding-handling"
+    "to": "/wedding-handling"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-international_moves-banner_image.webp",
     "title": "International Relocations.",
-    "to": "/services/international-relocations"
+    "to": "/international-relocations"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-cleaning-banner_image.webp",
     "title": "Cleaning Services.",
-    "to": "/services/cleaning"
+    "to": "/cleaning"
   },
   {
     "img": "/images/moving-company-lagos-nigeria-packmyload.com-storage_moves-banner_image.webp",
     "title": "Storage.",
-    "to": "/services/storage"
+    "to": "/storage"
   }
 ]

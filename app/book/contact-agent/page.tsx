@@ -39,7 +39,7 @@ export default function Next_Page() {
       try {
             if (!data.email) {
                alerts.error('Error', 'Please enter your email address')
-               router.push('/move')
+               router.push('/book')
                return
             }
             const res = await fetch('/api/booking/contact', {

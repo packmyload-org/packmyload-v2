@@ -68,12 +68,12 @@ export default function BookingIndexForm() {
         // Handle button 1 click
         setLoading1(true);
         await handleSubmit(formData)
-        router.push('/move/rooms')
+        router.push('/book/rooms')
         return;
       } else if (buttonName === 'submitButton2') {
         setLoading(true);
         await handleSubmit(formData)
-        router.push('/move/contact-agent')
+        router.push('/book/contact-agent')
         return;
       }
     }

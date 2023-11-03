@@ -10,7 +10,7 @@ export async function initiatePaymentToPaystack(email: string, amount: number): 
   const body: string = JSON.stringify({
    email,
    amount: (amount * 100),
-   callback_url: 'https://packmyload-v3.vercel.app/verify-payment'
+   callback_url: 'https://packmyload.com/book/verify-payment'
   });
 
   try {
