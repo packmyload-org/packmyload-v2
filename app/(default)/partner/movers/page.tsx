@@ -11,7 +11,7 @@ export default function Movers() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg grid items-center py-[20px] h-[fit-content] ">
+        <section className="gradient-bg grid items-center py-[20px] lg:py-[5px] h-[fit-content] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -22,7 +22,7 @@ export default function Movers() {
                 justify="space-between"
                 align="middle"
               >
-                <Col span={24} md={10} className="flex flex-col space-y-6">
+                <Col span={24} md={15} className="flex flex-col space-y-6">
                   <h3 className="text-2xl md:text-4xl font-bold">
                     Join Our Community of Expert Movers
                   </h3>

@@ -5,7 +5,7 @@ export default function OurStory() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg flex flex-col items-center py-[20px] h-[fit-content]">
+        <section className="gradient-bg flex flex-col items-center py-[20px] lg:py-[5px] h-[fit-content]">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
