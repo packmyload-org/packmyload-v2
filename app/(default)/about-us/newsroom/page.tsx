@@ -6,7 +6,7 @@ export default function Newsroom() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg items-center py-[5px] min-h-[150px]  ">
+        <section className="gradient-bg items-center py-[20px] lg:py-[5px] h-[fit-content]">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -25,11 +25,6 @@ export default function Newsroom() {
                   Read more about our story and history to learn why we're Africa's Most Trusted Moving Company
                   </p>
                 </Col>
-                <Col
-                  span={24}
-                  md={10}
-                  className="flex items-center text-start md:text-end justify-center min-h-[160px]"
-                ></Col>
               </Row>
             </div>
           </div>
