@@ -10,7 +10,7 @@ export default function Partnerpage() {
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
         <AnimatedWrapper>
 
-          <section className="gradient-bg grid items-center py-[10px] h-[fit-content] ">
+          <section className="gradient-bg grid items-center py-[5px] h-[fit-content] ">
             <div className="cirle-bg">
               <div className="bg object-cover"></div>
             </div>
@@ -21,7 +21,7 @@ export default function Partnerpage() {
                   justify="space-between"
                   align="middle"
                 >
-                  <Col span={24} md={15} className="flex flex-col space-y-6">
+                  <Col span={24} md={12} className="flex flex-col space-y-6">
                     <h3 className="text-2xl lg:text-4xl font-bold mt-4 md:mt-0">
                       Become a Business Partner
                     </h3>
@@ -45,7 +45,7 @@ export default function Partnerpage() {
           <div className="w-full bg-[#012D40] h-auto ">
             <AnimatedWrapper>
             
-              <div className="absolute w-full top-[200px] md:top-[225px] lg:top-[300px] p-2 mt-6 md:mt-0">
+              <div className="absolute w-full top-[200px] md:top-[280px] lg:top-[300px] p-2 mt-6 md:mt-0">
                 <section className=" max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-evenly gap-2 flex-wrap">
                   <div className="w-[90%] md:w-auto">
                     <Card
@@ -62,7 +62,7 @@ export default function Partnerpage() {
                   </div>
                   <div className="w-[90%] md:w-auto">
                     <Card
-                      className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80 lg:py-3"
+                      className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80 md:py-3"
                       style={{ backgroundColor: "#F4FAFA" }}
                       title="Integrations & Lead Monetization"
                     >
@@ -75,7 +75,7 @@ export default function Partnerpage() {
                   </div>
                   <div className="w-[90%] md:w-auto">
                   <Card
-                    className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80 lg:py-3"
+                    className="w-[100%] md:w-80 lg:w-[330px] lg:h-[fit-content] opacity-80 md:py-3"
                     style={{ backgroundColor: "#F4FAFA" }}
                     title="Transportation & Logistics"
                   >
@@ -93,7 +93,7 @@ export default function Partnerpage() {
             <div>
             <AnimatedWrapper>
           
-              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-[28rem] md:pt-[18rem] lg:pt-28 md:max-w-6xl md:px-1">
+              <div className="w-full flex flex-col gap-5 md:flex-row justify-between mx-auto pt-[28rem] lg:pt-[14rem] md:max-w-6xl md:px-1">
                 <img
                   src="/images/partner/packmyload_1695798527485.webp"
                   alt="image-1"
