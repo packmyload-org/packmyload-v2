@@ -11,7 +11,7 @@ export default function Movers() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg grid items-center py-[20px] h-[fit-content] ">
+        <section className="gradient-bg grid items-center py-[20px] lg:py-[5px] h-[fit-content] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -22,7 +22,7 @@ export default function Movers() {
                 justify="space-between"
                 align="middle"
               >
-                <Col span={24} md={10} className="flex flex-col space-y-6">
+                <Col span={24} md={15} className="flex flex-col space-y-6">
                   <h3 className="text-2xl md:text-4xl font-bold">
                     Join Our Community of Expert Movers
                   </h3>
@@ -39,17 +39,17 @@ export default function Movers() {
           <div className="flex flex-row flex-wrap gap-2 justify-center max-w-6xl mx-auto ">
             <img
               src="/images/partner/packmyload_1697583737398.webp"
-              alt="image-1"
+              alt="Moving Company in lagos & abuja: Packing Items by Packmen"
               className="w-[355px] h-[350px] relative object-cover"
             />
             <img
               src="/images/about/packmyload_1696572694895.webp"
-              alt="image-2"
+              alt="Moving Company in lagos & abuja: Packing Items by Packmen"
               className="w-[355px] h-[350px] relative object-cover"
             />
             <img
               src="/images/partner/packmyload_1697583683638.webp"
-              alt="image-3"
+              alt="Moving Company in lagos & abuja: Packing Items by Packmen"
               className="w-[355px] h-[350px] relative object-cover"
             />
           </div>
@@ -58,7 +58,7 @@ export default function Movers() {
               <div className="mx-auto w-full h-full flex items-center">
                 <img
                   src="/images/partner/packmyload_1695798593791.webp"
-                  alt="image-1"
+                  alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                   loading="lazy"
                   className="w-full h-auto lg:h-[400px] mx-auto lg:mx-0 rounded-md object-cover flex-grow"
                 />

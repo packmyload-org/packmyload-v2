@@ -5,7 +5,7 @@ export default function Problem() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg items-center py-[20px] h-[fit-content] ">
+        <section className="gradient-bg items-center py-[20px] lg:py-[5px] h-[fit-content] ">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -33,7 +33,7 @@ export default function Problem() {
             <div className="flex flex-col gap-5 md:flex-row justify-between pt-3 max-w-6xl mx-auto lg:pt-9">
               <img
                 src="/images/partner/packmyload_1695798593791.webp"
-                alt="image-1"
+                alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                 loading="lazy"
                 className="w-[100%] h-auto md:w-[50%] md:h-auto lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover "
               />
@@ -120,7 +120,7 @@ export default function Problem() {
               </div>
               <img
                 src="/images/about/packmyload_1696572756874.webp"
-                alt="image-2"
+                alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                 loading="lazy"
                 className="w-[100%] h-auto md:w-[50%] md:h-auto lg:h-[550px] mx-auto lg:mx-0 rounded-md object-cover mb-4"
               />

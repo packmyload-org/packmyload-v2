@@ -6,7 +6,7 @@ export const AdSection: React.FC = () => {
 const router =useRouter()
     return (
         <section 
-            className="bg-[#2E5F9E] w-[100%]  bg-[url('/images/bg/shapes-big-new.webp')] "
+            className="bg-[#2E5F9E] w-[100%] bg-[url('/images/bg/shapes-big-new.webp')] "
         >
             <div 
                 className={`max-w-6xl mx-auto flex flex-col py-4 px-7 lg:py-10 lg:flex-row justify-center lg:justify-between `}
@@ -32,7 +32,7 @@ const router =useRouter()
                         src={"/images/packman.webp"}
                         width={345}
                         height={345}
-                        alt='packman'
+                        alt='Employee Holding Box Ready for Move'
                         className='rounded-[10px]'
                         loading='lazy'
                     />

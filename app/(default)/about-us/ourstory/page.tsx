@@ -5,7 +5,7 @@ export default function OurStory() {
   return (
     <div className="flex justify-left min-h-screen bg-gray-100">
       <div className="w-full text-black" style={{ marginTop: "70px" }}>
-        <section className="gradient-bg flex flex-col items-center py-[20px] h-[fit-content]">
+        <section className="gradient-bg flex flex-col items-center py-[20px] lg:py-[5px] h-[fit-content]">
           <div className="cirle-bg">
             <div className="bg object-cover"></div>
           </div>
@@ -31,7 +31,7 @@ export default function OurStory() {
               <div className=" mx-auto w-full h-full">
                 <img
                   src="/images/about/packmyload_1696572786359.webp"
-                  alt="image-1"
+                  alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                   loading="lazy"
                   className="w-full h-auto mx-auto lg:mx-0 rounded-md object-cover flex-grow"
                   />
@@ -78,7 +78,7 @@ export default function OurStory() {
               <div className="mx-auto w-full h-full flex items-center">
               <img
                 src="/images/about/packmyload_1696572694895.webp"
-                alt="image-2"
+                alt="Moving Company in lagos & abuja: Packing Items by Packmen"
                 loading="lazy"
                   className="w-auto w-full h-auto mx-auto lg:mx-0 rounded-md object-cover flex-grow"
               />

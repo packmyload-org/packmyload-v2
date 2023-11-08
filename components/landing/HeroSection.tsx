@@ -21,7 +21,7 @@ export default function HeroSection() {
         <div className="flex flex-wrap w-full justify-center gap-2 lg:gap-6 mt-2 mx-auto">
           <Image
             src="/images/team/hero-img1.webp"
-            alt="Image 1"
+            alt="Moving Company in lagos & abuja Nigeria: People Discovering Packmyload - Stage 1"
             className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain xl:mt-2"
             loading="lazy"
             width={160}
@@ -29,7 +29,7 @@ export default function HeroSection() {
           />
           <Image
             src="/images/team/hero-img2.webp"
-            alt="Image 2"
+            alt="Moving Company in lagos & abuja Nigeria: People Discovering Packmyload - Stage 2"
             className="w-[50px] h-[50px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] xl:w-[160px] xl:h-[160px] object-contain mt-5 xl:mt-10"
             loading="lazy"
             width={120}
@@ -37,7 +37,7 @@ export default function HeroSection() {
           />
           <Image
             src="/images/team/hero-img3.webp"
-            alt="Image 3"
+            alt="Moving Company in lagos & abuja Nigeria: People Discovering Packmyload - Stage 3"
             className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain mt-2 lg:mt-4 xl:mt-6"
             loading="lazy"
             width={160}
@@ -45,7 +45,7 @@ export default function HeroSection() {
           />
           <Image
             src="/images/team/hero-img4.webp"
-            alt="Image 4"
+            alt="Moving Company in lagos & abuja Nigeria: People Discovering Packmyload - Stage 4"
             className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain mt-2 lg:mt-3 xl:mt-4"
             loading="lazy"
             width={160}
@@ -53,7 +53,7 @@ export default function HeroSection() {
           />
           <Image
             src="/images/team/hero-img5.webp"
-            alt="Image 5"
+            alt="Moving Company in lagos & abuja Nigeria: People Discovering Packmyload - Stage 5"
             className="w-[80px] h-[80px] md:w-[160px] md:h-[160px] lg:w-[190px] lg:h-[190px] xl:w-[220px] xl:h-[220px] object-contain mt-3 lg:mt-6 xl:mt-8"
             loading="lazy"
             width={160}
