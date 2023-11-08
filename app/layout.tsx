@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import './globals.css'
 import Script from 'next/script';
 import Loading from './loading';
-import Chat from '@/components/chat/chat';
 const Provider = dynamic(() => import("@/providers/provider"), { ssr: false , loading: () => <Loading />})
 export default function RootLayout({
   children,
@@ -14,7 +13,8 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href="https://maps.googleapis.com" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
-          <link rel="preload" href='/images/bg/shapes-big-new.webp'/>
+          <link rel="preload" href='/images/bg/shapes-big-new.webp' />
+          <link rel="icon" type='image/png' href="/favicon.ico" />
       <head>
         {/* <!-- Google Tag Manager --> */}
         <Script
@@ -48,8 +48,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta property="og:site_name" content="packmyload.com" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:see_also" content="https://www.packmyload.com" />
-            <link rel="icon" type='image/png' href="/favicon.ico" />
-          <title>Packmyload</title>
+        <title>Packmyload</title>
+        
       </head>
 
       <body>
@@ -65,7 +65,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             {/* <Chat /> */}
         </div>
       </body>
-        
+      <Script
+          strategy="lazyOnload"
+          async={true}
+            dangerouslySetInnerHTML={{
+              __html: `
+                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/5d15294553d10a56bd7c3930/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+                })();
+              `,
+            }}
+          />
     </html>
   )
 }

@@ -21,17 +21,17 @@ import Chat from '@/components/chat/chat';
 function Home() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showChat, setShowChat] = useState(false);
+  // const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
     localStorage.clear();
-    if (document.getElementById('google-maps-api')) {
-      setIsLoaded(true);
-    }
+    // if (document.getElementById('google-maps-api')) {
+    //   setIsLoaded(true);
+    // }
 
-      setTimeout(() => {
-        setShowChat(true); // Show the Chat component after 40 seconds
-      }, 10000); // 40 seconds in milliseconds
+    //   setTimeout(() => {
+    //     setShowChat(true); // Show the Chat component after 40 seconds
+    //   }, 10000); // 40 seconds in milliseconds
     
   }, []);
 
@@ -83,8 +83,8 @@ function Home() {
             <Faq />
           </AnimatedWrapper>
           <Footer />
-
-          {showChat && <Chat />} 
+{/* 
+          {showChat && <Chat />}  */}
           <ToastContainer
             position="top-right"
             autoClose={5000}
