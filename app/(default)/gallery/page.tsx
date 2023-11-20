@@ -59,22 +59,22 @@ const Gallery = async() => {
       <br />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 p-3 sm:p-3 md:p-0 md:grid-cols-3 gap-2 max-w-6xl mx-auto">
-        {sortedFeed.map((post: any) => (
+        {sortedFeed?.map((post: any) => (
           <div key={post.id} className="rounded-lg overflow-hidden cursor-pointer">
-            {post.media_type === 'IMAGE' && (
+            {post?.media_type === 'IMAGE' && (
                 <img
-                  src={post.media_url}
+                  src={post?.media_url}
                   alt={post?.caption || "Instagram Image"}
                   loading='lazy'
                   className='object-cover w-full h-[400px] transition-transform duration-300 transform-gpu hover:scale-110'
                 />
             )}
-            {post.media_type === 'VIDEO' && (
-              <VideoPlayer media_url={post.media_url} />
+            {post?.media_type === 'VIDEO' && (
+              <VideoPlayer media_url={post?.media_url} />
             )}
 
-          {post.media_type === 'CAROUSEL_ALBUM' && (
-            <InstagramCarousel images={post.children.data} />
+          {post?.media_type === 'CAROUSEL_ALBUM' && (
+            <InstagramCarousel images={post?.children?.data} />
             )}
           </div>
         ))}
