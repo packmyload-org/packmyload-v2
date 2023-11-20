@@ -19,7 +19,6 @@ const getData = async() => {
   
 }
 
-
 const Gallery = async() => {
 
   const feed = await getData()
@@ -34,7 +33,7 @@ const Gallery = async() => {
     IMAGE: 3,
   }
 
-  const sortedFeed = feed?.data.sort((a: { media_type: string },b: { media_type: string }) => mediaTypeOrder[a.media_type] - mediaTypeOrder[b.media_type])
+  const sortedFeed = feed?.data?.sort((a: { media_type: string },b: { media_type: string }) => mediaTypeOrder[a.media_type] - mediaTypeOrder[b.media_type])
 
   return (
    <div className='mt-[70px] bg-[#F9F9F9]'>
