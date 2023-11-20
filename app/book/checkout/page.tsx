@@ -46,22 +46,22 @@ export default function Checkout() {
 // };
     const volume = sumVolume(state.items.map(item => ({ ...item, volume: item.volume || 0 })));
     
-    // useEffect(() => {
-    //     if (
-    //         state.buildingTypeEnd === '' ||
-    //         state.buildingTypeStart === '' ||
-    //         state.firstName === '' ||
-    //         state.lastName === '' ||
-    //         state.destination === '' ||
-    //         state.email === '' ||
-    //         state.service === '' ||
-    //         state.moveDate === '' ||
-    //         state.moveTime === '' ||
-    //         state.pickUp === ''
-    //     ){
-    //         return redirect('/book/locations-details')
-    //     }
-    // })
+    useEffect(() => {
+        if (
+            state.buildingTypeEnd === '' ||
+            state.buildingTypeStart === '' ||
+            state.firstName === '' ||
+            state.lastName === '' ||
+            state.destination === '' ||
+            state.email === '' ||
+            state.service === '' ||
+            state.moveDate === '' ||
+            state.moveTime === '' ||
+            state.pickUp === ''
+        ){
+            return redirect('/book/locations-details')
+        }
+    })
     
     const priceString = state.totalPrice
     let price = Number(priceString.split(',').join(''));
