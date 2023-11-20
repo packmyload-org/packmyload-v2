@@ -36,6 +36,7 @@ function Home() {
   }, []);
 
   return (
+    
     <div className='w-full min-h-full relative text-black' style={{ marginTop: '65px' }}>
       <Script id='google-maps-api' src={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=${'places'}`} strategy="lazyOnload"
         async={true} onLoad={() => setIsLoaded(true)} />

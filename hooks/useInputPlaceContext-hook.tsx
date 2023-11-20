@@ -46,7 +46,7 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
                   setInputValueWithLocalStorage(formattedAddress ?? '', inputName);
                   path.includes('move') && setTriggerCalculateRoute(true);
 
-                  if (latitude !== undefined && longitude !== undefined && !path.includes('move')) {
+                  if (latitude !== undefined && longitude !== undefined && !path.includes('book')) {
                     let location = { lat: latitude, lng: longitude };
                     setPlaceValueWithLocalStorage(location, inputName + 'Location');
                   }
@@ -60,7 +60,7 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
                   if (isNigeriaPresent && someWordPresent) {
                     setInputValueWithLocalStorage(formattedAddress ?? '', inputName);
                     handleFieldChange(inputName, formattedAddress ?? '');
-                    path.includes('move') && setTriggerCalculateRoute(true);
+                    path.includes('book') && setTriggerCalculateRoute(true);
                     // setNewMessage('Valid address with Nigeria present.');
                     return;
                   } else {
@@ -71,7 +71,7 @@ export const useInputPlaceContext = (autocomplete: google.maps.places.Autocomple
 
                 setInputValueWithLocalStorage(formattedAddress ?? '', inputName);
                 handleFieldChange(inputName, formattedAddress ?? '');
-                path.includes('move') && setTriggerCalculateRoute(true);
+                path.includes('book') && setTriggerCalculateRoute(true);
               // } else {
               //   // Display an error message if the place doesn't have the required address types
               //   alerts.error(`Invalid Address`, `Please provide a valid street or residential address.`);

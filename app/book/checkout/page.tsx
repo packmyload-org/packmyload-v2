@@ -11,6 +11,7 @@ const BookingLayout = dynamic(() => import('../BookingLayout'), {
 import { alerts } from "@/components/alerts/Alert";
 import dynamic from "next/dynamic";
 import Loading from '@/app/loading';
+import { CustomModal } from "@/components/modals/CustomModal";
 
 export default function Checkout() {
     const {state, dispatch}=useBookingForm()
@@ -91,6 +92,7 @@ export default function Checkout() {
         volume: volume,
         totalPrice: total,
     }
+    const [displayModal,setDisplayModal]= useState(false)
     const handleMailQuote = async() => { 
         if (!state.acceptedTerms) {
             return alerts.error('Invalid Submission', 'Please accept our terms and conditions')
@@ -105,7 +107,7 @@ export default function Checkout() {
                   body: JSON.stringify(data)
             })
             if (res.ok) {
-                alerts.success('Success', 'Mail was sent successfully.')
+                setDisplayModal(true)
                 setLoading(false)
                 return;
             }
@@ -144,7 +146,7 @@ export default function Checkout() {
         }
     }
 const rightContent=(
-    <div className="w-[90%] mx-auto">
+    <div className="w-[90%] mx-auto relative">
                 {/* Section 1 */}
                 <Spin spinning={loading} delay={500} size="large">
                 <div className="bg-blue-200 p-6 mb-4 rounded-md shadow-md">
@@ -332,8 +334,13 @@ const rightContent=(
                     </button>
                     </div>
                 </Col>
-                </div>
-         </Spin>
+        
+                 </div>
+            </Spin>
+            <CustomModal 
+                displayModal={displayModal}
+                setDisplayModal={setDisplayModal}
+                />
             </div>
        
     )

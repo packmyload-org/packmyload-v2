@@ -84,7 +84,7 @@ function Map() {
         handleFieldChange('distance', result?.distance ?? '')
       }
     }
-    if (path.includes("move")) {
+    if (path.includes("book")) {
       fetchRouteData();
     }else if (path.includes('partner') ) {
       setMapCenter({ lat: 6.465422, lng: 3.406448 })
@@ -93,7 +93,8 @@ function Map() {
   console.log(routeData)
   return (
     <div className='w-full h-full mb-4 rounded-md shadow-md'>
-      <GoogleMap
+      {
+        !path.includes('book') ?    <GoogleMap
         center={mapCenter}
         zoom={15}
         mapContainerStyle={{ width: '100%', height: '100%' ,minHeight:'230px'}}
@@ -104,12 +105,24 @@ function Map() {
           fullscreenControl: false,
         }}
       >
-        {
-       !path.includes('move') && <Marker position={mapCenter} />
-        }
-          
-        {routeData?.direction  && <DirectionsRenderer directions={routeData.direction} />}
+        <Marker position={mapCenter} />
+        
+      </GoogleMap> :
+          <GoogleMap
+        center={mapCenter}
+        zoom={15}
+        mapContainerStyle={{ width: '100%', height: '100%' ,minHeight:'230px'}}
+        options={{
+          streetViewControl: false,
+          zoomControl: false,
+          mapTypeControl: false,
+          fullscreenControl: false,
+        }}
+      >
+            {
+              routeData?.direction && <DirectionsRenderer directions={routeData.direction} /> }
       </GoogleMap>
+  }
     </div>
   );
 }
