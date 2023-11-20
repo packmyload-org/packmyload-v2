@@ -4,14 +4,14 @@ import { PlusCircle, Plus, Minus } from '@phosphor-icons/react';
 import { useBookingForm } from '@/context/BookingFormContext';
 import priceDataJson from '@/utils/prices.json';
 interface RoomProps{
-    roomType: string,
-    price: number
+  roomType: string,
+  price: number,
+  priceDataJson: any
 }
 
-export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
+export const RoomCounter: React.FC<RoomProps> = ({ roomType, price, priceDataJson}) => {
 
     const { state: bookingFormState, dispatch: bookingFormDispatch } = useBookingForm();
-
     const initialCount = bookingFormState.rooms.reduce((count, room) => {
         if (room.room === roomType) {
           return parseInt(room.numberOfRooms, 10);
@@ -21,7 +21,7 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
 
 
     const [countItem, setCountItem] = useState<number>(initialCount);
-    console.log()
+
 
     const increaseCountItem = () => {
         setCountItem((countItem) => countItem + 1);
@@ -66,7 +66,9 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
     );
     const handleFieldChange = (field: string, value: string | number) => {
       bookingFormDispatch({ type: 'UPDATE_FIELD', field, value });
-    };
+  };
+
+  
     useEffect(() => {
       if (bookingFormState.rooms.length === 0) {
         return;
@@ -94,8 +96,8 @@ export const RoomCounter: React.FC<RoomProps> = ({ roomType, price}) => {
         console.warn("Invalid move type.");
         return;
       }
-    
-      const priceDataArray = priceDataJson[moveType];
+      console.log(priceDataJson)
+      const priceDataArray = priceDataJson[moveType] 
     
       if (!priceDataArray || priceDataArray.length === 0) {
         console.warn("Price data array is empty or undefined.");

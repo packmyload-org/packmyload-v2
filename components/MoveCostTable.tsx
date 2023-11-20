@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import { alerts } from './alerts/Alert';
 
 interface MoveCost {
   Bedrooms: number;
@@ -33,7 +34,6 @@ const MoveCostTable: React.FC<MoveCostTableProps> = ({ initialData }) => {
   };
 
   const saveData = async () => {
-    console.log(data);
    const res = await fetch('/api/pricing', {
     method: "POST",
     headers: {
@@ -41,8 +41,10 @@ const MoveCostTable: React.FC<MoveCostTableProps> = ({ initialData }) => {
     },
     body: JSON.stringify(data)
    })
-   console.log(await res.json())
-    alert('Data saved! Check the console for the data.');
+   console.log(res)
+   if (res.ok) {
+    alerts.success('success','successfully updated')
+   }
   };
 
   return (

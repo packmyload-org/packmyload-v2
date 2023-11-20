@@ -4,6 +4,7 @@ import roomMove from '@/utils/RoomMoves.json';
 import dynamic from 'next/dynamic';
 import Loading from '@/app/loading';
 import { useBookingForm } from '@/context/BookingFormContext';
+import { useEffect, useMemo, useState } from 'react';
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
@@ -14,13 +15,32 @@ type RoomJson = {
         price: number
     }[]
 }
-
-export default function Rooms(){
+export default async function Rooms(){
 const handleFieldChange = (field: string, value: string) => {
     dispatch({ type: 'UPDATE_FIELD', field, value });
-};
+    };
+
+    const[priceData, setPriceData] = useState()
+
     const { state, dispatch } = useBookingForm();
     const roomsOb: RoomJson = roomMove
+    
+    useMemo(() => {
+  (async () => {
+   const hostURL = window.location.origin;
+   const res = await fetch(`${hostURL}/api/pricing`, {
+    method: "GET",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+   });
+   const data = await res.json();
+   const newObj = data.data[data.data.length - 1]
+   delete newObj._id;
+   delete newObj.__v;
+   setPriceData(newObj)
+  })();
+     }, []);
     
     const rightContent = (
         <main className='space-y-3'>
@@ -28,7 +48,9 @@ const handleFieldChange = (field: string, value: string) => {
             <div className='grid grid-cols-2 gap-2 p-1 pt-4 md:w-[70%] lg:w-[80%] w-full  h-[fit-content] mx-auto mt-2'>
                 {
                     roomsOb.rooms.map(room => (
-                        <RoomCounter roomType={room.room} price={room.price} />
+                        <RoomCounter roomType={room.room} price={room.price}
+                        priceDataJson={priceData as any}
+                        />
                     ))
                 }
             </div>

@@ -19,6 +19,7 @@ const getData = async() => {
   
 }
 
+
 const Gallery = async() => {
 
   const feed = await getData()
