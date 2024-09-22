@@ -2,22 +2,40 @@ import { VideoPlayer } from '@/components/gallery/VideoPlayer'
 import InstagramCarousel from '../../../components/gallery/InstagramCarousel'
 import Link from 'next/link'
 
-const getData = async() => {
+// const getData = async() => {
   
-  const insta_url = process.env.INSTAGRAM_URL
+//   const insta_url = process.env.INSTAGRAM_URL
 
-  if(!insta_url){
-    throw new Error("Missing Instagram Url")
+//   if(!insta_url){
+//     throw new Error("Missing Instagram Url")
+//   }
+//   try {
+//     const res = await fetch(insta_url, { next: { revalidate: 3600 } })
+//     return await res.json()
+
+//   } catch (error) {
+//     throw new Error("Failed to fetch data")
+//   }
+  
+// }
+
+
+const getData = async () => {
+  const insta_url = process.env.INSTAGRAM_URL;
+
+  if (!insta_url) {
+    console.warn("Missing Instagram URL");
+    return { data: [] }; // Return an empty array if the URL is missing
   }
+
   try {
-    const res = await fetch(insta_url, { next: { revalidate: 3600 } })
-    return await res.json()
-
+    const res = await fetch(insta_url, { next: { revalidate: 3600 } });
+    return await res.json();
   } catch (error) {
-    throw new Error("Failed to fetch data")
+    console.error("Failed to fetch data", error);
+    return { data: [] }; // Return an empty array if fetch fails
   }
-  
-}
+};
 
 const Gallery = async() => {
 
