@@ -51,7 +51,7 @@ const handleDateSelect = (date: dayjs.Dayjs | null) => {
         if (!open && state.moveTime === '')
           setCalendarVisible(true);
       }}
-      onSelect={handleDateSelect} 
+      onChange={handleDateSelect} 
       renderExtraFooter={() =>
         <>
         <p className='font-black text-lg px-5'>Select Move Time</p>
