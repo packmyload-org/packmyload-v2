@@ -16,6 +16,14 @@ interface AutoCompleteInputProps {
 
 
 export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }: AutoCompleteInputProps) => {
+  
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || "",
+    libraries: ["places"]
+  });
+
+  
+
  const { setInputValueWithLocalStorage } = useInputContext();
   const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null);
  
@@ -27,6 +35,8 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
  const { handlePlaceChanged } = useInputPlaceContext(autocomplete, inputName);
 
   const name = inputName.toLowerCase()
+
+  if (!isLoaded) return <div>Loading maps...</div>;
  
   return (
     <>

@@ -11,11 +11,25 @@ export default function Location_Details(){
     const { state } = useBookingForm()
     const router = useRouter()
 
+    // const rightContent = (
+    //     <div className="p-3 sm:px-5 w-full md:w-[95%]  mx-auto ">
+    //         <LocationServiceForm title={"Your Start Location"} location={state.pickUp} />
+    //         <LocationServiceForm title={"Your End Location"} location={state.destination} />
+    //         <p className="text-blue-700 text-lg font-semibold"><span className="font-bold">NOTE:</span> Packing more than 5 meter's attracts more charge.</p>
+    //     </div>
+    // )
+
     const rightContent = (
         <div className="p-3 sm:px-5 w-full md:w-[95%]  mx-auto ">
             <LocationServiceForm title={"Your Start Location"} location={state.pickUp} />
             <LocationServiceForm title={"Your End Location"} location={state.destination} />
             <p className="text-blue-700 text-lg font-semibold"><span className="font-bold">NOTE:</span> Packing more than 5 meter's attracts more charge.</p>
+            <button
+                onClick={() => router.push('/book/checkout')}
+                className="mt-4 bg-green-500 text-white px-4 py-2 rounded"
+            >
+                Go Now
+            </button>
         </div>
     )
     const textDescription = "Tell us more about your pick up and drop off location.";
