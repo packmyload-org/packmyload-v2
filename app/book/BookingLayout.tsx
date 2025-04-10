@@ -17,6 +17,7 @@ type BookingLayoutProps = {
 export default function BookingLayout ({leftContent, rightContent, stepDescription, textDescription, prev, next }: BookingLayoutProps) {
     const router = useRouter()
     const pathname = usePathname()
+    console.log(next)
     return (
         <div className="flex flex-col lg:flex-row gap-4">
             {/* Left section */}
@@ -66,7 +67,12 @@ export default function BookingLayout ({leftContent, rightContent, stepDescripti
                     {rightContent}
                 </div>
                 {next &&
-                    <div className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' onClick={() => router.push(next ?? '')}>
+                    <div 
+                    className='bg-blue-300 mx-auto text-center w-[130px] md:w-[160px] cursor-pointer font-black text-md text-white hover:text-blue-300 hover:bg-white p-2 rounded-lg' 
+                    onClick={() => {
+                        console.log(next)
+                        router.push(next ?? '')
+                    }}>
                     Proceed
                 </div>}
             </main>

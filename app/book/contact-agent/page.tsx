@@ -93,6 +93,11 @@ export default function Next_Page() {
          </Spin>
       </div>
   )
-return <BookingLayout leftContent={leftContent} rightContent={rightContent} stepDescription="Have Our Agent Contact You." textDescription="Sometimes, life's too busy to fill forms. Opt for a hassle-free experience – let our agents contact you swiftly." prev='/book_a_move' />
+return <BookingLayout 
+leftContent={leftContent} 
+rightContent={rightContent} 
+stepDescription="Have Our Agent Contact You." 
+textDescription="Sometimes, life's too busy to fill forms. Opt for a hassle-free experience – let our agents contact you swiftly." 
+prev='/book_a_move' />
 
 }

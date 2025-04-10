@@ -113,6 +113,7 @@ export const BookingFormProvider = ({ children }: { children: React.ReactNode })
   // Load initial state from localStorage (if available)
   useEffect(() => {
     const savedState = localStorage.getItem(LOCAL_STORAGE_KEY);
+    console.log(savedState)
     if (savedState) {
       dispatch({ type: 'RESTORE_STATE', payload: JSON.parse(savedState) });
     }
@@ -122,6 +123,8 @@ export const BookingFormProvider = ({ children }: { children: React.ReactNode })
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
   }, [state]);
+
+  console.log(state)
 
   return (
     <BookingFormContext.Provider value={{ state, dispatch }}>
