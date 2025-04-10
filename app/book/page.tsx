@@ -11,6 +11,8 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react"
 import Loading from "../loading";
 import Script from 'next/script';
+
+// 
 export default function Booking() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
   
