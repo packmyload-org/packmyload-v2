@@ -22,77 +22,83 @@ interface Move extends Document {
   isPaid: boolean;
 }
 
-const moveSchema = new Schema<Move>({
-  firstName: {
-    type: String,
-    required: [true, 'First Name is required']
-  },
-  lastName: {
-    type: String,
-    required: [true, 'Last Name is required']
-  },
-  email: {
-    type: String,
-    required: [true, 'Email is required'],
-  },
-  moveDate: {
-    type: String,
-    required: [true, 'Move Date is required']
-  },
-  pickUp: {
-    type: String,
-    required: [true, 'Pick Up is required']
-  },
-  destination: {
-    type: String,
-    required: [true, 'Destination is required']
-  },
-  moveTime: {
-    type: String,
-    required: [true, 'Move Time is required']
-  },
-  phoneNumber: {
-    type: String,
-    required: [true, 'Phone Number is required']
-  },
-  service: {
-    type: String,
-    required: [true, 'Service is required']
-  },
-  items: [
-    {
-      item: {
-        type: String,
-        required: [true, 'Item is required']
-      },
-      numberOfItems: {
-        type: String,
-        required: [true, 'Number of Items is required']
-      }
-    }
-  ],
-  totalPrice: {
-    type: Number,
-    required: [true, 'Total Price is required']
-  },
-  volume: {
-    type: Number,
-    required: [true, 'Volume is required']
-  },
-  countryCode: {
-    type: String,
-    required: [true, 'Country code is required']
-  },
-  reference: {
-    type: String,
-  },
-  isPaid: {
-    type: Boolean,
-    default: false
-  }
-},
-{ timestamps: true });
+// const moveSchema = new Schema<Move>({
+//   firstName: {
+//     type: String,
+//     required: [true, 'First Name is required']
+//   },
+//   lastName: {
+//     type: String,
+//     required: [true, 'Last Name is required']
+//   },
+//   email: {
+//     type: String,
+//     required: [true, 'Email is required'],
+//   },
+//   moveDate: {
+//     type: String,
+//     required: [true, 'Move Date is required']
+//   },
+//   pickUp: {
+//     type: String,
+//     required: [true, 'Pick Up is required']
+//   },
+//   destination: {
+//     type: String,
+//     required: [true, 'Destination is required']
+//   },
+//   moveTime: {
+//     type: String,
+//     required: [true, 'Move Time is required']
+//   },
+//   phoneNumber: {
+//     type: String,
+//     required: [true, 'Phone Number is required']
+//   },
+//   service: {
+//     type: String,
+//     required: [true, 'Service is required']
+//   },
+//   items: [
+//     {
+//       item: {
+//         type: String,
+//         required: [true, 'Item is required']
+//       },
+//       numberOfItems: {
+//         type: String,
+//         required: [true, 'Number of Items is required']
+//       }
+//     }
+//   ],
+//   totalPrice: {
+//     type: Number,
+//     required: [true, 'Total Price is required']
+//   },
+//   volume: {
+//     type: Number,
+//     required: [true, 'Volume is required']
+//   },
+//   countryCode: {
+//     type: String,
+//     required: [true, 'Country code is required']
+//   },
+//   reference: {
+//     type: String,
+//   },
+//   isPaid: {
+//     type: Boolean,
+//     default: false
+//   }
+// },
+// { timestamps: true });
 
+
+const moveSchema = new Schema({
+  firstName: { type: String, required: false }, // ← Changed to false
+  lastName: { type: String, required: false },
+  // ... repeat for all error fields
+});
 const Move = models.Move || model<Move>('Move', moveSchema);
 
 export default Move;

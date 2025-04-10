@@ -7,6 +7,14 @@ import Loading from '@/app/loading';
 const BookingLayout = dynamic(() => import('../BookingLayout'), {
   loading: () => <Loading/>,
 });
+
+
+
+
+
+
+
+
 export default function Location_Details(){
     const { state } = useBookingForm()
     const router = useRouter()

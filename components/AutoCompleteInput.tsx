@@ -1,7 +1,7 @@
 'use client'
 import { useInputContext } from '@/context/InputContext';
 // import { useStore } from '@/hooks/useDirections-hook';
-import { Libraries, useJsApiLoader } from '@react-google-maps/api'
+//import { Libraries, useJsApiLoader } from '@react-google-maps/api'
 import { useInputPlaceContext } from '@/hooks/useInputPlaceContext-hook'; 
 import {Autocomplete} from '@react-google-maps/api'
 import { useEffect, useState } from 'react';
@@ -17,10 +17,10 @@ interface AutoCompleteInputProps {
 
 export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }: AutoCompleteInputProps) => {
   
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || "",
-    libraries: ["places"]
-  });
+  // const { isLoaded } = useJsApiLoader({
+  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || "",
+  //   libraries: ["places"]
+  // });
 
   
 
@@ -36,7 +36,7 @@ export const AutoCompleteInput = ({ inputStyle, inputName, type, placeholder, }:
 
   const name = inputName.toLowerCase()
 
-  if (!isLoaded) return <div>Loading maps...</div>;
+  // if (!isLoaded) return <div>Loading maps...</div>;
  
   return (
     <>

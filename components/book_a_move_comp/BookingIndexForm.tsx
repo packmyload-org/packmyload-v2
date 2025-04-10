@@ -65,6 +65,7 @@ export default function BookingIndexForm() {
     if (isValid) {
     const formData = getValues(); 
       if (buttonName === 'submitButton1') {
+        console.log(formData)
         // Handle button 1 click
         setLoading1(true);
         await handleSubmit(formData)

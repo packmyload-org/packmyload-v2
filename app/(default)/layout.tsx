@@ -2,7 +2,10 @@
 import { ToastContainer } from 'react-toastify';
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import Script from 'next/script';
 // import Chat from '@/components/chat/chat';
+
+
 
 export default function DefaultLayout({
   children,
@@ -11,6 +14,7 @@ export default function DefaultLayout({
 }) {
  return(
    <>
+   
     <Nav/>
       {children}
     <Footer/>

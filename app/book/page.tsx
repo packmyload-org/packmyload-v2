@@ -13,6 +13,7 @@ import Loading from "../loading";
 import Script from 'next/script';
 export default function Booking() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
+  
   const { state } = useBookingForm()
   const {pickUp,destination,moveDate,moveTime}= state
   const [displayDetails, setDisplayDetails] = useState(false)

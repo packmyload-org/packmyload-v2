@@ -350,7 +350,7 @@ const rightContent=(
         </div>
     )
     return <BookingLayout
-                stepDescription="Finalize your move"
-                leftContent={leftContent}
-                rightContent={rightContent}/>
+            stepDescription="Finalize your move"
+            leftContent={leftContent}
+            rightContent={rightContent}/>
 }

@@ -17,6 +17,7 @@ import Footer from '@/components/Footer';
 import Script from 'next/script';
 import Loading from './loading';
 import Chat from '@/components/chat/chat';
+import Checkout from './book/checkout/page';
 
 function Home() {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? '';
@@ -43,6 +44,15 @@ function Home() {
       {!isLoaded ? <Loading /> :
         <>
           <Nav />
+
+          {/* <AnimatedWrapper>
+            <Checkout />
+          </AnimatedWrapper> */}
+          {/* <AnimatedWrapper>
+            <HeroSection />
+          </AnimatedWrapper> */}
+
+
 
           <AnimatedWrapper>
             <HeroSection />

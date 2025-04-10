@@ -7,7 +7,7 @@ import { alerts } from '../alerts/Alert';
 import { useState } from 'react';
 import { Calendar, MapPin } from '@phosphor-icons/react'
 import CustomDatePicker from '../Datepicker';
-import { useJsApiLoader } from '@react-google-maps/api';
+//import { useJsApiLoader } from '@react-google-maps/api';
 
 
 
@@ -28,12 +28,12 @@ export const MovingForm: React.FC = () => {
         router.push('/book')
   }
 
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || "",
-    libraries: ["places"]
-  });
+  // const { isLoaded } = useJsApiLoader({
+  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || "",
+  //   libraries: ["places"]
+  // });
   
-  if (!isLoaded) return <div>Loading...</div>;
+  // if (!isLoaded) return <div>Loading...</div>;
     return (
         <div className="w-5/6 pt-3 sm:mt-6">
             <form onSubmit={handleSubmit} className='backdrop-blur-lg bg-gray-100/20 border-gray-400/20 border-[8px] rounded-lg lg:rounded-full w-full mx-auto lg:w-[90%] xl:w-[950px] flex space-y-2 sm:space-y-0 flex-col md:flex-row input_shadow'>
