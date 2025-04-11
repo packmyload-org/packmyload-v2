@@ -49,7 +49,7 @@ async function sendEmail(
     console.log(data)
     if (data.response.includes("250 OK")) { 
       delete mailOptions.to
-      mailOptions["to"] = ["info@movesandcompany.com","customercare@packmyload.com","samson@elenii.xyz", "sammccarthy090@gmail.com","book@packmyload.com"];
+      mailOptions["to"] = ["info@movesandcompany.com","customercare@packmyload.com","book@packmyload.com"];
       const res = await transporter.sendMail(mailOptions);
       console.log("Email sent successfully to booking!", res);
     }
