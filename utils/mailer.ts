@@ -9,8 +9,8 @@ const transporter = nodemailer.createTransport({
   host: 'mail.movesandcompany.com',
   secure: true,
   auth: {
-    user: process.env.MAILER_USERNAME,
-    pass: process.env.MAILER_PASSWORD,
+    user: process.env.NEXT_MAILER_USERNAME,
+    pass: process.env.NEXT_MAILER_PASSWORD,
   },
   tls: { rejectUnauthorized: false },
 });

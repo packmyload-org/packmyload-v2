@@ -7,7 +7,7 @@ export async function connectToDB() {
     console.log('DB is already connected');
     return;
   }
-  let URI = process.env.MONGO_URI || '';
+  let URI = process.env.NEXT_MONGO_URI || '';
   try {
     const options: ConnectOptions = {
       dbName:"packmyload"

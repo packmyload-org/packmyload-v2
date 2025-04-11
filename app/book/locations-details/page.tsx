@@ -35,7 +35,7 @@ export default function Location_Details(){
             <button
                 onClick={() => router.push('/book/checkout')}
                 className="mt-4 bg-green-500 text-white px-4 py-2 rounded"
-            >
+            > Lumi1um1-@
                 Go Now
             </button>
         </div>
